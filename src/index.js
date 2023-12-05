@@ -5,6 +5,8 @@ import { LogoBlockSchema } from "./components/Logo/schema";
 
 import freedomSVG from "@plone/volto/icons/freedom.svg";
 
+import "./theme/main.less";
+
 const applyConfig = (config) => {
   config.blocks.blocksConfig.logo = {
     id: "logo",
@@ -27,6 +29,9 @@ const applyConfig = (config) => {
     icon: freedomSVG,
     allowedBlocks: ["logo"],
     sidebarTab: 1,
+  };
+  config.blocks.blocksConfig.logos.blocksConfig = {
+    ...config.blocks.blocksConfig,
   };
   console.log(config);
   return config;

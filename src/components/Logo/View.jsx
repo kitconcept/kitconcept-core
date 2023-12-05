@@ -29,6 +29,7 @@ const View = (props) => {
         <img
           src={flattenToAppURL(`${logo["@id"]}/@@images/image/teaser`)}
           alt="placeholder"
+          className="logo-image"
         />
       )}
       <h3 className="logo-heading headline">{data.heading}</h3>
