@@ -1,4 +1,4 @@
-![Logo-dlr](https://github.com/kitconcept/volto-logos-block/assets/44289551/d649fb81-1add-4408-9221-0c8d1d8ca40e)# Volto Logos Block
+# Volto Logos Block
 
 [![NPM](https://img.shields.io/npm/v/@kitconcept/volto-logos-block.svg)](https://www.npmjs.com/package/@kitconcept/volto-logos-block)
 [![Build Status](https://github.com/kitconcept/volto-logos-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-logos-block/actions)
