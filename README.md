@@ -10,7 +10,7 @@
 The Volto Logos Block allows editors to add a row of up to 4 logos to a Volto page. 
 ## Screenshot
 
-![Screenshot 2023-12-05 at 15-43-30 Logos examples](https://github.com/kitconcept/volto-logos-block/assets/44289551/c17e7061-f8c8-4974-ae50-32ed3fdc5aa8)
+![Screenshot 2023-12-05 at 15-28-43 Logos Test](https://github.com/kitconcept/volto-logos-block/assets/44289551/751d347e-afa0-4358-9797-21a785e0a480)
 
 ## Screencast 
 
