@@ -94,6 +94,5 @@
   },
   "peerDependencies": {
     "@plone/volto": "^17.0.0-alpha.21"
-  },
-  "packageManager": "yarn@3.2.3"
+  }
 }
