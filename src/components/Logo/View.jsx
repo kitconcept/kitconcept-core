@@ -1,13 +1,13 @@
-import React from "react";
-import { flattenToAppURL } from "@plone/volto/helpers";
-import { Message } from "semantic-ui-react";
-import { defineMessages, useIntl } from "react-intl";
-import imageBlockSVG from "@plone/volto/components/manage/Blocks/Image/block-image.svg";
+import React from 'react';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { Message } from 'semantic-ui-react';
+import { defineMessages, useIntl } from 'react-intl';
+import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 
 const messages = defineMessages({
   PleaseChooseLogo: {
-    id: "Please choose a logo as source for this element",
-    defaultMessage: "Please choose a logo as source for this element",
+    id: 'Please choose a logo as source for this element',
+    defaultMessage: 'Please choose a logo as source for this element',
   },
 });
 
@@ -27,7 +27,7 @@ const View = (props) => {
       )}
       {logo && (
         <img
-          src={flattenToAppURL(`${logo["@id"]}/@@images/image/teaser`)}
+          src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
           alt="placeholder"
           className="logo-image"
         />

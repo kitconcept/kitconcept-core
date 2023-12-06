@@ -1,12 +1,12 @@
-import React from "react";
-import { BlockDataForm } from "@plone/volto/components";
-import { LogoBlockSchema } from "./schema";
-import { useIntl, defineMessages } from "react-intl";
+import React from 'react';
+import { BlockDataForm } from '@plone/volto/components';
+import { LogoBlockSchema } from './schema';
+import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   Logo: {
-    id: "Logo",
-    defaultMessage: "Logo",
+    id: 'Logo',
+    defaultMessage: 'Logo',
   },
 });
 

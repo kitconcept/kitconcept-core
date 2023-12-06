@@ -1,44 +1,44 @@
-import { defineMessages } from "react-intl";
+import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   logo: {
-    id: "Logo",
-    defaultMessage: "Logo",
+    id: 'Logo',
+    defaultMessage: 'Logo',
   },
   title: {
-    id: "title",
-    defaultMessage: "title",
+    id: 'title',
+    defaultMessage: 'title',
   },
   description: {
-    id: "description",
-    defaultMessage: "description",
+    id: 'description',
+    defaultMessage: 'description',
   },
   logoBlock: {
-    id: "Logo",
-    defaultMessage: "Logo",
+    id: 'Logo',
+    defaultMessage: 'Logo',
   },
   svgbest: {
-    id: "It is advised to use a svg graphic.",
-    defaultMessage: "It is advised to use a svg graphic.",
+    id: 'It is advised to use a svg graphic.',
+    defaultMessage: 'It is advised to use a svg graphic.',
   },
 });
 
 export const LogoBlockSchema = (props) => {
   return {
     title: props.intl.formatMessage(messages.logoBlock),
-    block: "logo",
+    block: 'logo',
     fieldsets: [
       {
-        id: "default",
-        title: "Default",
-        fields: ["logo", "heading", "description"],
+        id: 'default',
+        title: 'Default',
+        fields: ['logo', 'heading', 'description'],
       },
     ],
     properties: {
       logo: {
         title: props.intl.formatMessage(messages.logo),
-        widget: "object_browser",
-        mode: "image",
+        widget: 'object_browser',
+        mode: 'image',
         allowExternals: true,
         description: props.intl.formatMessage(messages.svgbest),
       },
@@ -47,9 +47,9 @@ export const LogoBlockSchema = (props) => {
       },
       description: {
         title: props.intl.formatMessage(messages.description),
-        widget: "text",
+        widget: 'text',
       },
     },
-    required: ["logo"],
+    required: ['logo'],
   };
 };

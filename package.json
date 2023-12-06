@@ -21,28 +21,79 @@
     "release-alpha": "release-it --preRelease=alpha",
     "release-rc": "release-it --preRelease=rc"
   },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": "*.overrides",
+        "options": {
+          "parser": "less"
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-idiomatic-order"
+    ],
+    "plugins": [
+      "stylelint-prettier"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.less"
+        ],
+        "customSyntax": "postcss-less"
+      },
+      {
+        "files": [
+          "**/*.overrides"
+        ],
+        "customSyntax": "postcss-less"
+      }
+    ],
+    "rules": {
+      "prettier/prettier": true,
+      "rule-empty-line-before": [
+        "always-multi-line",
+        {
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ]
+    }
+  },
   "devDependencies": {
     "@babel/eslint-parser": "7.22.15",
     "@plone/scripts": "^3.0.0",
     "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-react-app": "7.0.1",
-    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "postcss-less": "6.0.0",
-    "postcss-scss": "4.0.8",
     "prettier": "3.0.3",
-    "release-it": "^16.1.5",
+    "release-it": "^16.2.1",
     "stylelint": "15.10.3",
     "stylelint-config-idiomatic-order": "9.0.0",
+    "stylelint-config-prettier": "9.0.4",
     "stylelint-config-sass-guidelines": "10.0.0",
     "stylelint-prettier": "4.0.2"
   },
   "peerDependencies": {
-    "@plone/volto": "^17.0.0"
-  }
+    "@plone/volto": "^17.0.0-alpha.21"
+  },
+  "packageManager": "yarn@3.2.3"
 }
