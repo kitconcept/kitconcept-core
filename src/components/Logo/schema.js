@@ -31,7 +31,7 @@ export const LogoBlockSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['logo', 'heading', 'description'],
+        fields: ['logo', 'heading'],
       },
     ],
     properties: {
