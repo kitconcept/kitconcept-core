@@ -16,7 +16,6 @@ const View = (props) => {
   const { data, isEditMode } = props;
   const intl = useIntl();
   const logo = data.logo?.[0];
-  console.log(data);
 
   return (
     <div className="logo-block">
