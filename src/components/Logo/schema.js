@@ -6,8 +6,8 @@ const messages = defineMessages({
     defaultMessage: 'Logo',
   },
   title: {
-    id: 'title',
-    defaultMessage: 'title',
+    id: 'Title',
+    defaultMessage: 'Title',
   },
   description: {
     id: 'description',
@@ -21,6 +21,10 @@ const messages = defineMessages({
     id: 'It is advised to use a svg graphic.',
     defaultMessage: 'It is advised to use a svg graphic.',
   },
+  link: {
+    id: 'Link',
+    defaultMessage: 'Link',
+  },
 });
 
 export const LogoBlockSchema = (props) => {
@@ -31,7 +35,7 @@ export const LogoBlockSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['logo', 'heading'],
+        fields: ['logo', 'heading', 'link'],
       },
     ],
     properties: {
@@ -45,9 +49,16 @@ export const LogoBlockSchema = (props) => {
       heading: {
         title: props.intl.formatMessage(messages.title),
       },
+      //description currently unused
       description: {
         title: props.intl.formatMessage(messages.description),
         widget: 'text',
+      },
+      link: {
+        title: props.intl.formatMessage(messages.link),
+        widget: 'object_browser',
+        mode: 'link',
+        allowExternals: true,
       },
     },
     required: ['logo'],

@@ -16,6 +16,11 @@ msgstr ""
 msgid "It is advised to use a svg graphic."
 msgstr "Es wird empfohlen eine svg Grafik zu verwenden"
 
+#: components/Logo/schema
+# defaultMessage: Link
+msgid "Link"
+msgstr "Link"
+
 #: components/Logo/Data
 #: components/Logo/schema
 # defaultMessage: Logo
@@ -28,11 +33,11 @@ msgid "Please choose a logo as source for this element"
 msgstr "Bitte wählen Sie ein Logo als Quelle für dieses Element"
 
 #: components/Logo/schema
+# defaultMessage: Title
+msgid "Title"
+msgstr "Titel"
+
+#: components/Logo/schema
 # defaultMessage: description
 msgid "description"
 msgstr "Beschreibung"
-
-#: components/Logo/schema
-# defaultMessage: title
-msgid "title"
-msgstr "Titel"
