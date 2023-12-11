@@ -1,5 +1,4 @@
-const fs = require('fs');
-
+/* eslint-disable no-template-curly-in-string */
 module.exports = {
   npm: {
     publish: true,
