@@ -1,5 +1,6 @@
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { Message } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
@@ -12,9 +13,11 @@ const messages = defineMessages({
 });
 
 const View = (props) => {
-  const { data } = props;
+  const { data, isEditMode } = props;
   const intl = useIntl();
   const logo = data.logo?.[0];
+  console.log(data);
+
   return (
     <div className="logo-block">
       {!logo && props.isEditMode && (
@@ -25,13 +28,23 @@ const View = (props) => {
           </div>
         </Message>
       )}
-      {logo && (
-        <img
-          src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
-          alt="placeholder"
-          className="logo-image"
-        />
-      )}
+      {logo &&
+        (isEditMode ? (
+          <img
+            src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
+            alt="placeholder"
+            className="logo-image"
+          />
+        ) : (
+          <UniversalLink href={data.link?.[0]?.['@id']}>
+            <img
+              src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
+              alt="placeholder"
+              className="logo-image"
+            />
+          </UniversalLink>
+        ))}
+
       <h3 className="logo-heading headline">{data.heading}</h3>
       {data.description && <p>{data.description}</p>}
     </div>

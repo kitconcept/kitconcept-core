@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-12-08T15:34:03.624Z\n"
+"POT-Creation-Date: 2023-12-11T12:47:09.894Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,11 @@ msgstr ""
 msgid "It is advised to use a svg graphic."
 msgstr ""
 
+#: components/Logo/schema
+# defaultMessage: Link
+msgid "Link"
+msgstr ""
+
 #: components/Logo/Data
 #: components/Logo/schema
 # defaultMessage: Logo
@@ -30,11 +35,11 @@ msgid "Please choose a logo as source for this element"
 msgstr ""
 
 #: components/Logo/schema
-# defaultMessage: description
-msgid "description"
+# defaultMessage: Title
+msgid "Title"
 msgstr ""
 
 #: components/Logo/schema
-# defaultMessage: title
-msgid "title"
+# defaultMessage: description
+msgid "description"
 msgstr ""
