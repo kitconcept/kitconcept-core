@@ -7,3 +7,11 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.1.0 (2023-12-13)
+
+### Feature
+
+- add german translations [#2](https://github.com/kitconcept/volto-logos-block/pull/2)
+- remove currently unused description field [#3](https://github.com/kitconcept/volto-logos-block/pull/3)
+- Add possibillity to link on Logo [#4](https://github.com/kitconcept/volto-logos-block/pull/4)
