@@ -71,12 +71,53 @@
 
   .logo-image {
     width: 100%;
+    object-fit: contain;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .four.column.grid {
+    .logo-image {
+      max-width: 200px;
+      height: 100px;
+    }
+
+    h3 {
+      width: 200px;
+    }
+  }
+
+  .three.column.grid {
+    .logo-image {
+      max-width: 200px;
+      height: 200px;
+    }
+
+    h3 {
+      width: 300px;
+    }
+  }
+
+  .two.column.grid {
+    .logo-image {
+      height: 300px;
+    }
   }
 }
 
 .block.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .logo-image {
     width: 100%;
-    object-position: top left;
+    object-position: top center;
+  }
+
+  h3 {
+    width: 400px;
   }
 }
