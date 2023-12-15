@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.1.1 (2023-12-15)
+
+### Feature
+
+- improve styling for layouts with less than four columns @jackahl [#1](https://github.com/kitconcept/volto-logos-block/pull/1)
+
 ## 1.0.0 (2023-12-06)
 
 - initial release
