@@ -12,6 +12,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: components/Logo/schema
+# defaultMessage: Description
+msgid "Description"
+msgstr "Beschreibung"
+
+#: components/Logo/schema
 # defaultMessage: It is advised to use a svg graphic.
 msgid "It is advised to use a svg graphic."
 msgstr "Es wird empfohlen eine svg Grafik zu verwenden"
@@ -36,8 +41,3 @@ msgstr "Bitte wählen Sie ein Logo als Quelle für dieses Element"
 # defaultMessage: Title
 msgid "Title"
 msgstr "Titel"
-
-#: components/Logo/schema
-# defaultMessage: description
-msgid "description"
-msgstr "Beschreibung"

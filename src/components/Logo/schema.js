@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   logo: {
@@ -10,8 +11,8 @@ const messages = defineMessages({
     defaultMessage: 'Title',
   },
   description: {
-    id: 'description',
-    defaultMessage: 'description',
+    id: 'Description',
+    defaultMessage: 'Description',
   },
   logoBlock: {
     id: 'Logo',
@@ -35,7 +36,12 @@ export const LogoBlockSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['logo', 'heading', 'link'],
+        fields: [
+          'logo',
+          'heading',
+          config.blocks.blocksConfig.logo.showDescriptionField && 'description',
+          'link',
+        ],
       },
     ],
     properties: {

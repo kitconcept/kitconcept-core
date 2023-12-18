@@ -17,6 +17,7 @@ const applyConfig = (config) => {
     restricted: true,
     mostUsed: true,
     sidebarTab: 1,
+    showDescriptionField: false,
   };
   config.blocks.blocksConfig.logos = {
     ...config.blocks.blocksConfig.gridBlock,

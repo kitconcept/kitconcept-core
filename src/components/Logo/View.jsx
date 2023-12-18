@@ -3,6 +3,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Message } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
+import config from '@plone/volto/registry';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 
 const messages = defineMessages({
@@ -45,7 +46,8 @@ const View = (props) => {
         ))}
 
       <h3 className="logo-heading headline">{data.heading}</h3>
-      {data.description && <p>{data.description}</p>}
+      {config.blocks.blocksConfig.logo.showDescriptionField &&
+        data.description && <p>{data.description}</p>}
     </div>
   );
 };
