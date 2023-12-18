@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.2.0 (2023-12-18)
+
+### Feature
+
+- add setting to show or not show description field @jackahl [#1](https://github.com/kitconcept/volto-logos-block/pull/1)
+
+### Bugfix
+
+- fix link element being rendered even when no link is set @jackahl [#1](https://github.com/kitconcept/volto-logos-block/pull/1)
+
 ## 1.1.1 (2023-12-15)
 
 ### Feature
