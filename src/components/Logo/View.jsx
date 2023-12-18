@@ -28,7 +28,7 @@ const View = (props) => {
         </Message>
       )}
       {logo &&
-        (isEditMode ? (
+        (isEditMode || !data.link?.length > 0 ? (
           <img
             src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
             alt="placeholder"
