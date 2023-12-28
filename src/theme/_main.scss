@@ -1,0 +1,9 @@
+//Specific styles for volto-light-theme
+.block.logos .ui.stackable,
+.block.logos .grid-items,
+.block.logos h2.headline{
+  @include default-container-width();
+    // Adding 2 * 10px (one for each side) we force the container to extend the value of
+    // the gutter to match the other blocks margin.
+  max-width: calc(var(--default-container-width) + 2 * 10px);
+}
