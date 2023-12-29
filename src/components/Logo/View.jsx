@@ -44,8 +44,9 @@ const View = (props) => {
             />
           </UniversalLink>
         ))}
-
-      <h3 className="logo-heading headline">{data.heading}</h3>
+      {data.heading && (
+        <h3 className="logo-heading headline">{data.heading}</h3>
+      )}
       {config.blocks.blocksConfig.logo.showDescriptionField &&
         data.description && <p>{data.description}</p>}
     </div>
