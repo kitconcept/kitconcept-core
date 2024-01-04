@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.2.1 (2024-01-04)
+
+### Feature
+
+- Compatiblity with kitconcept volto-light-theme container widths @jackahl [#6](https://github.com/kitconcept/volto-logos-block/pull/6)
+
 ## 1.2.0 (2023-12-18)
 
 ### Feature
