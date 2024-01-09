@@ -7,3 +7,8 @@
   // the gutter to match the other blocks margin.
   max-width: calc(var(--default-container-width) + 2 * 10px);
 }
+
+//Hide the external link logo when used with VLT
+.content-area .block.logos a.external::after {
+  content: none;
+}
