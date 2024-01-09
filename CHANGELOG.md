@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.2.2 (2024-01-09)
+
+### Bugfix
+
+- vertically center logos @jackahl [#7](https://github.com/kitconcept/volto-logos-block/pull/7)
+- hide external link icon on external links when used with vlt @jackahl [#8](https://github.com/kitconcept/volto-logos-block/pull/8)
+
 ## 1.2.1 (2024-01-04)
 
 ### Feature
