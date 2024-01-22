@@ -37,8 +37,8 @@ export const LogoBlockSchema = (props) => {
         id: 'default',
         title: 'Default',
         fields: config.blocks.blocksConfig.logo.showDescriptionField
-          ? ['logo', 'heading', 'description', 'link']
-          : ['logo', 'heading', 'link'],
+          ? ['logo', 'heading', 'description', 'href']
+          : ['logo', 'heading', 'href'],
       },
     ],
     properties: {
@@ -57,7 +57,7 @@ export const LogoBlockSchema = (props) => {
         title: props.intl.formatMessage(messages.description),
         widget: 'text',
       },
-      link: {
+      href: {
         title: props.intl.formatMessage(messages.link),
         widget: 'object_browser',
         mode: 'link',

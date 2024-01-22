@@ -29,14 +29,14 @@ const View = (props) => {
         </Message>
       )}
       {logo &&
-        (isEditMode || !data.link?.length > 0 ? (
+        (isEditMode || !data.href?.length > 0 ? (
           <img
             src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
             alt="placeholder"
             className="logo-image"
           />
         ) : (
-          <UniversalLink href={data.link?.[0]?.['@id']}>
+          <UniversalLink href={data.href?.[0]?.['@id']}>
             <img
               src={flattenToAppURL(`${logo['@id']}/@@images/image/teaser`)}
               alt="placeholder"
