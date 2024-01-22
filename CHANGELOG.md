@@ -8,6 +8,22 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.0 (2024-01-22)
+
+### Breaking
+
+- rename "link" field to "href" to make it use the correct adapter [#14](https://github.com/kitconcept/volto-logos-block/pull/14)
+
+### Bugfix
+
+- remove css related to hiding the remove block button inside the grid @jackahl [#12](https://github.com/kitconcept/volto-logos-block/pull/12)
+- remove borders around logos on hover @jakckahl [#17](https://github.com/kitconcept/volto-logos-block/pull/17)
+
+### Internal
+
+- Add LICENSE [#11](https://github.com/kitconcept/volto-logos-block/pull/11)
+- Add proper description to package.json @tisto [#16](https://github.com/kitconcept/volto-logos-block/pull/16)
+
 ## 1.2.2 (2024-01-09)
 
 ### Bugfix
