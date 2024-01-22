@@ -1,7 +1,7 @@
 {
   "name": "@kitconcept/volto-logos-block",
   "version": "1.2.2",
-  "description": "volto-logos-block: Volto add-on",
+  "description": "Plone (Volto) Block that allows showing logos in a grid-like way.",
   "main": "src/index.js",
   "license": "MIT",
   "keywords": [
