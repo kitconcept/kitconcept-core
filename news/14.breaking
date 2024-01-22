@@ -1,0 +1,1 @@
+rename "link" field to "href" to make it use the correct adapter
