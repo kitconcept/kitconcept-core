@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.1 (2024-01-23)
+
+### Bugfix
+
+- fix broken hover borders in edit mode @jackahl [#17](https://github.com/kitconcept/volto-logos-block/pull/17)
+- amend design to fit provided designs @jackahl [#20](https://github.com/kitconcept/volto-logos-block/pull/20)
+
 ## 2.0.0-alpha.0 (2024-01-22)
 
 ### Breaking
