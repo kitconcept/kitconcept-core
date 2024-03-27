@@ -1,0 +1,35 @@
+#page-document,
+#page-add,
+#page-edit {
+  .block.banner > div {
+    max-width: 1440px;
+    height: 300px;
+
+    img.image {
+      max-width: 1440px;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    div.text {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 300px;
+      padding: 50px 0;
+      background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+      p {
+        margin-bottom: 0;
+        width: 100%;
+        color: #fff;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 60px;
+      }
+    }
+  }
+}
