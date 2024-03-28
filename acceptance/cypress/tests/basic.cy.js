@@ -15,7 +15,7 @@ context('Basic Acceptance Tests', () => {
       cy.wait('@content');
     });
 
-    it('As editor I can add a page with a text block', function () {
+    it('As editor I can add a page with a banner block', function () {
       // when I add a page with a text block
       cy.get('#toolbar-add').click();
       cy.get('#toolbar-add-document').click();
@@ -36,7 +36,7 @@ context('Basic Acceptance Tests', () => {
       cy.get('[title="/my-image (Image)"]').dblclick();
       cy.get('#field-alt').type('Plone');
       cy.get('#field-text').type('Plone 6');
-      cy.get('#field-additionalText').type('Volto Banner Block');
+      cy.get('#field-additionalText').type('Volto Banner');
       cy.get('#toolbar-save > .icon').click();
     });
   });
