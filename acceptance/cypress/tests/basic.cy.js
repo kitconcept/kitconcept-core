@@ -27,9 +27,7 @@ context('Basic Acceptance Tests', () => {
       cy.get('.slate-editor > div > p').click();
       cy.get('.text-slate-editor-inner > .ui > .icon').click();
       cy.get('[aria-label="Unfold Common blocks"]').click();
-      cy.get(
-        '[style="transition: opacity 500ms;"] > :nth-child(10) > .ui > .icon',
-      ).click();
+      cy.get('.ui.basic.icon.button.banner').click();
       cy.get(
         '.block > :nth-child(1) > :nth-child(1) > [tabindex="0"] > .message > center > .toolbar-inner > :nth-child(1) > .ui > .icon',
       ).click();
