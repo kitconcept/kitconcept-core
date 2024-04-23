@@ -8,7 +8,7 @@ const View = (props) => {
   return (
     <div className="block banner">
       {data.url ? (
-        <div>
+        <>
           <img
             src={`${flattenToAppURL(data.url)}/${
               data?.image_scales?.image[0]?.download
@@ -21,7 +21,7 @@ const View = (props) => {
             <p>{data?.text}</p>
             <p>{data?.additionalText}</p>
           </div>
-        </div>
+        </>
       ) : (
         isEditMode && <ImageInput {...props} />
       )}
