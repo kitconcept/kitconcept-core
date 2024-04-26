@@ -1,1 +1,0 @@
-Make volto-banner-block VLT (volto-light-theme) compatible @jonaspiterek

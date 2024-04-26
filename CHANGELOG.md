@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-2 (2024-04-26)
+
+### Feature
+
+- Make volto-banner-block VLT (volto-light-theme) compatible @jonaspiterek [#6](https://github.com/volto-banner-block/pull/6)
+
+### Bugfix
+
+- Fix images only loading after save when first selecting an image @jonaspiterek [#8](https://github.com/volto-banner-block/pull/8)
+
 ## 1.0.0-1 (2024-04-26)
 
 ## 1.0.0-0 (2024-04-26)
