@@ -1,18 +1,18 @@
 import { flattenToAppURL } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 import React from 'react';
 import ImageInput from './Image/ImageInput';
 
 const View = (props) => {
   const { data, isEditMode } = props;
+  const Image = config.getComponent({ name: 'Image' }).component;
 
   return (
     <div className="block banner">
       {data.url ? (
         <>
-          <img
-            src={`${flattenToAppURL(data.url)}/${
-              data?.image_scales?.image[0]?.download
-            }}`}
+          <Image
+            src={`${flattenToAppURL(data.url)}/@@images/image`}
             alt={data.alt}
             className="image"
             loading="lazy"
