@@ -7,3 +7,10 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.0.0-0 (2024-04-26)
+
+### Internal
+
+- Add acceptance test [#2](https://github.com/volto-banner-block/pull/2)
+- Fix code-analysis workflow @jonaspiterk [#3](https://github.com/volto-banner-block/pull/3)
