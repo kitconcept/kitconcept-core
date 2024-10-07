@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2024-10-07)
+
+### Internal
+
+- Re-release to fix the version @sneridagh
+  Remove peer on Volto 17 [#0](https://github.com/volto-banner-block/pull/0)
+
 ## 1.0.0-2 (2024-04-26)
 
 ### Feature
