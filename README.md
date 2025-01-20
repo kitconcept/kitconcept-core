@@ -8,7 +8,7 @@ A logos block for volto
 [![Unit tests](https://github.com/kitconcept/volto-logos-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-logos-block/actions/workflows/unit.yml)
 
 
-![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/master/kitconcept.png)
+![kitconcept GmbH](https://github.com/kitconcept/volto-blocks/raw/main/kitconcept.png)
 
 The Volto Logos Block allows editors to add a row of up to 4 logos to a Volto page. 
 
