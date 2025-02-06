@@ -25,7 +25,10 @@ Coming soon...
 
 ## Features
 
-<!-- List your awesome features here -->
+   - 	Flexible Logo Display – Supports adding logos and automatically adjusting based on available space.
+   -    Responsive Layout – Adapts dynamically to different screen sizes to ensure logos are displayed optimally.
+   -    Seamless Volto Integration – Works smoothly within existing Volto projects
+	
 
 ## Installation
 
