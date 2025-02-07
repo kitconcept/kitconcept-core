@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Description"
+#: components/Logo/schema
+msgid "Description"
+msgstr ""
+
+#. Default: "It is advised to use a svg graphic."
+#: components/Logo/schema
+msgid "It is advised to use a svg graphic."
+msgstr "It is advised to use a svg graphic."
+
+#. Default: "Link"
+#: components/Logo/schema
+msgid "Link"
+msgstr ""
+
+#. Default: "Logo"
+#: components/Logo/Data
+#: components/Logo/schema
+msgid "Logo"
+msgstr "Logo"
+
+#. Default: "Please choose a logo as source for this element"
+#: components/Logo/View
+msgid "Please choose a logo as source for this element"
+msgstr "Please choose a logo as source for this element"
+
+#. Default: "Title"
+#: components/Logo/schema
+msgid "Title"
+msgstr ""
