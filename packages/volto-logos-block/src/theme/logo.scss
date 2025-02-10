@@ -1,0 +1,32 @@
+$spacing-small: 20px !default;
+$spacing-medium: 40px !default;
+$pre-footer-vertical-spacing: $spacing-small !default;
+
+.block.logos {
+  .container ul.footer-logos {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: $pre-footer-vertical-spacing 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: $spacing-medium;
+    gap: 60px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+
+    &.s {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    &.l .item img {
+      max-width: min(100%, 240px);
+      max-height: 165px;
+    }
+
+    &.s .item img {
+      max-width: min(100%, 175px);
+      max-height: 120px;
+    }
+  }
+}
