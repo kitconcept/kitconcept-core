@@ -84,7 +84,7 @@ const logoSchema = (props) => {
         title: intl.formatMessage(messages.Target),
         widget: 'object_browser',
         mode: 'link',
-        selectedItemAttrs: ['Title', 'Description'],
+        selectedItemAttrs: ['Title', 'Description', '@type'],
         allowExternals: true,
       },
       openLinkInNewTab: {

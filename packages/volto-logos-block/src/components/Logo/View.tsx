@@ -2,11 +2,13 @@ import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Message, Container } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
-import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 import cx from 'classnames';
 import isEmpty from 'lodash/isEmpty';
+
+import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import type { logoData } from '@kitconcept/volto-logos-block/types/Logo';
+
 const messages = defineMessages({
   PleaseChooseLogo: {
     id: 'Please choose a logo as source for this element',
@@ -32,7 +34,7 @@ const View: React.FC<logosViewProps> = (props: {
     <div className="block logos">
       <Container>
         <ul
-          className={cx('footer-logos', {
+          className={cx('block-logos', {
             [logosSize]: logosSize,
           })}
         >
@@ -80,13 +82,17 @@ const View: React.FC<logosViewProps> = (props: {
                 return (
                   <li className="item" key={itemId}>
                     {/* @ts-ignore */}
-                    <UniversalLink
-                      href={logoInfo.href}
-                      openLinkInNewTab={logoInfo.openLinkInNewTab}
-                      title={logoInfo.hrefTitle || logoInfo.srcAlt}
-                    >
+                    {logoInfo.href ? (
+                      <UniversalLink
+                        href={logoInfo.href}
+                        openLinkInNewTab={logoInfo.openLinkInNewTab}
+                        title={logoInfo.hrefTitle || logoInfo.srcAlt}
+                      >
+                        <img src={logoInfo.src} alt={logoInfo.srcAlt} />
+                      </UniversalLink>
+                    ) : (
                       <img src={logoInfo.src} alt={logoInfo.srcAlt} />
-                    </UniversalLink>
+                    )}
                   </li>
                 );
               })
