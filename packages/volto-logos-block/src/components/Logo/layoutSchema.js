@@ -36,7 +36,7 @@ const messages = defineMessages({
   },
   logo: {
     id: 'Logo image',
-    defaultMessage: 'Logo image',
+    defaultMessage: 'Logo',
   },
   AltText: {
     id: 'Alt text',
@@ -48,7 +48,11 @@ const messages = defineMessages({
   },
   logo_size: {
     id: 'logo_size',
-    defaultMessage: 'Logo size',
+    defaultMessage: 'Size',
+  },
+  width: {
+    id: 'width',
+    defaultMessage: 'Container Width',
   },
 });
 
@@ -112,7 +116,7 @@ export const layoutSchema = (props) => {
       {
         id: 'default',
         title: intl.formatMessage(messages.Default),
-        fields: ['logo_size', 'data'],
+        fields: ['logo_size', 'logo_width', 'data'],
       },
     ],
     properties: {
@@ -125,11 +129,13 @@ export const layoutSchema = (props) => {
 
       logo_size: {
         title: intl.formatMessage(messages.logo_size),
-        choices: [
-          ['s', intl.formatMessage(messages.Small)],
-          ['l', intl.formatMessage(messages.Large)],
-        ],
+        widget: 'logoBlocksizeWidget',
         default: 's',
+      },
+      logo_width: {
+        title: intl.formatMessage(messages.width),
+        widget: 'logoBlockWidth',
+        default: 'default',
       },
     },
     required: ['data'],

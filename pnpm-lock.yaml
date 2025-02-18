@@ -15,6 +15,9 @@ importers:
       '@kitconcept/volto-logos-block':
         specifier: workspace:*
         version: link:packages/volto-logos-block
+      '@plone/components':
+        specifier: workspace:^
+        version: link:core/packages/components
       '@plone/registry':
         specifier: workspace:*
         version: link:core/packages/registry

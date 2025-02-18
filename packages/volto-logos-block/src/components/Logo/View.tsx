@@ -1,10 +1,11 @@
 import React from 'react';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Message, Container } from 'semantic-ui-react';
+import { Message } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import isEmpty from 'lodash/isEmpty';
 
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { Container } from '@plone/components';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import type { logoData } from '@kitconcept/volto-logos-block/types/Logo';
@@ -21,20 +22,24 @@ interface logosViewProps {
   data: logoData;
   isEditMode: boolean;
 }
+
 const View: React.FC<logosViewProps> = (props: {
   data: logoData;
   isEditMode: boolean;
 }) => {
   const intl = useIntl();
   const { isEditMode } = props;
+
   const logos = props?.data?.data;
   const logosSize = props?.data?.logo_size;
 
+  const footer_logos_container_width = props?.data?.logo_width;
+
   return (
-    <div className="block logos">
-      <Container>
+    <div id="footer">
+      <Container className={cx({ [footer_logos_container_width]: 1 })}>
         <ul
-          className={cx('block-logos', {
+          className={cx('footer-logos', {
             [logosSize]: logosSize,
           })}
         >

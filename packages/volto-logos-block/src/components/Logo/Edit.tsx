@@ -1,4 +1,5 @@
 import React from 'react';
+
 import View from './View';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
 import { layoutSchema } from './layoutSchema';

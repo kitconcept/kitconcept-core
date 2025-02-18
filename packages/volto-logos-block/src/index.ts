@@ -1,12 +1,16 @@
-import { Edit } from './components';
 import { layoutSchema } from './components/Logo/layoutSchema';
-import { LogoBlockView } from './components';
+import { LogoBlockView, LogoBlockEdit } from './components';
 import freedomSVG from '@plone/volto/icons/freedom.svg';
-import './theme/logo.scss';
 import type { ConfigType } from '@plone/registry';
-import { BlocksObjectWidget } from './components/widgets';
+import {
+  BlocksObjectWidget,
+  LogoBlockSizeWidget,
+  LogoBlockWidthWidget,
+} from './components/widgets';
 import type { BlocksObjectWidgetProps } from './components/widgets/BlocksObjectWidget';
 import cloneDeep from 'lodash/cloneDeep';
+
+// import './theme/logo.scss';
 
 declare module '@plone/types' {
   export interface BlocksConfigData {
@@ -15,6 +19,8 @@ declare module '@plone/types' {
   }
   export interface WidgetsConfigByWidget {
     blocksObject_widget: React.FC<BlocksObjectWidgetProps>;
+    logoBlocksizeWidget: React.ComponentType<any>;
+    logoBlockWidth: React.ComponentType<any>;
   }
   export interface WidgetsConfigByType {
     logos: React.FC<BlocksObjectWidgetProps>;
@@ -28,7 +34,7 @@ const applyConfig = (config: ConfigType) => {
     group: 'common',
     icon: freedomSVG,
     view: LogoBlockView,
-    edit: Edit,
+    edit: LogoBlockEdit,
     mostUsed: true,
     sidebarTab: 1,
     schema: layoutSchema,
@@ -37,7 +43,9 @@ const applyConfig = (config: ConfigType) => {
   };
 
   config.widgets.widget.blocksObject_widget = BlocksObjectWidget;
+  config.widgets.widget.logoBlockWidth = LogoBlockWidthWidget;
   config.widgets.type.logos = BlocksObjectWidget;
+  config.widgets.widget.logoBlocksizeWidget = LogoBlockSizeWidget;
 
   return config;
 };

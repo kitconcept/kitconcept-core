@@ -1,8 +1,9 @@
-//From VLT
 import { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import omit from 'lodash/omit';
-import { Accordion, Button, Segment } from 'semantic-ui-react';
+import { Accordion, Segment } from 'semantic-ui-react';
+
+import { Button } from '@plone/components';
 import DragDropList from '@plone/volto/components/manage/DragDropList/DragDropList';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import FormFieldWrapper from '@plone/volto/components/manage/Widgets/FormFieldWrapper';
@@ -13,7 +14,6 @@ import {
   getBlocksLayoutFieldname,
   moveBlock,
 } from '@plone/volto/helpers/Blocks/Blocks';
-
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import deleteSVG from '@plone/volto/icons/delete.svg';
