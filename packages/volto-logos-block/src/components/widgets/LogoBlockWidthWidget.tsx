@@ -2,9 +2,8 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
-import ButtonsWidget, {
-  type ButtonsWidgetProps,
-} from '@kitconcept/volto-light-theme/components/Widgets/ButtonsWidget';
+import ButtonsWidget, { type ButtonsWidgetProps } from './ButtonsWidget';
+
 import imageFitSVG from '@plone/volto/icons/image-fit.svg';
 import imageWideSVG from '@plone/volto/icons/image-wide.svg';
 

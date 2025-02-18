@@ -1,9 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import type { IntlShape } from 'react-intl';
 
-import ButtonsWidget, {
-  type ButtonsWidgetProps,
-} from '@kitconcept/volto-light-theme/components/Widgets/ButtonsWidget';
+import ButtonsWidget, { type ButtonsWidgetProps } from './ButtonsWidget';
 
 const messages = defineMessages({
   s: {
