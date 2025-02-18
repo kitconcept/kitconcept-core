@@ -6,7 +6,7 @@ export type logoData = {
     };
   };
   logo_size: string;
-  logo_width:string;
+  logo_width: string;
 };
 type logoBlock = {
   alt: string;
