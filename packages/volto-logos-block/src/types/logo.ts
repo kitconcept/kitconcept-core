@@ -1,3 +1,4 @@
+//schmea
 export type logoData = {
   data: {
     blocks: logoBlock;
