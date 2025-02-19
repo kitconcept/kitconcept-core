@@ -10,8 +10,6 @@ import {
 import type { BlocksObjectWidgetProps } from './components/widgets/BlocksObjectWidget';
 import cloneDeep from 'lodash/cloneDeep';
 
-// import './theme/logo.scss';
-
 declare module '@plone/types' {
   export interface BlocksConfigData {
     //logo
