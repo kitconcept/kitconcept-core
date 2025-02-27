@@ -12,15 +12,15 @@ importers:
 
   .:
     dependencies:
+      '@kitconcept/volto-banner-block':
+        specifier: workspace:*
+        version: link:packages/volto-banner-block
       '@plone/registry':
         specifier: workspace:*
         version: link:core/packages/registry
       '@plone/volto':
         specifier: workspace:*
         version: link:core/packages/volto
-      volto-banner-block:
-        specifier: workspace:*
-        version: link:packages/volto-banner-block
     devDependencies:
       mrs-developer:
         specifier: ^2.2.0

@@ -1,4 +1,4 @@
-const addons = ['volto-banner-block'];
+const addons = ['@kitconcept/volto-banner-block'];
 const theme = '';
 
 module.exports = {

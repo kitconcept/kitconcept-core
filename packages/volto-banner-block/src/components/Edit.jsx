@@ -1,4 +1,4 @@
-import { SidebarPortal } from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import { ImageInput } from '@plone/volto/components/manage/Widgets/ImageWidget';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';

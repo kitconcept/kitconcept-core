@@ -1,4 +1,4 @@
-import { BlockDataForm } from '@plone/volto/components/manage/Form/BlockDataForm';
+import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
 import trashSVG from '@plone/volto/icons/delete.svg';

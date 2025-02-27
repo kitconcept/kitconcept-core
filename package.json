@@ -1,5 +1,5 @@
 {
-  "name": "volto-banner-block-dev",
+  "name": "@kitconcept/volto-banner-block-dev",
   "version": "1.0.0",
   "description": "volto-banner-block: Volto Add-on",
   "author": "kitconcept GmbH",
@@ -25,17 +25,17 @@
     "prettier:fix": "prettier --write 'packages/**/src/**/*.{js,jsx,ts,tsx}' ",
     "stylelint": "stylelint 'packages/**/src/**/*.{css,scss,less}' --allow-empty-input",
     "stylelint:fix": "stylelint 'packages/**/src/**/*.{css,scss,less}' --fix --allow-empty-input",
-    "dry-release": "pnpm --filter volto-banner-block dry-release",
-    "release": "pnpm --filter volto-banner-block release",
-    "release-major-alpha": "pnpm --filter volto-banner-block release-major-alpha",
-    "release-alpha": "pnpm --filter volto-banner-block release-alpha",
+    "dry-release": "pnpm --filter @kitconcept/volto-banner-block dry-release",
+    "release": "pnpm --filter @kitconcept/volto-banner-block release",
+    "release-major-alpha": "pnpm --filter @kitconcept/volto-banner-block release-major-alpha",
+    "release-alpha": "pnpm --filter @kitconcept/volto-banner-block release-alpha",
     "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "volto-banner-block": "workspace:*"
+    "@kitconcept/volto-banner-block": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
