@@ -1,4 +1,4 @@
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
 import cx from 'classnames';
 import React from 'react';

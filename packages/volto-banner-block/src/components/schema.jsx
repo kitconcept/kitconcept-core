@@ -62,7 +62,7 @@ export const BannerBlockSchema = (props) => {
         ),
       },
       text: {
-        title: propsintl.formatMessage(messages.Line1),
+        title: props.intl.formatMessage(messages.Line1),
       },
       additionalText: {
         title: props.intl.formatMessage(messages.Line2),
