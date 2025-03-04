@@ -1,24 +1,46 @@
 import React from 'react';
-
+import type { BlockEditProps } from '@plone/types';
 import View from './View';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-import { layoutSchema } from './layoutSchema';
-import type { logoData } from '@kitconcept/volto-logos-block/types/Logo';
+import { layoutSchema } from './schema';
 
-interface logosEditProps {
+interface logosEditProps extends BlockEditProps {
   '@type': string;
   data: logoData;
   block: string;
   onChangeBlock: (blockId: string, newData: logoData) => void;
   selected: boolean;
 }
+export type logoData = {
+  data: {
+    blocks: logoBlock;
+    blocks_layout: {
+      items: string[];
+    };
+  };
+  logo_size: string;
+  logo_width: string;
+};
+type logoBlock = {
+  alt: string;
+  href: link[];
+  logo: Logo[];
+  openLinkInNewTab: boolean;
+};
+type link = {
+  '@id': string;
+  Description: string;
+  Title: string;
+};
+type Logo = {
+  '@id': string;
+  '@type': string;
+  Description: string;
+  Title: string;
+  image_field: string;
+};
 
-const Edit: React.FC<logosEditProps> = (props: {
-  data: logoData;
-  block: string;
-  onChangeBlock: (blockId: string, newData: logoData) => void;
-  selected: boolean;
-}) => {
+const Edit = (props: logosEditProps) => {
   const { data, block, onChangeBlock, selected } = props;
 
   return (

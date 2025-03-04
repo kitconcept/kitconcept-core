@@ -122,20 +122,40 @@ export const layoutSchema = (props) => {
     properties: {
       data: {
         title: intl.formatMessage(messages.logo),
-        type: 'logos',
+        type: 'addLogo',
         schema: logoSchema(props),
         schemaExtender: toggleIconField,
       },
 
       logo_size: {
         title: intl.formatMessage(messages.logo_size),
-        widget: 'logoBlocksizeWidget',
+        widget: 'sizeWidget',
         default: 's',
+        actions: [
+          {
+            name: 's',
+            label: intl.formatMessage(messages.Small),
+          },
+          {
+            name: 'l',
+            label: intl.formatMessage(messages.Large),
+          },
+        ],
       },
       logo_width: {
         title: intl.formatMessage(messages.width),
-        widget: 'logoBlockWidth',
+        widget: 'blockWidth',
         default: 'default',
+        actions: [
+          {
+            name: 'default',
+            label: 'Default',
+          },
+          {
+            name: 'layout',
+            label: 'Layout',
+          },
+        ],
       },
     },
     required: ['data'],
