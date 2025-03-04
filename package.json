@@ -53,8 +53,7 @@
     "@plone/registry": "workspace:*",
     "@plone/types": "workspace:*",
     "@plone/components": "workspace:^",
-    "@kitconcept/volto-logos-block": "workspace:*",
-    "@kitconcept/volto-light-theme": "workspace:*"
+    "@kitconcept/volto-logos-block": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
