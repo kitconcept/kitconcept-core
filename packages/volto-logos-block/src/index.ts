@@ -2,10 +2,10 @@ import { layoutSchema } from './components/schema';
 import { LogoBlockView, LogoBlockEdit } from './components';
 import freedomSVG from '@plone/volto/icons/freedom.svg';
 import type { ConfigType } from '@plone/registry';
-import type { BlocksObjectWidgetProps } from '@kitconcept/volto-light-theme/components/Widgets/BlocksObjectWidget'; // eslint-disable-line
-import BlocksObjectWidget from '@kitconcept/volto-light-theme/components/Widgets/BlocksObjectWidget'; // eslint-disable-line
-import BlockWidthWidget from '@kitconcept/volto-light-theme/components/Widgets/BlockWidthWidget'; // eslint-disable-line
-import SizeWidget from '@kitconcept/volto-light-theme/components/Widgets/SizeWidget'; // eslint-disable-line
+import type { BlocksObjectWidgetProps } from '@kitconcept/volto-light-theme/components/Widgets/BlocksObjectWidget';
+import BlocksObjectWidget from '@kitconcept/volto-light-theme/components/Widgets/BlocksObjectWidget';
+import BlockWidthWidget from '@kitconcept/volto-light-theme/components/Widgets/BlockWidthWidget';
+import SizeWidget from '@kitconcept/volto-light-theme/components/Widgets/SizeWidget';
 
 declare module '@plone/types' {
   export interface BlocksConfigData {
