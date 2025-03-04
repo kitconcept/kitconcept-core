@@ -1,4 +1,5 @@
 import React from 'react';
+
 import type { BlockEditProps } from '@plone/types';
 import View from './View';
 import { SidebarPortal, BlockDataForm } from '@plone/volto/components';

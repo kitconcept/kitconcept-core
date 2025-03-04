@@ -1,6 +1,12 @@
 import { cloneDeepSchema } from '@plone/volto/helpers/Utils/Utils';
 import { defineMessages } from 'react-intl';
 
+import type { BlockEditProps, JSONSchema } from '@plone/types';
+
+interface logoSchemaProps extends JSONSchema {
+  addMessage: string;
+}
+
 const messages = defineMessages({
   Default: {
     defaultMessage: 'Default',
@@ -56,7 +62,7 @@ const messages = defineMessages({
   },
 });
 
-const logoSchema = (props) => {
+const logoSchema = (props: BlockEditProps) => {
   const intl = props.intl;
   return {
     title: intl.formatMessage(messages.item),
@@ -101,15 +107,15 @@ const logoSchema = (props) => {
   };
 };
 
-const toggleIconField = (schema) => {
+const toggleIconField = (schema: logoSchemaProps) => {
   const cloned = cloneDeepSchema(schema);
   cloned.fieldsets[0].fields = [...cloned.fieldsets[0].fields];
-
   return cloned;
 };
 
-export const layoutSchema = (props) => {
+export const layoutSchema = (props: BlockEditProps) => {
   const intl = props.intl;
+
   return {
     title: intl.formatMessage(messages.logo),
     fieldsets: [

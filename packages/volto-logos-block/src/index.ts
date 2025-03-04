@@ -13,10 +13,10 @@ declare module '@plone/types' {
     logo: React.ComponentType<any>;
   }
   export interface WidgetsConfigByWidget {
-    blocksObjectWidget: React.FC<BlocksObjectWidgetProps>;
+    blocksObjectWidget: React.ComponentType<BlocksObjectWidgetProps>;
   }
   export interface WidgetsConfigByType {
-    addLogo: React.FC<BlocksObjectWidgetProps>;
+    addLogo: BlocksObjectWidgetProps;
   }
 }
 

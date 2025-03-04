@@ -3,12 +3,14 @@ import { Message } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import isEmpty from 'lodash/isEmpty';
+
 import type { BlockViewProps } from '@plone/types';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Container } from '@plone/components';
 import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import type { logoData } from '@kitconcept/volto-logos-block/components/Edit';
+
 const messages = defineMessages({
   PleaseChooseLogo: {
     id: 'Please choose a logo as source for this element',
