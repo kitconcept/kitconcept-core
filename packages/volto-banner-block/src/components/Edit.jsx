@@ -31,24 +31,8 @@ const Edit = (props) => {
     [onChangeBlock, block, data],
   );
 
-  const handleEnterKey = (e, index) => {
-    const isMultipleSelection = e.shiftKey;
-    if (e.key === 'Enter' && !disableEnter && !isMultipleSelection) {
-      if (!disableAddBlockOnEnterKey) {
-        onSelectBlock(onAddBlock(config.settings.defaultBlockType, index + 1));
-      }
-      e.preventDefault();
-    }
-  };
-
   return (
-    <div
-      className="block banner"
-      role="presentation"
-      onKeyDown={(e) =>
-        handleEnterKey(e, props.index, props.id, props.blockNode.current)
-      }
-    >
+    <>
       {data.url ? (
         <View {...props} isEditMode />
       ) : (
@@ -67,7 +51,7 @@ const Edit = (props) => {
           onChangeBlock={onChangeBlock}
         />
       </SidebarPortal>
-    </div>
+    </>
   );
 };
 

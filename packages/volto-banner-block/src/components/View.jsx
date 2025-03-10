@@ -1,14 +1,22 @@
+import MaybeWrap from '@plone/volto/components/manage/MaybeWrap/MaybeWrap';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
 import cx from 'classnames';
 import React from 'react';
 
+const LegacyWrapper = (props) => (
+  <div className={cx('block banner', props.className)} style={props.style}>
+    {props.children}
+  </div>
+);
+
 const View = (props) => {
-  const { className, data } = props;
+  const { data, blocksConfig } = props;
+  const isBlockModelv3 = blocksConfig?.banner?.blockModel === 3;
   const Image = config.getComponent({ name: 'Image' }).component;
 
   return (
-    <div className={cx('block banner', className)}>
+    <MaybeWrap {...props} condition={!isBlockModelv3} as={LegacyWrapper}>
       {data.url && (
         <>
           <Image
@@ -23,7 +31,7 @@ const View = (props) => {
           </div>
         </>
       )}
-    </div>
+    </MaybeWrap>
   );
 };
 
