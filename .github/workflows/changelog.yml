@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  NODE_VERSION: 20.x
+  NODE_VERSION: 22.x
   ADDON_NAME: volto-banner-block
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Enable corepack
-        run: npm i -g corepack@latest && corepack enable
+        run: corepack enable
 
       - name: Get pnpm store directory
         shell: bash
@@ -51,7 +51,7 @@ jobs:
           # Fetch the pull request' base branch so towncrier will be able to
           # compare the current branch with the base branch.
           # Source: https://github.com/actions/checkout/#fetch-all-branches.
-          git fetch --no-tags origin ${BASE_BRANCH}
+          git fetch --no-tags origin main
           towncrier check --dir packages/${ADDON_NAME}
         env:
           BASE_BRANCH: ${{ github.base_ref }}
