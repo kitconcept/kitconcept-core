@@ -1,23 +1,13 @@
 import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
 import { ImageInput } from '@plone/volto/components/manage/Widgets/ImageWidget';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
-import config from '@plone/volto/registry';
 import React from 'react';
 
 import BannerSidebar from '@kitconcept/volto-banner-block/components/Data';
 import View from '@kitconcept/volto-banner-block/components/View';
 
 const Edit = (props) => {
-  const {
-    data,
-    block,
-    onChangeBlock,
-    selected,
-    disableAddBlockOnEnterKey,
-    onSelectBlock,
-    onAddBlock,
-    disableEnter = false,
-  } = props;
+  const { data, block, onChangeBlock, selected } = props;
 
   const handleChange = React.useCallback(
     async (id, image) => {
