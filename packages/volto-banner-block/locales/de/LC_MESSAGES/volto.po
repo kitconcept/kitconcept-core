@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: de\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr "Alternativtext"
+
+#. Default: "Banner"
+#: components/Data
+#: components/schema
+msgid "Banner"
+msgstr "Banner"
+
+#. Default: "Banner preview"
+#: components/Data
+msgid "Banner preview"
+msgstr "Banner Vorschau"
+
+#. Default: "Clear block"
+#: components/Data
+msgid "Clear block"
+msgstr "Block zurücksetzen"
+
+#. Default: "Describe the purpose of the image."
+#: components/schema
+msgid "Describe the purpose of the image."
+msgstr "Beschreiben Sie den Zweck des Bildes."
+
+#. Default: "Leave empty if the image is purely decorative."
+#: components/schema
+msgid "Leave empty if the image is purely decorative."
+msgstr "Lassen Sie das Feld leer, wenn das Bild rein dekorativ ist."
+
+#. Default: "Line 1"
+#: components/schema
+msgid "Line 1"
+msgstr "Linie 1"
+
+#. Default: "Line 2"
+#: components/schema
+msgid "Line 2"
+msgstr "Linie 2"
+
+#. Default: "No image selected"
+#: components/Data
+msgid "No image selected"
+msgstr "Kein Bild ausgewählt"
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr "In neuem Tab öffnen"

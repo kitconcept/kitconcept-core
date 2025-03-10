@@ -5,7 +5,10 @@
 [![Build Status](https://github.com/kitconcept/volto-banner-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-banner-block/actions)
 [![Build Status](https://github.com/kitconcept/volto-banner-block/actions/workflows/acceptance.yml/badge.svg)](https://github.com/kitconcept/volto-banner-block/actions)
 
-<img alt="kitconcept GmbH" width="200px" src="https://kitconcept.com/logo.svg">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
 
 The Volto Banner Block allows editors to add a banner with text to a Volto page.
 
