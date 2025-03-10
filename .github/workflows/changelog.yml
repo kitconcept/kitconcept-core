@@ -51,7 +51,7 @@ jobs:
           # Fetch the pull request' base branch so towncrier will be able to
           # compare the current branch with the base branch.
           # Source: https://github.com/actions/checkout/#fetch-all-branches.
-          git fetch --no-tags origin ${BASE_BRANCH}
+          git fetch --no-tags origin main
           towncrier check --dir packages/${ADDON_NAME}
         env:
           BASE_BRANCH: ${{ github.base_ref }}
