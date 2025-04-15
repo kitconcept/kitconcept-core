@@ -1,0 +1,8 @@
+The data structure of the block now uses a simple array of objects.
+This package has a hard depenency on `@kitconcept/volto-light-theme`.
+The block matches the Logos Footer feature of `@kitconcept/volto-light-theme`. @Tishasoumya-02 @sneridagh
+
+Breaking:
+
+The data structure in versions <=2.x.x was using the usual blocks in block data structure (`blocks`/`blocks_layout`).
+The data structure in version 3.x.x is using a simpler arrayed `object_list` widget data structure.
