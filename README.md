@@ -1,6 +1,6 @@
 # Volto Logos Block (@kitconcept/volto-logos-block)
 
-A logos block for volto
+A logos block for Volto
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-logos-block)](https://www.npmjs.com/package/@kitconcept/volto-logos-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-logos-block/)
@@ -13,61 +13,42 @@ A logos block for volto
   <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
 </picture>
 
-The Volto Logos Block allows editors to add a row of up to 4 logos to a Volto page. 
+The Volto Logos Block allows editors to add a row of up to 6 logos to a page. The logos are displayed in a responsive grid layout, automatically adjusting the number of logos per row based on the available space. This block is designed to be flexible and easy to use, making it a great addition to any Volto project.
 
-## Screenshot
+The logos block matches the style of the existing Logos footer slot in VLT 6.
 
-![Screenshot 2023-12-05 at 15-28-43 Logos Test](https://github.com/kitconcept/volto-logos-block/assets/44289551/751d347e-afa0-4358-9797-21a785e0a480)
+> [!WARNING]
+> This package depends on `@kitconcept/volto-light-theme` and Volto 18 or later.
+> It could be used without it, but you would have to provide your own block's view component and the logos container styling.
 
-## Screencast 
-
-Coming soon...
 
 ## Features
 
    - 	Flexible Logo Display – Supports adding logos and automatically adjusting based on available space.
    -    Responsive Layout – Adapts dynamically to different screen sizes to ensure logos are displayed optimally.
-   -    Seamless Volto Integration – Works smoothly within existing Volto projects
-	
+   -    Seamless Volto Integration – Works smoothly within existing Volto using VLT projects
+
+## Compatibility
+
+From version 3.x.x this add-on requires `@kitconcept/volto-light-theme` and Volto 18 or later.
+There is also a hard breaking in the data stored in the block.
+No migration is provided, so you have to remove the block and add it again or provide your own migration.
+
+The data structure in versions <=2.x.x was using the usual blocks in block data structure (`blocks`/`blocks_layout`).
+
+The data structure in version 3.x.x is using a simpler arrayed `object_list` widget data structure.
+
+This is the compatibility matrix.
+
+| volto-logos-block version | Volto version | VLT version  |
+|---------------------------|---------------|--------------|
+| 2.x.x                     |  17, 18       | Not required |
+| 3.x.x                     |  18           | 6.x.x        |
+
 
 ## Installation
 
 To install your project, you must choose the method appropriate to your version of Volto.
-
-
-### Volto 17 and earlier
-
-Create a new Volto project (you can skip this step if you already have one):
-
-```
-npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon @kitconcept/volto-logos-block
-cd my-volto-project
-```
-
-Add `@kitconcept/volto-logos-block` to your package.json:
-
-```JSON
-"addons": [
-    "@kitconcept/volto-logos-block"
-],
-
-"dependencies": {
-    "@kitconcept/volto-logos-block": "*"
-}
-```
-
-Download and install the new add-on by running:
-
-```
-yarn install
-```
-
-Start volto with:
-
-```
-yarn start
-```
 
 ### Volto 18 and later
 
