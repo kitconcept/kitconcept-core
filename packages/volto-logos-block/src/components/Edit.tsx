@@ -1,58 +1,38 @@
 import React from 'react';
-
-import type { BlockEditProps } from '@plone/types';
+import { defineMessages, useIntl } from 'react-intl';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import { BlockDataForm } from '@plone/volto/components/manage/Form';
+import { LogosBlockSchema } from './schema';
 import View from './View';
-import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
-import { layoutSchema } from './schema';
+import type { BlockEditProps } from '@plone/types';
+import imageBlockSVG from '@plone/volto/components/manage/Blocks/Image/block-image.svg';
 
-interface logosEditProps extends BlockEditProps {
-  '@type': string;
-  data: logoData;
-  block: string;
-  onChangeBlock: (blockId: string, newData: logoData) => void;
-  selected: boolean;
-}
-export type logoData = {
-  data: {
-    blocks: logoBlock;
-    blocks_layout: {
-      items: string[];
-    };
-  };
-  logo_size: string;
-  logo_width: string;
-};
-type logoBlock = {
-  alt: string;
-  href: link[];
-  logo: Logo[];
-  openLinkInNewTab: boolean;
-};
-type link = {
-  '@id': string;
-  Description: string;
-  Title: string;
-};
-type Logo = {
-  '@id': string;
-  '@type': string;
-  Description: string;
-  Title: string;
-  image_field: string;
-};
+const messages = defineMessages({
+  PleaseChooseLogo: {
+    id: 'Please set logos as source for this block',
+    defaultMessage: 'Please set logos as source for this block',
+  },
+});
 
-const Edit = (props: logosEditProps) => {
+const Edit = (props: BlockEditProps) => {
   const { data, block, onChangeBlock, selected } = props;
-
+  const intl = useIntl();
   return (
     <>
-      <View {...props} isEditMode />
+      <View {...props} />
+      {(!data?.logos || data.logos?.length === 0) && (
+        <div className="grid-teaser-item default">
+          <img src={imageBlockSVG} alt="" />
+          <p>{intl.formatMessage(messages.PleaseChooseLogo)}</p>
+        </div>
+      )}
+      {/* @ts-ignore */}
       <SidebarPortal selected={selected}>
         <BlockDataForm
           {...props}
           data={data}
           block={block}
-          schema={layoutSchema(props)}
+          schema={LogosBlockSchema({ props, intl })}
           onChangeBlock={onChangeBlock}
           formData={data}
           onChangeField={(id: string, value: any) => {

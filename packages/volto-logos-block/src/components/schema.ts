@@ -1,17 +1,7 @@
-import { cloneDeepSchema } from '@plone/volto/helpers/Utils/Utils';
-import { defineMessages } from 'react-intl';
-
-import type { BlockEditProps, JSONSchema } from '@plone/types';
-
-interface logoSchemaProps extends JSONSchema {
-  addMessage: string;
-}
+import { type IntlShape, defineMessages } from 'react-intl';
+import type { BlockEditProps } from '@plone/types';
 
 const messages = defineMessages({
-  Default: {
-    defaultMessage: 'Default',
-    id: 'default',
-  },
   Small: {
     id: 'small',
     defaultMessage: 'Small',
@@ -20,57 +10,78 @@ const messages = defineMessages({
     id: 'large',
     defaultMessage: 'Large',
   },
-  Description: {
-    id: 'description',
-    defaultMessage: 'Description',
+  logos: {
+    id: 'Logos',
+    defaultMessage: 'Logos',
   },
-  openLinkInNewTab: {
-    id: 'Open in a new tab',
-    defaultMessage: 'Open in a new tab',
+  logosSize: {
+    id: 'Logos Size',
+    defaultMessage: 'Logos Size',
   },
-  title: {
-    id: 'Title',
-    defaultMessage: 'Title',
-  },
-  item: {
-    id: 'Item',
-    defaultMessage: 'Item',
-  },
-  addLogo: {
-    id: 'Add logo',
-    defaultMessage: 'Add logo',
-  },
-  logo: {
-    id: 'Logo image',
-    defaultMessage: 'Logo',
-  },
-  AltText: {
-    id: 'Alt text',
-    defaultMessage: 'Alt text',
+  logosContainerWidth: {
+    id: 'Logos Container Width',
+    defaultMessage: 'Logos Container Width',
   },
   Target: {
     id: 'Target',
     defaultMessage: 'Target',
   },
-  logo_size: {
-    id: 'logo_size',
-    defaultMessage: 'Size',
+  title: {
+    id: 'Title',
+    defaultMessage: 'Title',
   },
-  width: {
-    id: 'width',
-    defaultMessage: 'Container Width',
+  AltText: {
+    id: 'Alt text',
+    defaultMessage: 'Alt text',
+  },
+  description: {
+    id: 'Description',
+    defaultMessage: 'Description',
+  },
+  logo: {
+    id: 'Logo image',
+    defaultMessage: 'Logo image',
+  },
+  item: {
+    id: 'Logo',
+    defaultMessage: 'Logo',
+  },
+  addLogo: {
+    id: 'Add logo',
+    defaultMessage: 'Add logo',
+  },
+  headline: {
+    id: 'Headline',
+    defaultMessage: 'Headline',
+  },
+  hideDescription: {
+    id: 'Hide description',
+    defaultMessage: 'Hide description',
+  },
+  settings: {
+    id: 'Settings',
+    defaultMessage: 'Settings',
+  },
+  openLinkInNewTab: {
+    id: 'Open in a new tab',
+    defaultMessage: 'Open in a new tab',
   },
 });
 
-const logoSchema = (props: BlockEditProps) => {
-  const intl = props.intl;
+const logoSchema = ({
+  props,
+  intl,
+}: {
+  props: BlockEditProps;
+  intl: IntlShape;
+}) => {
   return {
     title: intl.formatMessage(messages.item),
     addMessage: intl.formatMessage(messages.addLogo),
     fieldsets: [
       {
         id: 'default',
-        title: intl.formatMessage(messages.Default),
+        title: 'Default',
         fields: ['logo', 'alt', 'href', 'openLinkInNewTab'],
       },
     ],
@@ -107,35 +118,33 @@ const logoSchema = (props: BlockEditProps) => {
   };
 };
 
-const toggleIconField = (schema: logoSchemaProps) => {
-  const cloned = cloneDeepSchema(schema);
-  cloned.fieldsets[0].fields = [...cloned.fieldsets[0].fields];
-  return cloned;
-};
-
-export const layoutSchema = (props: BlockEditProps) => {
-  const intl = props.intl;
-
+export const LogosBlockSchema = ({
+  props,
+  intl,
+}: {
+  props: BlockEditProps;
+  intl: IntlShape;
+}) => {
   return {
-    title: intl.formatMessage(messages.logo),
+    title: intl.formatMessage(messages.logos),
     fieldsets: [
       {
         id: 'default',
-        title: intl.formatMessage(messages.Default),
-        fields: ['logo_size', 'logo_width', 'data'],
+        title: 'Default',
+        fields: ['logos', 'logos_size', 'logos_container_width'],
       },
     ],
     properties: {
-      data: {
-        title: intl.formatMessage(messages.logo),
-        type: 'addLogo',
-        schema: logoSchema(props),
-        schemaExtender: toggleIconField,
+      logos: {
+        title: intl.formatMessage(messages.logos),
+        widget: 'object_list',
+        schema: logoSchema({ props, intl }),
+        default: [],
       },
 
-      logo_size: {
-        title: intl.formatMessage(messages.logo_size),
-        widget: 'sizeWidget',
+      logos_size: {
+        title: intl.formatMessage(messages.logosSize),
+        widget: 'size',
         default: 's',
         actions: [
           {
@@ -148,8 +157,8 @@ export const layoutSchema = (props: BlockEditProps) => {
           },
         ],
       },
-      logo_width: {
-        title: intl.formatMessage(messages.width),
+      logos_container_width: {
+        title: intl.formatMessage(messages.logosContainerWidth),
         widget: 'blockWidth',
         default: 'default',
         actions: [
@@ -164,6 +173,6 @@ export const layoutSchema = (props: BlockEditProps) => {
         ],
       },
     },
-    required: ['data'],
+    required: ['logos'],
   };
 };

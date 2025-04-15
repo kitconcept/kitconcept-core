@@ -35,25 +35,11 @@
     "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
     "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook"
   },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "useTabs": false,
-    "overrides": [
-      {
-        "files": "*.overrides",
-        "options": {
-          "parser": "less"
-        }
-      }
-    ]
-  },
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@plone/types": "workspace:*",
-    "@plone/components": "workspace:^",
-    "@kitconcept/volto-logos-block": "workspace:*"
+    "@kitconcept/volto-logos-block": "workspace:*",
+    "@kitconcept/volto-light-theme": "^6.0.0-alpha.21"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
