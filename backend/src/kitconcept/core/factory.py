@@ -112,43 +112,37 @@ class HiddenProfiles:
 
 @implementer(IAddonList)
 class LocalAddonList:
-    addon_list: AddonList = AddonList(
-        [
-            Addon(profile_id="Products.CMFEditions:CMFEditions"),
-            Addon(
-                profile_id="Products.CMFPlacefulWorkflow:CMFPlacefulWorkflow",
-                check_module="Products.CMFPlacefulWorkflow",
-            ),
-            Addon(profile_id="Products.PlonePAS:PlonePAS"),
-            Addon(
-                profile_id="plone.app.caching:default", check_module="plone.app.caching"
-            ),
-            Addon(profile_id="plone.app.contenttypes:default"),
-            Addon(profile_id="plone.app.dexterity:default"),
-            Addon(
-                profile_id="plone.app.discussion:default",
-                check_module="plone.app.discussion",
-            ),
-            Addon(profile_id="plone.app.event:default"),
-            Addon(
-                profile_id="plone.app.iterate:default", check_module="plone.app.iterate"
-            ),
-            Addon(
-                profile_id="plone.app.multilingual:default",
-                check_module="plone.app.multilingual",
-            ),
-            Addon(profile_id="plone.app.querystring:default"),
-            Addon(profile_id="plone.app.theming:default"),
-            Addon(profile_id="plone.app.users:default"),
-            Addon(profile_id="plone.restapi:default"),
-            Addon(profile_id="plone.session:default"),
-            Addon(profile_id="plone.staticresources:default"),
-            Addon(profile_id="plone.volto:default"),
-            Addon(profile_id="plonetheme.barceloneta:default"),
-            Addon(profile_id="kitconcept.voltolighttheme:default"),
-            Addon(profile_id="plonegovbr.socialmedia:default"),
-        ]
-    )
+    addon_list: AddonList = AddonList([
+        Addon(profile_id="Products.CMFEditions:CMFEditions"),
+        Addon(
+            profile_id="Products.CMFPlacefulWorkflow:CMFPlacefulWorkflow",
+            check_module="Products.CMFPlacefulWorkflow",
+        ),
+        Addon(profile_id="Products.PlonePAS:PlonePAS"),
+        Addon(profile_id="plone.app.caching:default", check_module="plone.app.caching"),
+        Addon(profile_id="plone.app.contenttypes:default"),
+        Addon(profile_id="plone.app.dexterity:default"),
+        Addon(
+            profile_id="plone.app.discussion:default",
+            check_module="plone.app.discussion",
+        ),
+        Addon(profile_id="plone.app.event:default"),
+        Addon(profile_id="plone.app.iterate:default", check_module="plone.app.iterate"),
+        Addon(
+            profile_id="plone.app.multilingual:default",
+            check_module="plone.app.multilingual",
+        ),
+        Addon(profile_id="plone.app.querystring:default"),
+        Addon(profile_id="plone.app.theming:default"),
+        Addon(profile_id="plone.app.users:default"),
+        Addon(profile_id="plone.restapi:default"),
+        Addon(profile_id="plone.session:default"),
+        Addon(profile_id="plone.staticresources:default"),
+        Addon(profile_id="plone.volto:default"),
+        Addon(profile_id="plonetheme.barceloneta:default"),
+        Addon(profile_id="kitconcept.voltolighttheme:default"),
+        Addon(profile_id="plonegovbr.socialmedia:default"),
+    ])
 
 
 def add_site(
