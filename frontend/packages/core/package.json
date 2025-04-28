@@ -1,0 +1,58 @@
+{
+  "name": "@kitconcept/core",
+  "version": "1.0.0-alpha.0",
+  "description": "Core setup for kitconcept GmbH distributions built on top of Plone",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/kitconcept-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kitconcept/kitconcept-core"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "addons": [
+    "@eeacms/volto-accordion-block",
+    "@kitconcept/volto-banner-block",
+    "@kitconcept/volto-button-block",
+    "@kitconcept/volto-heading-block",
+    "@kitconcept/volto-highlight-block",
+    "@kitconcept/volto-introduction-block",
+    "@kitconcept/volto-separator-block",
+    "@kitconcept/volto-slider-block",
+    "@mbarde/volto-image-crop-widget",
+    "@plonegovbr/volto-social-media",
+    "@kitconcept/volto-light-theme"
+  ],
+  "dependencies": {
+    "@plone/components": "workspace:*",
+    "@kitconcept/volto-light-theme": "6.0.0-alpha.21",
+    "@mbarde/volto-image-crop-widget": "^0.5.1",
+    "@plonegovbr/volto-social-media": "^2.0.0-alpha.4",
+    "@kitconcept/volto-banner-block": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/types": "workspace:*",
+    "@plone/scripts": "^3.6.1",
+    "release-it": "^17.1.1"
+  }
+}

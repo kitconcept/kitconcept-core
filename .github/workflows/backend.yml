@@ -1,0 +1,87 @@
+name: Backend CI
+
+on:
+  workflow_call:
+    inputs:
+      base-tag:
+        required: true
+        type: string
+      image-name-prefix:
+        required: true
+        type: string
+      python-version:
+        required: true
+        type: string
+      plone-version:
+        required: true
+        type: string
+      kc-version:
+        required: true
+        type: string
+      working-directory:
+        required: false
+        type: string
+        default: backend
+
+defaults:
+  run:
+    working-directory: backend
+
+jobs:
+
+  lint:
+    name: "Backend: Lint"
+    uses: plone/meta/.github/workflows/backend-lint.yml@2.x
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.plone-version }}
+      working-directory: ${{ inputs.working-directory }}
+
+  test:
+    name: "Backend: Test"
+    uses: plone/meta/.github/workflows/backend-pytest.yml@2.x
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.plone-version }}
+      working-directory: ${{ inputs.working-directory }}
+
+  coverage:
+    name: "Backend: Coverage"
+    uses: plone/meta/.github/workflows/backend-pytest-coverage.yml@2.x
+    needs:
+      - test
+    with:
+      python-version: ${{ inputs.python-version }}
+      plone-version: ${{ inputs.plone-version }}
+      working-directory: ${{ inputs.working-directory }}
+
+
+  release:
+    name: "Backend: Build and publish Container Images"
+    uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
+    needs:
+      - lint
+      - coverage
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image-name-suffix: "builder"
+            dockerfile: "Dockerfile.builder"
+          - image-name-suffix: "prod"
+            dockerfile: "Dockerfile.prod"
+    permissions:
+      contents: read
+      packages: write
+    with:
+      base-tag: ${{ inputs.base-tag }}
+      image-name-prefix: ${{ inputs.image-name-prefix }}
+      image-name-suffix: ${{ matrix.image-name-suffix }}
+      working-directory: ${{ inputs.working-directory }}
+      dockerfile: ${{ matrix.dockerfile }}
+      build-args: |
+        KC_VERSION=${{ inputs.kc-version }}
+      push: ${{ github.event_name != 'pull_request' }}
+    secrets:
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}

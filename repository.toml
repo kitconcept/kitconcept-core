@@ -1,0 +1,37 @@
+[repository]
+name = "kitconcept-core"
+managed_by_uv = true
+changelog = "CHANGELOG.md"
+version = "version.txt"
+compose = "docker-compose.yml"
+
+[repository.towncrier]
+section = "Project"
+settings = "towncrier.toml"
+
+[backend]
+path = "backend"
+
+[backend.package]
+name = "kitconcept.core"
+path = "backend"
+changelog = "backend/CHANGELOG.md"
+towncrier_settings = "backend/pyproject.toml"
+base_package = "Products.CMFPlone"
+publish = true
+
+[frontend]
+path = "frontend"
+
+[frontend.package]
+name = "core"
+path = "frontend/packages/core"
+changelog = "frontend/packages/core/CHANGELOG.md"
+towncrier_settings = "frontend/packages/core/towncrier.toml"
+base_package = "@plone/volto"
+publish = true
+
+[cookieplone]
+template = "project"
+template_version = "0beeb9f07d04cdd732c487422c94ed975b73507d"
+generated_date = "2025-04-28 14:50:10"
