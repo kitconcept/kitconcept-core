@@ -1,9 +1,7 @@
 # kitconcept.core 🚀
 
 [![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookieplone-templates/)
-[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Backend Tests](https://github.com/kitconcept/kitconcept-core/actions/workflows/backend.yml/badge.svg)](https://github.com/kitconcept/kitconcept-core/actions/workflows/backend.yml)
-[![Frontend Tests](https://github.com/kitconcept/kitconcept-core/actions/workflows/frontend.yml/badge.svg)](https://github.com/kitconcept/kitconcept-core/actions/workflows/frontend.yml)
+[![CI](https://github.com/kitconcept/kitconcept-core/actions/workflows/main.yml/badge.svg)](https://github.com/kitconcept/kitconcept-core/actions/workflows/main.yml)
 
 Core setup for kitconcept GmbH distributions built on top of Plone
 
