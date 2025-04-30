@@ -8,6 +8,19 @@
 
 <!-- towncrier release notes start -->
 
+## 3.0.0-alpha.0 (2025-04-30)
+
+### Breaking
+
+- The data structure of the block now uses a simple array of objects.
+  This package has a hard depenency on `@kitconcept/volto-light-theme`.
+  The block matches the Logos Footer feature of `@kitconcept/volto-light-theme`. @Tishasoumya-02 @sneridagh
+
+  Breaking:
+
+  The data structure in versions <=2.x.x was using the usual blocks in block data structure (`blocks`/`blocks_layout`).
+  The data structure in version 3.x.x is using a simpler arrayed `object_list` widget data structure. [#29](https://github.com/kitconcept/volto-logos-block/issue/29)
+
 ## 2.0.0-alpha.1 (2024-01-23)
 
 ### Bugfix
