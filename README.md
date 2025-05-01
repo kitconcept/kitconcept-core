@@ -1,6 +1,6 @@
 # volto-bm3-compat (@kitconcept/volto-bm3-compat)
 
-A new add-on for Volto
+Add-on for the Volto block model 3 compatibility
 
 [![npm](https://img.shields.io/npm/v/@kitconcept/volto-bm3-compat)](https://www.npmjs.com/package/@kitconcept/volto-bm3-compat)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://collective.github.io/volto-bm3-compat/)
@@ -9,7 +9,53 @@ A new add-on for Volto
 
 ## Features
 
-<!-- List your awesome features here -->
+This add-on provides a set of features to make the Volto block model 3 compatible with the Plone 6.0+ backend.
+
+## Usage
+
+Add this wrapper to the view of your block:
+
+```tsx
+import BlockWrapper from '@kitconcept/volto-bm3-compat/components/BlockWrapper/BlockWrapper';
+
+const MyBlockView = (props) => {
+  return (
+    <BlockWrapper {...props}>
+      <div>My block content</div>
+    </BlockWrapper>
+  );
+};
+
+export default MyBlockView;
+```
+
+It will add the usual `div` with the classNames `block` and the id of the block (e.g. `highlight`) for you.
+You can also pass additional `className` prop to add your own classNames to the block.
+
+If you add the `blockModel` key to your block configuration to 3, it will assume that you want to use the new block model so the block engine will take care of the rest.
+It won't add the `div` wrapper and function in full block model 3 mode.
+
+### `ExtraWrapper` prop
+
+You can also pass an `ExtraWrapper` prop to the `BlockWrapper` component.
+This prop is a function that takes the block's props and returns a React component.
+There are use cases in pre-blockModel 3 scenarios where an extra container is needed.
+This allows you to wrap your block in an additional component, where you define that extra container or also can be useful for adding extra functionality or styling.
+If the blockModel is set to 3, then the `ExtraWrapper` prop will be ignored, same as the blockModel 2 wrapper.
+
+```tsx
+import BlockWrapper from '@kitconcept/volto-bm3-compat/components/BlockWrapper/BlockWrapper';
+
+const MyBlockView = (props) => {
+  return (
+    <BlockWrapper {...props}>
+      <div>My block content</div>
+    </BlockWrapper>
+  );
+};
+
+export default MyBlockView;
+```
 
 ## Installation
 

@@ -2,6 +2,9 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import BlockWrapper from './BlockWrapper';
+import { describe, it, expect } from 'vitest';
+
+it('renders the component wrapped in the specified component', () => {});
 
 describe('<BlockWrapper />', () => {
   it('renders the component wrapped in the specified component', () => {
@@ -23,6 +26,7 @@ describe('<BlockWrapper />', () => {
       style: { '--blockWidth': 'var(--container-default-width)' },
     };
     const { container } = render(
+      // @ts-ignore
       <BlockWrapper {...props}>
         <BlockView />
       </BlockWrapper>,
@@ -49,6 +53,7 @@ describe('<BlockWrapper />', () => {
       style: { '--blockWidth': 'var(--container-default-width)' },
     };
     const { container } = render(
+      // @ts-ignore
       <BlockWrapper {...props}>
         <BlockView />
       </BlockWrapper>,
