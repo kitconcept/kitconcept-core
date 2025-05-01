@@ -46,9 +46,19 @@ If the blockModel is set to 3, then the `ExtraWrapper` prop will be ignored, sam
 ```tsx
 import BlockWrapper from '@kitconcept/volto-bm3-compat/components/BlockWrapper/BlockWrapper';
 
+const ExtraWrapper = (props) => {
+  return (
+    <div className="button container">
+      <div className={cx('align', props.data?.inneralign)}>
+        {props.children}
+      </div>
+    </div>
+  );
+};
+
 const MyBlockView = (props) => {
   return (
-    <BlockWrapper {...props}>
+    <BlockWrapper {...props} ExtraWrapper={ExtraWrapper}>
       <div>My block content</div>
     </BlockWrapper>
   );
