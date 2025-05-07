@@ -37,13 +37,17 @@
     "@kitconcept/volto-slider-block",
     "@mbarde/volto-image-crop-widget",
     "@plonegovbr/volto-social-media",
+    "@plone-collective/volto-authomatic",
+    "volto-form-block",
     "@kitconcept/volto-light-theme"
   ],
   "dependencies": {
     "@plone/components": "workspace:*",
-    "@kitconcept/volto-light-theme": "6.0.0-alpha.21",
+    "@plone-collective/volto-authomatic": "3.0.0-alpha.1",
+    "@kitconcept/volto-light-theme": "6.0.0-alpha.24",
     "@mbarde/volto-image-crop-widget": "^0.5.1",
-    "@plonegovbr/volto-social-media": "^2.0.0-alpha.4",
+    "@plonegovbr/volto-social-media": "^2.0.0-alpha.5",
+    "volto-form-block": "^3.12.0",
     "@kitconcept/volto-banner-block": "^1.0.1"
   },
   "peerDependencies": {

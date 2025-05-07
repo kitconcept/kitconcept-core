@@ -96,6 +96,7 @@ _PLONE_PROFILES = [
     "plone.volto:default",
     "kitconcept.voltolighttheme:default",
     "kitconcept.voltolighttheme:demo",
+    "collective.volto.formsupport:default",
     "plonegovbr.socialmedia:demo",
 ]
 
@@ -141,6 +142,7 @@ class LocalAddonList:
         Addon(profile_id="plone.volto:default"),
         Addon(profile_id="plonetheme.barceloneta:default"),
         Addon(profile_id="kitconcept.voltolighttheme:default"),
+        Addon(profile_id="collective.volto.formsupport:default"),
         Addon(profile_id="plonegovbr.socialmedia:default"),
     ])
 

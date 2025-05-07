@@ -65,6 +65,7 @@ def import_final_steps(context: SetupTool):
         "plone.restapi",
         "plone.volto",
         "kitconcept.voltolighttheme",
+        "collective.volto.formsupport",
         "plonegovbr.socialmedia",
     ]
     for package in dependencies:

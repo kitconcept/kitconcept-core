@@ -29,6 +29,8 @@ dependencies = [
     "plone.restapi",
     "plone.volto",
     "kitconcept.voltolighttheme",
+    "collective.volto.formsupport==3.2.3",
+    "collective.honeypot",
     "plonegovbr.socialmedia",
 ]
 
@@ -55,6 +57,7 @@ test = [
     "pytest-cov",
     "pytest-plone>=1.0.0a1",
 ]
+
 [project.urls]
 Homepage = "https://github.com/kitconcept/kitconcept-core"
 PyPI = "https://pypi.org/project/kitconcept.core"
@@ -150,7 +153,7 @@ constraint-dependencies = [
     "jsonschema-specifications==2024.10.1",
     "jsonschema==4.23.0",
     "keyring==25.5.0",
-    "kitconcept.voltolighttheme==6.0.0a21",
+    "kitconcept.voltolighttheme==6.0.0a24",
     "legacy-cgi==2.6.2",
     "lockfile==0.12.2",
     "lxml-html-clean==0.4.1",
@@ -292,7 +295,7 @@ constraint-dependencies = [
     "plone.volto==5.0.4",
     "plone.z3cform==2.0.4",
     "Plone==6.1.1",
-    "plonegovbr.socialmedia==2.0.0a4",
+    "plonegovbr.socialmedia==2.0.0a5",
     "plonetheme.barceloneta==3.2.3",
     "pluggy==1.5.0",
     "Products.BTreeFolder2==5.1",
