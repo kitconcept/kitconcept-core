@@ -1,0 +1,1 @@
+Remove old portlets registration -- but keep portlet managers (as they are required by other packages). @ericof
