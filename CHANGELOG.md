@@ -7,6 +7,42 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a2 (2025-05-13)
+
+### Backend
+
+
+#### New features:
+
+- Upgrade plone.restapi to version 9.14.0 @ericof [#6](https://github.com/kitconcept/kitconcept-core/issues/6)
+
+
+#### Internal:
+
+- Remove old portlets registration -- but keep portlet managers (as they are required by other packages). @ericof [#3](https://github.com/kitconcept/kitconcept-core/issues/3)
+- Pin Python to version 3.12 in pyproject.toml. @ericof [#4](https://github.com/kitconcept/kitconcept-core/issues/4)
+
+
+
+### Frontend
+
+#### Feature
+
+- Upgrade @plone/volto to version 18.20.0. @ericof 
+
+#### Internal
+
+- Rename packages/core to packages/kitconcept-core to avoid confusion with Volto core checkout. @ericof [#5](https://github.com/kitconcept/kitconcept-core/issue/5)
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a1 (2025-05-09)
 
 ### Backend
