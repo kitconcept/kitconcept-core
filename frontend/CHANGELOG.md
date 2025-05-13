@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.2 (2025-05-13)
+
+### Feature
+
+- Upgrade @plone/volto to version 18.20.0. @ericof 
+
+### Internal
+
+- Rename packages/core to packages/kitconcept-core to avoid confusion with Volto core checkout. @ericof [#5](https://github.com/kitconcept/kitconcept-core/issue/5)
+
 ## 1.0.0-alpha.1 (2025-05-09)
 
 ### Feature
