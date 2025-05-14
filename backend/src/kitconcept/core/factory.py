@@ -1,3 +1,4 @@
+from kitconcept.core import CMF_DEPENDENCIES_PROFILE
 from kitconcept.core import DEFAULT_PROFILE
 from kitconcept.core import DEPENDENCIES_PROFILE
 from kitconcept.core import PACKAGE_NAME
@@ -108,7 +109,12 @@ class HiddenProfiles:
 
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
-        return [DEFAULT_PROFILE, DEPENDENCIES_PROFILE, *_PLONE_PROFILES]
+        return [
+            DEFAULT_PROFILE,
+            CMF_DEPENDENCIES_PROFILE,
+            DEPENDENCIES_PROFILE,
+            *_PLONE_PROFILES,
+        ]
 
 
 @implementer(IAddonList)

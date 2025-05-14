@@ -34,19 +34,17 @@ class TestCTPloneSite:
     @pytest.mark.parametrize(
         "name,expected",
         [
-            ("plone.dublincore", True),
+            ("plone.basic", True),
             ("plone.richtext", False),
             ("plone.relateditems", True),
             ("plone.locking", True),
-            ("plone.excludefromnavigation", True),
-            ("plone.tableofcontents", True),
             ("voltolighttheme.header", True),
             ("voltolighttheme.footer", True),
             ("kitconcept.footer", True),
             ("kitconcept.sticky_menu", True),
             ("plonegovbr.socialmedia.settings", True),
             ("volto.blocks", True),
-            ("volto.preview_image", True),
+            ("volto.preview_image_link", True),
         ],
     )
     def test_behavior(self, name: str, expected: bool):
