@@ -3,13 +3,8 @@ from plone.dexterity.fti import DexterityFTI
 import pytest
 
 
-@pytest.fixture(scope="class")
-def portal(portal_class):
-    yield portal_class
-
-
-class TestCTPloneSite:
-    portal_type: str = "Plone Site"
+class TestContentTypeFTI:
+    portal_type: str = "File"
 
     @pytest.fixture(autouse=True)
     def _setup(self, portal, get_fti):
@@ -19,9 +14,8 @@ class TestCTPloneSite:
     @pytest.mark.parametrize(
         "attr,expected",
         [
-            ("title", "Plone Site"),
-            ("klass", "Products.CMFPlone.Portal.PloneSite"),
-            ("global_allow", False),
+            ("title", "File"),
+            ("global_allow", True),
         ],
     )
     def test_fti(self, attr: str, expected):
@@ -34,17 +28,14 @@ class TestCTPloneSite:
     @pytest.mark.parametrize(
         "name,expected",
         [
-            ("plone.basic", True),
-            ("plone.richtext", False),
-            ("plone.relateditems", True),
-            ("plone.locking", True),
-            ("voltolighttheme.header", True),
-            ("voltolighttheme.footer", True),
-            ("kitconcept.footer", True),
-            ("kitconcept.sticky_menu", True),
-            ("plonegovbr.socialmedia.settings", True),
-            ("volto.blocks", True),
+            ("plone.categorization", True),
+            ("plone.publication", True),
+            ("plone.ownership", True),
             ("volto.preview_image_link", True),
+            ("volto.kicker", True),
+            ("plone.shortname", True),
+            ("plone.relateditems", True),
+            ("plone.namefromfilename", True),
         ],
     )
     def test_behavior(self, name: str, expected: bool):

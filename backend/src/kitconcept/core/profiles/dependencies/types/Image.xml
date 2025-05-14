@@ -12,7 +12,6 @@
     <element value="plone.ownership" />
     <element value="plone.shortname" />
     <element value="plone.relateditems" />
-
     <element value="plone.namefromfilename" />
   </property>
 

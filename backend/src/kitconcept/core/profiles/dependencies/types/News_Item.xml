@@ -17,7 +17,6 @@
     <element value="volto.navtitle" />
     <element value="plone.excludefromnavigation" />
     <element value="plone.relateditems" />
-
     <element value="volto.blocks" />
     <element value="plone.constraintypes" />
     <element value="plone.locking" />

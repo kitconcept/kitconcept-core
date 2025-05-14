@@ -13,7 +13,6 @@
     <element value="volto.kicker" />
     <element value="plone.shortname" />
     <element value="plone.relateditems" />
-
     <element value="plone.namefromfilename" />
   </property>
 

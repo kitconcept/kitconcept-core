@@ -15,7 +15,6 @@
     <element value="plone.shortname" />
     <element value="volto.navtitle" />
     <element value="plone.excludefromnavigation" />
-
     <element value="plone.namefromtitle" />
     <element value="plone.translatable" />
   </property>
