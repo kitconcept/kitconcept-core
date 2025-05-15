@@ -9,6 +9,7 @@ __version__ = "1.0.0a2"
 
 PACKAGE_NAME = "kitconcept.core"
 DEFAULT_PROFILE = f"{PACKAGE_NAME}:base"
+CMF_DEPENDENCIES_PROFILE = f"{PACKAGE_NAME}:cmfdependencies"
 DEPENDENCIES_PROFILE = f"{PACKAGE_NAME}:dependencies"
 
 _ = MessageFactory(PACKAGE_NAME)

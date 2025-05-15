@@ -19,6 +19,7 @@ class kitconceptFixture(PloneFixture):
     internal_packages: tuple[str] = (
         "plone.restapi",
         "plone.volto",
+        "kitconcept.core.testing",
     )
 
     @property
@@ -46,6 +47,7 @@ class kitconceptFixture(PloneFixture):
             title=PLONE_SITE_TITLE,
             setup_content=False,
             default_language=DEFAULT_LANGUAGE,
+            distribution="testing",
             extension_ids=self.extensionProfiles,
         )
         pas = app[PLONE_SITE_ID]["acl_users"]
