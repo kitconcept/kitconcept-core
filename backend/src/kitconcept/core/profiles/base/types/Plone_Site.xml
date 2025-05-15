@@ -33,21 +33,7 @@
   <!-- Enabled behaviors -->
   <property name="behaviors"
             purge="false"
-  >
-    <element value="voltolighttheme.header" />
-    <element value="voltolighttheme.theme" />
-    <element value="voltolighttheme.footer" />
-    <element value="kitconcept.footer" />
-    <element value="kitconcept.sticky_menu" />
-    <element value="plonegovbr.socialmedia.settings" />
-    <element value="plone.dublincore" />
-    <element value="plone.relateditems" />
-    <element value="plone.locking" />
-    <element value="plone.excludefromnavigation" />
-    <element value="plone.tableofcontents" />
-    <element value="volto.blocks" />
-    <element value="volto.preview_image" />
-  </property>
+  />
 
   <!-- View information -->
   <property name="add_view_expr">string:${folder_url}/addPlone Site</property>

@@ -56,20 +56,11 @@ def import_final_steps(context: SetupTool):
     # Set out default profile version.
     set_profile_version(profile)
 
-    # Install our core dependencies
-    gs.install_package(package_name, "dependencies")
+    # Install cmf dependencies
+    gs.install_package(package_name, "cmfdependencies")
 
-    # Then install our dependencies
-    dependencies = [
-        "plone.app.contenttypes",
-        "plone.restapi",
-        "plone.volto",
-        "kitconcept.voltolighttheme",
-        "collective.volto.formsupport",
-        "plonegovbr.socialmedia",
-    ]
-    for package in dependencies:
-        gs.install_package(package, "default")
+    # Install our dependencies
+    gs.install_package(package_name, "dependencies")
 
     setuphandlers.replace_local_role_manager(site)
     setuphandlers.addCacheHandlers(site)

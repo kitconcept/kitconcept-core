@@ -73,9 +73,9 @@ class TestSystemGet:
     @pytest.mark.parametrize(
         "key,expected",
         (
-            ("name", "volto"),
-            ("package_name", "plone.volto"),
-            ("title", "Plone Site (Volto)"),
+            ("name", "testing"),
+            ("package_name", "kitconcept.core.testing"),
+            ("title", "kitconcept.core"),
         ),
     )
     def test_distribution(self, key, expected):
