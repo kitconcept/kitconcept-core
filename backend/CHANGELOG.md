@@ -9,6 +9,22 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a3 (2025-05-15)
+
+
+### Internal:
+
+- Explicitly add all content types to our generic setup profile. @sneridagh 
+- Refactor site creation function to use three distinct profiles: base, cmfdependencies and dependencies. The later one is responsible for installing, on first run, the add-on dependencies for kitconcept.core. @ericof 
+- Upgrade kitconcept.voltolighttheme to version 6.0.1 @sneridagh 
+- Upgrade plone.volto to version 5.1.0 @ericof 
+
+
+### Tests
+
+- Add FTI tests for all content types. @ericof 
+- Create a testing distribution to be used in internal tests. @ericof 
+
 ## 1.0.0a2 (2025-05-13)
 
 
