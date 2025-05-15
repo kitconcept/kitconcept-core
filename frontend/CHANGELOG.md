@@ -8,6 +8,20 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.3 (2025-05-15)
+
+### Feature
+
+- Update @kitconcept/volto-light-theme to version 6.0.1 @sneridagh 
+
+### Bugfix
+
+- Set `config.settings.supportedLanguages` to 'en' and 'de'. @sneridagh 
+
+### Internal
+
+- Set `filterBlobs` to true in mrs.developer.json. @sneridagh 
+
 ## 1.0.0-alpha.2 (2025-05-13)
 
 ### Feature
