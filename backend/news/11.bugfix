@@ -1,1 +1,0 @@
-Fix migration tool exception access without a site hook being set. @ericof
