@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-bm3-compat-dev",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Add-on for the Volto block model 3 compatibility",
   "author": "Plone Community",
   "homepage": "https://github.com/collective/volto-bm3-compat",
