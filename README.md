@@ -1,3 +1,8 @@
+<picture>
+  <source align="right" width="200" media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
+  <img align="right" width="200" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
+</picture>
+
 # Volto Logos Block (@kitconcept/volto-logos-block)
 
 A logos block for Volto
@@ -6,12 +11,6 @@ A logos block for Volto
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-logos-block/)
 [![Code analysis checks](https://github.com/kitconcept/volto-logos-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-logos-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-logos-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-logos-block/actions/workflows/unit.yml)
-
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
-  <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
-</picture>
 
 The Volto Logos Block allows editors to add a row of up to 6 logos to a page. The logos are displayed in a responsive grid layout, automatically adjusting the number of logos per row based on the available space. This block is designed to be flexible and easy to use, making it a great addition to any Volto project.
 
