@@ -1,5 +1,6 @@
 from kitconcept.core import __version__
 from kitconcept.core.tools.migration import MigrationTool
+from zope.component.hooks import site
 
 import pytest
 
@@ -85,4 +86,25 @@ class TestMigrationToolVersions:
     def test_coreVersions_keys(self, key: str):
         """Test portal_migration.coreVersions."""
         info = self.tool.coreVersions()
+        assert key in info
+
+    @pytest.mark.parametrize(
+        "key",
+        [
+            "CMF",
+            "CMFPlone",
+            "Debug mode",
+            "PIL",
+            "Platform",
+            "Plone File System",
+            "Plone Instance",
+            "core",
+            "Python",
+            "Zope",
+        ],
+    )
+    def test_coreVersions_keys_without_site_hook(self, key: str):
+        """Test access to the tool without the site hook being set."""
+        with site(None):
+            info = self.tool.coreVersions()
         assert key in info

@@ -16,7 +16,6 @@ from Products.GenericSetup.tool import SetupTool
 from typing import Any
 from ZODB.POSException import ConflictError
 from zope.component import getUtility
-from zope.component.hooks import getSite
 from zope.interface import implementer
 
 import logging
@@ -54,10 +53,8 @@ class MigrationTool(BaseTool):
     package_name: str = ""
     security = ClassSecurityInfo()
 
-    @property
-    def setup(self) -> SetupTool:
-        site = getSite()
-        return getToolByName(site, "portal_setup")
+    def get_setup_tool(self) -> SetupTool:
+        return getToolByName(self, "portal_setup")
 
     @property
     def addon_list(self) -> AddonList:
@@ -74,7 +71,7 @@ class MigrationTool(BaseTool):
 
     def getInstanceVersion(self) -> str:
         # The version this instance of plone is on.
-        setup = self.setup
+        setup = self.get_setup_tool()
         version = setup.getLastVersionForProfile(self.profile)
         if isinstance(version, tuple):
             version = ".".join(version)
@@ -94,12 +91,12 @@ class MigrationTool(BaseTool):
         return version
 
     def setInstanceVersion(self, version: str) -> None:
-        setup = self.setup
+        setup = self.get_setup_tool()
         setup.setLastVersionForProfile(self.profile, version)
         self._version = False
 
     def getFileSystemVersion(self) -> str | None:
-        setup = self.setup
+        setup = self.get_setup_tool()
         try:
             return setup.getVersionForProfile(self.profile)
         except KeyError:
@@ -111,7 +108,7 @@ class MigrationTool(BaseTool):
         return package_version(self.package_name)
 
     def listUpgrades(self):
-        setup = self.setup
+        setup = self.get_setup_tool()
         fs_version = self.getFileSystemVersion()
         upgrades = setup.listUpgrades(self.profile, dest=fs_version)
         return upgrades
@@ -155,7 +152,7 @@ class MigrationTool(BaseTool):
     def _upgrade_run_steps(
         self, steps: list, logger: logging.Logger, swallow_errors: bool
     ) -> None:
-        setup = self.setup
+        setup = self.get_setup_tool()
         for step in steps:
             try:
                 step_title = step["title"]
