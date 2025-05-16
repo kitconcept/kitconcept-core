@@ -16,7 +16,7 @@ This add-on provides a set of features to make the Volto block model 3 compatibl
 Add this wrapper to the view of your block:
 
 ```tsx
-import BlockWrapper from '@kitconcept/volto-bm3-compat/components/BlockWrapper/BlockWrapper';
+import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 
 const MyBlockView = (props) => {
   return (
@@ -44,7 +44,7 @@ This allows you to wrap your block in an additional component, where you define 
 If the blockModel is set to 3, then the `ExtraWrapper` prop will be ignored, same as the blockModel 2 wrapper.
 
 ```tsx
-import BlockWrapper from '@kitconcept/volto-bm3-compat/components/BlockWrapper/BlockWrapper';
+import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 
 const ExtraWrapper = (props) => {
   return (
