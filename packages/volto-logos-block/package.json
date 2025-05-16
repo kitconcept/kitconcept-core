@@ -10,7 +10,7 @@
     "plone",
     "react"
   ],
-  "author": "kitconcept,  GmbH",
+  "author": "kitconcept, GmbH",
   "homepage": "https://github.com/kitconcept/volto-logos-block#readme",
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
   "devDependencies": {
     "@plone/types": "workspace:*",
     "@plone/scripts": "^3.6.1",
-    "release-it": "^17.1.1"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "release-it": "^19.0.2"
   }
 }
