@@ -5,6 +5,7 @@
     <dependency>profile-plone.app.contenttypes:default</dependency>
     <dependency>profile-plone.restapi:default</dependency>
     <dependency>profile-plone.volto:default</dependency>
+    <dependency>profile-collective.person:default</dependency>
     <dependency>profile-kitconcept.voltolighttheme:default</dependency>
     <dependency>profile-collective.volto.formsupport:default</dependency>
     <dependency>profile-plonegovbr.socialmedia:default</dependency>
