@@ -7,4 +7,13 @@ class JSONSummarySerializerMetadata:
     """Additional metadata to be exposed on listings."""
 
     def default_metadata_fields(self):
-        return {"image_field", "image_scales", "effective", "Subject"}
+        return {
+            "image_field",
+            "image_scales",
+            "effective",
+            "Subject",
+            "contact_email",
+            "contact_room",
+            "contact_phone",
+            "contact_building",
+        }
