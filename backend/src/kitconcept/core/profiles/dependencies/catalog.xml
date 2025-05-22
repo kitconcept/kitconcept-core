@@ -17,14 +17,14 @@
   </index>
   <column value="contact_room" />
 
-    <index meta_type="FieldIndex"
+  <index meta_type="FieldIndex"
          name="contact_email"
   >
     <indexed_attr value="contact_email" />
   </index>
   <column value="contact_email" />
 
-    <index meta_type="FieldIndex"
+  <index meta_type="FieldIndex"
          name="contact_phone"
   >
     <indexed_attr value="contact_phone" />
