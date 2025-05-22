@@ -41,8 +41,9 @@ class TestContentTypeFTI:
             ("plone.relateditems", True),
             ("volto.blocks", True),
             ("plone.constraintypes", True),
-            ("plone.locking", True),
             ("plone.namefromtitle", True),
+            ("plone.locking", True),
+            ("plone.versioning", True),
             ("plone.translatable", True),
         ],
     )

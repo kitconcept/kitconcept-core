@@ -35,6 +35,8 @@ class TestContentTypeFTI:
             ("plone.shortname", True),
             ("plone.relateditems", True),
             ("plone.namefromfilename", True),
+            ("plone.versioning", True),
+            ("plone.locking", True),
         ],
     )
     def test_behavior(self, name: str, expected: bool):

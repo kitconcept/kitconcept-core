@@ -50,6 +50,8 @@ class TestContentTypeFTI:
             ("plone.locking", True),
             ("plone.namefromtitle", True),
             ("plone.textindexer", True),
+            ("plone.versioning", True),
+            ("plone.locking", True),
             ("plone.translatable", True),
         ],
     )
