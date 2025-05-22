@@ -38,6 +38,8 @@ class TestContentTypeFTI:
             ("volto.navtitle", True),
             ("plone.excludefromnavigation", True),
             ("plone.namefromtitle", True),
+            ("plone.versioning", True),
+            ("plone.locking", True),
             ("plone.translatable", True),
         ],
     )
