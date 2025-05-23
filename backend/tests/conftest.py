@@ -12,11 +12,13 @@ pytest_plugins = ["pytest_plone"]
 
 
 globals().update(
-    fixtures_factory((
-        (ACCEPTANCE_TESTING, "acceptance"),
-        (FUNCTIONAL_TESTING, "functional"),
-        (INTEGRATION_TESTING, "integration"),
-    ))
+    fixtures_factory(
+        (
+            (ACCEPTANCE_TESTING, "acceptance"),
+            (FUNCTIONAL_TESTING, "functional"),
+            (INTEGRATION_TESTING, "integration"),
+        )
+    )
 )
 
 
@@ -33,7 +35,7 @@ def current_versions() -> CurrentVersions:
 
     return CurrentVersions(
         base="20250523001",
-        dependencies="20250523001",
+        dependencies="1000",
         package=__version__,
     )
 

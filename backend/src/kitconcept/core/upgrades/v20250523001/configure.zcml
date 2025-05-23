@@ -8,9 +8,14 @@
       source="1001"
       destination="20250523001"
       >
-    <genericsetup:upgradeStep
+    <genericsetup:upgradeDepends
         title="Install collective.person"
-        handler="kitconcept.core.upgrades.utils.null_upgrade_step"
+        import_profile="profile-collective.person:default"
+        />
+    <genericsetup:upgradeDepends
+        title="Add Person type. Complete the list behaviors in content types."
+        import_profile="profile-kitconcept.core:dependencies"
+        import_steps="catalog repositorytool typeinfo"
         />
   </genericsetup:upgradeSteps>
 
