@@ -1,17 +1,9 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    >
+<configure xmlns="http://namespaces.zope.org/zope">
 
-  <genericsetup:upgradeSteps
-      profile="kitconcept.core:default"
-      source="1000"
-      destination="20250523001"
-      >
-    <genericsetup:upgradeDepends
-        title="Add Person type. Complete the list behaviors in content types."
-        import_steps="catalog repositorytool typeinfo"
-        />
-  </genericsetup:upgradeSteps>
+  <!-- Upgrades to the base profile -->
+  <include package=".base" />
+
+  <!-- Upgrades to the dependencies profile -->
+  <include package=".dependencies" />
 
 </configure>
