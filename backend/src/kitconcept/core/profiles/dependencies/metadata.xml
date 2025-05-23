@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-  <version>20250523001</version>
+  <version>1000</version>
   <dependencies>
     <dependency>profile-plone.app.contenttypes:default</dependency>
     <dependency>profile-plone.restapi:default</dependency>

@@ -1,9 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- Upgrades to the base profile -->
-  <include package=".base" />
-
-  <!-- Upgrades to the dependencies profile -->
-  <include package=".dependencies" />
+  <include package=".v20250523001" />
 
 </configure>
