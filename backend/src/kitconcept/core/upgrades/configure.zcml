@@ -3,19 +3,15 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     >
 
-  <!-- Example upgrade step
   <genericsetup:upgradeSteps
       profile="kitconcept.core:default"
       source="1000"
-      destination="1001"
+      destination="20250523001"
       >
     <genericsetup:upgradeDepends
-        title="Update registry value"
-        import_steps="plone.app.registry"
+        title="Add Person type. Complete the list behaviors in content types."
+        import_steps="catalog repositorytool typeinfo"
         />
   </genericsetup:upgradeSteps>
-  -->
-
-  <!-- -*- extra stuff goes here -*- -->
 
 </configure>
