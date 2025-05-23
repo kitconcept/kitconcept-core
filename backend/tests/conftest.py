@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from kitconcept.core.testing import ACCEPTANCE_TESTING
 from kitconcept.core.testing import FUNCTIONAL_TESTING
 from kitconcept.core.testing import INTEGRATION_TESTING
@@ -17,6 +18,24 @@ globals().update(
         (INTEGRATION_TESTING, "integration"),
     ))
 )
+
+
+@dataclass
+class CurrentVersions:
+    base: str
+    dependencies: str
+    package: str
+
+
+@pytest.fixture(scope="session")
+def current_versions() -> CurrentVersions:
+    from kitconcept.core import __version__
+
+    return CurrentVersions(
+        base="20250523001",
+        dependencies="1000",
+        package=__version__,
+    )
 
 
 @pytest.fixture(scope="class")

@@ -3,9 +3,8 @@ from plone.dexterity.fti import DexterityFTI
 import pytest
 
 
-@pytest.mark.skip(reason="Only available if plone.app.multilingual is installed")
 class TestContentTypeFTI:
-    portal_type: str = "LRF"
+    portal_type: str = "Person"
 
     @pytest.fixture(autouse=True)
     def _setup(self, portal, get_fti):
@@ -15,8 +14,9 @@ class TestContentTypeFTI:
     @pytest.mark.parametrize(
         "attr,expected",
         [
-            ("title", "LRF"),
-            ("global_allow", False),
+            ("title", "Person"),
+            ("klass", "collective.person.content.person.Person"),
+            ("global_allow", True),
         ],
     )
     def test_fti(self, attr: str, expected):
@@ -29,17 +29,17 @@ class TestContentTypeFTI:
     @pytest.mark.parametrize(
         "name,expected",
         [
-            ("plone.basic", True),
             ("volto.preview_image_link", True),
-            ("plone.categorization", True),
-            ("plone.publication", True),
-            ("plone.ownership", True),
-            ("volto.blocks", True),
-            ("plone.constraintypes", True),
+            ("collective.person.person", True),
+            ("collective.contact_behaviors.contact_info", True),
+            ("kitconcept.core.additional_contact_info", True),
+            ("volto.blocks.editable.layout", True),
             ("plone.namefromtitle", True),
-            ("plone.navigationroot", True),
-            ("plone.locking", True),
+            ("plone.shortname", True),
+            ("plone.excludefromnavigation", True),
+            ("plone.relateditems", True),
             ("plone.versioning", True),
+            ("plone.locking", True),
             ("plone.translatable", True),
         ],
     )

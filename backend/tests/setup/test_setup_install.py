@@ -6,6 +6,11 @@ import pytest
 
 
 class TestSetupInstall:
+    @pytest.fixture(autouse=True)
+    def _setup(self, current_versions):
+        self.profile_version: str = current_versions.base
+        self.dependencies_profile_version: str = current_versions.dependencies
+
     def test_browserlayer(self, browser_layers):
         """Test that IBrowserLayer is registered."""
         from kitconcept.core.interfaces import IBrowserLayer
@@ -14,11 +19,18 @@ class TestSetupInstall:
 
     def test_latest_version(self, profile_last_version):
         """Test latest version of default profile."""
-        assert profile_last_version(f"{PACKAGE_NAME}:base") == "1001"
+        assert profile_last_version(f"{PACKAGE_NAME}:base") == self.profile_version
 
     def test_base_profile(self, setup_tool):
         """Test if we have the base profile."""
         assert setup_tool.getBaselineContextID() == f"profile-{PACKAGE_NAME}:base"
+
+    def test_dependencies_version(self, profile_last_version):
+        """Test latest version of dependencies profile."""
+        assert (
+            profile_last_version(f"{PACKAGE_NAME}:dependencies")
+            == self.dependencies_profile_version
+        )
 
 
 class TestSetupDependencies:

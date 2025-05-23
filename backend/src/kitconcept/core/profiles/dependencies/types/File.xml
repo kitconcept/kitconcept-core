@@ -14,6 +14,8 @@
     <element value="plone.shortname" />
     <element value="plone.relateditems" />
     <element value="plone.namefromfilename" />
+    <element value="plone.versioning" />
+    <element value="plone.locking" />
   </property>
 
 </object>

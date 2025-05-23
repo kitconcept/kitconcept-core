@@ -32,6 +32,7 @@ dependencies = [
     "collective.volto.formsupport==3.2.3",
     "collective.honeypot",
     "plonegovbr.socialmedia",
+    "collective.person",
 ]
 
 [project.optional-dependencies]
@@ -100,7 +101,9 @@ constraint-dependencies = [
     "click==8.1.7",
     "cmarkgfm==2024.11.20",
     "collective.MockMailHost==3.0.0",
+    "collective.contact-behaviors==1.0.0a3",
     "collective.monkeypatcher==2.0.0",
+    "collective.person==1.0.0a2",
     "collective.recipe.omelette==2.0.0",
     "collective.recipe.template==2.2",
     "collective.recipe.vscode==0.1.9",
