@@ -17,6 +17,8 @@
     <element value="plone.constraintypes" />
     <element value="plone.namefromtitle" />
     <element value="plone.navigationroot" />
+    <element value="plone.versioning" />
+    <element value="plone.locking" />
     <element value="plone.translatable" />
   </property>
 

@@ -23,8 +23,9 @@
     <element value="plone.allowdiscussion" />
     <element value="volto.blocks" />
     <element value="plone.constraintypes" />
-    <element value="plone.locking" />
     <element value="plone.namefromtitle" />
+    <element value="plone.versioning" />
+    <element value="plone.locking" />
     <element value="plone.translatable" />
   </property>
 

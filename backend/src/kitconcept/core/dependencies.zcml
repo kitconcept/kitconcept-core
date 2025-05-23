@@ -3,6 +3,7 @@
   <!-- List all packages you depend here -->
   <include package="plone.restapi" />
   <include package="plone.volto" />
+  <include package="collective.person" />
   <include package="kitconcept.voltolighttheme" />
   <include package="collective.volto.formsupport" />
   <include package="plonegovbr.socialmedia" />
