@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="1001"
+      destination="20250523001"
+      >
+    <genericsetup:upgradeStep
+        title="Install collective.person"
+        handler="kitconcept.core.upgrades.utils.null_upgrade_step"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

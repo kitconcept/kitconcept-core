@@ -11,8 +11,9 @@ def portal(portal_class):
 
 class TestSystemGet:
     @pytest.fixture(autouse=True)
-    def _setup(self, api_manager_request):
+    def _setup(self, api_manager_request, current_versions):
         self.api_session = api_manager_request
+        self.profile_version = current_versions.base
 
     def test_response_type(self):
         response = self.api_session.get("/@system")
@@ -59,13 +60,16 @@ class TestSystemGet:
     @pytest.mark.parametrize(
         "key,expected",
         (
-            ("profile_version_file_system", "1001"),
-            ("profile_version_installed", "1001"),
+            ("profile_version_file_system", "current_profile_version"),
+            ("profile_version_installed", "current_profile_version"),
             ("name", PACKAGE_NAME),
             ("version", __version__),
         ),
     )
     def test_kitconcept_core(self, key, expected):
+        expected = (
+            self.profile_version if expected == "current_profile_version" else expected
+        )
         response = self.api_session.get("/@system")
         data = response.json()
         assert data["core"][key] == expected
