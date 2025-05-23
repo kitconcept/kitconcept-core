@@ -20,6 +20,10 @@ class TestSetupInstall:
         """Test if we have the base profile."""
         assert setup_tool.getBaselineContextID() == f"profile-{PACKAGE_NAME}:base"
 
+    def test_dependencies_version(self, profile_last_version):
+        """Test latest version of dependencies profile."""
+        assert profile_last_version(f"{PACKAGE_NAME}:dependencies") == "20250523001"
+
 
 class TestSetupDependencies:
     @pytest.fixture(autouse=True)
