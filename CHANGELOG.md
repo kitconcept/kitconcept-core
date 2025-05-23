@@ -7,6 +7,41 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a5 (2025-05-23)
+
+### Backend
+
+
+#### New features:
+
+- Added c.person as dependency, move person related things from k.intranet. @sneridagh [#13](https://github.com/kitconcept/kitconcept-core/issues/13)
+
+
+#### Internal:
+
+- Update to VLT 6.1.0. @sneridagh 
+
+
+
+### Frontend
+
+#### Feature
+
+- Customize UpgradeControlPanel to use our VersionOverview component. @ericof 
+
+#### Bugfix
+
+- Fixed the color in links in slate block in edit mode. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a4 (2025-05-16)
 
 ### Backend

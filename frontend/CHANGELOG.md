@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.5 (2025-05-23)
+
+### Feature
+
+- Customize UpgradeControlPanel to use our VersionOverview component. @ericof 
+
+### Bugfix
+
+- Fixed the color in links in slate block in edit mode. @sneridagh 
+
 ## 1.0.0-alpha.4 (2025-05-16)
 
 ## 1.0.0-alpha.3 (2025-05-15)

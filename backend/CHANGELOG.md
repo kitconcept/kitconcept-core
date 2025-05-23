@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a5 (2025-05-23)
+
+
+### New features:
+
+- Added c.person as dependency, move person related things from k.intranet. @sneridagh [#13](https://github.com/kitconcept/kitconcept-core/issues/13)
+
+
+### Internal:
+
+- Update to VLT 6.1.0. @sneridagh 
+
 ## 1.0.0a4 (2025-05-16)
 
 
