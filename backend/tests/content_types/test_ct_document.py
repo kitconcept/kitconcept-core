@@ -27,30 +27,30 @@ class TestContentTypeFTI:
         assert getattr(fti, attr) == expected
 
     @pytest.mark.parametrize(
-        "name,expected",
+        "name,expected,index",
         [
-            ("plone.basic", True),
-            ("volto.preview_image_link", True),
-            ("volto.kicker", True),
-            ("plone.categorization", True),
-            ("plone.publication", True),
-            ("plone.ownership", True),
-            ("plone.relateditems", True),
-            ("plone.shortname", True),
-            ("volto.navtitle", True),
-            ("plone.excludefromnavigation", True),
-            ("plone.allowdiscussion", True),
-            ("volto.blocks", True),
-            ("plone.constraintypes", True),
-            ("plone.locking", True),
-            ("plone.namefromtitle", True),
-            ("plone.versioning", True),
-            ("plone.locking", True),
-            ("plone.translatable", True),
+            ("plone.basic", True, 0),
+            ("volto.preview_image_link", True, 1),
+            ("volto.kicker", True, 2),
+            ("plone.categorization", True, 3),
+            ("plone.publication", True, 4),
+            ("plone.ownership", True, 5),
+            ("plone.relateditems", True, 6),
+            ("plone.shortname", True, 7),
+            ("volto.navtitle", True, 8),
+            ("plone.excludefromnavigation", True, 9),
+            ("plone.allowdiscussion", True, 10),
+            ("volto.blocks", True, 11),
+            ("plone.constraintypes", True, 12),
+            ("plone.namefromtitle", True, 13),
+            ("plone.versioning", True, 14),
+            ("plone.locking", True, 15),
+            ("plone.translatable", True, 16),
         ],
     )
-    def test_behavior(self, name: str, expected: bool):
+    def test_behavior(self, name: str, expected: bool, index: int):
         """Test behavior is present or not."""
         fti = self.fti
         behaviors = fti.behaviors
         assert (name in behaviors) is expected
+        assert behaviors[index] == name if expected else True
