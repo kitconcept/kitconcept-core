@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.6 (2025-06-06)
+
+### Breaking
+
+- Use VLT 7a6. @sneridagh 
+
+### Internal
+
+- Update volto-authomatic 3.0.0-alpha.3. Fixed CSS in login form. @sneridagh 
+- Use VLT 7a8. @sneridagh 
+
 ## 1.0.0-alpha.5 (2025-05-23)
 
 ### Feature
