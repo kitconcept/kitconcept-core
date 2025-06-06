@@ -27,36 +27,34 @@ class TestContentTypeFTI:
         assert getattr(fti, attr) == expected
 
     @pytest.mark.parametrize(
-        "name,expected",
-        [
-            ("plone.eventbasic", True),
-            ("plone.eventrecurrence", True),
-            ("plone.eventlocation", True),
-            ("plone.eventattendees", True),
-            ("plone.eventcontact", True),
-            ("plone.basic", True),
-            ("volto.preview_image_link", True),
-            ("volto.kicker", True),
-            ("plone.categorization", True),
-            ("plone.publication", True),
-            ("plone.ownership", True),
-            ("plone.shortname", True),
-            ("volto.navtitle", True),
-            ("plone.excludefromnavigation", True),
-            ("plone.allowdiscussion", True),
-            ("plone.relateditems", True),
-            ("volto.blocks", True),
-            ("plone.constraintypes", True),
-            ("plone.locking", True),
-            ("plone.namefromtitle", True),
-            ("plone.textindexer", True),
-            ("plone.versioning", True),
-            ("plone.locking", True),
-            ("plone.translatable", True),
-        ],
+        "index,name",
+        enumerate([
+            "plone.eventbasic",
+            "plone.eventrecurrence",
+            "plone.eventlocation",
+            "plone.eventattendees",
+            "plone.eventcontact",
+            "plone.basic",
+            "volto.preview_image_link",
+            "volto.kicker",
+            "plone.categorization",
+            "plone.publication",
+            "plone.ownership",
+            "plone.shortname",
+            "volto.navtitle",
+            "plone.excludefromnavigation",
+            "plone.allowdiscussion",
+            "plone.relateditems",
+            "volto.blocks",
+            "plone.constraintypes",
+            "plone.namefromtitle",
+            "plone.textindexer",
+            "plone.versioning",
+            "plone.locking",
+            "plone.translatable",
+        ]),
     )
-    def test_behavior(self, name: str, expected: bool):
-        """Test behavior is present or not."""
+    def test_behaviors(self, index: int, name: str):
+        """Test behaviors are present and in correct order."""
         fti = self.fti
-        behaviors = fti.behaviors
-        assert (name in behaviors) is expected
+        assert fti.behaviors[index] == name

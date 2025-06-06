@@ -11,6 +11,7 @@
     <element value="plone.publication" />
     <element value="plone.ownership" />
     <element value="plone.shortname" />
+    <element value="volto.navtitle" />
     <element value="plone.relateditems" />
     <element value="plone.namefromfilename" />
     <element value="plone.versioning" />
