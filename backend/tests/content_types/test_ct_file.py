@@ -35,6 +35,7 @@ class TestContentTypeFTI:
                 "volto.preview_image_link",
                 "volto.kicker",
                 "plone.shortname",
+                "volto.navtitle",
                 "plone.relateditems",
                 "plone.namefromfilename",
                 "plone.versioning",

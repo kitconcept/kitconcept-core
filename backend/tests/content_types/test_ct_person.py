@@ -38,6 +38,7 @@ class TestContentTypeFTI:
                 "volto.blocks.editable.layout",
                 "plone.namefromtitle",
                 "plone.shortname",
+                "volto.navtitle",
                 "plone.excludefromnavigation",
                 "plone.relateditems",
                 "plone.versioning",
