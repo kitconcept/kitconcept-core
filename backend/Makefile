@@ -127,7 +127,7 @@ i18n: $(VENV_FOLDER) ## Update locales
 ###########################################
 .PHONY: test
 test: $(VENV_FOLDER) ## run tests
-	@uv run pytest
+	@uv run pytest $(filter-out $@ --,$(MAKECMDGOALS))
 
 .PHONY: test-coverage
 test-coverage: $(VENV_FOLDER) ## run tests with coverage
