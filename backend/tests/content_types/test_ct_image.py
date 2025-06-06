@@ -34,6 +34,7 @@ class TestContentTypeFTI:
                 "plone.publication",
                 "plone.ownership",
                 "plone.shortname",
+                "volto.navtitle",
                 "plone.relateditems",
                 "plone.namefromfilename",
                 "plone.versioning",

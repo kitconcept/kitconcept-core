@@ -13,6 +13,7 @@
     <element value="volto.blocks.editable.layout" />
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
+    <element value="volto.navtitle" />
     <element value="plone.excludefromnavigation" />
     <element value="plone.relateditems" />
     <element value="plone.versioning" />
