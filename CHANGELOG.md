@@ -7,6 +7,43 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a6 (2025-06-06)
+
+### Backend
+
+
+#### Breaking changes:
+
+- Use VLT 7a6. @sneridagh 
+
+
+#### Internal:
+
+- Improved tests checking the position of the behavior. @sneridagh 
+- Use VLT 7a8. @sneridagh 
+
+
+
+### Frontend
+
+#### Breaking
+
+- Use VLT 7a6. @sneridagh 
+
+#### Internal
+
+- Update volto-authomatic 3.0.0-alpha.3. Fixed CSS in login form. @sneridagh 
+- Use VLT 7a8. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a5 (2025-05-23)
 
 ### Backend

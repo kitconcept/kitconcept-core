@@ -9,6 +9,19 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a6 (2025-06-06)
+
+
+### Breaking changes:
+
+- Use VLT 7a6. @sneridagh 
+
+
+### Internal:
+
+- Improved tests checking the position of the behavior. @sneridagh 
+- Use VLT 7a8. @sneridagh 
+
 ## 1.0.0a5 (2025-05-23)
 
 
