@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a7 (2025-06-09)
+
+### Backend
+
+
+#### Internal:
+
+- Update to VLT 7a9. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to VLT 7a9 - Fixed Person Teaser CSS.  @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a6 (2025-06-06)
 
 ### Backend
