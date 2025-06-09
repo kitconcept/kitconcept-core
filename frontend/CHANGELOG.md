@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.7 (2025-06-09)
+
+### Internal
+
+- Update to VLT 7a9 - Fixed Person Teaser CSS.  @sneridagh 
+
 ## 1.0.0-alpha.6 (2025-06-06)
 
 ### Breaking
