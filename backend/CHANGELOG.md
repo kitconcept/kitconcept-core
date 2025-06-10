@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a8 (2025-06-10)
+
+
+### Internal:
+
+- Update to VLT 7a10. Fixes CSS styling Person Teaser top. @sneridagh 
+
 ## 1.0.0a7 (2025-06-09)
 
 
