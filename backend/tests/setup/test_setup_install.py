@@ -57,6 +57,7 @@ class TestSetupDependencies:
             "plone.app.contenttypes:default",
             "plone.restapi:default",
             "plone.volto:default",
+            "plonetheme.barceloneta:default",
             "kitconcept.voltolighttheme:default",
             "collective.volto.formsupport:default",
             "plonegovbr.socialmedia:default",
