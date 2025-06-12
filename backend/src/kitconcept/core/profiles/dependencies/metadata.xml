@@ -3,6 +3,7 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-plone.app.contenttypes:default</dependency>
+    <dependency>profile-plonetheme.barceloneta:default</dependency>
     <dependency>profile-plone.restapi:default</dependency>
     <dependency>profile-plone.volto:default</dependency>
     <dependency>profile-collective.person:default</dependency>
