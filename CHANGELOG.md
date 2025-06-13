@@ -7,6 +7,37 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a9 (2025-06-13)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Bring back Barceloneta Theme to ClassicUI. @sneridagh 
+
+
+#### Internal:
+
+- Update Volto 18.23.0 and VLT 7a11. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update Volto 18.23.0 and VLT 7a11. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a8 (2025-06-10)
 
 ### Backend
