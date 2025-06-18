@@ -7,6 +7,33 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a11 (2025-06-18)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to use VLT 7a13. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fixed default `selectedItemAttrs` for Teaser to include Person specific attributes. @sneridagh
+  Update to use VLT 7a13. 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a10 (2025-06-18)
 
 ### Backend

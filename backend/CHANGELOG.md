@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a11 (2025-06-18)
+
+
+### Bug fixes:
+
+- Update to use VLT 7a13. @sneridagh 
+
 ## 1.0.0a10 (2025-06-18)
 
 
