@@ -7,6 +7,36 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a10 (2025-06-18)
+
+### Backend
+
+
+#### Internal:
+
+- Update to VLT 7a12. @sneridagh 
+
+
+
+### Frontend
+
+#### Feature
+
+- Add `volto-carousel-block` and `volto-logos-block` as addons. @jnptk 
+
+#### Internal
+
+- Update to VLT 7a12. Fixes several CSS issues with persons variants. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a9 (2025-06-13)
 
 ### Backend
