@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2025-02-06T14:06:03.289Z\n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Add"
+#: components/widgets/BlocksObjectWidget
+msgid "Add (object list)"
+msgstr ""
+
+#. Default: "Add logo"
+#: components/Logo/layoutSchema
+msgid "Add logo"
+msgstr ""
+
+#. Default: "Alt text"
+#: components/Logo/layoutSchema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Collapse item"
+#: components/widgets/BlocksObjectWidget
+msgid "Collapse item"
+msgstr ""
+
+#. Default: "Empty object list"
+#: components/widgets/BlocksObjectWidget
+msgid "Empty object list"
+msgstr ""
+
+#. Default: "Item"
+#: components/Logo/layoutSchema
+msgid "Item"
+msgstr ""
+
+#. Default: "Logo image"
+#: components/Logo/layoutSchema
+msgid "Logo image"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/Logo/layoutSchema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Please choose a logo as source for this element"
+#: components/Logo/View
+msgid "Please choose a logo as source for this element"
+msgstr ""
+
+#. Default: "Remove item"
+#: components/widgets/BlocksObjectWidget
+msgid "Remove item"
+msgstr ""
+
+#. Default: "Show item"
+#: components/widgets/BlocksObjectWidget
+msgid "Show item"
+msgstr ""
+
+#. Default: "Target"
+#: components/Logo/layoutSchema
+msgid "Target"
+msgstr ""
+
+#. Default: "Title"
+#: components/Logo/layoutSchema
+msgid "Title"
+msgstr ""
+
+#. Default: "Default"
+#: components/Logo/layoutSchema
+msgid "default"
+msgstr ""
+
+#. Default: "Description"
+#: components/Logo/layoutSchema
+msgid "description"
+msgstr ""
+
+#. Default: "Large"
+#: components/Logo/layoutSchema
+msgid "large"
+msgstr ""
+
+#. Default: "Logo size"
+#: components/Logo/layoutSchema
+msgid "logo_size"
+msgstr ""
+
+#. Default: "Small"
+#: components/Logo/layoutSchema
+msgid "small"
+msgstr ""
