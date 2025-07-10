@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-02-06T14:06:03.289Z\n"
+"POT-Creation-Date: 2025-07-10T08:33:10.828Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,92 +13,87 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
-#. Default: "Add"
-#: components/widgets/BlocksObjectWidget
-msgid "Add (object list)"
-msgstr ""
-
 #. Default: "Add logo"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Add logo"
 msgstr ""
 
 #. Default: "Alt text"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Alt text"
 msgstr ""
 
-#. Default: "Collapse item"
-#: components/widgets/BlocksObjectWidget
-msgid "Collapse item"
+#. Default: "Description"
+#: components/schema
+msgid "Description"
 msgstr ""
 
-#. Default: "Empty object list"
-#: components/widgets/BlocksObjectWidget
-msgid "Empty object list"
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
 msgstr ""
 
-#. Default: "Item"
-#: components/Logo/layoutSchema
-msgid "Item"
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr ""
+
+#. Default: "Logo"
+#: components/schema
+msgid "Logo"
 msgstr ""
 
 #. Default: "Logo image"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Logo image"
 msgstr ""
 
+#. Default: "Logos"
+#: components/schema
+msgid "Logos"
+msgstr ""
+
+#. Default: "Logos Container Width"
+#: components/schema
+msgid "Logos Container Width"
+msgstr ""
+
+#. Default: "Logos Size"
+#: components/schema
+msgid "Logos Size"
+msgstr ""
+
 #. Default: "Open in a new tab"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Open in a new tab"
 msgstr ""
 
-#. Default: "Please choose a logo as source for this element"
-#: components/Logo/View
-msgid "Please choose a logo as source for this element"
+#. Default: "Please set logos as source for this block"
+#: components/Edit
+msgid "Please set logos as source for this block"
 msgstr ""
 
-#. Default: "Remove item"
-#: components/widgets/BlocksObjectWidget
-msgid "Remove item"
-msgstr ""
-
-#. Default: "Show item"
-#: components/widgets/BlocksObjectWidget
-msgid "Show item"
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
 msgstr ""
 
 #. Default: "Target"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Target"
 msgstr ""
 
 #. Default: "Title"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "Title"
 msgstr ""
 
-#. Default: "Default"
-#: components/Logo/layoutSchema
-msgid "default"
-msgstr ""
-
-#. Default: "Description"
-#: components/Logo/layoutSchema
-msgid "description"
-msgstr ""
-
 #. Default: "Large"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "large"
 msgstr ""
 
-#. Default: "Logo size"
-#: components/Logo/layoutSchema
-msgid "logo_size"
-msgstr ""
-
 #. Default: "Small"
-#: components/Logo/layoutSchema
+#: components/schema
 msgid "small"
 msgstr ""

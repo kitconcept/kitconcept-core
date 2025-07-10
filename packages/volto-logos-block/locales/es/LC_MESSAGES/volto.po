@@ -1,5 +1,5 @@
-# Translation of volto.pot to Spanish
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2024.
+#. Translation of volto.pot to Spanish
+#. Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
@@ -7,12 +7,12 @@ msgstr ""
 "POT-Creation-Date: 2023-12-18T15:12:47.088Z\n"
 "PO-Revision-Date: 2024-04-12 21:42-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
-"Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
-"MIME-Version: 1.0\n"
+"Language-Team: ES <LL@li.org>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
 "Preferred-Encodings: utf-8\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
@@ -20,32 +20,87 @@ msgstr ""
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 3.4.2\n"
 
-# defaultMessage: Description
-#: components/Logo/schema
+#. Default: "Add logo"
+#: components/schema
+msgid "Add logo"
+msgstr ""
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
 msgid "Description"
 msgstr "Descripción"
 
-# defaultMessage: It is advised to use a svg graphic.
-#: components/Logo/schema
-msgid "It is advised to use a svg graphic."
-msgstr "Se aconseja utilizar un gráfico svg."
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
+msgstr ""
 
-# defaultMessage: Link
-#: components/Logo/schema
-msgid "Link"
-msgstr "Enlace"
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr ""
 
-# defaultMessage: Logo
-#: components/Logo/Data components/Logo/schema
+#. Default: "Logo"
+#: components/schema
 msgid "Logo"
 msgstr "Logotipo"
 
-# defaultMessage: Please choose a logo as source for this element
-#: components/Logo/View
-msgid "Please choose a logo as source for this element"
-msgstr "Elija un logotipo como fuente para este elemento"
+#. Default: "Logo image"
+#: components/schema
+msgid "Logo image"
+msgstr ""
 
-# defaultMessage: Title
-#: components/Logo/schema
+#. Default: "Logos"
+#: components/schema
+msgid "Logos"
+msgstr ""
+
+#. Default: "Logos Container Width"
+#: components/schema
+msgid "Logos Container Width"
+msgstr ""
+
+#. Default: "Logos Size"
+#: components/schema
+msgid "Logos Size"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Please set logos as source for this block"
+#: components/Edit
+msgid "Please set logos as source for this block"
+msgstr ""
+
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
+msgstr ""
+
+#. Default: "Target"
+#: components/schema
+msgid "Target"
+msgstr ""
+
+#. Default: "Title"
+#: components/schema
 msgid "Title"
 msgstr "Título"
+
+#. Default: "Large"
+#: components/schema
+msgid "large"
+msgstr ""
+
+#. Default: "Small"
+#: components/schema
+msgid "small"
+msgstr ""
