@@ -9,6 +9,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a12 (2025-07-10)
+
+
+### Internal:
+
+- Added new event calendar block.
+  Added `footer_main_logo_inversed` image field to kitconcept.footer behavior, and related frontend code.
+  Several fixes.
+  Update to VLT 7a14. @sneridagh 
+
 ## 1.0.0a11 (2025-06-18)
 
 
