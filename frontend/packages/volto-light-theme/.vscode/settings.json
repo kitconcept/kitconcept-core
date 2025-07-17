@@ -1,0 +1,37 @@
+{
+  "eslint.workingDirectories": ["./frontend"],
+  "flake8.cwd": "${workspaceFolder}/backend",
+  "flake8.args": ["--config=pyproject.toml"],
+  "ruff.organizeImports": true,
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestArgs": ["backend/tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#9e82bb",
+    "activityBar.background": "#9e82bb",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#ddcfc1",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#9e82bb",
+    "statusBar.background": "#8461a9",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#9e82bb",
+    "statusBarItem.remoteBackground": "#8461a9",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#8461a9",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#8461a999",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "peacock.color": "#8461a9"
+}

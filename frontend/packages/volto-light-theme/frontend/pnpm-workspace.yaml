@@ -1,0 +1,5 @@
+packages:
+  - 'core/packages/*'
+  - 'packages/volto-light-theme'
+  # This is for the packages in nested subdirs of packages/
+  - 'packages/**/packages/*'
