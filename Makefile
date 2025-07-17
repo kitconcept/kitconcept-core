@@ -131,4 +131,4 @@ integrate-addon: ## Integrates a repo that already as a git remote to this
   git switch $(ADDON)-merge || \
   git switch -c $(ADDON)-merge
 	git mv -k .github/ frontend/packages/$(ADDON)/
-	git ls-tree --name-only HEAD | xargs -I{} git mv -k "{}" frontend/packages/$(ADDON)/
+	git ls-tree --name-only HEAD | xargs -I{} echo git mv -k "{}" frontend/packages/$(ADDON)/
