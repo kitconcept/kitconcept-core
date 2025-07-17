@@ -126,6 +126,7 @@ test:  backend-test frontend-test ## Test codebase
 
 .PHONY: integrate-addon
 integrate-addon: ## Integrates a repo that already as a git remote to this
+	git remote add $(ADDON) git@github.com:kitconcept/$(ADDON).git || true
 	git fetch $(ADDON)
 	git branch --list $(ADDON)-merge | grep -q $(ADDON)-merge && \
   git switch $(ADDON)-merge || \
