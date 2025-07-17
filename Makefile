@@ -123,3 +123,9 @@ i18n:  ## Update locales
 
 .PHONY: test
 test:  backend-test frontend-test ## Test codebase
+
+.PHONY: integrate-addon
+integrate-addon: ## Integrates a repo that already as a git remote to this
+	git fetch $(ADDON)
+	git checkout -b $(ADDON)-merge $(ADDON)/main
+	git ls-tree --name-only HEAD | xargs -I{} git mv -k "{}" frontend/packages/$(ADDON)/
