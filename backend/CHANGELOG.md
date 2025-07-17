@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a13 (2025-07-17)
+
+
+### Internal:
+
+- Update VLT 7a15. @sneridagh 
+
 ## 1.0.0a12 (2025-07-10)
 
 
