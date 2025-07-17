@@ -1,0 +1,46 @@
+{
+  "name": "@kitconcept/volto-bm3-compat",
+  "version": "1.0.0-alpha.1",
+  "description": "Add-on for the Volto block model 3 compatibility",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "Plone Community",
+  "homepage": "https://github.com/collective/volto-bm3-compat#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:collective/volto-bm3-compat"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "addons": [],
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.1",
+    "@plone/types": "workspace:*",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@testing-library/react": "^16.2.0",
+    "release-it": "^17.1.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.1.2"
+  }
+}
