@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-09 11:45-0400\n"
+"PO-Revision-Date: 2025-07-10 11:19+0200\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Preferred-Encodings: utf-8\n"
+"Language-Code: es\n"
+"Language-Name: Español\n"
+"Domain: volto\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+"X-Generator: Poedit 3.6\n"
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr "Texto alternativo"
+
+#. Default: "Banner"
+#: components/Data components/schema
+msgid "Banner"
+msgstr "Banner"
+
+#. Default: "Banner preview"
+#: components/Data
+msgid "Banner preview"
+msgstr "Vista previa del banner"
+
+#. Default: "Clear block"
+#: components/Data
+msgid "Clear block"
+msgstr "Borrar bloque"
+
+#. Default: "Describe the purpose of the image."
+#: components/schema
+msgid "Describe the purpose of the image."
+msgstr "Describe el propósito de la imagen."
+
+#. Default: "Leave empty if the image is purely decorative."
+#: components/schema
+msgid "Leave empty if the image is purely decorative."
+msgstr "Deja vacío si la imagen es netamente decorativa."
+
+#. Default: "Line 1"
+#: components/schema
+msgid "Line 1"
+msgstr "Línea 1"
+
+#. Default: "Line 2"
+#: components/schema
+msgid "Line 2"
+msgstr "Línea 2"
+
+#. Default: "No image selected"
+#: components/Data
+msgid "No image selected"
+msgstr "No hay ninguna imagen seleccionada"
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr "Abrir en una nueva pestaña"

@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Banner"
+#: components/Data
+#: components/schema
+msgid "Banner"
+msgstr ""
+
+#. Default: "Banner preview"
+#: components/Data
+msgid "Banner preview"
+msgstr ""
+
+#. Default: "Clear block"
+#: components/Data
+msgid "Clear block"
+msgstr ""
+
+#. Default: "Describe the purpose of the image."
+#: components/schema
+msgid "Describe the purpose of the image."
+msgstr ""
+
+#. Default: "Leave empty if the image is purely decorative."
+#: components/schema
+msgid "Leave empty if the image is purely decorative."
+msgstr ""
+
+#. Default: "Line 1"
+#: components/schema
+msgid "Line 1"
+msgstr ""
+
+#. Default: "Line 2"
+#: components/schema
+msgid "Line 2"
+msgstr ""
+
+#. Default: "No image selected"
+#: components/Data
+msgid "No image selected"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""
