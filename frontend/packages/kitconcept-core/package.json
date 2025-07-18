@@ -43,22 +43,22 @@
     "@kitconcept/volto-light-theme"
   ],
   "dependencies": {
-    "@kitconcept/volto-light-theme": "workspace:*",
-    "@kitconcept/volto-bm3-compat": "workspace:*",
     "@eeacms/volto-accordion-block": "^10.4.6",
     "@kitconcept/volto-banner-block": "workspace:*",
+    "@kitconcept/volto-bm3-compat": "workspace:*",
     "@kitconcept/volto-button-block": "workspace:*",
     "@kitconcept/volto-carousel-block": "workspace:*",
     "@kitconcept/volto-dsgvo-banner": "workspace:*",
     "@kitconcept/volto-heading-block": "workspace:*",
     "@kitconcept/volto-highlight-block": "workspace:*",
     "@kitconcept/volto-introduction-block": "workspace:*",
+    "@kitconcept/volto-light-theme": "workspace:*",
     "@kitconcept/volto-logos-block": "workspace:*",
     "@kitconcept/volto-separator-block": "workspace:*",
     "@kitconcept/volto-slider-block": "workspace:*",
     "@mbarde/volto-image-crop-widget": "^0.5.1",
-    "@plone/components": "workspace:*",
     "@plone-collective/volto-authomatic": "3.0.0-alpha.3",
+    "@plone/components": "workspace:*",
     "@plonegovbr/volto-social-media": "^2.0.0-alpha.6"
   },
   "peerDependencies": {
@@ -70,6 +70,8 @@
     "@plone/types": "workspace:*",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "release-it": "^18.1.2"
+    "@testing-library/react": "^16.2.0",
+    "release-it": "^18.1.2",
+    "vitest": "^3.2.4"
   }
 }
