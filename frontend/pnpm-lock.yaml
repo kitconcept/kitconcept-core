@@ -1561,9 +1561,45 @@ importers:
 
   packages/kitconcept-core:
     dependencies:
+      '@eeacms/volto-accordion-block':
+        specifier: ^10.4.6
+        version: 10.4.6
+      '@kitconcept/volto-banner-block':
+        specifier: workspace:*
+        version: link:../volto-banner-block/packages/volto-banner-block
+      '@kitconcept/volto-bm3-compat':
+        specifier: workspace:*
+        version: link:../volto-bm3-compat/packages/volto-bm3-compat
+      '@kitconcept/volto-button-block':
+        specifier: workspace:*
+        version: link:../volto-button-block/packages/volto-button-block
+      '@kitconcept/volto-carousel-block':
+        specifier: workspace:*
+        version: link:../volto-carousel-block/packages/volto-carousel-block
+      '@kitconcept/volto-dsgvo-banner':
+        specifier: workspace:*
+        version: link:../volto-dsgvo-banner/packages/volto-dsgvo-banner
+      '@kitconcept/volto-heading-block':
+        specifier: workspace:*
+        version: link:../volto-heading-block/packages/volto-heading-block
+      '@kitconcept/volto-highlight-block':
+        specifier: workspace:*
+        version: link:../volto-highlight-block/packages/volto-highlight-block
+      '@kitconcept/volto-introduction-block':
+        specifier: workspace:*
+        version: link:../volto-introduction-block/packages/volto-introduction-block
       '@kitconcept/volto-light-theme':
         specifier: workspace:*
         version: link:../volto-light-theme/frontend/packages/volto-light-theme
+      '@kitconcept/volto-logos-block':
+        specifier: workspace:*
+        version: link:../volto-logos-block/packages/volto-logos-block
+      '@kitconcept/volto-separator-block':
+        specifier: workspace:*
+        version: link:../volto-separator-block/packages/volto-separator-block
+      '@kitconcept/volto-slider-block':
+        specifier: workspace:*
+        version: link:../volto-slider-block/packages/volto-slider-block
       '@mbarde/volto-image-crop-widget':
         specifier: ^0.5.1
         version: 0.5.1(react@18.2.0)
@@ -1573,6 +1609,9 @@ importers:
       '@plone/components':
         specifier: workspace:*
         version: link:../../core/packages/components
+      '@plonegovbr/volto-social-media':
+        specifier: ^2.0.0-alpha.6
+        version: 2.0.0-alpha.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.12(prettier@3.6.2))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -1827,7 +1866,7 @@ importers:
         version: link:../../../../volto-separator-block/packages/volto-separator-block
       '@kitconcept/volto-slider-block':
         specifier: ^6.3.1
-        version: 6.3.1(@plone/volto@18.23.0(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.6.0)(react@18.2.0)
+        version: 6.3.1(@plone/volto@18.23.0(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0)
       '@plone/components':
         specifier: workspace:^
         version: link:../../../../../core/packages/components
@@ -8227,9 +8266,6 @@ packages:
 
   embla-carousel@8.5.2:
     resolution: {integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==}
-
-  embla-carousel@8.6.0:
-    resolution: {integrity: sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA==}
 
   emittery@0.7.2:
     resolution: {integrity: sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ==}
@@ -17718,11 +17754,11 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.23.0(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.6.0)(react@18.2.0)':
+  '@kitconcept/volto-slider-block@6.3.1(@plone/volto@18.23.0(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0)':
     dependencies:
       '@plone/volto': 18.23.0(@babel/runtime@7.27.0)(@popperjs/core@2.11.8)(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4)
       deepmerge: 4.2.2
-      embla-carousel-autoplay: 8.5.2(embla-carousel@8.6.0)
+      embla-carousel-autoplay: 8.5.2(embla-carousel@8.5.2)
       embla-carousel-react: 8.5.2(react@18.2.0)
     transitivePeerDependencies:
       - embla-carousel
@@ -17902,7 +17938,7 @@ snapshots:
       read-package-json-fast: 2.0.3
       readdir-scoped-modules: 1.1.0
       rimraf: 3.0.2
-      semver: 7.7.1
+      semver: 7.7.2
       ssri: 8.0.1
       treeverse: 1.0.4
       walk-up-path: 1.0.0
@@ -17932,7 +17968,7 @@ snapshots:
       npm-pick-manifest: 6.1.1
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.7.1
+      semver: 7.7.2
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -17972,7 +18008,7 @@ snapshots:
       cacache: 15.3.0
       json-parse-even-better-errors: 2.3.1
       pacote: 12.0.3
-      semver: 7.7.1
+      semver: 7.7.2
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -24048,10 +24084,6 @@ snapshots:
     dependencies:
       embla-carousel: 8.5.2
 
-  embla-carousel-autoplay@8.5.2(embla-carousel@8.6.0):
-    dependencies:
-      embla-carousel: 8.6.0
-
   embla-carousel-react@8.5.2(react@18.2.0):
     dependencies:
       embla-carousel: 8.5.2
@@ -24063,8 +24095,6 @@ snapshots:
       embla-carousel: 8.5.2
 
   embla-carousel@8.5.2: {}
-
-  embla-carousel@8.6.0: {}
 
   emittery@0.7.2: {}
 
@@ -28493,7 +28523,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.7.1
+      semver: 7.7.2
       tar: 6.2.1
       which: 2.0.2
     transitivePeerDependencies:
@@ -28579,7 +28609,7 @@ snapshots:
 
   npm-install-checks@4.0.0:
     dependencies:
-      semver: 7.7.1
+      semver: 7.7.2
 
   npm-install-checks@6.3.0:
     dependencies:
@@ -28601,7 +28631,7 @@ snapshots:
   npm-package-arg@8.1.5:
     dependencies:
       hosted-git-info: 4.1.0
-      semver: 7.7.1
+      semver: 7.7.2
       validate-npm-package-name: 3.0.0
 
   npm-packlist@3.0.0:
@@ -28620,7 +28650,7 @@ snapshots:
       npm-install-checks: 4.0.0
       npm-normalize-package-bin: 1.0.1
       npm-package-arg: 8.1.5
-      semver: 7.7.1
+      semver: 7.7.2
 
   npm-pick-manifest@8.0.2:
     dependencies:
@@ -34075,7 +34105,7 @@ snapshots:
       preferred-pm: 3.1.4
       pretty-bytes: 5.3.0
       readable-stream: 4.7.0
-      semver: 7.7.1
+      semver: 7.7.2
       slash: 3.0.0
       strip-ansi: 6.0.1
       text-table: 0.2.0

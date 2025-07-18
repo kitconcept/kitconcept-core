@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { includes, isObject } from 'lodash';
+import includes from 'lodash/includes';
+import isObject from 'lodash/isObject';
 import { Button, Modal, Checkbox, Form } from 'semantic-ui-react';
 import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ import config from '@plone/volto/registry';
 import { useIntl, defineMessages, FormattedMessage } from 'react-intl';
 import Google from './Google';
 import Matomo from './Matomo';
-import { BodyClass } from '@plone/volto/helpers';
+import BodyClass from '@plone/volto/helpers/BodyClass/BodyClass';
 
 import { hideDSGVOBanner } from '../../actions';
 

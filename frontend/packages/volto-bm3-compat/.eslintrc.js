@@ -49,7 +49,10 @@ module.exports = {
           ['@plone/volto', `${coreLocation}/packages/volto/src`],
           ['@plone/volto-slate', `${coreLocation}/packages/volto-slate/src`],
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
-          ['@kitconcept/volto-bm3-compat', './packages/volto-bm3-compat/src'],
+          [
+            '@kitconcept/volto-bm3-compat',
+            `${projectRootPath}/packages/volto-bm3-compat/src`,
+          ],
           ...addonAliases,
         ],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

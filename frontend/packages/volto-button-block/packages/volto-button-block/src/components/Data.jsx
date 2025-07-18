@@ -1,6 +1,6 @@
 import { useIntl, defineMessages } from 'react-intl';
 import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
-import { ButtonSchema } from './schema';
+import { ButtonSchema } from '@kitconcept/volto-button-block/components/schema';
 
 const messages = defineMessages({
   ButtonBlock: {

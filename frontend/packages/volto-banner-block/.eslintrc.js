@@ -51,7 +51,7 @@ module.exports = {
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
             '@kitconcept/volto-banner-block',
-            './packages/volto-banner-block/src',
+            `${projectRootPath}/packages/volto-banner-block/src`,
           ],
           ...addonAliases,
         ],
