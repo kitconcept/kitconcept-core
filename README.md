@@ -5,6 +5,28 @@
 
 Core setup for kitconcept GmbH distributions built on top of Plone
 
+It is composed of the following packages:
+
+- Volto Light Theme ([@kitconcept/volto-light-theme](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-light-theme))
+- Button Block ([@kitconcept/volto-button-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-button-block))
+- Highlight Block ([@kitconcept/volto-highlight-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-highlight-block))
+- Introduction Block ([@kitconcept/volto-introduction-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-introduction-block))
+- Logos Block ([@kitconcept/volto-logos-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-logos-block))
+- Separator Block ([@kitconcept/volto-separator-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-separator-block))
+- Heading Block ([@kitconcept/volto-heading-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-heading-block))
+- Banner Block ([@kitconcept/volto-banner-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-banner-block))
+- Slider Block ([@kitconcept/volto-slider-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-slider-block))
+- Carousel Block ([@kitconcept/volto-carousel-block](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-carousel-block))
+- Accordion Block ([@eeacms/volto-accordion-block](https://www.npmjs.com/package/@eeacms/volto-accordion-block))
+- DSGVO Banner ([@kitconcept/volto-dsgvo-banner](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-dsgvo-banner))
+- Volto BM3 Compatibility Layer ([@kitconcept/volto-bm3-compat](https://github.com/kitconcept/kitconcept-core/tree/main/frontend/packages/volto-bm3-compat))
+
+You will find them in the `frontend/packages` directory.
+They are all built on the top of VLT (Volto Light Theme) but they can be used independently if you load the corresponding CSS in the way that VLT does.
+They are all released independently on npm.
+`@kitconcept/core` is a package that is the aggregator and the glue for all these packages.
+It is released on npm as well, and you can use it in your projects to install all the packages at once.
+
 ## Quick Start 🏁
 
 ### Prerequisites ✅

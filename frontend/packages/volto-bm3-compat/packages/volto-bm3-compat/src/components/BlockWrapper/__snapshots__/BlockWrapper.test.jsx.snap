@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<BlockWrapper /> > renders the component not wrapped (condition false) 1`] = `
+<div>
+  <div
+    class="block button extra-classname flex items-center bg-quanta-sapphire"
+    style="--blockWidth: var(--container-default-width);"
+  >
+    <div>
+      The block view
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<BlockWrapper /> > renders the component wrapped in the specified component 1`] = `
+<div>
+  <div>
+    The block view
+  </div>
+</div>
+`;

@@ -1,0 +1,45 @@
+{
+  "name": "@kitconcept/volto-logos-block",
+  "version": "3.0.0-alpha.0",
+  "description": "A logos block for volto",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "kitconcept, GmbH",
+  "homepage": "https://github.com/kitconcept/volto-logos-block#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kitconcept/volto-logos-block.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "dependencies": {
+    "@plone/components": "workspace:*"
+  },
+  "peerDependencies": {
+    "classnames": "2.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intl": "^3.12.1"
+  },
+  "devDependencies": {
+    "@plone/types": "workspace:*",
+    "@plone/scripts": "^3.6.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "release-it": "^19.0.2"
+  }
+}

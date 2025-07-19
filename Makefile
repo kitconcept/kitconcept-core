@@ -123,3 +123,15 @@ i18n:  ## Update locales
 
 .PHONY: test
 test:  backend-test frontend-test ## Test codebase
+
+.PHONY: integrate-addon
+integrate-addon: ## Integrates a repo that already as a git remote to this
+	git remote add $(ADDON) git@github.com:kitconcept/$(ADDON).git || true
+	git fetch $(ADDON)
+	git branch --list $(ADDON)-merge | grep -q $(ADDON)-merge && \
+  git switch $(ADDON)-merge || \
+  git switch -c $(ADDON)-merge
+	git reset --hard $(ADDON)/main
+	mkdir -p frontend/packages/$(ADDON)
+	git mv -k .github/ frontend/packages/$(ADDON)/
+	git ls-tree --name-only HEAD | xargs -I{} git mv -k "{}" frontend/packages/$(ADDON)/

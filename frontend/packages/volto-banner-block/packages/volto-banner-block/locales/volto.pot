@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2025-02-27T10:36:38.682Z\n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Banner"
+#: components/Data
+#: components/schema
+msgid "Banner"
+msgstr ""
+
+#. Default: "Banner preview"
+#: components/Data
+msgid "Banner preview"
+msgstr ""
+
+#. Default: "Clear block"
+#: components/Data
+msgid "Clear block"
+msgstr ""
+
+#. Default: "Describe the purpose of the image."
+#: components/schema
+msgid "Describe the purpose of the image."
+msgstr ""
+
+#. Default: "Leave empty if the image is purely decorative."
+#: components/schema
+msgid "Leave empty if the image is purely decorative."
+msgstr ""
+
+#. Default: "Line 1"
+#: components/schema
+msgid "Line 1"
+msgstr ""
+
+#. Default: "Line 2"
+#: components/schema
+msgid "Line 2"
+msgstr ""
+
+#. Default: "No image selected"
+#: components/Data
+msgid "No image selected"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""

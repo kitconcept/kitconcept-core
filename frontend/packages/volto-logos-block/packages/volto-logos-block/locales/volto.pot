@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2025-07-10T08:33:10.828Z\n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Add logo"
+#: components/schema
+msgid "Add logo"
+msgstr ""
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr ""
+
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
+msgstr ""
+
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr ""
+
+#. Default: "Logo"
+#: components/schema
+msgid "Logo"
+msgstr ""
+
+#. Default: "Logo image"
+#: components/schema
+msgid "Logo image"
+msgstr ""
+
+#. Default: "Logos"
+#: components/schema
+msgid "Logos"
+msgstr ""
+
+#. Default: "Logos Container Width"
+#: components/schema
+msgid "Logos Container Width"
+msgstr ""
+
+#. Default: "Logos Size"
+#: components/schema
+msgid "Logos Size"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Please set logos as source for this block"
+#: components/Edit
+msgid "Please set logos as source for this block"
+msgstr ""
+
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
+msgstr ""
+
+#. Default: "Target"
+#: components/schema
+msgid "Target"
+msgstr ""
+
+#. Default: "Title"
+#: components/schema
+msgid "Title"
+msgstr ""
+
+#. Default: "Large"
+#: components/schema
+msgid "large"
+msgstr ""
+
+#. Default: "Small"
+#: components/schema
+msgid "small"
+msgstr ""

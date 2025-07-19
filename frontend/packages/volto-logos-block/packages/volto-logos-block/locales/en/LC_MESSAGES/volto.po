@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Add logo"
+#: components/schema
+msgid "Add logo"
+msgstr ""
+
+#. Default: "Alt text"
+#: components/schema
+msgid "Alt text"
+msgstr ""
+
+#. Default: "Description"
+#: components/schema
+msgid "Description"
+msgstr ""
+
+#. Default: "Headline"
+#: components/schema
+msgid "Headline"
+msgstr ""
+
+#. Default: "Hide description"
+#: components/schema
+msgid "Hide description"
+msgstr ""
+
+#. Default: "Logo"
+#: components/schema
+msgid "Logo"
+msgstr ""
+
+#. Default: "Logo image"
+#: components/schema
+msgid "Logo image"
+msgstr ""
+
+#. Default: "Logos"
+#: components/schema
+msgid "Logos"
+msgstr ""
+
+#. Default: "Logos Container Width"
+#: components/schema
+msgid "Logos Container Width"
+msgstr ""
+
+#. Default: "Logos Size"
+#: components/schema
+msgid "Logos Size"
+msgstr ""
+
+#. Default: "Open in a new tab"
+#: components/schema
+msgid "Open in a new tab"
+msgstr ""
+
+#. Default: "Please set logos as source for this block"
+#: components/Edit
+msgid "Please set logos as source for this block"
+msgstr ""
+
+#. Default: "Settings"
+#: components/schema
+msgid "Settings"
+msgstr ""
+
+#. Default: "Target"
+#: components/schema
+msgid "Target"
+msgstr ""
+
+#. Default: "Title"
+#: components/schema
+msgid "Title"
+msgstr ""
+
+#. Default: "Large"
+#: components/schema
+msgid "large"
+msgstr ""
+
+#. Default: "Small"
+#: components/schema
+msgid "small"
+msgstr ""
