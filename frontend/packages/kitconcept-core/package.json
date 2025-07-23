@@ -43,10 +43,22 @@
     "@kitconcept/volto-light-theme"
   ],
   "dependencies": {
+    "@eeacms/volto-accordion-block": "^10.4.6",
     "@plone/components": "workspace:*",
     "@plone-collective/volto-authomatic": "3.0.0-alpha.3",
+    "@kitconcept/volto-bm3-compat": "^1.0.0-alpha.1",
+    "@kitconcept/volto-button-block": "^4.0.0-alpha.0",
+    "@kitconcept/volto-carousel-block": "^2.0.0-alpha.3",
+    "@kitconcept/volto-dsgvo-banner": "^2.5.0",
+    "@kitconcept/volto-heading-block": "^2.5.0",
+    "@kitconcept/volto-highlight-block": "^4.4.0",
+    "@kitconcept/volto-introduction-block": "^1.1.0",
     "@kitconcept/volto-light-theme": "7.0.0-alpha.15",
-    "@mbarde/volto-image-crop-widget": "^0.5.1"
+    "@kitconcept/volto-logos-block": "^3.0.0-alpha.1",
+    "@kitconcept/volto-separator-block": "^4.2.0",
+    "@kitconcept/volto-slider-block": "^6.4.0",
+    "@mbarde/volto-image-crop-widget": "^0.5.1",
+    "@plonegovbr/volto-social-media": "^2.0.0-alpha.6"
   },
   "peerDependencies": {
     "react": "18.2.0",
