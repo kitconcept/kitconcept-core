@@ -7,6 +7,31 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a14 (2025-07-23)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Internal
+
+- Revert #31 @sneridagh [#32](https://github.com/kitconcept/kitconcept-core/issue/32)
+- Update to VLT 7a18. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a13 (2025-07-17)
 
 ### Backend

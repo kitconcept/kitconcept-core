@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.14 (2025-07-23)
+
+### Internal
+
+- Revert #31 @sneridagh [#32](https://github.com/kitconcept/kitconcept-core/issue/32)
+- Update to VLT 7a18. @sneridagh 
+
 ## 1.0.0-alpha.13 (2025-07-17)
 
 ### Internal
