@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a15 (2025-07-25)
+
+### Backend
+
+
+#### Internal:
+
+- Update to VLT 7a19 @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to VLT 7a19 @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a14 (2025-07-23)
 
 ### Backend
