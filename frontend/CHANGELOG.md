@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.16 (2025-08-25)
+
+### Feature
+
+- Update to Volto 18.24.0 and VLT 7a23. @sneridagh [#36](https://github.com/kitconcept/kitconcept-core/issue/36)
+
 ## 1.0.0-alpha.15 (2025-07-25)
 
 ### Internal
