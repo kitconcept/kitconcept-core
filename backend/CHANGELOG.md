@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a17 (2025-08-26)
+
+
+### Bug fixes:
+
+- Fixed person images for search block. Update to VLT 7a24. @sneridagh 
+
 ## 1.0.0a16 (2025-08-25)
 
 
