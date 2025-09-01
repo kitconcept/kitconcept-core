@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a18 (2025-09-01)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Several VLT bugfixes. Update to VLT 7a25. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Several VLT bugfixes. Update to VLT 7a25. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a17 (2025-08-26)
 
 ### Backend

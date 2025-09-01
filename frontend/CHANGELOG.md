@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.18 (2025-09-01)
+
+### Bugfix
+
+- Several VLT bugfixes. Update to VLT 7a25. @sneridagh 
+
 ## 1.0.0-alpha.17 (2025-08-26)
 
 ### Bugfix
