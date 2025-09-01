@@ -237,7 +237,7 @@ constraints = [
     { name = "products-cmfdynamicviewfti", specifier = "==7.0.2" },
     { name = "products-cmfeditions", specifier = "==4.0.5" },
     { name = "products-cmfplacefulworkflow", specifier = "==3.0.5" },
-    { name = "products-cmfplone", specifier = "==6.1.1" },
+    { name = "products-cmfplone", specifier = "==6.1.2" },
     { name = "products-cmfuid", specifier = "==4.2" },
     { name = "products-daterecurringindex", specifier = "==3.0.1" },
     { name = "products-dcworkflow", specifier = "==3.0" },
@@ -1172,7 +1172,7 @@ requires-dist = [
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "plone-volto", specifier = ">=5.1.0" },
     { name = "plonegovbr-socialmedia" },
-    { name = "products-cmfplone", specifier = "==6.1.1" },
+    { name = "products-cmfplone", specifier = "==6.1.2" },
     { name = "pytest", marker = "extra == 'test'" },
     { name = "pytest-cov", marker = "extra == 'test'" },
     { name = "pytest-plone", marker = "extra == 'test'", specifier = ">=1.0.0a1" },
@@ -3716,7 +3716,7 @@ wheels = [
 
 [[package]]
 name = "products-cmfplone"
-version = "6.1.1"
+version = "6.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "borg-localrole" },
@@ -3786,9 +3786,9 @@ dependencies = [
     { name = "zope-i18nmessageid" },
     { name = "zope-structuredtext" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ab/1a/97a3c8ddffc66ec80b22075db664d224988205d3973bb20ed79234bd0f66/products_cmfplone-6.1.1.tar.gz", hash = "sha256:9e1bb2959c8d42fa22e12df34d238a6a1e7fe770c4c319c17ab7b1feab054de8", size = 871334 }
+sdist = { url = "https://files.pythonhosted.org/packages/30/e1/d6e46791a84143a4979476c0747e007a4f90ad4edd9c3cd5354b3d141467/products_cmfplone-6.1.2.tar.gz", hash = "sha256:484759826b486ff060791877d3937ed852a3fcb26cdf7126244344677560c802", size = 873611 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c0/16/71b3eaeaa7a0640a3e5d1e06b20a0c36830f850221e90edc64b4ff8a3c6d/products_cmfplone-6.1.1-py3-none-any.whl", hash = "sha256:4c208f305975fde4aeef6c2b5c83090e51f572ac79ce7450d1a0ef68f6d761e8", size = 872177 },
+    { url = "https://files.pythonhosted.org/packages/f9/b0/209e1bd9eda44dfb354bd023183a75470960abf97ecbaa005fca7c0a6b6d/products_cmfplone-6.1.2-py3-none-any.whl", hash = "sha256:fa7290854fcae895cf6643da66deefafb3f456a3987e53c91de865d47eb99d7a", size = 873976 },
 ]
 
 [package.optional-dependencies]
