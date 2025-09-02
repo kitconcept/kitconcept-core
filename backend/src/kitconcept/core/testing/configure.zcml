@@ -10,6 +10,7 @@
       title="kitconcept.core"
       description="Distribution used for testing."
       directory="distributions/testing"
+      profile_id="kitconcept.core:base"
       />
 
 </configure>
