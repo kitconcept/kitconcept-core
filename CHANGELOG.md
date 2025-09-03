@@ -7,6 +7,56 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a21 (2025-09-03)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Fix image widget and new slider variant. Update to VLT 7a26. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fix image widget and new slider variant. Update to VLT 7a26. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
+## 1.0.0a21 (2025-09-03)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Fix image widget and new slider variant. Update to VLT 7a26. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fix image widget and new slider variant. Update to VLT 7a26. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
 ## 1.0.0a20 (2025-09-03)
 
 ### Backend

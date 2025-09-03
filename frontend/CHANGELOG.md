@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.21 (2025-09-03)
+
+### Bugfix
+
+- Fix image widget and new slider variant. Update to VLT 7a26. @sneridagh 
+
 ## 1.0.0-alpha.20 (2025-09-03)
 
 ### Internal
