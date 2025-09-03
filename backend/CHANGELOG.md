@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a19 (2025-09-03)
+
+
+### New features:
+
+- Update core to Plone 6.1.2 @sneridagh [#39](https://github.com/kitconcept/kitconcept-core/issues/39)
+- Move from `preview_image_link` to `kitconcept.core.person_image` attribute-based field. @sneridagh [#40](https://github.com/kitconcept/kitconcept-core/issues/40)
+
 ## 1.0.0a18 (2025-09-01)
 
 
