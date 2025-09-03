@@ -57,6 +57,6 @@
     "@plone/types": "workspace:*",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "release-it": "^18.1.2"
+    "release-it": "^19.0.4"
   }
 }
