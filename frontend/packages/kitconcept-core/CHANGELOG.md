@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.20 (2025-09-03)
+
+### Internal
+
+- Due to a problem with the last release, re-releasing. @sneridagh 
+
 ## 1.0.0-alpha.19 (2025-09-03)
 
 ### Feature
