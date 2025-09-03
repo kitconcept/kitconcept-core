@@ -19,4 +19,11 @@
       provides=".additional_contact_info.IAdditionalContactInfo"
       />
 
+  <plone:behavior
+      name="kitconcept.core.person_image"
+      title="Person Image"
+      description="Simple attribute-based image field for persons portraits."
+      provides=".person_image.IPersonImage"
+      />
+
 </configure>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-05-23 14:22+0000\n"
+"POT-Creation-Date: 2025-09-03 08:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,19 @@ msgstr ""
 msgid "Person Behavior"
 msgstr ""
 
+#: kitconcept/core/behaviors/configure.zcml:27
+msgid "Person Image"
+msgstr ""
+
+#: kitconcept/core/behaviors/configure.zcml:27
+msgid "Simple attribute-based image field for persons portraits."
+msgstr ""
+
+#. Default: "Use a normal portrait image with your face centered."
+#: kitconcept/core/behaviors/person_image.py:12
+msgid "help_person_image"
+msgstr ""
+
 #: kitconcept/core/profiles.zcml:13
 msgid "kitconcept: Base settings"
 msgstr ""
@@ -59,4 +72,9 @@ msgstr ""
 #. Default: "Room"
 #: kitconcept/core/behaviors/additional_contact_info.py:32
 msgid "label_contact_room"
+msgstr ""
+
+#. Default: "Profile Picture/Portrait"
+#: kitconcept/core/behaviors/person_image.py:11
+msgid "label_person_image"
 msgstr ""
