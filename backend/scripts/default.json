@@ -1,8 +1,7 @@
 {
   "site_id": "Plone",
   "title": "kitconcept.core",
-  "profile_id": "kitconcept.core:base",
-  "distribution": "volto",
+  "distribution": "testing",
   "setup_content": false,
   "default_language": "de",
   "portal_timezone": "UTC"
