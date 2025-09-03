@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/core",
-  "version": "1.0.0-alpha.18",
+  "version": "1.0.0-alpha.19",
   "description": "Core setup for kitconcept GmbH distributions built on top of Plone",
   "main": "src/index.ts",
   "license": "MIT",
