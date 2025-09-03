@@ -56,6 +56,12 @@ instance/etc/zope.ini instance/etc/zope.conf: ## Create instance configuration
 .PHONY: config
 config: instance/etc/zope.ini
 
+
+.PHONY: config-generate
+config-generate:
+	@echo "$(GREEN)==> Re-generate instance configuration$(RESET)"
+	@uvx cookiecutter -f --no-input --config-file instance.yaml gh:plone/cookiecutter-zope-instance
+
 .PHONY: sync
 sync: ## Sync project dependencies
 	@echo "$(GREEN)==> Sync project dependencies$(RESET)"
