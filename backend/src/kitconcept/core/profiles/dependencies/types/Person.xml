@@ -6,12 +6,16 @@
 >
   <property name="behaviors">
     <element value="kitconcept.core.person_image" />
-    <element value="volto.preview_image_link" remove="true" />
+    <element remove="true"
+             value="volto.preview_image_link"
+    />
     <element value="volto.kicker" />
     <element value="collective.person.person" />
     <element value="collective.contact_behaviors.contact_info" />
     <element value="kitconcept.core.additional_contact_info" />
-    <element value="volto.blocks.editable.layout" remove="true" />
+    <element remove="true"
+             value="volto.blocks.editable.layout"
+    />
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
     <element value="volto.navtitle" />
