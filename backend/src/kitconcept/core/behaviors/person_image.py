@@ -6,12 +6,12 @@ from zope.interface import provider
 
 
 @provider(IFormFieldProvider)
-class IImage(model.Schema):
+class IPersonImage(model.Schema):
     image = namedfile.NamedBlobImage(
-        title=_("label_image", default="Image"),
+        title=_("label_person_image", default="Profile Picture/Portrait"),
         description=_(
-            "help_image",
-            default="Insert an image that will be used in listing and teaser blocks.",
+            "help_person_image",
+            default="Use a normal portrait image with your face centered.",
         ),
         required=False,
     )

@@ -20,10 +20,10 @@
       />
 
   <plone:behavior
-      name="kitconcept.core.image"
-      title="Image"
+      name="kitconcept.core.person_image"
+      title="Person Image"
       description="Simple attribute-based image field for content items"
-      provides=".image.IImage"
+      provides=".person_image.IPersonImage"
       />
 
 </configure>

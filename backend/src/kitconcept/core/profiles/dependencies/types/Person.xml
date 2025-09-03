@@ -5,7 +5,7 @@
         i18n:domain="collective.person"
 >
   <property name="behaviors">
-    <element value="kitconcept.core.image" />
+    <element value="kitconcept.core.person_image" />
     <element value="volto.kicker" />
     <element value="collective.person.person" />
     <element value="collective.contact_behaviors.contact_info" />

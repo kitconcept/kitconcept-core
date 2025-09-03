@@ -9,7 +9,7 @@
       destination="20250902001"
       >
     <genericsetup:upgradeDepends
-        title="Update person type behavior list, use lead image instead of preview_image_link"
+        title="Update person type behavior list, use person image instead of preview_image_link"
         import_profile="profile-kitconcept.core:dependencies"
         import_steps="typeinfo"
         />

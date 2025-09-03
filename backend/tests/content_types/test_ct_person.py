@@ -29,7 +29,7 @@ class TestContentTypeFTI:
     def test_behaviors(self):
         """Test behaviors are present and in correct order."""
         assert self.fti.behaviors == (
-            "kitconcept.core.image",
+            "kitconcept.core.person_image",
             "volto.kicker",
             "collective.person.person",
             "collective.contact_behaviors.contact_info",
