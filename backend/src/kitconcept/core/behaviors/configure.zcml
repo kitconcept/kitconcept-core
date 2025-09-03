@@ -22,7 +22,7 @@
   <plone:behavior
       name="kitconcept.core.person_image"
       title="Person Image"
-      description="Simple attribute-based image field for content items"
+      description="Simple attribute-based image field for persons portraits."
       provides=".person_image.IPersonImage"
       />
 
