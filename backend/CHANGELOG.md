@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a22 (2025-09-04)
+
+
+### Bug fixes:
+
+- Fix person grid teasers in edit mode. Update VLT 7a27. @sneridagh 
+
 ## 1.0.0a21 (2025-09-03)
 
 
