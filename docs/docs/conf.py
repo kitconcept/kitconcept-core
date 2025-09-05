@@ -71,7 +71,6 @@ extensions = [
     "sphinx_examples",
     "sphinx_reredirects",
     "sphinx_sitemap",
-    "sphinx_tippy",
     "sphinxcontrib.httpdomain",  # plone.restapi
     "sphinxcontrib.httpexample",  # plone.restapi
     "sphinxcontrib.mermaid",
