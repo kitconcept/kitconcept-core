@@ -17,6 +17,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(D
 VALEFILES       := $(shell find $(DOCS_DIR) -type f -name "*.md" -print)
 VALEOPTS        ?=
 PYTHONVERSION   = >=3.11,<3.14
+SPHINXBUILD     = "$(realpath .venv/bin/sphinx-build)"
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -96,7 +97,7 @@ rtd-prepare:  ## Prepare environment on Read the Docs
 
 .PHONY: rtd-pr-preview  ## Build pull request previews on Read the Docs
 rtd-pr-preview: rtd-prepare .venv/bin/python ## Build pull request preview on Read the Docs
-	cd $(DOCS_DIR) && $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ${READTHEDOCS_OUTPUT}/html/
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ${READTHEDOCS_OUTPUT}/html/
 # /documentation builders
 
 

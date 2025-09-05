@@ -1,5 +1,5 @@
 [project]
-name = "kitconcept_core_Documentation"
+name = "kitconcept_core_docs"
 description = "Core setup for kitconcept GmbH distributions built on top of Plone"
 keywords = [
     "kitconcept.core",
