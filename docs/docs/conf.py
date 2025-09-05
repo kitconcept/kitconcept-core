@@ -20,8 +20,8 @@ from plone_sphinx_theme import __version__
 # -- Project information -----------------------------------------------------
 
 project = "kitconcept.core"
-author = "kitconcept GmbH"
-trademark_name = "kitconcept"
+author = "kitconcept, GmbH"
+trademark_name = "kitconcept.core"
 now = datetime.now()
 year = str(now.year)
 copyright = year
@@ -95,7 +95,7 @@ linkcheck_ignore = [
     # Ignore file downloads
     r"^/_static/",
     # Ignore pages that require authentication
-    r"https://github.com/kitconcept/kitconceptcore/issues/new",  # requires auth
+    r"https://github.com/kitconcept/kitconcept-core/issues/new",  # requires auth
     # Ignore github.com pages with anchors
     r"https://github.com/.*#.*",
     # Ignore other specific anchors
@@ -155,7 +155,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/kitconcept/kitconceptcore",
+            "url": "https://github.com/kitconcept/kitconcept-core",
             "icon": "fa-brands fa-square-github",
             "type": "fontawesome",
             "attributes": {
@@ -182,7 +182,7 @@ html_theme_options = {
     "navigation_with_keys": True,
     "path_to_docs": "docs/docs",
     "repository_branch": "main",
-    "repository_url": "https://github.com/kitconcept/kitconceptcore",
+    "repository_url": "https://github.com/kitconcept/kitconcept-core",
     "search_bar_text": "Search",
     "show_toc_level": 2,
     "use_edit_page_button": True,
@@ -321,7 +321,7 @@ tippy_props = {
 # -- Options for HTML help output -------------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "kitconcept.coreDocumentation"
+htmlhelp_basename = "kitconcept.core"
 
 
 # -- Options for LaTeX output -------------------------------------------------
