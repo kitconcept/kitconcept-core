@@ -17,6 +17,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(D
 VALEFILES       := $(shell find $(DOCS_DIR) -type f -name "*.md" -print)
 VALEOPTS        ?=
 PYTHONVERSION   = >=3.11,<3.14
+SPHINXBUILD     = "$(realpath .venv/bin/sphinx-build)"
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
