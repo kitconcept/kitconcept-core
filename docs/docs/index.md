@@ -11,10 +11,11 @@ myst:
 
 Welcome to the documentation for kitconcept.core!
 
-`````{grid} 1 1 2 2
+`````{grid} 1 1 3 3
 :gutter: 3 3 4 5
 
 ````{grid-item-card}
+:columns: 12 12 12 12
 :link: concepts/what-is-core
 :link-type: doc
 {octicon}`zap;1.5em;sd-text-info`
@@ -30,6 +31,7 @@ Go to Get started
 ````
 
 ````{grid-item-card}
+:columns: 6 6 6 6
 :link: https://volto-light-theme.readthedocs.io/
 :link-type: url
 {octicon}`person;1.5em;sd-text-info`
@@ -38,7 +40,6 @@ Volto Light Theme
 This is the documentation specific to VLT features.
 +++
 ```{button-link} https://volto-light-theme.readthedocs.io/
-:ref-type: ref
 :color: primary
 :expand:
 Go to VLT docs
@@ -46,6 +47,23 @@ Go to VLT docs
 ````
 
 ````{grid-item-card}
+:columns: 6 6 6 6
+:link: https://volto-light-theme.readthedocs.io/storybook/
+:link-type: url
+{octicon}`person-add;1.5em;sd-text-info`
+VLT Storybook
+^^^
+This is the Storybook of VLT.
++++
+```{button-ref} https://volto-light-theme.readthedocs.io/storybook/
+:color: primary
+:expand:
+Go to VLT Storybook
+```
+````
+
+````{grid-item-card}
+:columns: 6 6 6 6
 :link: https://kitconcept-intranet.readthedocs.io
 :link-type: url
 {octicon}`person-add;1.5em;sd-text-info`
@@ -53,11 +71,42 @@ Intranet distribution
 ^^^
 This is the documentation specific to the kitconcept intranet distribution.
 +++
-```{button-ref} https://kitconceptintranet.readthedocs.io
-:ref-type: ref
+```{button-ref} https://kitconcept-intranet.readthedocs.io
 :color: primary
 :expand:
 Go to intranet docs
+```
+````
+
+````{grid-item-card}
+:columns: 6 6 6 6
+:link: https://plone-intranet.kitconcept.dev
+:link-type: url
+{octicon}`person-add;1.5em;sd-text-info`
+Intranet distribution dev demo site
+^^^
+This is the demo dev site (https://plone-intranet.kitconcept.dev).
++++
+```{button-ref} https://plone-intranet.kitconcept.dev
+:color: primary
+:expand:
+Go to intranet dev site
+```
+````
+
+````{grid-item-card}
+:columns: 6 6 6 6
+:link: https://plone-components.readthedocs.io/
+:link-type: url
+{octicon}`person-add;1.5em;sd-text-info`
+@plone/components Storybook
+^^^
+This is the Storybook (canary) of the @plone/components package.
++++
+```{button-ref} https://plone-components.readthedocs.io/
+:color: primary
+:expand:
+Go to @plone/components Storybook
 ```
 ````
 
