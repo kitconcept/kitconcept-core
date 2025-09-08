@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.23 (2025-09-08)
+
+### Bugfix
+
+- Fixed slider flag position button in simple variant. Changed svg events calendar variant. Update VLT 7a28. @sneridagh 
+
 ## 1.0.0-alpha.22 (2025-09-04)
 
 ### Bugfix

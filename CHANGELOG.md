@@ -7,6 +7,34 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a23 (2025-09-08)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Fixed slider flag position button in simple variant. Changed svg events calendar variant. Update VLT 7a28. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fixed slider flag position button in simple variant. Changed svg events calendar variant. Update VLT 7a28. @sneridagh 
+
+
+
+### Project
+
+
+#### Documentation
+
+- Enable docs in core. https://kitconcept-core.readthedocs.io/ @sneridagh 
+
+
+
 ## 1.0.0a22 (2025-09-04)
 
 ### Backend
