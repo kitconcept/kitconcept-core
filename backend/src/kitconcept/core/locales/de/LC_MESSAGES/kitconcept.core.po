@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-10 19:27+0000\n"
+"POT-Creation-Date: 2025-09-10 19:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,20 +59,20 @@ msgstr ""
 msgid "kitconcept: Required dependencies"
 msgstr ""
 
-#. Default: "Additional Contact Information"
-#: kitconcept/core/behaviors/additional_contact_info.py:17
-msgid "label_additional_contact_info"
-msgstr ""
-
 #. Default: "Building"
 #: kitconcept/core/behaviors/additional_contact_info.py:27
 msgid "label_contact_building"
-msgstr ""
+msgstr "Gebäude"
+
+#. Default: "Location"
+#: kitconcept/core/behaviors/additional_contact_info.py:17
+msgid "label_contact_location"
+msgstr "Standort"
 
 #. Default: "Room"
 #: kitconcept/core/behaviors/additional_contact_info.py:32
 msgid "label_contact_room"
-msgstr ""
+msgstr "Raum"
 
 #. Default: "Profile Picture/Portrait"
 #: kitconcept/core/behaviors/person_image.py:11
