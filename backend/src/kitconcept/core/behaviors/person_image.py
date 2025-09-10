@@ -1,7 +1,7 @@
+from kitconcept.core import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile import field as namedfile
 from plone.supermodel import model
-from plone.volto import _
 from zope.interface import provider
 
 

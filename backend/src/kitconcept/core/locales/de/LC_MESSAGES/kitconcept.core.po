@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-03 08:32+0000\n"
+"POT-Creation-Date: 2025-09-10 19:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 #. Default: "Use a normal portrait image with your face centered."
 #: kitconcept/core/behaviors/person_image.py:12
 msgid "help_person_image"
-msgstr "Verwenden Sie ein Portraibild mit Ihrem Gesicht in der Mitte."
+msgstr "Laden Sie ein normales Portraitbild mit Ihrem Kopf in der Mitte hoch."
 
 #: kitconcept/core/profiles.zcml:13
 msgid "kitconcept: Base settings"
