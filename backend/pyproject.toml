@@ -32,7 +32,7 @@ dependencies = [
     "collective.volto.formsupport==3.2.3",
     "collective.honeypot",
     "plonegovbr.socialmedia",
-    "collective.person",
+    "collective.person==1.0.0b2",
 ]
 
 [project.optional-dependencies]
