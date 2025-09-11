@@ -13,10 +13,10 @@ PERMISSION = "kitconcept.core.behaviors.additional_contact_info.view"
 @provider(IFormFieldProvider)
 class IAdditionalContactInfo(model.Schema):
     directives.fieldset(
-        "additional_contact_info",
+        "contact_location",
         label=_(
-            "label_additional_contact_info",
-            default="Additional Contact Information",
+            "label_contact_location",
+            default="Location",
         ),
         fields=("contact_building", "contact_room"),
     )
