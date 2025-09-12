@@ -9,6 +9,14 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a24 (2025-09-12)
+
+
+### Bug fixes:
+
+- Fix translations of Person behaviors. @davisagli 
+- Upgrade to collective.person 1.0.0b2 to improve the Person schema. @davisagli 
+
 ## 1.0.0a23 (2025-09-08)
 
 
