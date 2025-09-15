@@ -5,7 +5,7 @@
         i18n:domain="collective.person"
 >
   <!-- This is needed to reset the XML defined blocks layout for Person -->
-  <property name="model_source"></property>
+  <property name="model_source" />
   <property name="schema">collective.person.content.person.IPerson</property>
 
   <property name="behaviors">
