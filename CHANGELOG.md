@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a27 (2025-09-15)
+
+### Backend
+
+
+#### Internal:
+
+- Added missing upgrade step in previous version (1.0.0a26). @sneridagh 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a26 (2025-09-15)
 
 ### Backend

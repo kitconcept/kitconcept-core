@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a27 (2025-09-15)
+
+
+### Internal:
+
+- Added missing upgrade step in previous version (1.0.0a26). @sneridagh 
+
 ## 1.0.0a26 (2025-09-15)
 
 
