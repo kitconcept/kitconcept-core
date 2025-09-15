@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0a26 (2025-09-15)
+
+
+### Bug fixes:
+
+- Fixed blocks behavior removal by getting rid of `model_schema` from c.person. @sneridagh 
+
 ## 1.0.0a25 (2025-09-12)
 
 

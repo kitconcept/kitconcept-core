@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a26 (2025-09-15)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Fixed blocks behavior removal by getting rid of `model_schema` from c.person. @sneridagh 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a25 (2025-09-12)
 
 ### Backend

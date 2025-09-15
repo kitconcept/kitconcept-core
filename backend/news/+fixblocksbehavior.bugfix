@@ -1,1 +1,0 @@
-Fixed blocks behavior removal by getting rid of `model_schema` from c.person. @sneridagh
