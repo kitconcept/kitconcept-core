@@ -10,7 +10,6 @@
       >
     <genericsetup:upgradeDepends
         title="Remove custom model_schema in Person content type from collective.person"
-        import_profile="profile-kitconcept.core:dependencies"
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
