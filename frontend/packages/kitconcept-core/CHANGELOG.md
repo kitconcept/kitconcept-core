@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.28 (2025-09-16)
+
+### Bugfix
+
+- Fixed theme CSS properties injection in add/edit view. Several CSS fixes. Use VLT 7b4 and plonegovbr/social-media 2.0.0a8. @sneridagh 
+
 ## 1.0.0-alpha.27 (2025-09-15)
 
 ## 1.0.0-alpha.26 (2025-09-15)

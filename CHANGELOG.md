@@ -7,6 +7,38 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a28 (2025-09-16)
+
+### Backend
+
+
+#### New features:
+
+- Add behavior `kitconcept.core.additional_contact_info` with fields address, office_phone and fax field. @iFlameing 
+- Person: Add behavior `kitconcept.core.biography` with field `biography`. @ericof 
+
+
+#### Bug fixes:
+
+- Use VLT 7b4 and plonegovbr/social-media 2.0.0a8. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fixed theme CSS properties injection in add/edit view. Several CSS fixes. Use VLT 7b4 and plonegovbr/social-media 2.0.0a8. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a27 (2025-09-15)
 
 ### Backend
