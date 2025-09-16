@@ -26,6 +26,8 @@ The mutator definition will be applied to the hardcoded blocks configuration, mo
 
 The behavior is enabled by default on the Plone site for the kitconcept intranet distribution, but you can also enable it on a subsite.
 
+## Accessing the configuration field
+
 You find it in the "Plone Site" tab of the site or subsite settings, under the name "Blocks configuration".
 
 ```{image} ../_static/ttwblocksconfig.png
