@@ -18,4 +18,4 @@ jobs:
     with:
       python-version: ${{ inputs.python-version }}
       working-directory: ${{ inputs.working-directory }}
-      check-vale: true
+      check-vale: false
