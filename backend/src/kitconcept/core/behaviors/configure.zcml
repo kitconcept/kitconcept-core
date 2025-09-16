@@ -14,14 +14,21 @@
   <!-- Person Behavior -->
   <plone:behavior
       name="kitconcept.core.additional_contact_info"
-      title="Person Behavior"
+      title="Person: Additional contact information"
       description="Fields with additional person information"
       provides=".additional_contact_info.IAdditionalContactInfo"
       />
 
   <plone:behavior
+      name="kitconcept.core.biography"
+      title="Person: Biography information"
+      description="Add a field for a biography."
+      provides=".person_bio.IPersonBiography"
+      />
+
+  <plone:behavior
       name="kitconcept.core.person_image"
-      title="Person Image"
+      title="Person: Image"
       description="Simple attribute-based image field for persons portraits."
       provides=".person_image.IPersonImage"
       />

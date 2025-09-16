@@ -12,15 +12,6 @@ PERMISSION = "kitconcept.core.behaviors.additional_contact_info.view"
 
 @provider(IFormFieldProvider)
 class IAdditionalContactInfo(model.Schema):
-    directives.fieldset(
-        "contact_location",
-        label=_(
-            "label_contact_location",
-            default="Location",
-        ),
-        fields=("contact_building", "contact_room"),
-    )
-
     read_permission(contact_building=PERMISSION, contact_room=PERMISSION)
 
     contact_building = schema.TextLine(
@@ -30,4 +21,36 @@ class IAdditionalContactInfo(model.Schema):
 
     contact_room = schema.TextLine(
         title=_("label_contact_room", default="Room"), required=False
+    )
+
+    address = schema.Text(
+        title=_("label_address", default="Address"),
+        required=False,
+    )
+
+    office_phone = schema.TextLine(
+        title=_("label_office_phone", default="Office Phone"),
+        required=False,
+    )
+
+    fax = schema.TextLine(
+        title=_("label_fax", default="Fax"),
+        required=False,
+    )
+
+    directives.fieldset(
+        "contact_location",
+        label=_(
+            "label_contact_location",
+            default="Location",
+        ),
+        fields=("contact_building", "contact_room", "address"),
+    )
+    directives.fieldset(
+        "contact_info",
+        label=_(
+            "label_contact_info",
+            default="Contact Information",
+        ),
+        fields=("office_phone", "fax"),
     )
