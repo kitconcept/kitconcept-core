@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-10 19:44+0000\n"
+"POT-Creation-Date: 2025-09-16 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,14 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: kitconcept.core\n"
+
+#: kitconcept/core/behaviors/additional_contact_info.py:36
+msgid "Address"
+msgstr ""
+
+#: kitconcept/core/behaviors/additional_contact_info.py:46
+msgid "Fax"
+msgstr ""
 
 #: kitconcept/core/behaviors/configure.zcml:20
 msgid "Fields with additional person information"
@@ -28,6 +36,10 @@ msgstr ""
 
 #: kitconcept/core/profiles.zcml:31
 msgid "Generic setup profile with dependencies used by kitconcept projects."
+msgstr ""
+
+#: kitconcept/core/behaviors/additional_contact_info.py:41
+msgid "Office Phone"
 msgstr ""
 
 #: kitconcept/core/behaviors/configure.zcml:20
