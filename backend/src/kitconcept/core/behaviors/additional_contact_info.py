@@ -31,3 +31,18 @@ class IAdditionalContactInfo(model.Schema):
     contact_room = schema.TextLine(
         title=_("label_contact_room", default="Room"), required=False
     )
+
+    address = schema.Text(
+        title=_("Address"),
+        required=False,
+    )
+
+    office_phone = schema.TextLine(
+        title=_("Office Phone"),
+        required=False,
+    )
+
+    fax = schema.TextLine(
+        title=_("Fax"),
+        required=False,
+    )
