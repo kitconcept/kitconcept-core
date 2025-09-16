@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-16 13:48+0000\n"
+"POT-Creation-Date: 2025-09-16 14:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: kitconcept/core/behaviors/additional_contact_info.py:36
+#: kitconcept/core/behaviors/configure.zcml:27
+msgid "Add a field for a biography."
+msgstr ""
+
+#: kitconcept/core/behaviors/additional_contact_info.py:27
 msgid "Address"
 msgstr "Adresse"
 
-#: kitconcept/core/behaviors/additional_contact_info.py:46
+#: kitconcept/core/behaviors/additional_contact_info.py:37
 msgid "Fax"
 msgstr "Fax"
 
@@ -38,19 +42,23 @@ msgstr ""
 msgid "Generic setup profile with dependencies used by kitconcept projects."
 msgstr ""
 
-#: kitconcept/core/behaviors/additional_contact_info.py:41
+#: kitconcept/core/behaviors/additional_contact_info.py:32
 msgid "Office Phone"
 msgstr "Bürotelefon"
 
 #: kitconcept/core/behaviors/configure.zcml:20
-msgid "Person Behavior"
+msgid "Person: Additional contact information"
 msgstr ""
 
 #: kitconcept/core/behaviors/configure.zcml:27
-msgid "Person Image"
+msgid "Person: Biography information"
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:27
+#: kitconcept/core/behaviors/configure.zcml:34
+msgid "Person: Image"
+msgstr ""
+
+#: kitconcept/core/behaviors/configure.zcml:34
 msgid "Simple attribute-based image field for persons portraits."
 msgstr ""
 
@@ -72,19 +80,38 @@ msgid "kitconcept: Required dependencies"
 msgstr ""
 
 #. Default: "Building"
-#: kitconcept/core/behaviors/additional_contact_info.py:27
+#: kitconcept/core/behaviors/additional_contact_info.py:18
 msgid "label_contact_building"
 msgstr "Gebäude"
 
+#. Default: "Contact Information"
+#: kitconcept/core/behaviors/additional_contact_info.py:51
+msgid "label_contact_info"
+msgstr ""
+
 #. Default: "Location"
-#: kitconcept/core/behaviors/additional_contact_info.py:17
+#: kitconcept/core/behaviors/additional_contact_info.py:43
 msgid "label_contact_location"
 msgstr "Standort"
 
 #. Default: "Room"
-#: kitconcept/core/behaviors/additional_contact_info.py:32
+#: kitconcept/core/behaviors/additional_contact_info.py:23
 msgid "label_contact_room"
 msgstr "Raum"
+
+#. Default: "Biography"
+#: kitconcept/core/behaviors/person_bio.py:23
+msgid "label_person_biography"
+msgstr ""
+
+#: kitconcept/core/behaviors/person_bio.py:18
+msgid "label_person_description_help"
+msgstr ""
+
+#. Default: "Summary"
+#: kitconcept/core/behaviors/person_bio.py:15
+msgid "label_person_description_title"
+msgstr ""
 
 #. Default: "Profile Picture/Portrait"
 #: kitconcept/core/behaviors/person_image.py:11
