@@ -205,7 +205,8 @@ html_title = f"{project} v{release}"
 # If false, no index is generated.
 html_use_index = True
 
-# html_css_files = ["custom.css", ("print.css", {"media": "print"})]
+html_css_files = ["custom.css"]
+
 # html_js_files = []
 
 html_extra_path = [
