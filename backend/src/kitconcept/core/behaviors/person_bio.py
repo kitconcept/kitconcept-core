@@ -11,20 +11,17 @@ from zope.interface import provider
 @provider(IFormFieldProvider)
 class IPersonBiography(model.Schema):
     """A behavior to add a biography field to a person."""
-    # Modify the existing description field
-    IPersonData["description"].__dict__['title'] = _(
-        "label_person_description_title", default="Summary"
-    )
-    IPersonData["description"].__dict__['description'] = _(
-        "label_person_description_help", default=""
-    )
+
+    # Hide the existing description field
+    IPersonData["description"].__dict__["readonly"] = True
 
     text = RichTextField(
         title=_("label_person_biography", default="Biography"),
+        description=_(
+            "help_person_biography", default="A short biography for this person."
+        ),
         required=False,
     )
     model.primary("text")
     searchable("text")
-    form.order_after(
-        text= "collective.person.behaviors.person.IPersonData.last_name"
-    )
+    form.order_after(text="last_name")

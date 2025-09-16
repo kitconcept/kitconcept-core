@@ -24,17 +24,17 @@ class IAdditionalContactInfo(model.Schema):
     )
 
     address = schema.Text(
-        title=_("Address"),
+        title=_("label_address", default="Address"),
         required=False,
     )
 
     office_phone = schema.TextLine(
-        title=_("Office Phone"),
+        title=_("label_office_phone", default="Office Phone"),
         required=False,
     )
 
     fax = schema.TextLine(
-        title=_("Fax"),
+        title=_("label_fax", default="Fax"),
         required=False,
     )
 
