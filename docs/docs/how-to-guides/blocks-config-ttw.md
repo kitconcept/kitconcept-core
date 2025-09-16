@@ -1,13 +1,13 @@
 ---
 myst:
   html_meta:
-    "description": "Blocks configuration Trough the Web (TTW)"
-    "property=og:description": "Blocks configuration Trough the Web (TTW)"
-    "property=og:title": "Blocks configuration Trough the Web (TTW)"
+    "description": "Blocks configuration Through the Web (TTW)"
+    "property=og:description": "Blocks configuration Through the Web (TTW)"
+    "property=og:title": "Blocks configuration Through the Web (TTW)"
     "keywords": "kitconcept Intranet Distribution, blocks configuration, TTW"
 ---
 
-# Blocks configuration Trough the Web (TTW)
+# Blocks configuration Through the Web (TTW)
 
 This document describes how to configure blocks TTW (through the web) in a Plone site or subsite.
 

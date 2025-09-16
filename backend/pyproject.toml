@@ -31,7 +31,7 @@ dependencies = [
     "kitconcept.voltolighttheme==7.0.0b4",
     "collective.volto.formsupport==3.2.3",
     "collective.honeypot",
-    "plonegovbr.socialmedia",
+    "plonegovbr.socialmedia==2.0.0a8",
     "collective.person==1.0.0b2",
 ]
 
