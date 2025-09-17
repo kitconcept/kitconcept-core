@@ -5,6 +5,13 @@
     i18n_domain="kitconcept.core"
     >
 
-  <!-- -*- extra stuff goes here -*- -->
+  <adapter
+      factory=".kitconcept.KitconceptControlpanel"
+      name="kitconcept-settings"
+      />
+  <adapter
+      factory=".kitconcept.SiteEndpointExpander"
+      name="kitconcept.core.settings"
+      />
 
 </configure>
