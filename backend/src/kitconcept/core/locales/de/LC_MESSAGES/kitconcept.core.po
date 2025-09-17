@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-16 17:01+0000\n"
+"POT-Creation-Date: 2025-09-17 11:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,13 +82,8 @@ msgstr "Adresse"
 msgid "label_contact_building"
 msgstr "Gebäude"
 
-#. Default: "Contact Information"
-#: kitconcept/core/behaviors/additional_contact_info.py:51
-msgid "label_contact_info"
-msgstr "Kontaktinformationen"
-
 #. Default: "Location"
-#: kitconcept/core/behaviors/additional_contact_info.py:43
+#: kitconcept/core/behaviors/additional_contact_info.py:33
 msgid "label_contact_location"
 msgstr "Standort"
 
@@ -96,16 +91,6 @@ msgstr "Standort"
 #: kitconcept/core/behaviors/additional_contact_info.py:23
 msgid "label_contact_room"
 msgstr "Raum"
-
-#. Default: "Fax"
-#: kitconcept/core/behaviors/additional_contact_info.py:37
-msgid "label_fax"
-msgstr "Fax"
-
-#. Default: "Office Phone"
-#: kitconcept/core/behaviors/additional_contact_info.py:32
-msgid "label_office_phone"
-msgstr "Bürotelefon"
 
 #. Default: "Biography"
 #: kitconcept/core/behaviors/person_bio.py:19
