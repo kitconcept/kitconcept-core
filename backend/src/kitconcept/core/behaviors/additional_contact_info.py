@@ -28,16 +28,6 @@ class IAdditionalContactInfo(model.Schema):
         required=False,
     )
 
-    office_phone = schema.TextLine(
-        title=_("label_office_phone", default="Office Phone"),
-        required=False,
-    )
-
-    fax = schema.TextLine(
-        title=_("label_fax", default="Fax"),
-        required=False,
-    )
-
     directives.fieldset(
         "contact_location",
         label=_(
@@ -45,12 +35,4 @@ class IAdditionalContactInfo(model.Schema):
             default="Location",
         ),
         fields=("contact_building", "contact_room", "address"),
-    )
-    directives.fieldset(
-        "contact_info",
-        label=_(
-            "label_contact_info",
-            default="Contact Information",
-        ),
-        fields=("office_phone", "fax"),
     )
