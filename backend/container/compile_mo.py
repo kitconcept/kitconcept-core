@@ -27,10 +27,6 @@ def compile_po_file(po_file: Path) -> Path | None:
     mo_file: Path = parent / f"{domain}.mo"
     do_compile: bool = True
 
-    if mo_file.exists():
-        # Check if an existing file needs to be recompiled
-        do_compile = os.stat(mo_file).st_mtime < os.stat(po_file).st_mtime
-
     if do_compile:
         try:
             mo = Msgfmt(f"{po_file}", name=domain).getAsFile()
