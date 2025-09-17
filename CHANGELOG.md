@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a29 (2025-09-17)
+
+### Backend
+
+
+#### Internal:
+
+- Move the office_phone and fax to collective.contact_behaviours. @iFlameing 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a28 (2025-09-16)
 
 ### Backend
