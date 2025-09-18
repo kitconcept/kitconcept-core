@@ -5,13 +5,13 @@
 
   <genericsetup:upgradeSteps
       profile="kitconcept.core:base"
-      source="v20250902001"
-      destination="20250903001"
+      source="20250916001"
+      destination="20250917001"
       >
     <genericsetup:upgradeDepends
-        title="Remove volto.blocks.editable.layout from the Person content type behaviors"
+        title="Add new control panel for kitconcept settings"
         import_profile="kitconcept.core:dependencies"
-        import_steps="typeinfo"
+        import_steps="controlpanel plone.app.registry"
         />
   </genericsetup:upgradeSteps>
 

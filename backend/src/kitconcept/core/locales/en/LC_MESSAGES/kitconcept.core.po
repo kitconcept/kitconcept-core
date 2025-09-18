@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-17 11:07+0000\n"
+"POT-Creation-Date: 2025-09-18 06:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,27 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: kitconcept.core\n"
 
-#: kitconcept/core/behaviors/configure.zcml:27
+#: kitconcept/core/behaviors/configure.zcml:34
 msgid "Add a field for a biography."
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:20
+#: kitconcept/core/behaviors/configure.zcml:19
+msgid "Allows to set configuration that will be injected into the blocks default configuration."
+msgstr ""
+
+#: kitconcept/core/behaviors/blocks_settings.py:24
+msgid "Blocks configuration"
+msgstr ""
+
+#: kitconcept/core/controlpanel/kitconcept.py:19
+msgid "Custom CSS"
+msgstr ""
+
+#: kitconcept/core/controlpanel/kitconcept.py:20
+msgid "Custom CSS for this site."
+msgstr ""
+
+#: kitconcept/core/behaviors/configure.zcml:27
 msgid "Fields with additional person information"
 msgstr ""
 
@@ -34,20 +50,29 @@ msgstr ""
 msgid "Generic setup profile with dependencies used by kitconcept projects."
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:20
+#: kitconcept/core/behaviors/configure.zcml:27
 msgid "Person: Additional contact information"
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:27
+#: kitconcept/core/behaviors/configure.zcml:34
 msgid "Person: Biography information"
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:34
+#: kitconcept/core/behaviors/configure.zcml:41
 msgid "Person: Image"
 msgstr ""
 
-#: kitconcept/core/behaviors/configure.zcml:34
+#: kitconcept/core/behaviors/configure.zcml:41
 msgid "Simple attribute-based image field for persons portraits."
+msgstr ""
+
+#: kitconcept/core/behaviors/configure.zcml:19
+msgid "Through The Web blocks configuration"
+msgstr ""
+
+#. Default: "Configure some aspects of the default blocks configuration."
+#: kitconcept/core/behaviors/blocks_settings.py:41
+msgid "help_blocks_config_mutator"
 msgstr ""
 
 #. Default: "A short biography for this person."
@@ -58,6 +83,10 @@ msgstr ""
 #. Default: "Use a normal portrait image with your face centered."
 #: kitconcept/core/behaviors/person_image.py:12
 msgid "help_person_image"
+msgstr ""
+
+#: kitconcept/core/controlpanel/kitconcept.py:27
+msgid "kitconcept Settings"
 msgstr ""
 
 #: kitconcept/core/profiles.zcml:13

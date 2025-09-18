@@ -10,7 +10,7 @@
       >
     <genericsetup:upgradeDepends
         title="Update person type behavior list, use person image instead of preview_image_link"
-        import_profile="profile-kitconcept.core:dependencies"
+        import_profile="kitconcept.core:dependencies"
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>
