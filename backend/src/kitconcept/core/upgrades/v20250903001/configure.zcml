@@ -10,7 +10,7 @@
       >
     <genericsetup:upgradeDepends
         title="Remove volto.blocks.editable.layout from the Person content type behaviors"
-        import_profile="profile-kitconcept.core:dependencies"
+        import_profile="kitconcept.core:dependencies"
         import_steps="typeinfo"
         />
   </genericsetup:upgradeSteps>

@@ -10,7 +10,7 @@
       >
     <genericsetup:upgradeDepends
         title="Add new control panel for kitconcept settings"
-        import_profile="profile-kitconcept.core:dependencies"
+        import_profile="kitconcept.core:dependencies"
         import_steps="controlpanel plone.app.registry"
         />
   </genericsetup:upgradeSteps>

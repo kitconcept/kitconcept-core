@@ -6,9 +6,7 @@
 >
 
   <!-- Enabled behaviors -->
-  <property name="behaviors"
-            purge="true"
-  >
+  <property name="behaviors">
     <element value="volto.preview_image_link" />
     <element value="voltolighttheme.header" />
     <element value="voltolighttheme.theme" />

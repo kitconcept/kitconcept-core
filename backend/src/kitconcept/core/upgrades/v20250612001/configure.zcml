@@ -10,7 +10,7 @@
       >
     <genericsetup:upgradeDepends
         title="Install plonetheme.barceloneta"
-        import_profile="profile-plonetheme.barceloneta:default"
+        import_profile="plonetheme.barceloneta:default"
         />
   </genericsetup:upgradeSteps>
 
