@@ -13,11 +13,11 @@ from zope.interface import Interface
 
 
 class IKitconceptSettings(Interface):
-    """Intranet project settings stored in the backend"""
+    """kitconcept core settings stored in the backend"""
 
     custom_css = schema.Text(
         title=_("Custom CSS"),
-        description=_("Custom CSS for the intranet."),
+        description=_("Custom CSS for this site."),
         required=False,
     )
 
