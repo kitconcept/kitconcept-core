@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-16 17:01+0000\n"
+"POT-Creation-Date: 2025-09-18 06:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,45 +10,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Language-Code: de\n"
-"Language-Name: English\n"
+"Language-Name: Deutsch\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: kitconcept.core\n"
+
+#: kitconcept/core/behaviors/configure.zcml:34
+msgid "Add a field for a biography."
+msgstr "Fügen Sie ein Feld für eine Biografie hinzu."
+
+#: kitconcept/core/behaviors/configure.zcml:19
+msgid "Allows to set configuration that will be injected into the blocks default configuration."
+msgstr "Ermöglicht die Festlegung einer Konfiguration, die in die Standardkonfiguration der Blöcke eingefügt wird."
+
+#: kitconcept/core/behaviors/blocks_settings.py:24
+msgid "Blocks configuration"
+msgstr "Blocks Konfiguration"
+
+#: kitconcept/core/controlpanel/kitconcept.py:19
+msgid "Custom CSS"
+msgstr "Benutzerdefiniertes CSS"
+
+#: kitconcept/core/controlpanel/kitconcept.py:20
+msgid "Custom CSS for this site."
+msgstr "Benutzerdefiniertes CSS für diese Seite."
 
 #: kitconcept/core/behaviors/configure.zcml:27
-msgid "Add a field for a biography."
-msgstr ""
-
-#: kitconcept/core/behaviors/configure.zcml:20
 msgid "Fields with additional person information"
-msgstr ""
+msgstr "Felder mit zusätzlichen Personeninformationen"
 
 #: kitconcept/core/profiles.zcml:13
 msgid "Generic setup profile with base settings for kitconcept projects."
-msgstr ""
+msgstr "Generisches Setup-Profil mit Basiseinstellungen für kitconcept-Projekte."
 
 #: kitconcept/core/profiles.zcml:22
 msgid "Generic setup profile with core dependencies needed by CMF."
-msgstr ""
+msgstr "Generisches Setup-Profil mit Kernabhängigkeiten, die von CMF benötigt werden."
 
 #: kitconcept/core/profiles.zcml:31
 msgid "Generic setup profile with dependencies used by kitconcept projects."
-msgstr ""
-
-#: kitconcept/core/behaviors/configure.zcml:20
-msgid "Person: Additional contact information"
-msgstr ""
+msgstr "Generisches Setup-Profil mit Abhängigkeiten, die von kitconcept-Projekten verwendet werden."
 
 #: kitconcept/core/behaviors/configure.zcml:27
+msgid "Person: Additional contact information"
+msgstr "Person: Zusätzliche Kontaktinformationen"
+
+#: kitconcept/core/behaviors/configure.zcml:34
 msgid "Person: Biography information"
-msgstr ""
+msgstr "Person: Biografieinformationen"
 
-#: kitconcept/core/behaviors/configure.zcml:34
+#: kitconcept/core/behaviors/configure.zcml:41
 msgid "Person: Image"
-msgstr ""
+msgstr "Person: Bild"
 
-#: kitconcept/core/behaviors/configure.zcml:34
+#: kitconcept/core/behaviors/configure.zcml:41
 msgid "Simple attribute-based image field for persons portraits."
-msgstr ""
+msgstr "Einfaches attributbasiertes Bildfeld für Personenporträts."
+
+#: kitconcept/core/behaviors/configure.zcml:19
+msgid "Through The Web blocks configuration"
+msgstr "Blockkonfiguration durch die Weboberfläche"
+
+#. Default: "Configure some aspects of the default blocks configuration."
+#: kitconcept/core/behaviors/blocks_settings.py:41
+msgid "help_blocks_config_mutator"
+msgstr "Blocks Konfiguration anpassen"
 
 #. Default: "A short biography for this person."
 #: kitconcept/core/behaviors/person_bio.py:20
@@ -59,6 +84,10 @@ msgstr "Kurzbiographie der Person."
 #: kitconcept/core/behaviors/person_image.py:12
 msgid "help_person_image"
 msgstr "Laden Sie ein normales Portraitbild mit Ihrem Kopf in der Mitte hoch."
+
+#: kitconcept/core/controlpanel/kitconcept.py:27
+msgid "kitconcept Settings"
+msgstr ""
 
 #: kitconcept/core/profiles.zcml:13
 msgid "kitconcept: Base settings"
