@@ -111,29 +111,14 @@ msgstr ""
 msgid "label_contact_building"
 msgstr ""
 
-#. Default: "Contact Information"
-#: kitconcept/core/behaviors/additional_contact_info.py:51
-msgid "label_contact_info"
-msgstr ""
-
 #. Default: "Location"
-#: kitconcept/core/behaviors/additional_contact_info.py:43
+#: kitconcept/core/behaviors/additional_contact_info.py:33
 msgid "label_contact_location"
 msgstr ""
 
 #. Default: "Room"
 #: kitconcept/core/behaviors/additional_contact_info.py:23
 msgid "label_contact_room"
-msgstr ""
-
-#. Default: "Fax"
-#: kitconcept/core/behaviors/additional_contact_info.py:37
-msgid "label_fax"
-msgstr ""
-
-#. Default: "Office Phone"
-#: kitconcept/core/behaviors/additional_contact_info.py:32
-msgid "label_office_phone"
 msgstr ""
 
 #. Default: "Biography"
