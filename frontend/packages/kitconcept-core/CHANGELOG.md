@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-alpha.30 (2025-09-18)
+
+### Feature
+
+- Transfer core features from intranet distribution to here: TTWCustomCSS and TTWBlocksConfig. @sneridagh [#53](https://github.com/kitconcept/kitconcept-core/issue/53)
+
+### Bugfix
+
+- Better buttons in slider add item. Refresh content button in slider. @sneridagh 
+
 ## 1.0.0-alpha.29 (2025-09-17)
 
 ## 1.0.0-alpha.28 (2025-09-16)

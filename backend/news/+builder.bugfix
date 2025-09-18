@@ -1,1 +1,0 @@
-Builder image: Always compile .mo files, even if they are already present. @ericof

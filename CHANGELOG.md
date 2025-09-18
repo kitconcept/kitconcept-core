@@ -7,6 +7,46 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a30 (2025-09-18)
+
+### Backend
+
+
+#### New features:
+
+- Transfer core features from intranet distribution to here: TTWCustomCSS and TTWBlocksConfig. @sneridagh [#53](https://github.com/kitconcept/kitconcept-core/issues/53)
+
+
+#### Bug fixes:
+
+- Builder image: Always compile .mo files, even if they are already present. @ericof 
+
+
+#### Internal:
+
+- Update to VLT 7b5. @sneridagh 
+
+
+
+### Frontend
+
+#### Feature
+
+- Transfer core features from intranet distribution to here: TTWCustomCSS and TTWBlocksConfig. @sneridagh [#53](https://github.com/kitconcept/kitconcept-core/issue/53)
+
+#### Bugfix
+
+- Better buttons in slider add item. Refresh content button in slider. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a29 (2025-09-17)
 
 ### Backend
