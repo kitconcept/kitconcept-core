@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0a31 (2025-09-24)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to kitconcept.voltolighttheme 7.0.0b7. @davisagli 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Update to @kitconcept/volto-light-theme 7.0.0-beta.7. @davisagli 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a30 (2025-09-18)
 
 ### Backend
