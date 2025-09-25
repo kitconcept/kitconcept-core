@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0b0 (2025-09-25)
+
+### Backend
+
+
+#### Internal:
+
+- Use VLT 7.0.0 final. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Use VLT 7.0.0 final. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0a31 (2025-09-24)
 
 ### Backend
