@@ -21,6 +21,18 @@ class IKitconceptSettings(Interface):
         required=False,
     )
 
+    types_not_linked = schema.List(
+        title=_("Non linked content types"),
+        description=_(
+            "Content types that should not be linked in teasers and listings."
+        ),
+        required=False,
+        value_type=schema.Choice(
+            vocabulary="plone.app.vocabularies.ReallyUserFriendlyTypes"
+        ),
+        default=[],
+    )
+
 
 class KitconceptSettingsEditForm(RegistryEditForm):
     schema = IKitconceptSettings
@@ -59,3 +71,4 @@ class SiteEndpointExpander:
             IKitconceptSettings, prefix="kitconcept.core.settings"
         )
         data["kitconcept.custom_css"] = settings.custom_css
+        data["kitconcept.types_not_linked"] = settings.types_not_linked
