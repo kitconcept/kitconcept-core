@@ -9,6 +9,25 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b1 (2025-09-26)
+
+No significant changes.
+
+
+## 1.0.0b0 (2025-09-25)
+
+
+### Internal:
+
+- Use VLT 7.0.0 final. @sneridagh 
+
+## 1.0.0a31 (2025-09-24)
+
+
+### Bug fixes:
+
+- Update to kitconcept.voltolighttheme 7.0.0b7. @davisagli 
+
 ## 1.0.0a30 (2025-09-18)
 
 

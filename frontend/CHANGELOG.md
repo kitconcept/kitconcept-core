@@ -8,6 +8,24 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.1 (2025-09-26)
+
+### Bugfix
+
+- Update volto-authomatic to 3.0.0-alpha.6. @iFlameing 
+
+## 1.0.0-beta.0 (2025-09-25)
+
+### Internal
+
+- Use VLT 7.0.0 final. @sneridagh 
+
+## 1.0.0-alpha.31 (2025-09-24)
+
+### Bugfix
+
+- Update to @kitconcept/volto-light-theme 7.0.0-beta.7. @davisagli 
+
 ## 1.0.0-alpha.30 (2025-09-18)
 
 ### Feature
