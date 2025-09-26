@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.1 (2025-09-26)
+
+### Bugfix
+
+- Update volto-authomatic to 3.0.0-alpha.6. @iFlameing 
+
 ## 1.0.0-beta.0 (2025-09-25)
 
 ### Internal

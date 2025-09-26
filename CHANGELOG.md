@@ -7,6 +7,30 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0b1 (2025-09-26)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Update volto-authomatic to 3.0.0-alpha.6. @iFlameing 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0b0 (2025-09-25)
 
 ### Backend
