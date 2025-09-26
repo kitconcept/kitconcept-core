@@ -208,6 +208,140 @@ When rendering images, always use the `Image` component from `@plone/volto`.
 This ensures that images are rendered correctly and consistently across all kitconcept projects.
 Whenever possible, use the `sizes` props to provide responsive images with the proper configuration depending on the image usage.
 
+## Add `blockSchema` to all blocks
+
+It is important to add `blockSchema` to all blocks, since it powers the default values for the block's settings form.
+
+```ts
+{
+  teaser: {
+    id: 'teaser',
+    title: 'Teaser',
+    icon: imagesSVG,
+    group: 'common',
+    view: TeaserViewBlock,
+    edit: TeaserEditBlock,
+    restricted: false,
+    mostUsed: true,
+    sidebarTab: 1,
+    blockSchema: TeaserSchema,
+    dataAdapter: TeaserBlockDataAdapter,
+    variations: [
+      {
+        id: 'default',
+        isDefault: true,
+        title: 'Default',
+        template: TeaserBlockDefaultBody,
+      },
+    ],
+  },
+}
+```
+
+Use it in also in the "Data" components of your blocks, avoid retrieving it as a module `import`, as shown:
+
+```tsx
+// ❌ Avoid this
+import { MyBlockSchema } from './schema';
+const MyBlockData = (props) => {
+  const { data } = props;
+  const schema = MyBlockSchema({ ...props, intl }); // Avoid this
+
+  return (
+    <BlockDataForm
+      schema={schema}
+      title={schema.title}
+      onChangeField={(id, value) => {
+        dataAdapter({
+          block,
+          data,
+          id,
+          onChangeBlock,
+          value,
+        });
+      }}
+      onChangeBlock={onChangeBlock}
+      formData={data}
+      block={block}
+      blocksConfig={blocksConfig}
+      navRoot={navRoot}
+      contentType={contentType}
+      errors={blocksErrors}
+    />
+  );
+};
+```
+Instead, retrieve it from the block's props:
+
+```tsx
+// ✅ Do this instead
+const MyBlockData = (props) => {
+  const { data, blocksConfig } = props;
+
+  const schema = blocksConfig.myBlock.blockSchema({ ...props, intl }); // Do this
+
+  return (
+    <BlockDataForm
+      schema={schema}
+      title={schema.title}
+      onChangeField={(id, value) => {
+        dataAdapter({
+          block,
+          data,
+          id,
+          onChangeBlock,
+          value,
+        });
+      }}
+      onChangeBlock={onChangeBlock}
+      formData={data}
+      block={block}
+      blocksConfig={blocksConfig}
+      navRoot={navRoot}
+      contentType={contentType}
+      errors={blocksErrors}
+    />
+  );
+};
+```
+
+## The right way to instantiate `BlockDataForm`
+
+This is the right way of instantiating the `BlockDataForm` component from `@plone/volto/components/manage/Blocks/BlockDataForm`:
+
+```tsx
+import { BlockDataForm } from '@plone/volto/components/manage/Blocks/BlockDataForm';
+
+const MyBlockData = (props) => {
+  const { data, blocksConfig } = props;
+
+  const schema = blocksConfig.myBlock.blockSchema({ ...props, intl });
+
+  return (
+    <BlockDataForm
+      schema={schema}
+      title={schema.title}
+      onChangeField={(id, value) => {
+        dataAdapter({
+          block,
+          data,
+          id,
+          onChangeBlock,
+          value,
+        });
+      }}
+      onChangeBlock={onChangeBlock}
+      formData={data}
+      block={block}
+      blocksConfig={blocksConfig}
+      navRoot={navRoot}
+      contentType={contentType}
+      errors={blocksErrors}
+    />
+  );
+};
+```
+
 ## Use of the blocks StyleWrapper
 
 Our blocks settings and blocks widgets should always leverage the usage of the blocks `StyleWrapper`.
