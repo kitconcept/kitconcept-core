@@ -348,10 +348,16 @@ Our blocks settings and blocks widgets should always leverage the usage of the b
 This ensures that the blocks are styled correctly and consistently across all kitconcept projects.
 The StyleWrapper is embedded in the blocks engine and it is used to wrap the block content.
 
-We should use the `:noprefix` suffix for the styles properties that we want to be applied directly to the block, without any prefix.
-This is useful for properties that are not specific to any namespace, but are more general, e.g. `blockWidth`, `alignment`, etc.
+We should always use it with the injection of custom CSS properties that we want to apply to the block.
+If we want to inject a single property (and it seems that won't change in the foreseeable future), we will use the property directly. See example in: https://6.docs.plone.org/volto/blocks/block-style-wrapper.html#custom-css-properties-recommended
+
+If we want to inject multiple properties, we should use the `:noprefix` suffix for the styles properties that we want to be applied directly to the block, without any prefix.
+This is useful for properties that are not specific to any namespace, but are more general, e.g. `blockWidth`, `alignment`, etc. See below and in https://6.docs.plone.org/volto/blocks/block-style-wrapper.html#avoid-injecting-nested-prefixes for more details.
 
 There are some handlers that we would like always to use and define them the same way:
+
+See the official documentation for more details:
+https://6.docs.plone.org/volto/blocks/block-style-wrapper.html
 
 ### Block width
 
