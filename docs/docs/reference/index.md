@@ -14,10 +14,8 @@ This part of the documentation contains reference material, including APIs, conf
 > Reference guides are technical descriptions of the machinery and how to operate it.
 > Reference material is information-oriented.
 
-```{seealso}
-https://diataxis.fr/reference/
+```{toctree}
+:maxdepth: 2
+
+frontend-styleguide
 ```
-
-## Configuration
-
--   {doc}`plone:contributing/documentation/themes-and-extensions`
