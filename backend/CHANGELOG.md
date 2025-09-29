@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b2 (2025-09-29)
+
+
+### Bug fixes:
+
+- Fixed CSS issue with top blocks. Upgrade to Volto 18.27.2 and VLT 7.1.0 @sneridagh 
+
 ## 1.0.0b1 (2025-09-26)
 
 No significant changes.
