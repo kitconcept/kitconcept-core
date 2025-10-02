@@ -421,3 +421,42 @@ export const MyBlockSchema = ({ schema, formData, intl }) => {
   };
 }
 ```
+
+## Never place full components inside other components
+
+Avoid placing a full component implementation inside a component implementation, as this can lead to performance issues and makes the code harder to read and maintain.
+
+```tsx
+// ❌ Avoid this
+const MyComponent = (props) => {
+  const { someProp } = props;
+  const AnotherComponent = (props) => {
+    const { anotherProp } = props;
+
+    return <div>{anotherProp}</div>;
+  };
+  return (
+    <div>
+      <AnotherComponent anotherProp={someProp} />
+    </div>
+  );
+};
+```
+
+Instead, define the component outside and use it inside the other component:
+
+```tsx
+// ✅ Do this instead
+const AnotherComponent = (props) => {
+  const { anotherProp } = props;
+  return <div>{anotherProp}</div>;
+};
+const MyComponent = (props) => {
+  const { someProp } = props;
+  return (
+    <div>
+      <AnotherComponent anotherProp={someProp} />
+    </div>
+  );
+};
+```
