@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b4 (2025-10-07)
+
+
+### New features:
+
+- Misc fixes. Update Plone 6.1.3, Volto 18.28.0, VLT 7.3.0. @sneridagh [#64](https://github.com/kitconcept/kitconcept-core/issues/64)
+
 ## 1.0.0b3 (2025-10-01)
 
 
