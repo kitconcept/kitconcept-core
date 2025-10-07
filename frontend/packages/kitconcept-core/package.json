@@ -45,11 +45,11 @@
   "dependencies": {
     "@plone/components": "workspace:*",
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@kitconcept/volto-light-theme": "7.2.0",
+    "@kitconcept/volto-light-theme": "7.3.0",
     "@mbarde/volto-image-crop-widget": "^0.5.1"
   },
   "peerDependencies": {
-    "@plonegovbr/volto-social-media": "^2.0.0-alpha.8",
+    "@plonegovbr/volto-social-media": "^2.0.0-alpha.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intl": "^3.12.1",
