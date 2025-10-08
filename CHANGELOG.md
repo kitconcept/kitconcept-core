@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0b5 (2025-10-08)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Remove pinnings, update locks. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Update to Volto 18.28.1. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0b4 (2025-10-07)
 
 ### Backend

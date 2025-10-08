@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b5 (2025-10-08)
+
+
+### Bug fixes:
+
+- Remove pinnings, update locks. @sneridagh 
+
 ## 1.0.0b4 (2025-10-07)
 
 
