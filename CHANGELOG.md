@@ -7,6 +7,31 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0b6 (2025-10-31)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Internal
+
+- Several fixes - Update Volto to 18.29.0.
+  Several fixes including File in listings missing pipe - Update to VLT 7.5.1 @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0b5 (2025-10-08)
 
 ### Backend

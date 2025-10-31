@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.6 (2025-10-31)
+
+### Internal
+
+- Several fixes - Update Volto to 18.29.0.
+  Several fixes including File in listings missing pipe - Update to VLT 7.5.1 @sneridagh 
+
 ## 1.0.0-beta.5 (2025-10-08)
 
 ### Bugfix
