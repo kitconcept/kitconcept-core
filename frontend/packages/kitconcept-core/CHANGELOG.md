@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.0 (2025-11-04)
+
+### Internal
+
+- Use Volto 19.0.0a3, vlt 8a3. @sneridagh 
+
 ## 1.0.0-beta.7 (2025-11-04)
 
 ### Bugfix

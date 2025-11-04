@@ -7,6 +7,34 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a0 (2025-11-04)
+
+### Backend
+
+
+#### Internal:
+
+- Use Volto 19.0.0a3, vlt 8a3. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Use Volto 19.0.0a3, vlt 8a3. @sneridagh 
+
+
+
+### Project
+
+
+#### Internal
+
+- Fixed CI for changelog workflow support branch 1.x.x and added support for node 24. @sneridagh 
+
+
+
 ## 1.0.0b7 (2025-11-04)
 
 ### Backend
