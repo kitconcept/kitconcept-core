@@ -1447,7 +1447,7 @@ importers:
   packages/kitconcept-core:
     dependencies:
       '@kitconcept/volto-light-theme':
-        specifier: 8.0.0-alpha.3
+        specifier: ^8.0.0-alpha.3
         version: 8.0.0-alpha.3(classnames@2.5.1)(embla-carousel@8.6.0)(lodash@4.17.21)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.24)(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)
       '@mbarde/volto-image-crop-widget':
         specifier: ^0.5.1
