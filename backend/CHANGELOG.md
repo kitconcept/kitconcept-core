@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0b7 (2025-11-04)
+
+
+### Bug fixes:
+
+- No significant changes. @sneridagh 
+
 ## 1.0.0b6 (2025-10-31)
 
 No significant changes.

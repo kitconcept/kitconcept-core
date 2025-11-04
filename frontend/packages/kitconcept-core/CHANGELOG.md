@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0-beta.7 (2025-11-04)
+
+### Bugfix
+
+- Several bugfixes. @sneridagh 
+
 ## 1.0.0-beta.6 (2025-10-31)
 
 ### Internal

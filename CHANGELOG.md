@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.0b7 (2025-11-04)
+
+### Backend
+
+
+#### Bug fixes:
+
+- No significant changes. @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Several bugfixes. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0b6 (2025-10-31)
 
 ### Backend
