@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a1 (2025-11-11)
+
+
+### Internal:
+
+- Use native namespaces. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issues/vlt8a5)
+
 ## 2.0.0a0 (2025-11-04)
 
 

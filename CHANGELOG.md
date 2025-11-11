@@ -7,6 +7,36 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a1 (2025-11-11)
+
+### Backend
+
+
+#### Internal:
+
+- Use native namespaces. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issues/vlt8a5)
+
+
+
+### Frontend
+
+#### Feature
+
+- New styleDefinitions registry powered. Improved ColorSwatch component. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issue/vlt8a5)
+
+#### Bugfix
+
+- Fixed intranet header. Fixed sticky menu. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issue/vlt8a5)
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a0 (2025-11-04)
 
 ### Backend

@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.1 (2025-11-11)
+
+### Feature
+
+- New styleDefinitions registry powered. Improved ColorSwatch component. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issue/vlt8a5)
+
+### Bugfix
+
+- Fixed intranet header. Fixed sticky menu. @sneridagh [#vlt8a5](https://github.com/kitconcept/kitconcept-core/issue/vlt8a5)
+
 ## 2.0.0-alpha.0 (2025-11-04)
 
 ### Internal
