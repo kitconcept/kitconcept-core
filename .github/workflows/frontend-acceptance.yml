@@ -52,7 +52,7 @@ jobs:
       - name: test ls
         run: ls -la
       - name: test makes
-        run: make ci-acceptance-backend-start
+        run: make acceptance-frontend-prod-start
 
       - uses: JarvusInnovations/background-action@v1
         name: Start Servers
