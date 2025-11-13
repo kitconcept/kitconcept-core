@@ -9,6 +9,7 @@ on:
       - ".github/workflows/backend.yml"
       - ".github/workflows/config.yml"
       - ".github/workflows/docs.yml"
+      - ".github/workflows/frontend-acceptance.yml"
       - ".github/workflows/frontend.yml"
       - ".github/workflows/main.yml"
   workflow_dispatch:

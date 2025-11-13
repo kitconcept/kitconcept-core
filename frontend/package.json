@@ -1,6 +1,6 @@
 {
   "name": "core-dev",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Core setup for kitconcept GmbH distributions built on top of Plone",
   "author": "kitconcept GmbH",
   "homepage": "https://github.com/kitconcept/kitconcept-core",
@@ -44,7 +44,22 @@
     "overrides": {
       "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
       "react-refresh": "^0.14.2"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "why"
+    ],
+    "onlyBuiltDependencies": [
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "es5-ext",
+      "esbuild",
+      "full-icu",
+      "lightningcss-cli",
+      "sharp",
+      "unrs-resolver"
+    ]
   },
-  "packageManager": "pnpm@9.1.1"
+  "packageManager": "pnpm@10.20.0"
 }
