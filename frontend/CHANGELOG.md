@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.2 (2025-11-13)
+
+### Internal
+
+- Update to VLT8a6. @sneridagh 
+- Update to Volto 19a13. @sneridagh 
+
 ## 2.0.0-alpha.1 (2025-11-11)
 
 ### Feature

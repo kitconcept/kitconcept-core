@@ -7,6 +7,35 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a2 (2025-11-13)
+
+### Backend
+
+
+#### Internal:
+
+- Update to VLT8a6. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to VLT8a6. @sneridagh 
+- Update to Volto 19a13. @sneridagh 
+
+
+
+### Project
+
+
+#### Internal
+
+- Added acceptance tests. @sneridagh [#70](https://github.com/kitconcept/kitconcept-core/pull/70)
+
+
+
 ## 2.0.0a1 (2025-11-11)
 
 ### Backend
