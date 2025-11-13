@@ -44,7 +44,22 @@
     "overrides": {
       "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
       "react-refresh": "^0.14.2"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "why"
+    ],
+    "onlyBuiltDependencies": [
+      "core-js",
+      "core-js-pure",
+      "cypress",
+      "es5-ext",
+      "esbuild",
+      "full-icu",
+      "lightningcss-cli",
+      "sharp",
+      "unrs-resolver"
+    ]
   },
-  "packageManager": "pnpm@9.1.1"
+  "packageManager": "pnpm@10.20.0"
 }
