@@ -88,7 +88,6 @@ jobs:
             frontend:
               - 'frontend/**'
               - '.github/workflows/frontend.yml'
-              - '.github/workflows/frontend-acceptance.yml'
 
       - name: Test vars
         run: |
