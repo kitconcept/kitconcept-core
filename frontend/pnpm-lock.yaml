@@ -616,7 +616,7 @@ importers:
         version: 1.0.10
       wait-on:
         specifier: ^7.2.0
-        version: 7.2.0
+        version: 7.2.0(debug@4.3.4)
     devDependencies:
       release-it:
         specifier: ^16.1.3
@@ -1450,8 +1450,8 @@ importers:
   packages/kitconcept-core:
     dependencies:
       '@kitconcept/volto-light-theme':
-        specifier: ^8.0.0-alpha.5
-        version: 8.0.0-alpha.5(classnames@2.5.1)(embla-carousel@8.6.0)(lodash@4.17.21)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.24)(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^8.0.0-alpha.6
+        version: 8.0.0-alpha.6(classnames@2.5.1)(embla-carousel@8.6.0)(lodash@4.17.21)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.24)(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)
       '@mbarde/volto-image-crop-widget':
         specifier: ^0.5.1
         version: 0.5.1(react@18.2.0)
@@ -3113,8 +3113,15 @@ packages:
   '@keyv/serialize@1.1.0':
     resolution: {integrity: sha512-RlDgexML7Z63Q8BSaqhXdCYNBy/JQnqYIwxofUrNLGCblOMHp+xux2Q8nLMLlPpgHQPoU0Do8Z6btCpRBEqZ8g==}
 
-  '@kitconcept/volto-light-theme@8.0.0-alpha.5':
-    resolution: {integrity: sha512-6zBcLWjAddrc3NKa0E6nVy8NCHgdpkMq8xSegK+DS4d63dyTb7yupopMXKQwL9hypJks1PxIt/Ffm5tIds2PXQ==}
+  '@kitconcept/volto-bm3-compat@1.0.0-alpha.1':
+    resolution: {integrity: sha512-eKEtR1WBvLh9gf9JzCB7THgcYxyJPiw7QVXZ2Bdo6NOYSh05PPMvpN+lUBYj3ottk7oAt9Mvln4FCyfza4abUw==}
+    peerDependencies:
+      classnames: ^2.2.6
+      react: 18.2.0
+      react-dom: 18.2.0
+
+  '@kitconcept/volto-light-theme@8.0.0-alpha.6':
+    resolution: {integrity: sha512-sjz6J/iDcRUj7WAN7PZgxWo2+7/rStHkdmjwsAkuciSQATlTfwf6MlOC7LpE7sSSvcLLBlb3tduxBQKVh63k2w==}
     peerDependencies:
       classnames: ^2.5.1
       lodash: 4.17.21
@@ -3493,15 +3500,6 @@ packages:
       react-dom: 18.2.0
       react-intl: '*'
       semantic-ui-react: '*'
-
-  '@plone/components@4.0.0-alpha.1':
-    resolution: {integrity: sha512-VZiE/kj6A7PVXcJwMCralMOC2VnsjIjX+T6LTQXWz9+1M9DrFuse5sNMw7ryZqFWRvY+E06BPhHgeNuKOKM2Hw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
 
   '@plone/components@4.0.0-alpha.3':
     resolution: {integrity: sha512-LgW9bBDXajaXdq6Pk4wWViHie3jsuV2AGEDWofBl336JXksGui5ZD2Ae+E9QkppZi8RHdpyN9mjMKPnAu65mkg==}
@@ -6147,10 +6145,6 @@ packages:
 
   axe-core@4.7.2:
     resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
-    engines: {node: '>=4'}
-
-  axe-core@4.8.4:
-    resolution: {integrity: sha512-CZLSKisu/bhJ2awW4kJndluz2HLZYIHh5Uy1+ZwDRkJi69811xgIXXfdU9HSLX0Th+ILrHj8qfL/5wzamsFtQg==}
     engines: {node: '>=4'}
 
   axios@0.21.4:
@@ -16460,12 +16454,19 @@ snapshots:
 
   '@keyv/serialize@1.1.0': {}
 
-  '@kitconcept/volto-light-theme@8.0.0-alpha.5(classnames@2.5.1)(embla-carousel@8.6.0)(lodash@4.17.21)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.24)(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)':
+  '@kitconcept/volto-bm3-compat@1.0.0-alpha.1(classnames@2.5.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      classnames: 2.5.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
+  '@kitconcept/volto-light-theme@8.0.0-alpha.6(classnames@2.5.1)(embla-carousel@8.6.0)(lodash@4.17.21)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.24)(react@18.2.0))(react-redux@8.1.2(@types/react-dom@18.3.7(@types/react@18.3.24))(@types/react@18.3.24)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(redux@4.2.1))(react-router-dom@5.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@dnd-kit/core': 6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       '@dnd-kit/utilities': 3.2.2(react@18.2.0)
-      '@plone/components': 4.0.0-alpha.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@kitconcept/volto-bm3-compat': 1.0.0-alpha.1(classnames@2.5.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@plone/components': 4.0.0-alpha.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       classnames: 2.5.1
       embla-carousel-autoplay: 8.6.0(embla-carousel@8.6.0)
       embla-carousel-react: 8.6.0(react@18.2.0)
@@ -16907,23 +16908,6 @@ snapshots:
       react-intl: 3.12.1(@types/react@18.3.24)(react@18.2.0)
       semantic-ui-react: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
-  '@plone/components@4.0.0-alpha.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@internationalized/date': 3.10.0
-      '@react-aria/utils': 3.31.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@react-spectrum/utils': 3.12.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      clsx: 2.1.1
-      react: 18.2.0
-      react-aria: 3.44.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-aria-components: 1.13.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-stately: 3.42.0(react@18.2.0)
-      tailwind-merge: 3.3.1
-      tailwind-variants: 1.0.0(tailwindcss@4.1.16)
-      tailwindcss: 4.1.16
-      tailwindcss-animate: 1.0.7(tailwindcss@4.1.16)
-    optionalDependencies:
-      react-dom: 18.2.0(react@18.2.0)
-
   '@plone/components@4.0.0-alpha.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@internationalized/date': 3.10.0
@@ -16972,7 +16956,7 @@ snapshots:
       lodash: 4.17.21
       mrs-developer: 2.3.0
       pofile: 1.0.10
-      wait-on: 7.2.0
+      wait-on: 7.2.0(debug@4.3.4)
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -20542,8 +20526,6 @@ snapshots:
 
   axe-core@4.7.2: {}
 
-  axe-core@4.8.4: {}
-
   axios@0.21.4(debug@4.3.2):
     dependencies:
       follow-redirects: 1.15.11(debug@4.3.2)
@@ -20559,14 +20541,6 @@ snapshots:
   axios@0.24.0(debug@4.3.4):
     dependencies:
       follow-redirects: 1.15.11(debug@4.3.4)
-    transitivePeerDependencies:
-      - debug
-
-  axios@1.11.0:
-    dependencies:
-      follow-redirects: 1.15.11(debug@4.3.2)
-      form-data: 4.0.4
-      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
 
@@ -30614,8 +30588,8 @@ snapshots:
   vitest-axe@0.1.0(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.30.1)(sass@1.92.0)(terser@5.44.0)):
     dependencies:
       aria-query: 5.3.2
-      axe-core: 4.8.4
-      chalk: 5.6.0
+      axe-core: 4.4.2
+      chalk: 5.6.2
       dom-accessibility-api: 0.5.16
       lodash-es: 4.17.21
       redent: 3.0.0
@@ -30884,16 +30858,6 @@ snapshots:
   wait-on@6.0.0(debug@4.3.4):
     dependencies:
       axios: 0.21.4(debug@4.3.4)
-      joi: 17.13.3
-      lodash: 4.17.21
-      minimist: 1.2.8
-      rxjs: 7.8.2
-    transitivePeerDependencies:
-      - debug
-
-  wait-on@7.2.0:
-    dependencies:
-      axios: 1.11.0
       joi: 17.13.3
       lodash: 4.17.21
       minimist: 1.2.8
