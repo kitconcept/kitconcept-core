@@ -68,14 +68,16 @@ jobs:
           tail: true # true = stderr,stdout
           # This will allow you to monitor the progress live
 
-          log-output-resume: stderr
+          log-output-resume: true
           # Eliminates previously output stderr log entries from post-run output
 
           wait-for: 10m
 
-          log-output: stderr,stdout # same as true
+          log-output: true
 
           log-output-if: true
+
+          working-directory: ${{ inputs.working-directory }}
 
       - name: Run acceptance tests
         shell: bash
