@@ -48,12 +48,6 @@ jobs:
         run: |
           make cypress-install
 
-
-      - name: test ls
-        run: ls -la
-      - name: test makes
-        run: make acceptance-frontend-prod-start
-
       - uses: JarvusInnovations/background-action@v1
         name: Start Servers
         with:
