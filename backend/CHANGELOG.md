@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.0 (2025-11-17)
+
+
+### Bug fixes:
+
+- Several fixes. Use vlt7.6.2. @sneridagh 
+
+
+### Internal:
+
+- Release k.core 1.0.0 @sneridagh 
+
 ## 1.0.0b7 (2025-11-04)
 
 
