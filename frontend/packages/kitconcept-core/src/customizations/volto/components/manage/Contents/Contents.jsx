@@ -1,4 +1,9 @@
 /**
+ * OVERRIDE Contents.jsx
+ * REASON: Add component DropzoneContent to enable drag and drop upload
+ */
+
+/**
  * Contents component.
  * @module components/manage/Contents/Contents
  */
@@ -1157,11 +1162,13 @@ class Contents extends Component {
               <Helmet
                 title={this.props.intl.formatMessage(messages.contents)}
               />
+              {/* Start Customization  */}
               <DropzoneContent
                 onOk={this.onUploadOk}
                 onCancel={this.onUploadCancel}
                 pathname={getBaseUrl(this.props.pathname)}
               >
+                {/* End Customization */}
                 <div className="container">
                   <article id="content">
                     <ContentsDeleteModal
