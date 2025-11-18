@@ -8,6 +8,8 @@
  *  - Add component DropZoneContent to enable drag and drop upload (#6) @Tishasoumya-02
  */
 
+//START CUSTOMIZATION
 import DropZoneContent from '../../../../../components/Contents/DropZoneContent';
+//END CUSTOMIZATION
 
 export default DropZoneContent;
