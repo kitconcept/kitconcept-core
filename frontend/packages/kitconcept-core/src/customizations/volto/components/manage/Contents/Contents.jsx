@@ -15,6 +15,6 @@
  * @module components/manage/Contents/Contents
  */
 
-import Contents from '../../customizations/volto/components/manage/Contents/Contents';
+import Contents from '../../../../../components/Contents/Contents';
 
 export default Contents;
