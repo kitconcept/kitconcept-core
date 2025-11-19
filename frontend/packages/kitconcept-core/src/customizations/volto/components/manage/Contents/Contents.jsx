@@ -1,19 +1,3 @@
-/**
- * OVERRIDE Contents.jsx
- * REASON: Add component DropzoneContent to enable drag and drop upload.
- * FILE: https://github.com/plone/volto/blob/829f0a61b80adb0d2a637f0160c1e9b00931114f/packages/volto/src/components/manage/Contents/Contents.jsx
- * FILE VERSION: Volto 18.29.1
- * PULL REQUEST: https://github.com/kitconcept/kitconcept-core/pull/71
- * TICKET: https://gitlab.kitconcept.io/kitconcept/distribution-kitconcept-intranet/-/issues/6
- * DEVELOPER: @Tishasoumya-02
- * CHANGELOG:
- *  - Add component DropzoneContent to enable drag and drop upload (#6) @Tishasoumya-02
- */
-
-/**
- * Contents component.
- * @module components/manage/Contents/Contents
- */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -101,7 +85,7 @@ import sortUpSVG from '@plone/volto/icons/sort-up.svg';
 import downKeySVG from '@plone/volto/icons/down-key.svg';
 import moreSVG from '@plone/volto/icons/more.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
-import DropzoneContent from './DropZoneContent';
+import DropzoneContent from '../../customizations/volto/components/manage/Contents/DropZoneContent';
 
 const messages = defineMessages({
   back: {
