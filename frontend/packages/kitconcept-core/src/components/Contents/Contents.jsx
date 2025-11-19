@@ -85,7 +85,7 @@ import sortUpSVG from '@plone/volto/icons/sort-up.svg';
 import downKeySVG from '@plone/volto/icons/down-key.svg';
 import moreSVG from '@plone/volto/icons/more.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
-import DropzoneContent from '../../customizations/volto/components/manage/Contents/DropZoneContent';
+import DropzoneContent from './DropZoneContent';
 
 const messages = defineMessages({
   back: {
