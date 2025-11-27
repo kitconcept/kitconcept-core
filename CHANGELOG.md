@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a3 (2025-11-27)
+
+### Backend
+
+
+#### Internal:
+
+- Update to VLT 8a7 (Razzle fork). @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to VLT 8a7 (Razzle fork). @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a2 (2025-11-13)
 
 ### Backend
