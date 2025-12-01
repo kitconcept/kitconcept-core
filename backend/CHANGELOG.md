@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a4 (2025-12-01)
+
+
+### Internal:
+
+- Several bugfixes. Update to VLT8a8. @sneridagh 
+
 ## 2.0.0a3 (2025-11-27)
 
 
