@@ -44,7 +44,7 @@
   ],
   "dependencies": {
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@kitconcept/volto-light-theme": "7.6.2",
+    "@kitconcept/volto-light-theme": "7.6.3",
     "@mbarde/volto-image-crop-widget": "^0.5.1"
   },
   "peerDependencies": {
