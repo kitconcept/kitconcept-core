@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.1 (2025-12-01)
+
+### Backend
+
+
+#### Internal:
+
+- Several bugfixes. Update to VLT7.6.4. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Several bugfixes. Update to VLT7.6.4. @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.0 (2025-11-17)
 
 ### Backend

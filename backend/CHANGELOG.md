@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.1 (2025-12-01)
+
+
+### Internal:
+
+- Several bugfixes. Update to VLT7.6.4. @sneridagh 
+
 ## 1.0.0 (2025-11-17)
 
 
