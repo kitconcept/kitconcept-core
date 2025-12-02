@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.4 (2025-12-01)
+
+### Internal
+
+- Several bugfixes. Update to VLT8a8. @sneridagh 
+
+## 2.0.0-alpha.3 (2025-11-27)
+
+### Internal
+
+- Update to VLT 8a7 (Razzle fork). @sneridagh 
+
 ## 2.0.0-alpha.2 (2025-11-13)
 
 ### Internal

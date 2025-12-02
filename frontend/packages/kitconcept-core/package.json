@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/core",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.4",
   "description": "Core setup for kitconcept GmbH distributions built on top of Plone",
   "main": "src/index.ts",
   "license": "MIT",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@kitconcept/volto-light-theme": "^8.0.0-alpha.6",
+    "@kitconcept/volto-light-theme": "^8.0.0-alpha.8",
     "@mbarde/volto-image-crop-widget": "^0.5.1"
   },
   "peerDependencies": {
