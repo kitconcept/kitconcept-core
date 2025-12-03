@@ -8,5 +8,6 @@
   <include package=".v20250915001" />
   <include package=".v20250916001" />
   <include package=".v20250917001" />
+  <include package=".v20250925001" />
 
 </configure>
