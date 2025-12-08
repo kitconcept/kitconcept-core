@@ -7,6 +7,40 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a5 (2025-12-08)
+
+### Backend
+
+
+#### New features:
+
+- Update to VLT 8a9:
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a9 @sneridagh 
+
+
+#### Bug fixes:
+
+- Fixed backend deps due to typos in previous dist.plone.org incarnations. @sneridagh 
+
+
+
+### Frontend
+
+#### Feature
+
+- Add feature of drag and drop files in folder contents @Tishasoumya-02 
+- Update to VLT 8a9:
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a9 @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a4 (2025-12-01)
 
 ### Backend

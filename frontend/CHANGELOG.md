@@ -8,6 +8,14 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.5 (2025-12-08)
+
+### Feature
+
+- Add feature of drag and drop files in folder contents @Tishasoumya-02 
+- Update to VLT 8a9:
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a9 @sneridagh 
+
 ## 2.0.0-alpha.4 (2025-12-01)
 
 ### Internal
