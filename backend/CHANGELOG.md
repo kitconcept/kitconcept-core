@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.2 (2025-12-08)
+
+
+### Bug fixes:
+
+- Fixed backend deps due to typos in previous dist.plone.org incarnations. @sneridagh 
+
+
+### Internal:
+
+- Update to VLT 7.6.5. @sneridagh 
+
 ## 1.0.1 (2025-12-01)
 
 
