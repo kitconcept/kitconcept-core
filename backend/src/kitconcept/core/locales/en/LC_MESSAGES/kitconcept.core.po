@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-09-18 06:46+0000\n"
+"POT-Creation-Date: 2025-12-09 17:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,10 @@ msgstr ""
 msgid "Generic setup profile with dependencies used by kitconcept projects."
 msgstr ""
 
+#: kitconcept/core/profiles/dependencies/registry/querystring.xml
+msgid "Path"
+msgstr ""
+
 #: kitconcept/core/behaviors/configure.zcml:27
 msgid "Person: Additional contact information"
 msgstr ""
@@ -64,6 +68,10 @@ msgstr ""
 
 #: kitconcept/core/behaviors/configure.zcml:41
 msgid "Simple attribute-based image field for persons portraits."
+msgstr ""
+
+#: kitconcept/core/profiles/dependencies/registry/querystring.xml
+msgid "The path of an item"
 msgstr ""
 
 #: kitconcept/core/behaviors/configure.zcml:19
