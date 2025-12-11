@@ -7,6 +7,30 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a6 (2025-12-11)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Rename Location criterion to Path. @davisagli [#222](https://github.com/kitconcept/kitconcept-core/issues/222)
+- Update to collective.person 1.0.0b4 (fixes validation of username field). @davisagli 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a5 (2025-12-08)
 
 ### Backend
