@@ -7,6 +7,33 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.3 (2026-01-13)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fixed sticky menu cut off at the bottom on smaller screens @iRohitSingh
+  Fixed double navigation in cards that contains inner links in its body. @sneridagh 
+
+
+
+### Project
+
+
+#### Internal
+
+- Fixed missing check on changelog, changed the branch detection. @sneridagh 
+
+
+
 ## 1.0.2 (2025-12-08)
 
 ### Backend
