@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, labeled, unlabeled]
     branches:
-      - main
+      - 1.x.x
 
 env:
   NODE_VERSION: 22.x
