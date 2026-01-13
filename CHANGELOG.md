@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.4 (2026-01-13)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Rename Location criterion to Path. @davisagli [#222](https://github.com/kitconcept/kitconcept-core/issues/222)
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.3 (2026-01-13)
 
 ### Backend
