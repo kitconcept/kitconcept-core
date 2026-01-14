@@ -7,6 +7,36 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a7 (2026-01-14)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Fixed sticky menu cut off at the bottom on smaller screens @iRohitSingh
+  Fixed double navigation in cards that contains inner links in its body. @sneridagh
+  Fixed rearrangement of files in drag-and-drop of folderish content. @Tishasoumya-02 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fixed sticky menu cut off at the bottom on smaller screens @iRohitSingh
+  Fixed double navigation in cards that contains inner links in its body. @sneridagh
+  Fixed rearrangement of files in drag-and-drop of folderish content. @Tishasoumya-02 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a6 (2025-12-11)
 
 ### Backend
