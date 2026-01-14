@@ -44,4 +44,3 @@ with api.env.adopt_user("admin"):
     portal_type = os.environ.get("PORTAL_TYPE", "").split(",")
     idxs = os.environ["INDEXES"].split(",")
     reindex_content(portal, portal_type=portal_type, idxs=idxs)
-  
