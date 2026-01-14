@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.5 (2026-01-14)
+
+### Backend
+
+
+#### Internal:
+
+- Adjust versions range for vlt. @sneridagh 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.4 (2026-01-13)
 
 ### Backend
