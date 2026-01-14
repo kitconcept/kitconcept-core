@@ -11,6 +11,8 @@ myst:
 
 This document describes how to run the `reindex_content.py` instance script locally or inside a Docker container.
 
+This is useful in cases where a lot of content needs to be reindexed, and running the operation inside a request would time out.
+
 | Option                 | Description                                                   |
 |------------------------|---------------------------------------------------------------|
 | INDEXES (required)     | Comma-separated list of catalog indexes to reindex.           |
@@ -43,8 +45,10 @@ $ PORTAL_TYPE=Contact INDEXES=Title,sortable_title \
 
 ### Reindex `SearchableText` for multiple types
 
+(The types need to be inside quotation marks if they include spaces.)
+
 ```bash
-$ PORTAL_TYPE=Document,News Item INDEXES=SearchableText \
+$ PORTAL_TYPE="Document,News Item" INDEXES=SearchableText \
   ./docker-entrypoint.sh run scripts/reindex_content.py
 ```
 
