@@ -22,4 +22,5 @@ https://diataxis.fr/how-to-guides/
 :maxdepth: 2
 
 blocks-config-ttw
+reindex-content-script
 ```
