@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a8 (2026-01-15)
+
+
+### New features:
+
+- Add script for reindexing content. @jnptk 
+
 ## 2.0.0a7 (2026-01-14)
 
 

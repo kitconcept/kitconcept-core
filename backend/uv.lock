@@ -1193,7 +1193,7 @@ test = [
 
 [[package]]
 name = "kitconcept-voltolighttheme"
-version = "8.0.0a10"
+version = "8.0.0a12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -1202,9 +1202,9 @@ dependencies = [
     { name = "plonegovbr-socialmedia" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/09/34/7b2d28fb96628a94cdfef3d236c25a766ac2deec3e7e241d40b84305decd/kitconcept_voltolighttheme-8.0.0a10.tar.gz", hash = "sha256:afb1990cc3ed50ea1e4593b24a50cd8b2c3525c16db6b24c798e5e3d732ec4e7", size = 1365006, upload-time = "2026-01-14T08:29:13.09Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f7/63/1f4a4bb9ac4c9e394d2c17db8098a0022e68da08e83cf6e2eb8507471541/kitconcept_voltolighttheme-8.0.0a12.tar.gz", hash = "sha256:504c63456321d57a48d61cf852f5cde713382dd41158bac3206df8eb4713a667", size = 1365006, upload-time = "2026-01-15T09:23:51.132Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f5/35/ce0b4799d66eebb526bab5437f79b5f49c3bfa5a36ef767e7e46903339a3/kitconcept_voltolighttheme-8.0.0a10-py3-none-any.whl", hash = "sha256:b409ead950e8e4fcab9190526db200c5d7d11bef8783f58ff407e8b5d7b1fecd", size = 1431715, upload-time = "2026-01-14T08:28:52.768Z" },
+    { url = "https://files.pythonhosted.org/packages/35/b1/fb96a58f2c551a45bc19a228cc1869cedfc51932dcd42c8877871362e7eb/kitconcept_voltolighttheme-8.0.0a12-py3-none-any.whl", hash = "sha256:4fbe996ce9d6b35716349e43b110455fba4edd84e8d5c5ed5e84db4ce15cff1e", size = 1431718, upload-time = "2026-01-15T09:23:41.316Z" },
 ]
 
 [[package]]

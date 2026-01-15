@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.8 (2026-01-15)
+
+### Internal
+
+- Remove `Contents` customization for the D&D files, since it's core now. @sneridagh 
+
 ## 2.0.0-alpha.7 (2026-01-14)
 
 ### Bugfix

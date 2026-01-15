@@ -7,6 +7,34 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a8 (2026-01-15)
+
+### Backend
+
+
+#### New features:
+
+- Add script for reindexing content. @jnptk 
+
+
+
+### Frontend
+
+#### Internal
+
+- Remove `Contents` customization for the D&D files, since it's core now. @sneridagh 
+
+
+
+### Project
+
+
+#### Documentation
+
+- Add short how-to in docs explaining how to use the `reindex_content.py` script. @jnptk 
+
+
+
 ## 2.0.0a7 (2026-01-14)
 
 ### Backend
