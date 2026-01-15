@@ -16,4 +16,5 @@ class JSONSummarySerializerMetadata:
             "contact_room",
             "contact_phone",
             "contact_building",
+            "getRemoteUrl",
         }
