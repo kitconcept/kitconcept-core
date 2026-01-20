@@ -119,7 +119,7 @@ with api.env.adopt_user("admin"):
 
     apply_patch()
     if parent.getId() == target.getId():
-        parent.manage_renameObject(obj.getId(), new_id.split("/")[:-1])
+        parent.manage_renameObject(obj.getId(), new_id.split("/")[-1])
         print("Optimized rename", len(app._p_jar._registered_objects))  # noqa: F821
         transaction.commit()
     else:
