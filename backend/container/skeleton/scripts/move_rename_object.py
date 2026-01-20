@@ -109,6 +109,11 @@ with api.env.adopt_user("admin"):
     old_id = os.environ.get("OLD_ID", "").lstrip("/")
     new_id = os.environ.get("NEW_ID", "").lstrip("/")
 
+    if old_id == new_id:
+        raise ValueError(
+            f"OLD_ID and NEW_ID are identical ({old_id!r}); rename would be a no-op."
+        )
+
     obj = portal.unrestrictedTraverse(old_id)
     parent = obj.__parent__
     target = portal.unrestrictedTraverse("/".join(new_id.split("/")[:-1]))
