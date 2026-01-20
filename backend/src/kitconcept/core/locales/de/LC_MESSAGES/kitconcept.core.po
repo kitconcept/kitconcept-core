@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-12-09 17:11+0000\n"
+"POT-Creation-Date: 2026-01-20 10:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,38 @@ msgstr "Benutzerdefiniertes CSS für diese Seite."
 msgid "Fields with additional person information"
 msgstr "Felder mit zusätzlichen Personeninformationen"
 
+#: kitconcept/core/behaviors/footer.py:58
+msgid "Footer address"
+msgstr "Footer Adresse"
+
+#: kitconcept/core/behaviors/footer.py:79
+msgid "Footer column left"
+msgstr "Footer Spalte 1"
+
+#: kitconcept/core/behaviors/footer.py:67
+msgid "Footer column left header"
+msgstr "Footer Spalte 1 Überschrift"
+
+#: kitconcept/core/behaviors/footer.py:103
+msgid "Footer column middle"
+msgstr "Footer Spalte 2"
+
+#: kitconcept/core/behaviors/footer.py:91
+msgid "Footer column middle header"
+msgstr "Footer Spalte 2 Überschrift"
+
+#: kitconcept/core/behaviors/footer.py:127
+msgid "Footer column right"
+msgstr "Footer Spalte 3"
+
+#: kitconcept/core/behaviors/footer.py:115
+msgid "Footer column right header"
+msgstr "Footer Spalte 3 Überschrift"
+
+#: kitconcept/core/behaviors/footer.py:30
+msgid "Footer customizations"
+msgstr "Footer Anpassungen"
+
 #: kitconcept/core/profiles.zcml:13
 msgid "Generic setup profile with base settings for kitconcept projects."
 msgstr "Generisches Setup-Profil mit Basiseinstellungen für kitconcept-Projekte."
@@ -66,13 +98,33 @@ msgstr "Person: Biografieinformationen"
 msgid "Person: Image"
 msgstr "Person: Bild"
 
+#: kitconcept/core/behaviors/configure.zcml:48
+msgid "Set of fields to customize kitconcept's distributions sites and subsites"
+msgstr ""
+
 #: kitconcept/core/behaviors/configure.zcml:41
 msgid "Simple attribute-based image field for persons portraits."
 msgstr "Einfaches attributbasiertes Bildfeld für Personenporträts."
 
+#: kitconcept/core/behaviors/footer.py:59
+msgid "The footer address that appears below the footer logo in the first footer column."
+msgstr "Die Adresse wird auf der linken Seite im Footer unterhalb des Footer Logos angezeigt."
+
+#: kitconcept/core/behaviors/footer.py:80
+msgid "The left-most column appearing after the address column. It can contain a list of links."
+msgstr "Die linke Spalte, die nach der Adressspalte erscheint. Sie kann eine Liste von Links enthalten."
+
+#: kitconcept/core/behaviors/footer.py:104
+msgid "The middle column appearing between the left and the right columns. It can contain a list of links."
+msgstr "Die mittlere Spalte, die zwischen der linken und der rechten Spalte erscheint. Sie kann eine Liste von Links enthalten."
+
 #: kitconcept/core/profiles/dependencies/registry/querystring.xml
 msgid "The path of an item"
 msgstr "Der Pfad eines Inhalts"
+
+#: kitconcept/core/behaviors/footer.py:128
+msgid "The right-most column appearing after the middle column. It can contain a list of links."
+msgstr "Die rechte Spalte, die nach der mittleren Spalte erscheint. Sie kann eine Liste von Links enthalten."
 
 #: kitconcept/core/behaviors/configure.zcml:19
 msgid "Through The Web blocks configuration"
@@ -82,6 +134,11 @@ msgstr "Blockkonfiguration durch die Weboberfläche"
 #: kitconcept/core/behaviors/blocks_settings.py:41
 msgid "help_blocks_config_mutator"
 msgstr "Blocks Konfiguration anpassen"
+
+#. Default: "The footer has a main logo located in the lower left side, above the address. In case that the footer has a dark  background, you can set this inversed logo to ensure it plays well with the background color. If not set, the main site logo will be used."
+#: kitconcept/core/behaviors/footer.py:47
+msgid "help_footer_logo"
+msgstr "Der Footer zeigt ein Logo in der unteren linken Ecke, direkt über der Adresse. Falls der Footer eine dunkle Hintergrundfarbe hat, können Sie ein invertiertes Logo verwenden, um sicherzustellen, dass es mit dem Hintergrund funktioniert. Wenn Sie dieses Feld nicht füllen, wird das Hauptlogo der Seite im Footer verwendet."
 
 #. Default: "A short biography for this person."
 #: kitconcept/core/behaviors/person_bio.py:20
@@ -93,8 +150,22 @@ msgstr "Kurzbiographie der Person."
 msgid "help_person_image"
 msgstr "Laden Sie ein normales Portraitbild mit Ihrem Kopf in der Mitte hoch."
 
+#. Default: "The post footer can have a prominent logo located in the lower right side. It is normally used for displaying the logo of the site sponsor."
+#: kitconcept/core/behaviors/footer.py:140
+msgid "help_post_footer_logo"
+msgstr "Zeigt das Logo einer Organisation an, die das Projekt oder die Website fördert oder finanziert. Wird unterhalb des Footers platziert, um Fördergeber und Träger zu würdigen."
+
+#. Default: "The post footer logo can be linked to a URL."
+#: kitconcept/core/behaviors/footer.py:157
+msgid "help_post_footer_logo_link"
+msgstr "Verknüpfung des Förderlogos mit der Website der fördernden Organisation."
+
 #: kitconcept/core/controlpanel/kitconcept.py:27
 msgid "kitconcept Settings"
+msgstr ""
+
+#: kitconcept/core/behaviors/configure.zcml:48
+msgid "kitconcept specific footer customizations"
 msgstr ""
 
 #: kitconcept/core/profiles.zcml:13
@@ -129,6 +200,11 @@ msgstr "Standort"
 msgid "label_contact_room"
 msgstr "Raum"
 
+#. Default: "Footer Logo"
+#: kitconcept/core/behaviors/footer.py:46
+msgid "label_footer_logo"
+msgstr "Footer Logo"
+
 #. Default: "Biography"
 #: kitconcept/core/behaviors/person_bio.py:19
 msgid "label_person_biography"
@@ -138,3 +214,13 @@ msgstr "Biographie"
 #: kitconcept/core/behaviors/person_image.py:11
 msgid "label_person_image"
 msgstr "Profilbild/Portrait"
+
+#. Default: "Post Footer Logo"
+#: kitconcept/core/behaviors/footer.py:139
+msgid "label_post_footer_logo"
+msgstr "Partnerlogo/Förderlogo"
+
+#. Default: "Post Footer Logo Link"
+#: kitconcept/core/behaviors/footer.py:156
+msgid "label_post_footer_logo_link"
+msgstr "Partnerlogo/Förderlogo Link"

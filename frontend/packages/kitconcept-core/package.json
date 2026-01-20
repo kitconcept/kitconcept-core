@@ -27,8 +27,9 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
+    "@plone/components": "workspace:*",
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@kitconcept/volto-light-theme": "^8.0.0-alpha.10",
+    "@kitconcept/volto-light-theme": "^8.0.0-alpha.12",
     "@mbarde/volto-image-crop-widget": "^0.5.1"
   },
   "peerDependencies": {
