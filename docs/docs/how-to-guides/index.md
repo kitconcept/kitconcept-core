@@ -23,4 +23,5 @@ https://diataxis.fr/how-to-guides/
 
 blocks-config-ttw
 reindex-content-script
+move-rename-content-objects
 ```
