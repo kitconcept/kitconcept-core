@@ -30,7 +30,7 @@ $ OLD_ID=/foo/bar NEW_ID=/foo/bas \
 ### Locally
 
 ```bash
-$ OLD_ID=/foo/bar NEW_ID=/foo/bas> \
+$ OLD_ID=/foo/bar NEW_ID=/foo/bas \
   .venv/bin/zconsole run scripts/move_rename_object.py
 ```
 
