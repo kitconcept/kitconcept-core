@@ -5,6 +5,10 @@ Usage:
   $ OLD_ID=/Plone/foo/bar NEW_ID=/Plone/foo/bas \
     ./docker-entrypoint.sh run scripts/move_rename_object.py
 
+Implementation notes: This applies a monkey patch to the handleContentishEvent function from CMFCore.
+The goal is to optimize performance by transfering existing catalog data to a new path rather than doing a full unindex + reindex.
+See also https://github.com/plone/Products.CMFPlone/pull/3834
+(but that stalled due to some test issues that need to be debugged).
 """
 
 from Acquisition import aq_base
