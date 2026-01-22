@@ -226,7 +226,7 @@ constraints = [
     { name = "plone-transformchain", specifier = "==3.0.2" },
     { name = "plone-uuid", specifier = "==2.0.2" },
     { name = "plone-versioncheck", specifier = "==1.8.2" },
-    { name = "plone-volto", specifier = "==5.2.3" },
+    { name = "plone-volto", specifier = "==5.2.4" },
     { name = "plone-z3cform", specifier = "==2.0.5" },
     { name = "plonetheme-barceloneta", specifier = "==3.3.3" },
     { name = "pluggy", specifier = "==1.6.0" },
@@ -3485,7 +3485,7 @@ wheels = [
 
 [[package]]
 name = "plone-volto"
-version = "5.2.3"
+version = "5.2.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "collective-monkeypatcher" },
@@ -3497,9 +3497,9 @@ dependencies = [
     { name = "products-cmfplone" },
     { name = "setuptools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/89/45/0a26e7d25ed38a64a4cce091315ae54ae4f6d5d5a26cafa6702595a3ddb7/plone_volto-5.2.3.tar.gz", hash = "sha256:d39864e4956efa7f0a9b30ddb57a3d034bbcc7a4da6c3bb526be59d3cf6f3333", size = 266089, upload-time = "2026-01-14T03:18:16.849Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6c/2d/b4f3a12eb726a73bd6f201ff96b37c810b2862840ed3dba437289f3bd903/plone_volto-5.2.4.tar.gz", hash = "sha256:57d21a8a54d510288729ac852545dfb835e173df417cfb8b06c7690668106f15", size = 266245, upload-time = "2026-01-22T22:29:41.449Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/09/dc/047d4354300f7d1db1a8349ce663bda56e44ca2390fa2bd7987f56c33857/plone_volto-5.2.3-py3-none-any.whl", hash = "sha256:11f066e48671bb4afab70fa5702094c04d7cd5dbb590f60b75928d2c3929eecb", size = 279696, upload-time = "2026-01-14T03:18:14.032Z" },
+    { url = "https://files.pythonhosted.org/packages/42/c5/6b836c355b855d1c577155e1fbfe5142919a31df3e803b93641129a1cc67/plone_volto-5.2.4-py3-none-any.whl", hash = "sha256:32a7414610d2d987ea0045f180c4cc9f9e602ea6cfc1ce064b7d50cbac912ee7", size = 279741, upload-time = "2026-01-22T22:29:39.893Z" },
 ]
 
 [[package]]
