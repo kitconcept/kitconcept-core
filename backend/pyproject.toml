@@ -292,7 +292,7 @@ constraint-dependencies = [
     "plone.transformchain==3.0.2",
     "plone.uuid==2.0.2",
     "plone.versioncheck==1.8.2",
-    "plone.volto==5.2.3",
+    "plone.volto==5.2.4",
     "plone.z3cform==2.0.5",
     "Plone==6.1.4",
     "plonetheme.barceloneta==3.3.3",

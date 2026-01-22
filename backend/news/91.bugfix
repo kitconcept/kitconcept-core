@@ -1,0 +1,1 @@
+Update to plone.volto 5.2.4. Adds getRemoteUrl to default summary serialization. @jackahl @davisagli

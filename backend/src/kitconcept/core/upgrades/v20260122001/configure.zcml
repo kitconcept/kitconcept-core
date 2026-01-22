@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20251209001"
+      destination="20260122001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade dependencies for Plone 6.1.4"
+        handler="..null_upgrade_step"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
