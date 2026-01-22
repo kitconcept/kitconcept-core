@@ -21,6 +21,15 @@ class IKitconceptSettings(Interface):
         required=False,
     )
 
+    disable_profile_links = schema.Bool(
+        title=_("Non-clickable Profiles"),
+        description=_(
+            "Person profiles are not clickable in teasers, grids, listings, and search"
+        ),
+        required=False,
+        default=False,
+    )
+
 
 class KitconceptSettingsEditForm(RegistryEditForm):
     schema = IKitconceptSettings
@@ -59,3 +68,4 @@ class SiteEndpointExpander:
             IKitconceptSettings, prefix="kitconcept.core.settings"
         )
         data["kitconcept.custom_css"] = settings.custom_css
+        data["kitconcept.disable_profile_links"] = settings.disable_profile_links

@@ -1,0 +1,1 @@
+Added a control panel setting for disabling the link for Person content types in teasers and listings. @iFlameing
