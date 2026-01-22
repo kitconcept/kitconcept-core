@@ -10,7 +10,7 @@
       >
     <genericsetup:upgradeStep
         title="Upgrade dependencies for Plone 6.1.4"
-        handler="..null_upgrade_step"
+        handler="..utils.null_upgrade_step"
         />
   </genericsetup:upgradeSteps>
 
