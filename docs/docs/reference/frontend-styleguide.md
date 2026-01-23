@@ -167,7 +167,7 @@ in the add-on's `tsconfig.json`, declare it as a path mapping:
   "compilerOptions": {
     // other existing options...
     "paths": {
-      "@kitconcept/volto-light-theme/*": ["../volto-light-theme/src/*"]
+      "@kitconcept/volto-light-theme/*": ["../volto-light-theme/frontend/packages/volto-light-theme/src/*"]
     }
   }
 }
