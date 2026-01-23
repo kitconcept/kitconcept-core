@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-12-09 17:11+0000\n"
+"POT-Creation-Date: 2026-01-22 13:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,9 +50,17 @@ msgstr "Generisches Setup-Profil mit Kernabhängigkeiten, die von CMF benötigt 
 msgid "Generic setup profile with dependencies used by kitconcept projects."
 msgstr "Generisches Setup-Profil mit Abhängigkeiten, die von kitconcept-Projekten verwendet werden."
 
+#: kitconcept/core/controlpanel/kitconcept.py:25
+msgid "Non-clickable Profiles"
+msgstr "Nicht anklickbare Profile"
+
 #: kitconcept/core/profiles/dependencies/registry/querystring.xml
 msgid "Path"
 msgstr "Pfad"
+
+#: kitconcept/core/controlpanel/kitconcept.py:26
+msgid "Person profiles are not clickable in teasers, grids, listings, and search"
+msgstr "Personenprofile sind in Teasern, Rastern, Listen und Suchergebnissen nicht anklickbar."
 
 #: kitconcept/core/behaviors/configure.zcml:27
 msgid "Person: Additional contact information"
@@ -93,7 +101,7 @@ msgstr "Kurzbiographie der Person."
 msgid "help_person_image"
 msgstr "Laden Sie ein normales Portraitbild mit Ihrem Kopf in der Mitte hoch."
 
-#: kitconcept/core/controlpanel/kitconcept.py:27
+#: kitconcept/core/controlpanel/kitconcept.py:36
 msgid "kitconcept Settings"
 msgstr ""
 

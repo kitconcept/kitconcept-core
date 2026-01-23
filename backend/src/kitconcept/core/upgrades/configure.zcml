@@ -9,5 +9,6 @@
   <include package=".v20250916001" />
   <include package=".v20250917001" />
   <include package=".v20251209001" />
+  <include package=".v20260122001" />
 
 </configure>
