@@ -43,6 +43,8 @@ install: ## Installs the add-on in a development environment
 	pnpm dlx mrs-developer missdev --no-config --fetch-https
 	pnpm i
 	make build-deps
+	@echo "$(GREEN)==> Update volto-light-theme to the latest version$(RESET)"
+	pnpm --filter @kitconcept/core update @kitconcept/volto-light-theme
 
 .PHONY: start
 start: ## Starts Volto, allowing reloading of the add-on during development
