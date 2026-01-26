@@ -27,9 +27,9 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
-    "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@kitconcept/volto-light-theme": "^8.0.0-alpha.10",
-    "@mbarde/volto-image-crop-widget": "^0.5.1"
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.13",
+    "@mbarde/volto-image-crop-widget": "^0.5.1",
+    "@plone-collective/volto-authomatic": "3.0.0-alpha.6"
   },
   "peerDependencies": {
     "react": "^18.2.0",
