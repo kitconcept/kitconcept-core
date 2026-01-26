@@ -1,4 +1,4 @@
-name: 'Configurações'
+name: "Compute Config variables"
 
 on:
   workflow_call:
