@@ -64,7 +64,6 @@ jobs:
     uses: plone/meta/.github/workflows/container-image-build-push.yml@2.x
     needs:
       - lint
-      - coverage
     strategy:
       fail-fast: false
       matrix:
