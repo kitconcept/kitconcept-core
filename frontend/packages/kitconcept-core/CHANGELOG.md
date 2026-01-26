@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.9 (2026-01-26)
+
+### Internal
+
+- Update to VLT 8a9: https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a13 @sneridagh 
+
 ## 2.0.0-alpha.8 (2026-01-15)
 
 ### Internal

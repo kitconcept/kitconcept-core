@@ -7,6 +7,53 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a9 (2026-01-26)
+
+### Backend
+
+
+#### New features:
+
+- Add script to move/rename content objects. @jnptk 
+- Added a control panel setting for disabling the link for Person content types in teasers and listings. @iFlameing 
+
+
+#### Bug fixes:
+
+- Update to plone.volto 5.2.4. Adds getRemoteUrl to default summary serialization. @jackahl @davisagli [#91](https://github.com/kitconcept/kitconcept-core/issues/91)
+
+
+#### Internal:
+
+- Update to VLT 8a9: https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a13 @sneridagh 
+- Upgrade to Volto 6.1.4. @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to VLT 8a9: https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a13 @sneridagh 
+
+
+
+### Project
+
+
+#### Internal
+
+- Removed coverage tests from CI. @sneridagh 
+
+
+#### Documentation
+
+- Add docs for how to upgrade Plone. @sneridagh 
+- Add short how-to in docs explaining how to use the `move_rename_object.py` script. @jnptk 
+- Updated the instructions to install VLT via the styleguide. @TimoBroeskamp 
+
+
+
 ## 2.0.0a8 (2026-01-15)
 
 ### Backend
