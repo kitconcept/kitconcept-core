@@ -159,6 +159,26 @@ and declare it in the root `package.json` as a dependency:
 }
 ```
 
+Also add these overrides to the root `package.json`:
+
+```json
+"pnpm": {
+  "overrides": {
+    // other overrides
+    "@kitconcept/volto-light-theme": "workspace:*",
+    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1"
+  },
+  // other pnpm packages
+}
+```
+
+After that in the `volto.config.js` add @kitconcept/volto-light-theme to the addons and the thee like this:
+
+```js
+const addons = ['volto-vlt-test-styleguide', '@kitconcept/volto-light-theme'];
+const theme = '@kitconcept/volto-light-theme';
+```
+
 in the add-on's `tsconfig.json`, declare it as a path mapping:
 
 ```json
@@ -167,7 +187,7 @@ in the add-on's `tsconfig.json`, declare it as a path mapping:
   "compilerOptions": {
     // other existing options...
     "paths": {
-      "@kitconcept/volto-light-theme/*": ["../volto-light-theme/src/*"]
+      "@kitconcept/volto-light-theme/*": ["../volto-light-theme/frontend/packages/volto-light-theme/src/*"]
     }
   }
 }
