@@ -27,4 +27,7 @@ Make a quick search for `plone_version` in the `backend/tests` folder and update
 
 3. Create an upgrade step.
    Add an upgrade step for the `kitconcept.core:base` profile.
+   First, check what changes were made in `Products.CMFPlone`, and evaluate if we need to backport these changes to our profile:
+   - If a new registry configuration is created
+   - Changes to default types or permissions
    We at least need a null upgrade step, so that the migration tool has a chance to upgrade dependencies.
