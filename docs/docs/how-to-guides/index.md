@@ -25,4 +25,5 @@ blocks-config-ttw
 reindex-content-script
 move-rename-content-objects
 upgrade-plone
+upgrade-distribution
 ```
