@@ -31,3 +31,29 @@ Make a quick search for `plone_version` in the `backend/tests` folder and update
    - If a new registry configuration is created
    - Changes to default types or permissions
    We at least need a null upgrade step, so that the migration tool has a chance to upgrade dependencies.
+   ```xml
+    <configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+        >
+
+      <genericsetup:upgradeSteps
+          profile="kitconcept.core:base"
+          source="20251209001"
+          destination="20260122001"
+          >
+        <!--  This step upgrade all dependencies of kitconcept.core -->
+        <genericsetup:upgradeStep
+            title="Upgrade dependencies for Plone 6.1.4"
+            handler="..utils.null_upgrade_step"
+            />
+        <!-- Additional step updating registry settings defined in kitconcept.core:dependencies -->
+        <genericsetup:upgradeDepends
+            title="Adds disable_profile_links setting to kitconcept settings"
+            import_profile="kitconcept.core:dependencies"
+            import_steps="plone.app.registry"
+            />
+      </genericsetup:upgradeSteps>
+
+    </configure>
+   ```
