@@ -26,4 +26,5 @@ reindex-content-script
 move-rename-content-objects
 upgrade-dependencies
 upgrade-plone
+ensure-versions-distribution-projects
 ```
