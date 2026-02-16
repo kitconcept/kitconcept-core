@@ -7,6 +7,41 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a10 (2026-02-16)
+
+### Backend
+
+
+#### New features:
+
+- Pinned plone.exportimport 2.0.0a2. It enables the RESTAPI services for export/import. @sneridagh 
+
+
+#### Bug fixes:
+
+- Volto 19a25 VLT 8a16.
+  See https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a16 @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Volto 19a25 VLT 8a16.
+  See https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a16 @sneridagh 
+
+
+
+### Project
+
+
+#### Documentation
+
+- Improve documentation explaining the reason behind kitconcept.core and how to upgrade it. @ericof 
+
+
+
 ## 2.0.0a9 (2026-01-26)
 
 ### Backend
