@@ -88,6 +88,11 @@ install:  ## Install
 	$(MAKE) backend-install
 	$(MAKE) frontend-install
 
+.PHONY: upgrade
+upgrade:  ## Upgrade dependencies
+	$(MAKE) -C "./backend/" upgrade
+	$(MAKE) -C "./frontend/" upgrade
+
 .PHONY: start
 start:  ## Start
 	@echo "Starting application"

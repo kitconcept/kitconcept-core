@@ -66,13 +66,16 @@ config-generate:
 sync: ## Sync project dependencies
 	@echo "$(GREEN)==> Sync project dependencies$(RESET)"
 	@uv sync
-	@echo "$(GREEN)==> Force update of kitconcept.voltolighttheme$(RESET)"
-	@uv sync --upgrade-package kitconcept.voltolighttheme
 
 .PHONY: install
 install: sync config ## Install Plone and dependencies
 
 $(VENV_FOLDER): sync ## Install Plone and dependencies
+
+.PHONY: upgrade
+upgrade: ## Upgrade dependencies
+	@echo "$(GREEN)==> Force update of kitconcept.voltolighttheme$(RESET)"
+	@uv sync --upgrade-package kitconcept.voltolighttheme
 
 .PHONY: clean
 clean: ## Clean environment
