@@ -7,7 +7,7 @@ myst:
     "keywords": "kitconcept distribution, make upgrade, volto distribution upgrade"
 ---
 
-# How to upgrade a distribution using `make upgrade`
+# How to upgrade a distribution-based project
 
 Use this guide in projects based on a frontend distribution where `frontend/Makefile` provides an `upgrade` target.
 

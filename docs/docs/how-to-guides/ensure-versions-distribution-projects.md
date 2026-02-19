@@ -13,7 +13,7 @@ When you have a project that is based on a distribution, we need to make sure th
 
 We achieve the enforcement of the versions by running a script `upgrade-distribution.js` along with a custom `pnpm` configuration via `.pnpmfile.cjs` that ensures the distribution versions are used when installing dependencies.
 
-We can setup this script and configuration in any project based on a distribution, and in the future we will include it in the `frontend` template for kitconcept projects based on a distribution.
+We can set up this script and configuration in any project based on a distribution, and in the future we will include it in the `frontend` template for kitconcept projects based on a distribution.
 
 ## `upgrade-distribution.js`
 
@@ -52,7 +52,7 @@ In `frontend/Makefile`, target `upgrade` runs:
 
 This means the script is the first step that updates the files it controls (`volto.config.js` and `mrs.developer.json`) before dependency resolution and installation.
 
-## Setting `upgrade-distribution.js` and the configuration up
+## Setting up `upgrade-distribution.js` and the configuration
 
 In the future it will be included in the `frontend` template for kitconcept projects based on a distribution.
 
@@ -66,7 +66,7 @@ For now, you can follow these instructions:
 
 ```makefile
 upgrade:
-  node scripts/upgrade-distribution.js
+    node scripts/upgrade-distribution.js
 	pnpm exec prettier --log-level silent --write volto.config.js
 ```
 
