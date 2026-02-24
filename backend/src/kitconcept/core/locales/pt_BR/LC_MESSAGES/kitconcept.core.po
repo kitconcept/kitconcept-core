@@ -1,6 +1,3 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,140 +9,140 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: pt_BR\n"
+"Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: kitconcept.core\n"
 
 #: kitconcept/core/behaviors/configure.zcml:34
 msgid "Add a field for a biography."
-msgstr ""
+msgstr "Adicionar um campo para uma biografia."
 
 #: kitconcept/core/behaviors/configure.zcml:19
 msgid "Allows to set configuration that will be injected into the blocks default configuration."
-msgstr ""
+msgstr "Permite definir uma configuração que será injetada na configuração padrão dos blocos."
 
 #: kitconcept/core/behaviors/blocks_settings.py:24
 msgid "Blocks configuration"
-msgstr ""
+msgstr "Configuração de blocos"
 
 #: kitconcept/core/controlpanel/kitconcept.py:19
 msgid "Custom CSS"
-msgstr ""
+msgstr "CSS personalizado"
 
 #: kitconcept/core/controlpanel/kitconcept.py:20
 msgid "Custom CSS for this site."
-msgstr ""
+msgstr "CSS personalizado para este site."
 
 #: kitconcept/core/behaviors/configure.zcml:27
 msgid "Fields with additional person information"
-msgstr ""
+msgstr "Campos com informações adicionais da pessoa"
 
 #: kitconcept/core/profiles.zcml:13
 msgid "Generic setup profile with base settings for kitconcept projects."
-msgstr ""
+msgstr "Perfil de configuração genérico com configurações base para projetos kitconcept."
 
 #: kitconcept/core/profiles.zcml:22
 msgid "Generic setup profile with core dependencies needed by CMF."
-msgstr ""
+msgstr "Perfil de configuração genérico com dependências principais necessárias pelo CMF."
 
 #: kitconcept/core/profiles.zcml:31
 msgid "Generic setup profile with dependencies used by kitconcept projects."
-msgstr ""
+msgstr "Perfil de configuração genérico com dependências usadas por projetos kitconcept."
 
 #: kitconcept/core/controlpanel/kitconcept.py:25
 msgid "Non-clickable Profiles"
-msgstr ""
+msgstr "Perfis não clicáveis"
 
 #: kitconcept/core/profiles/dependencies/registry/querystring.xml
 msgid "Path"
-msgstr ""
+msgstr "Caminho"
 
 #: kitconcept/core/controlpanel/kitconcept.py:26
 msgid "Person profiles are not clickable in teasers, grids, listings, and search"
-msgstr ""
+msgstr "Perfis de pessoas não são clicáveis em teasers, grades, listagens e resultados de busca."
 
 #: kitconcept/core/behaviors/configure.zcml:27
 msgid "Person: Additional contact information"
-msgstr ""
+msgstr "Pessoa: Informações de contato adicionais"
 
 #: kitconcept/core/behaviors/configure.zcml:34
 msgid "Person: Biography information"
-msgstr ""
+msgstr "Pessoa: Informações de biografia"
 
 #: kitconcept/core/behaviors/configure.zcml:41
 msgid "Person: Image"
-msgstr ""
+msgstr "Pessoa: Imagem"
 
 #: kitconcept/core/behaviors/configure.zcml:41
 msgid "Simple attribute-based image field for persons portraits."
-msgstr ""
+msgstr "Campo de imagem simples baseado em atributos para retratos de pessoas."
 
 #: kitconcept/core/profiles/dependencies/registry/querystring.xml
 msgid "The path of an item"
-msgstr ""
+msgstr "O caminho de um item"
 
 #: kitconcept/core/behaviors/configure.zcml:19
 msgid "Through The Web blocks configuration"
-msgstr ""
+msgstr "Configuração de blocos pela interface web"
 
 #. Default: "Configure some aspects of the default blocks configuration."
 #: kitconcept/core/behaviors/blocks_settings.py:41
 msgid "help_blocks_config_mutator"
-msgstr ""
+msgstr "Configure alguns aspectos da configuração padrão dos blocos."
 
 #. Default: "A short biography for this person."
 #: kitconcept/core/behaviors/person_bio.py:20
 msgid "help_person_biography"
-msgstr ""
+msgstr "Uma breve biografia desta pessoa."
 
 #. Default: "Use a normal portrait image with your face centered."
 #: kitconcept/core/behaviors/person_image.py:12
 msgid "help_person_image"
-msgstr ""
+msgstr "Use uma imagem de retrato normal com seu rosto centralizado."
 
 #: kitconcept/core/controlpanel/kitconcept.py:36
 msgid "kitconcept Settings"
-msgstr ""
+msgstr "Configurações kitconcept"
 
 #: kitconcept/core/profiles.zcml:13
 msgid "kitconcept: Base settings"
-msgstr ""
+msgstr "kitconcept: Configurações base"
 
 #: kitconcept/core/profiles.zcml:22
 msgid "kitconcept: CMF dependencies"
-msgstr ""
+msgstr "kitconcept: Dependências CMF"
 
 #: kitconcept/core/profiles.zcml:31
 msgid "kitconcept: Required dependencies"
-msgstr ""
+msgstr "kitconcept: Dependências necessárias"
 
 #. Default: "Address"
 #: kitconcept/core/behaviors/additional_contact_info.py:27
 msgid "label_address"
-msgstr ""
+msgstr "Endereço"
 
 #. Default: "Building"
 #: kitconcept/core/behaviors/additional_contact_info.py:18
 msgid "label_contact_building"
-msgstr ""
+msgstr "Edifício"
 
 #. Default: "Location"
 #: kitconcept/core/behaviors/additional_contact_info.py:33
 msgid "label_contact_location"
-msgstr ""
+msgstr "Localização"
 
 #. Default: "Room"
 #: kitconcept/core/behaviors/additional_contact_info.py:23
 msgid "label_contact_room"
-msgstr ""
+msgstr "Sala"
 
 #. Default: "Biography"
 #: kitconcept/core/behaviors/person_bio.py:19
 msgid "label_person_biography"
-msgstr ""
+msgstr "Biografia"
 
 #. Default: "Profile Picture/Portrait"
 #: kitconcept/core/behaviors/person_image.py:11
 msgid "label_person_image"
-msgstr ""
+msgstr "Foto de perfil/Retrato"
