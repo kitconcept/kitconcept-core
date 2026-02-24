@@ -1327,7 +1327,10 @@ importers:
         version: 0.5.1(react@18.2.0)
       '@plone-collective/volto-authomatic':
         specifier: 3.0.0-alpha.6
-        version: 3.0.0-alpha.6(@plone/components@4.0.0-alpha.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@plone/registry@core+packages+registry)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.27)(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+        version: 3.0.0-alpha.6(@plone/components@core+packages+components)(@plone/registry@core+packages+registry)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.27)(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+      '@plone/components':
+        specifier: workspace:^
+        version: link:../../core/packages/components
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -15663,9 +15666,9 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@plone-collective/volto-authomatic@3.0.0-alpha.6(@plone/components@4.0.0-alpha.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@plone/registry@core+packages+registry)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.27)(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
+  '@plone-collective/volto-authomatic@3.0.0-alpha.6(@plone/components@core+packages+components)(@plone/registry@core+packages+registry)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.27)(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
     dependencies:
-      '@plone/components': 4.0.0-alpha.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@plone/components': link:core/packages/components
       '@plone/registry': link:core/packages/registry
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -18243,7 +18246,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 1.2.0
-      vitest: 2.1.9(@types/node@24.10.1)(@vitest/ui@2.1.9)(jsdom@21.1.2)(less@3.11.1)(lightningcss@1.30.2)(sass@1.58.0)(terser@5.44.1)
+      vitest: 2.1.9(@types/node@24.10.1)(@vitest/ui@2.1.9)(jsdom@22.1.0)(less@3.11.1)(lightningcss@1.30.2)(sass@1.58.0)(terser@5.44.1)
     optional: true
 
   '@vitest/ui@2.1.9(vitest@3.2.4)':

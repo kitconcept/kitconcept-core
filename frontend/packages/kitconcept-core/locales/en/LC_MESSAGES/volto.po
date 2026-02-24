@@ -62,6 +62,11 @@ msgstr ""
 msgid "Export successful"
 msgstr ""
 
+#. Default: "Exporting…"
+#: components/Controlpanels/ExportImport
+msgid "Exporting…"
+msgstr ""
+
 #. Default: "Import Content"
 #: components/Controlpanels/ExportImport
 msgid "Import Content"
@@ -75,6 +80,11 @@ msgstr ""
 #. Default: "Import successful"
 #: components/Controlpanels/ExportImport
 msgid "Import successful"
+msgstr ""
+
+#. Default: "Importing…"
+#: components/Controlpanels/ExportImport
+msgid "Importing…"
 msgstr ""
 
 #. Default: "Latest available configuration"

@@ -62,6 +62,11 @@ msgstr "Export-Standort"
 msgid "Export successful"
 msgstr "Export erfolgreich"
 
+#. Default: "Exporting…"
+#: components/Controlpanels/ExportImport
+msgid "Exporting…"
+msgstr ""
+
 #. Default: "Import Content"
 #: components/Controlpanels/ExportImport
 msgid "Import Content"
@@ -76,6 +81,11 @@ msgstr "Importieren Sie die Website"
 #: components/Controlpanels/ExportImport
 msgid "Import successful"
 msgstr "Import erfolgreich"
+
+#. Default: "Importing…"
+#: components/Controlpanels/ExportImport
+msgid "Importing…"
+msgstr ""
 
 #. Default: "Latest available configuration"
 #: components/Controlpanels/UpgradeControlPanel
