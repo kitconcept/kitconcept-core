@@ -1,4 +1,14 @@
-import { POST_IMPORT } from '../../constants/ActionTypes';
+import { POST_IMPORT, POST_EXPORT } from '../../constants/ActionTypes';
+
+export const exportContent = () => {
+  return {
+    type: POST_EXPORT,
+    request: {
+      op: 'post',
+      path: '/@export',
+    },
+  };
+};
 
 export const importContent = (file) => {
   const formData = new FormData();

@@ -15,7 +15,10 @@ import { toast } from 'react-toastify';
 import { createPortal } from 'react-dom';
 
 import { useDispatch } from 'react-redux';
-import { importContent } from '../../actions/exportImport/exportImport';
+import {
+  exportContent,
+  importContent,
+} from '../../actions/exportImport/exportImport';
 
 import uploadSVG from '@plone/volto/icons/upload.svg';
 import downloadSVG from '@plone/volto/icons/download.svg';
@@ -87,9 +90,7 @@ const ContentTransfer = ({ pathname }) => {
     try {
       setExporting(true);
 
-      const res = await fetch('/@export', {
-        method: 'POST',
-      });
+      const res = await dispatch(exportContent());
 
       if (!res.ok) throw new Error('Export failed');
 
