@@ -2,6 +2,7 @@ import type { ConfigType } from '@plone/registry';
 import type { CustomInheritBehavior, BlocksConfigSettings } from './types';
 import installSettings from './config/settings';
 import installSlots from './config/slots';
+import installControlPanels from './config/controlPanels';
 
 declare module '@plone/types' {
   export interface GetSiteResponse {
@@ -18,6 +19,8 @@ declare module '@plone/types' {
 const applyConfig = (config: ConfigType) => {
   installSettings(config);
   installSlots(config);
+  installControlPanels(config);
+
   return config;
 };
 

@@ -22,6 +22,7 @@ msgid "Add-ons"
 msgstr "Complementos"
 
 #. Default: "Back"
+#: components/Controlpanels/ExportImport
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Back"
 msgstr "Voltar"
@@ -30,6 +31,11 @@ msgstr "Voltar"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Configuration Versions"
 msgstr "Versões de configuração"
+
+#. Default: "Content Transfer"
+#: config/controlPanels
+msgid "Content Transfer"
+msgstr ""
 
 #. Default: "Current active configuration"
 #: components/Controlpanels/UpgradeControlPanel
@@ -40,6 +46,51 @@ msgstr "Configuração ativa atual"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Dry run selected, transaction aborted."
 msgstr "Execução de teste selecionada, transação cancelada."
+
+#. Default: "Error"
+#: components/Controlpanels/ExportImport
+msgid "Error"
+msgstr ""
+
+#. Default: "Export Content"
+#: components/Controlpanels/ExportImport
+msgid "Export Content"
+msgstr ""
+
+#. Default: "Export Site"
+#: components/Controlpanels/ExportImport
+msgid "Export Site"
+msgstr ""
+
+#. Default: "Export successful"
+#: components/Controlpanels/ExportImport
+msgid "Export successful"
+msgstr ""
+
+#. Default: "Exporting…"
+#: components/Controlpanels/ExportImport
+msgid "Exporting…"
+msgstr ""
+
+#. Default: "Import Content"
+#: components/Controlpanels/ExportImport
+msgid "Import Content"
+msgstr ""
+
+#. Default: "Import Site"
+#: components/Controlpanels/ExportImport
+msgid "Import Site"
+msgstr ""
+
+#. Default: "Import successful"
+#: components/Controlpanels/ExportImport
+msgid "Import successful"
+msgstr ""
+
+#. Default: "Importing…"
+#: components/Controlpanels/ExportImport
+msgid "Importing…"
+msgstr ""
 
 #. Default: "Latest available configuration"
 #: components/Controlpanels/UpgradeControlPanel
@@ -75,6 +126,16 @@ msgstr "Versão do perfil (sistema de arquivos)"
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (Installed)"
 msgstr "Versão do perfil (instalada)"
+
+#. Default: "Select a file first"
+#: components/Controlpanels/ExportImport
+msgid "Select a file first"
+msgstr ""
+
+#. Default: "Success"
+#: components/Controlpanels/ExportImport
+msgid "Success"
+msgstr ""
 
 #. Default: "The following list shows which upgrade steps are going to be run. Upgrading sometimes performs a catalog/security update, which may take a long time on large sites. Be patient."
 #: components/Controlpanels/UpgradeControlPanel
