@@ -19,18 +19,18 @@ msgstr ""
 #. Default: "Add-ons"
 #: components/Controlpanels/VersionOverview
 msgid "Add-ons"
-msgstr ""
+msgstr "Complementos"
 
 #. Default: "Back"
 #: components/Controlpanels/ExportImport
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 #. Default: "Configuration Versions"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Configuration Versions"
-msgstr ""
+msgstr "Versões de configuração"
 
 #. Default: "Content Transfer"
 #: config/controlPanels
@@ -40,12 +40,12 @@ msgstr ""
 #. Default: "Current active configuration"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Current active configuration"
-msgstr ""
+msgstr "Configuração ativa atual"
 
 #. Default: "Dry run selected, transaction aborted."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Dry run selected, transaction aborted."
-msgstr ""
+msgstr "Execução de teste selecionada, transação cancelada."
 
 #. Default: "Error"
 #: components/Controlpanels/ExportImport
@@ -95,37 +95,37 @@ msgstr ""
 #. Default: "Latest available configuration"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Latest available configuration"
-msgstr ""
+msgstr "Configuração mais recente disponível"
 
 #. Default: "More information about the upgrade procedure can be found in the documentation section of plone.org in the Upgrade Guide."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "More information about the upgrade procedure can be found in the documentation section of plone.org in the Upgrade Guide."
-msgstr ""
+msgstr "Mais informações sobre o procedimento de atualização podem ser encontradas na seção de documentação do plone.org no Guia de Atualização."
 
 #. Default: "No addons found"
 #: components/Controlpanels/VersionOverview
 msgid "No addons found"
-msgstr ""
+msgstr "Nenhum complemento encontrado"
 
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview
 msgid "Package Version"
-msgstr ""
+msgstr "Versão do pacote"
 
 #. Default: "Please ensure you have a backup of your site before performing the upgrade."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Please ensure you have a backup of your site before performing the upgrade."
-msgstr ""
+msgstr "Certifique-se de ter um backup do seu site antes de realizar a atualização."
 
 #. Default: "Profile Version (File system)"
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (File system)"
-msgstr ""
+msgstr "Versão do perfil (sistema de arquivos)"
 
 #. Default: "Profile Version (Installed)"
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (Installed)"
-msgstr ""
+msgstr "Versão do perfil (instalada)"
 
 #. Default: "Select a file first"
 #: components/Controlpanels/ExportImport
@@ -140,59 +140,59 @@ msgstr ""
 #. Default: "The following list shows which upgrade steps are going to be run. Upgrading sometimes performs a catalog/security update, which may take a long time on large sites. Be patient."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "The following list shows which upgrade steps are going to be run. Upgrading sometimes performs a catalog/security update, which may take a long time on large sites. Be patient."
-msgstr ""
+msgstr "A lista a seguir mostra quais etapas de atualização serão executadas. A atualização às vezes realiza uma atualização de catálogo/segurança, que pode demorar bastante em sites grandes. Tenha paciência."
 
 #. Default: "The site configuration is outdated and needs to be upgraded."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "The site configuration is outdated and needs to be upgraded."
-msgstr ""
+msgstr "A configuração do site está desatualizada e precisa ser atualizada."
 
 #. Default: "There was an error with the upgrade."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "There was an error with the upgrade."
-msgstr ""
+msgstr "Ocorreu um erro durante a atualização."
 
 #. Default: "Upgrade"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade"
-msgstr ""
+msgstr "Atualizar"
 
 #. Default: "Upgrade Plone Site"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade Plone Site"
-msgstr ""
+msgstr "Atualizar site Plone"
 
 #. Default: "Upgrade Report"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade Report"
-msgstr ""
+msgstr "Relatório de atualização"
 
 #. Default: "Upgrade Steps"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade Steps"
-msgstr ""
+msgstr "Etapas de atualização"
 
 #. Default: "Upgrade kitconcept.core"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade kitconcept.core"
-msgstr ""
+msgstr "Atualizar kitconcept.core"
 
 #. Default: "Upgrade your Site"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Upgrade your Site"
-msgstr ""
+msgstr "Atualizar seu site"
 
 #. Default: "Version Overview"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Version Overview"
-msgstr ""
+msgstr "Visão geral das versões"
 
 #. Default: "You are running in 'debug mode'. This mode is intended for sites that are under development. This allows many configuration changes to be immediately visible, but will make your site run more slowly. To turn off debug mode, stop the server, set 'debug-mode=off' in your buildout.cfg, re-run bin/buildout and then restart the server process."
 #: components/Controlpanels/VersionOverview
 msgid "Warning Regarding debug mode"
-msgstr ""
+msgstr "Aviso sobre o modo de depuração"
 
 #. Default: "Your site is up to date."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Your site is up to date."
-msgstr ""
+msgstr "Seu site está atualizado."
