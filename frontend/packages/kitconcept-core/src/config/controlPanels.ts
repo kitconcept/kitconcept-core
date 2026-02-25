@@ -15,21 +15,21 @@ export default function install(config: ConfigType) {
   config.settings.controlpanels = [
     ...config.settings.controlpanels,
     {
-      '@id': '/content-transfer',
+      '@id': '/import-export',
       group: 'General',
-      title: 'Content Transfer',
+      title: 'Import/Export',
     },
   ];
 
   config.settings.controlPanelsIcons = {
     ...config.settings.controlPanelsIcons,
-    'content-transfer': syncSVG,
+    'import-export': syncSVG,
   };
 
   config.addonRoutes = [
     ...config.addonRoutes,
     {
-      path: '/controlpanel/content-transfer',
+      path: '/controlpanel/import-export',
       component: ExportImport,
     },
   ];
