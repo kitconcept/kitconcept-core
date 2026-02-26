@@ -8,6 +8,21 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.11 (2026-02-26)
+
+### Feature
+
+- Include `scripts` folder with the files needed to setup a project based on a distribution. @sneridagh [#101](https://github.com/kitconcept/kitconcept-core/issue/101)
+- Add controlpanel to export and import content. @iFlameing 
+
+### Internal
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issue/105)
+- Remove VLT as a direct dependency of `@kitconcept/core`.
+  The specific version should be managed in a distribution instead.
+  This avoids the need to release `@kitconcept/core` just to include a new release of VLT.
+  @davisagli 
+
 ## 2.0.0-alpha.10 (2026-02-16)
 
 ### Bugfix

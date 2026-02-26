@@ -1,4 +1,0 @@
-Remove VLT as a direct dependency of `@kitconcept/core`.
-The specific version should be managed in a distribution instead.
-This avoids the need to release `@kitconcept/core` just to include a new release of VLT.
-@davisagli

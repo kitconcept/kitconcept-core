@@ -9,6 +9,19 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a11 (2026-02-26)
+
+
+### New features:
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issues/105)
+
+
+### Internal:
+
+- Add separate command for upgrading backend dependencies. @davisagli 
+- Update translation. @iFlameing 
+
 ## 2.0.0a10 (2026-02-16)
 
 

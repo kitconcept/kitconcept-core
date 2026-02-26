@@ -7,6 +7,55 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a11 (2026-02-26)
+
+### Backend
+
+
+#### New features:
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issues/105)
+
+
+#### Internal:
+
+- Add separate command for upgrading backend dependencies. @davisagli 
+- Update translation. @iFlameing 
+
+
+
+### Frontend
+
+#### Feature
+
+- Include `scripts` folder with the files needed to setup a project based on a distribution. @sneridagh [#101](https://github.com/kitconcept/kitconcept-core/issue/101)
+- Add controlpanel to export and import content. @iFlameing 
+
+#### Internal
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issue/105)
+- Remove VLT as a direct dependency of `@kitconcept/core`.
+  The specific version should be managed in a distribution instead.
+  This avoids the need to release `@kitconcept/core` just to include a new release of VLT.
+  @davisagli 
+
+
+
+### Project
+
+
+#### Internal
+
+- Add command for upgrading dependencies. @davisagli 
+
+
+#### Documentation
+
+- Add documentation for importing and exporting content via the Import/Export control panel. @iFlameing 
+- Ensure versions documentation for project based on distributions. @sneridagh 
+
+
+
 ## 2.0.0a10 (2026-02-16)
 
 ### Backend
