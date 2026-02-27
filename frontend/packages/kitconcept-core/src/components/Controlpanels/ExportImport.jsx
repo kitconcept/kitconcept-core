@@ -15,10 +15,7 @@ import { toast } from 'react-toastify';
 import { createPortal } from 'react-dom';
 
 import { useDispatch } from 'react-redux';
-import {
-  exportContent,
-  importContent,
-} from '../../actions/exportImport/exportImport';
+import { importContent } from '../../actions/exportImport/exportImport';
 
 import uploadSVG from '@plone/volto/icons/upload.svg';
 import downloadSVG from '@plone/volto/icons/download.svg';
