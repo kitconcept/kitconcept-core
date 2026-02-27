@@ -16,10 +16,22 @@ declare module '@plone/types' {
   }
 }
 
+const serverConfig =
+  typeof __SERVER__ !== 'undefined' && __SERVER__
+    ? require('./express-middleware/export').default
+    : false;
+
 const applyConfig = (config: ConfigType) => {
   installSettings(config);
   installSlots(config);
   installControlPanels(config);
+
+  if (serverConfig) {
+    config.settings.expressMiddleware = [
+      ...config.settings.expressMiddleware,
+      ...serverConfig,
+    ];
+  }
 
   return config;
 };

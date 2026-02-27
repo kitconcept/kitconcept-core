@@ -90,7 +90,9 @@ const ContentTransfer = ({ pathname }) => {
     try {
       setExporting(true);
 
-      const res = await dispatch(exportContent());
+      const res = await fetch('/@export', {
+        method: 'POST',
+      });
 
       if (!res.ok) throw new Error('Export failed');
 
