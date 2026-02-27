@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.12 (2026-02-27)
+
+### Bugfix
+
+- Fix content export. @davisagli 
+
 ## 2.0.0-alpha.11 (2026-02-26)
 
 ### Feature

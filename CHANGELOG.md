@@ -7,6 +7,30 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a12 (2026-02-27)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fix content export. @davisagli 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a11 (2026-02-26)
 
 ### Backend
