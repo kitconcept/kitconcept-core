@@ -14,11 +14,8 @@ import { Button, Container } from '@plone/components';
 import { toast } from 'react-toastify';
 import { createPortal } from 'react-dom';
 
-import { useDispatch } from 'react-redux';
-import {
-  exportContent,
-  importContent,
-} from '../../actions/exportImport/exportImport';
+import { useDispatch, useSelector } from 'react-redux';
+import { importContent } from '../../actions/exportImport/exportImport';
 
 import uploadSVG from '@plone/volto/icons/upload.svg';
 import downloadSVG from '@plone/volto/icons/download.svg';
@@ -82,6 +79,7 @@ const ContentTransfer = ({ pathname }) => {
   const intl = useIntl();
   const isClient = useClient();
   const dispatch = useDispatch();
+  const token = useSelector((state) => state.userSession.token);
 
   const [exporting, setExporting] = useState(false);
   const [importing, setImporting] = useState(false);
@@ -90,7 +88,12 @@ const ContentTransfer = ({ pathname }) => {
     try {
       setExporting(true);
 
-      const res = await dispatch(exportContent());
+      const res = await fetch('/++api++/@export', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       if (!res.ok) throw new Error('Export failed');
 
