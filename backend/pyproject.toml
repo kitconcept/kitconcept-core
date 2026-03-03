@@ -31,6 +31,7 @@ dependencies = [
     "collective.honeypot",
     "collective.person==1.0.0b4",
     "plone.exportimport>=2.0.0a2",
+    "kitconcept.contactblock==1.0.0a5",
 ]
 
 [project.optional-dependencies]

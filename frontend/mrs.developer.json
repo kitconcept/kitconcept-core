@@ -6,5 +6,13 @@
     "https": "https://github.com/plone/volto.git",
     "tag": "19.0.0-alpha.25",
     "filterBlobs": true
+  },
+    "volto-contact-block": {
+    "develop": true,
+    "output": "packages",
+    "package": "@kitconcept/volto-contact-block",
+    "url": "git@github.com:kitconcept/volto-contact-block.git",
+    "https": "https://github.com/kitconcept/volto-contact-block.git",
+    "tag": "1.0.0a5"
   }
 }

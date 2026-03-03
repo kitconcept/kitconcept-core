@@ -7,5 +7,6 @@
   <include package="kitconcept.voltolighttheme" />
   <include package="collective.volto.formsupport" />
   <include package="plonegovbr.socialmedia" />
+  <include package="kitconcept.contactblock" />
 
 </configure>
