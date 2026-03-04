@@ -1333,8 +1333,8 @@ importers:
         specifier: 3.0.0-alpha.6
         version: 3.0.0-alpha.6(@plone/components@core+packages+components)(@plone/registry@core+packages+registry)(react-dom@18.2.0(react@18.2.0))(react-intl@3.12.1(@types/react@18.3.27)(react@18.2.0))(react@18.2.0)(semantic-ui-react@2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@plone-collective/volto-image-editor':
-        specifier: 1.0.0
-        version: 1.0.0(@plone/registry@core+packages+registry)(@plone/types@core+packages+types)(advanced-cropper@0.17.1)(classnames@2.5.1)(react-aria-components@1.14.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.2.5))
+        specifier: 1.0.1
+        version: 1.0.1(@plone/registry@core+packages+registry)(@plone/types@core+packages+types)(advanced-cropper@0.17.1)(classnames@2.5.1)(react-aria-components@1.14.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@plone/components':
         specifier: workspace:^
         version: link:../../core/packages/components
@@ -3444,19 +3444,19 @@ packages:
       react-intl: '*'
       semantic-ui-react: '*'
 
-  '@plone-collective/volto-image-editor@1.0.0':
-    resolution: {integrity: sha512-YHVp9RBbVlIxFPTnyMsq21o7QeinAhs1RGzrS9DQRkMOADYUo0vDNiPyTOQsHwPzaKCTaIdxC02tbfSiZtuipA==}
+  '@plone-collective/volto-image-editor@1.0.1':
+    resolution: {integrity: sha512-uTTKKz3sywT8mMAEb/VLVFn+vkVg///n7fe160LMTHlamhnZ8GUWsY0gAYn6dC+StPQGXYR6osyXqRV4VNaBGw==}
     peerDependencies:
-      '@plone/registry': 3.0.0-alpha.5
-      '@plone/types': 2.0.0-alpha.5
+      '@plone/registry': 3.0.0-alpha.9
+      '@plone/types': 2.0.0-alpha.14
       advanced-cropper: ~0.17.1
       classnames: '*'
       react: 18.2.0
       react-aria-components: '*'
       react-dom: 18.2.0
 
-  '@plone/components@4.0.0-alpha.0':
-    resolution: {integrity: sha512-z5feeRKicQ+ghHT/dTxSA0abfxEjsxoYDzW6oRo9RcvNOBMbkG3wZm7+qEVPJvF55EeC89R1EVb7/Ov7YIZW4Q==}
+  '@plone/components@4.0.0-alpha.4':
+    resolution: {integrity: sha512-uJNGveBjTDgSqaUX2Az8S8OVzG6Aeh3mSF9PMpkqRp87GRV8Hq3WXuVS0ZY0SLSBm0GIXDDZm4HXKDLMRUc+MQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -3464,8 +3464,8 @@ packages:
       react-dom:
         optional: true
 
-  '@plone/components@4.0.0-alpha.4':
-    resolution: {integrity: sha512-uJNGveBjTDgSqaUX2Az8S8OVzG6Aeh3mSF9PMpkqRp87GRV8Hq3WXuVS0ZY0SLSBm0GIXDDZm4HXKDLMRUc+MQ==}
+  '@plone/components@4.0.0-alpha.6':
+    resolution: {integrity: sha512-x8nIF9iweA3ctx5K473XRfc3Gfc2fcZOQjVhaOLfdsGjrB6EvBEQe8CK2blMyYpNqcub9HvMG/ir4YckgR228Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -3547,12 +3547,6 @@ packages:
 
   '@react-aria/checkbox@3.16.3':
     resolution: {integrity: sha512-2p1haCUtERo5XavBAWNaX//dryNVnOOWfSKyzLs4UiCZR/NL0ttN+Nu/i445q0ipjLqZ6bBJtx0g0NNrubbU7Q==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-aria/collections@3.0.0-rc.0':
-    resolution: {integrity: sha512-WcRcE3wKtbprOJlBaMbdYS5Suu2KIGq1gVT2fLXVbmDY0CjGemqp2m5aDblQOO8pxvsAqHV8pyznkhANTnK1CQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
@@ -15606,9 +15600,9 @@ snapshots:
       react-intl: 3.12.1(@types/react@18.3.27)(react@18.2.0)
       semantic-ui-react: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
-  '@plone-collective/volto-image-editor@1.0.0(@plone/registry@core+packages+registry)(@plone/types@core+packages+types)(advanced-cropper@0.17.1)(classnames@2.5.1)(react-aria-components@1.14.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.2.5))':
+  '@plone-collective/volto-image-editor@1.0.1(@plone/registry@core+packages+registry)(@plone/types@core+packages+types)(advanced-cropper@0.17.1)(classnames@2.5.1)(react-aria-components@1.14.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@plone/components': 4.0.0-alpha.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.2.5))
+      '@plone/components': 4.0.0-alpha.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@plone/registry': link:core/packages/registry
       '@plone/types': link:core/packages/types
       advanced-cropper: 0.17.1
@@ -15618,15 +15612,12 @@ snapshots:
       react-advanced-cropper: 0.20.1(react@18.2.0)
       react-aria-components: 1.14.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - storybook
 
-  '@plone/components@4.0.0-alpha.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.2.5))':
+  '@plone/components@4.0.0-alpha.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@react-aria/collections': 3.0.0-rc.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@internationalized/date': 3.10.1
       '@react-aria/utils': 3.32.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@react-spectrum/utils': 3.12.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/test': 8.6.14(storybook@8.6.15(prettier@3.2.5))
       clsx: 2.1.1
       react: 18.2.0
       react-aria: 3.45.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -15638,10 +15629,8 @@ snapshots:
       tailwindcss-animate: 1.0.7(tailwindcss@4.1.18)
     optionalDependencies:
       react-dom: 18.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - storybook
 
-  '@plone/components@4.0.0-alpha.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@plone/components@4.0.0-alpha.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@internationalized/date': 3.10.1
       '@react-aria/utils': 3.32.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -15784,17 +15773,6 @@ snapshots:
       '@swc/helpers': 0.5.17
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-
-  '@react-aria/collections@3.0.0-rc.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@react-aria/interactions': 3.26.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@react-aria/ssr': 3.9.10(react@18.2.0)
-      '@react-aria/utils': 3.32.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@react-types/shared': 3.32.1(react@18.2.0)
-      '@swc/helpers': 0.5.17
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      use-sync-external-store: 1.6.0(react@18.2.0)
 
   '@react-aria/collections@3.0.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:

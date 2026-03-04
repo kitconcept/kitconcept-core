@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@plone-collective/volto-authomatic": "3.0.0-alpha.6",
-    "@plone-collective/volto-image-editor": "1.0.0",
+    "@plone-collective/volto-image-editor": "1.0.1",
     "@plone/components": "workspace:^"
   },
   "peerDependencies": {
