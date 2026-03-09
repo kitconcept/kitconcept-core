@@ -3,7 +3,7 @@
  * using @plone/components (React Aria based)
  */
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Toolbar from '@plone/volto/components/manage/Toolbar/Toolbar';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import { Link } from 'react-router-dom';
@@ -17,8 +17,8 @@ import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { importContent } from '../../actions/exportImport/exportImport';
 
-import uploadSVG from '@plone/volto/icons/upload.svg';
-import downloadSVG from '@plone/volto/icons/download.svg';
+import importSVG from '../../icons/import.svg';
+import exportSVG from '../../icons/export.svg';
 import backSVG from '@plone/volto/icons/back.svg';
 
 import { defineMessages, useIntl } from 'react-intl';
@@ -72,10 +72,19 @@ const messages = defineMessages({
     id: 'Importing…',
     defaultMessage: 'Importing…',
   },
+  chooseFile: {
+    id: 'Choose file',
+    defaultMessage: 'Choose file',
+  },
+  noFileSelected: {
+    id: 'No file selected',
+    defaultMessage: 'No file selected',
+  },
 });
 
 const ContentTransfer = ({ pathname }) => {
   const [file, setFile] = useState(null);
+  const fileInputRef = useRef(null);
   const intl = useIntl();
   const isClient = useClient();
   const dispatch = useDispatch();
@@ -168,13 +177,15 @@ const ContentTransfer = ({ pathname }) => {
         <div className="grid-container">
           <div className="grid-column export">
             <h2>{intl.formatMessage(messages.exportContent)}</h2>
+            <span>
+              <Icon name={exportSVG} size="50px" />
+            </span>
 
             <Button
               variant="primary"
               isDisabled={exporting}
               onPress={handleExport}
             >
-              <Icon name={downloadSVG} size="20px" />
               {exporting ? (
                 <span>{intl.formatMessage(messages.exporting)}</span>
               ) : (
@@ -185,19 +196,38 @@ const ContentTransfer = ({ pathname }) => {
 
           <div className="grid-column import">
             <h2>{intl.formatMessage(messages.importContent)}</h2>
+            <span>
+              <Icon name={importSVG} size="50px" />
+            </span>
 
-            <input
-              type="file"
-              accept=".zip"
-              onChange={(e) => setFile(e.target.files[0])}
-            />
+            <div className="file-input-wrapper">
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".zip"
+                onChange={(e) => setFile(e.target.files[0])}
+                hidden
+              />
+              <Button
+                variant="secondary"
+                onPress={() => fileInputRef.current?.click()}
+              >
+                {intl.formatMessage(messages.chooseFile)}
+              </Button>
+              <span className="file-input-name">
+                {file
+                  ? file.name.length > 48
+                    ? `${file.name.slice(0, 35)}…${file.name.slice(-12)}`
+                    : file.name
+                  : intl.formatMessage(messages.noFileSelected)}
+              </span>
+            </div>
 
             <Button
               variant="primary"
               isDisabled={!file || importing}
               onPress={handleImport}
             >
-              <Icon name={uploadSVG} size="20px" />
               {importing ? (
                 <span>{intl.formatMessage(messages.importing)}</span>
               ) : (
