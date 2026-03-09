@@ -29,6 +29,11 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+#. Default: "Choose file"
+#: components/Controlpanels/ExportImport
+msgid "Choose file"
+msgstr ""
+
 #. Default: "Configuration Versions"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Configuration Versions"
@@ -107,6 +112,11 @@ msgstr ""
 #. Default: "No addons found"
 #: components/Controlpanels/VersionOverview
 msgid "No addons found"
+msgstr ""
+
+#. Default: "No file selected"
+#: components/Controlpanels/ExportImport
+msgid "No file selected"
 msgstr ""
 
 #. Default: "Package Version"

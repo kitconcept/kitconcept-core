@@ -27,6 +27,11 @@ msgstr "Complementos"
 msgid "Back"
 msgstr "Voltar"
 
+#. Default: "Choose file"
+#: components/Controlpanels/ExportImport
+msgid "Choose file"
+msgstr ""
+
 #. Default: "Configuration Versions"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Configuration Versions"
@@ -106,6 +111,11 @@ msgstr "Mais informações sobre o procedimento de atualização podem ser encon
 #: components/Controlpanels/VersionOverview
 msgid "No addons found"
 msgstr "Nenhum complemento encontrado"
+
+#. Default: "No file selected"
+#: components/Controlpanels/ExportImport
+msgid "No file selected"
+msgstr ""
 
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview

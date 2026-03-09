@@ -22,6 +22,11 @@ msgstr ""
 msgid "Back"
 msgstr "Zurück"
 
+#. Default: "Choose file"
+#: components/Controlpanels/ExportImport
+msgid "Choose file"
+msgstr "Datai auswählen"
+
 #. Default: "Configuration Versions"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Configuration Versions"
@@ -55,7 +60,7 @@ msgstr "Inhalt exportieren"
 #. Default: "Export Site"
 #: components/Controlpanels/ExportImport
 msgid "Export Site"
-msgstr "Export-Standort"
+msgstr "Website exportieren"
 
 #. Default: "Export successful"
 #: components/Controlpanels/ExportImport
@@ -65,7 +70,7 @@ msgstr "Export erfolgreich"
 #. Default: "Exporting…"
 #: components/Controlpanels/ExportImport
 msgid "Exporting…"
-msgstr ""
+msgstr "Exportieren..."
 
 #. Default: "Import Content"
 #: components/Controlpanels/ExportImport
@@ -75,7 +80,7 @@ msgstr "Inhalt importieren"
 #. Default: "Import Site"
 #: components/Controlpanels/ExportImport
 msgid "Import Site"
-msgstr "Importieren Sie die Website"
+msgstr "Website Importieren"
 
 #. Default: "Import successful"
 #: components/Controlpanels/ExportImport
@@ -85,7 +90,7 @@ msgstr "Import erfolgreich"
 #. Default: "Importing…"
 #: components/Controlpanels/ExportImport
 msgid "Importing…"
-msgstr ""
+msgstr "Importieren..."
 
 #. Default: "Latest available configuration"
 #: components/Controlpanels/UpgradeControlPanel
@@ -101,6 +106,11 @@ msgstr ""
 #: components/Controlpanels/VersionOverview
 msgid "No addons found"
 msgstr ""
+
+#. Default: "No file selected"
+#: components/Controlpanels/ExportImport
+msgid "No file selected"
+msgstr "Keine Datei ausgewählt"
 
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview
