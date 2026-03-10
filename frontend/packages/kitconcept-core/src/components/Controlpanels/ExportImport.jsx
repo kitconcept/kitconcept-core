@@ -89,6 +89,8 @@ const ContentTransfer = ({ pathname }) => {
   const isClient = useClient();
   const dispatch = useDispatch();
   const token = useSelector((state) => state.userSession.token);
+  const siteTitle =
+    useSelector((state) => state.site?.data?.['plone.site_title']) || 'site';
 
   const [exporting, setExporting] = useState(false);
   const [importing, setImporting] = useState(false);
@@ -112,7 +114,12 @@ const ContentTransfer = ({ pathname }) => {
 
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'export.zip';
+      const timestamp = new Date().toISOString().slice(0, 16).replace(':', '-');
+      const safeSiteTitle = siteTitle
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-zA-Z0-9-_]/g, '-');
+      a.download = `${timestamp}_${safeSiteTitle}.zip`;
       a.click();
 
       window.URL.revokeObjectURL(url);
