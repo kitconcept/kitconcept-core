@@ -22,6 +22,7 @@ import exportSVG from '../../icons/export.svg';
 import backSVG from '@plone/volto/icons/back.svg';
 
 import { defineMessages, useIntl } from 'react-intl';
+import { slugify } from '@plone/volto/helpers/Utils/Utils';
 
 const messages = defineMessages({
   back: {
@@ -89,6 +90,8 @@ const ContentTransfer = ({ pathname }) => {
   const isClient = useClient();
   const dispatch = useDispatch();
   const token = useSelector((state) => state.userSession.token);
+  const siteTitle =
+    useSelector((state) => state.site?.data?.['plone.site_title']) || 'site';
 
   const [exporting, setExporting] = useState(false);
   const [importing, setImporting] = useState(false);
@@ -112,7 +115,8 @@ const ContentTransfer = ({ pathname }) => {
 
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'export.zip';
+      const timestamp = new Date().toISOString().slice(0, 16).replace(':', '-');
+      a.download = `${slugify(siteTitle)}_${timestamp}.zip`;
       a.click();
 
       window.URL.revokeObjectURL(url);
