@@ -22,6 +22,7 @@ import exportSVG from '../../icons/export.svg';
 import backSVG from '@plone/volto/icons/back.svg';
 
 import { defineMessages, useIntl } from 'react-intl';
+import { slugify } from '@plone/volto/helpers/Utils/Utils';
 
 const messages = defineMessages({
   back: {
@@ -115,11 +116,7 @@ const ContentTransfer = ({ pathname }) => {
       const a = document.createElement('a');
       a.href = url;
       const timestamp = new Date().toISOString().slice(0, 16).replace(':', '-');
-      const safeSiteTitle = siteTitle
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-zA-Z0-9-_]/g, '-');
-      a.download = `${timestamp}_${safeSiteTitle}.zip`;
+      a.download = `${slugify(siteTitle)}_${timestamp}.zip`;
       a.click();
 
       window.URL.revokeObjectURL(url);
