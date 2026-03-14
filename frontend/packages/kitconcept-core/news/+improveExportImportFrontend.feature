@@ -1,1 +1,0 @@
-Improve UX on Export Import control panel and add missing German translations. @danalvrz
