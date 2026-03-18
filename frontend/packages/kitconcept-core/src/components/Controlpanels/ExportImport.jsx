@@ -23,6 +23,7 @@ import backSVG from '@plone/volto/icons/back.svg';
 
 import { defineMessages, useIntl } from 'react-intl';
 import { slugify } from '@plone/volto/helpers/Utils/Utils';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   back: {
@@ -90,8 +91,7 @@ const ContentTransfer = ({ pathname }) => {
   const isClient = useClient();
   const dispatch = useDispatch();
   const token = useSelector((state) => state.userSession.token);
-  const siteTitle =
-    useSelector((state) => state.site?.data?.['plone.site_title']) || 'site';
+  const siteTitle = config.settings.publicURL;
 
   const [exporting, setExporting] = useState(false);
   const [importing, setImporting] = useState(false);
