@@ -8,6 +8,22 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.13 (2026-03-14)
+
+### Breaking
+
+- Removed add-ons from frontend, moved to the distributions. @sneridagh 
+- Replaced support of `@mbarde/volto-image-crop-widget` with `@plone-collective/volto-image-editor`. @sneridagh 
+
+### Feature
+
+- Improve UX on Export Import control panel and add missing German translations. @danalvrz 
+
+### Internal
+
+- Use Volto 19a27.
+  See https://github.com/plone/volto/releases/tag/19.0.0-alpha.27 @sneridagh 
+
 ## 2.0.0-alpha.12 (2026-02-27)
 
 ### Bugfix
