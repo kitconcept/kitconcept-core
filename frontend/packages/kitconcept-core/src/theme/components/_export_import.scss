@@ -1,0 +1,27 @@
+#page-controlpanel-content-transfer {
+  h2 {
+    @include text-heading-h2();
+  }
+  .grid-container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+  button,
+  input[type='file']::file-selector-button {
+    @include button-style;
+
+    svg.icon {
+      margin-right: 5px;
+    }
+  }
+
+  button[data-disabled] {
+    border-color: var(--border-color-disabled);
+    color: var(--text-color-disabled);
+  }
+
+  input[type='file']::file-selector-button {
+    margin-right: 5px;
+  }
+}

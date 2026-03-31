@@ -24,6 +24,10 @@ https://diataxis.fr/how-to-guides/
 blocks-config-ttw
 reindex-content-script
 move-rename-content-objects
+upgrade-dependencies
 upgrade-plone
 upgrade-distribution
+ensure-versions-distribution-projects
+upgrade-distribution-make-upgrade
+import-export
 ```

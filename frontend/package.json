@@ -1,6 +1,6 @@
 {
   "name": "core-dev",
-  "version": "2.0.0-alpha.9",
+  "version": "2.0.0-alpha.13",
   "description": "Core setup for kitconcept GmbH distributions built on top of Plone",
   "author": "kitconcept GmbH",
   "homepage": "https://github.com/kitconcept/kitconcept-core",
@@ -35,7 +35,8 @@
   "dependencies": {
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "@kitconcept/core": "workspace:*"
+    "@kitconcept/core": "workspace:*",
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.16"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"

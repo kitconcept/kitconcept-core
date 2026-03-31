@@ -8,6 +8,50 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.13 (2026-03-14)
+
+### Breaking
+
+- Removed add-ons from frontend, moved to the distributions. @sneridagh 
+- Replaced support of `@mbarde/volto-image-crop-widget` with `@plone-collective/volto-image-editor`. @sneridagh 
+
+### Feature
+
+- Improve UX on Export Import control panel and add missing German translations. @danalvrz 
+
+### Internal
+
+- Use Volto 19a27.
+  See https://github.com/plone/volto/releases/tag/19.0.0-alpha.27 @sneridagh 
+
+## 2.0.0-alpha.12 (2026-02-27)
+
+### Bugfix
+
+- Fix content export. @davisagli 
+
+## 2.0.0-alpha.11 (2026-02-26)
+
+### Feature
+
+- Include `scripts` folder with the files needed to setup a project based on a distribution. @sneridagh [#101](https://github.com/kitconcept/kitconcept-core/issue/101)
+- Add controlpanel to export and import content. @iFlameing 
+
+### Internal
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issue/105)
+- Remove VLT as a direct dependency of `@kitconcept/core`.
+  The specific version should be managed in a distribution instead.
+  This avoids the need to release `@kitconcept/core` just to include a new release of VLT.
+  @davisagli 
+
+## 2.0.0-alpha.10 (2026-02-16)
+
+### Bugfix
+
+- Volto 19a25 VLT 8a16.
+  See https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a16 @sneridagh 
+
 ## 2.0.0-alpha.9 (2026-01-26)
 
 ### Internal

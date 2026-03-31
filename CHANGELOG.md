@@ -7,6 +7,148 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a13 (2026-03-14)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Breaking
+
+- Removed add-ons from frontend, moved to the distributions. @sneridagh 
+- Replaced support of `@mbarde/volto-image-crop-widget` with `@plone-collective/volto-image-editor`. @sneridagh 
+
+#### Feature
+
+- Improve UX on Export Import control panel and add missing German translations. @danalvrz 
+
+#### Internal
+
+- Use Volto 19a27.
+  See https://github.com/plone/volto/releases/tag/19.0.0-alpha.27 @sneridagh 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
+## 2.0.0a12 (2026-02-27)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fix content export. @davisagli 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
+## 2.0.0a11 (2026-02-26)
+
+### Backend
+
+
+#### New features:
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issues/105)
+
+
+#### Internal:
+
+- Add separate command for upgrading backend dependencies. @davisagli 
+- Update translation. @iFlameing 
+
+
+
+### Frontend
+
+#### Feature
+
+- Include `scripts` folder with the files needed to setup a project based on a distribution. @sneridagh [#101](https://github.com/kitconcept/kitconcept-core/issue/101)
+- Add controlpanel to export and import content. @iFlameing 
+
+#### Internal
+
+- Added pt_BR Translations. @humanaice [#105](https://github.com/kitconcept/kitconcept-core/issue/105)
+- Remove VLT as a direct dependency of `@kitconcept/core`.
+  The specific version should be managed in a distribution instead.
+  This avoids the need to release `@kitconcept/core` just to include a new release of VLT.
+  @davisagli 
+
+
+
+### Project
+
+
+#### Internal
+
+- Add command for upgrading dependencies. @davisagli 
+
+
+#### Documentation
+
+- Add documentation for importing and exporting content via the Import/Export control panel. @iFlameing 
+- Ensure versions documentation for project based on distributions. @sneridagh 
+
+
+
+## 2.0.0a10 (2026-02-16)
+
+### Backend
+
+
+#### New features:
+
+- Pinned plone.exportimport 2.0.0a2. It enables the RESTAPI services for export/import. @sneridagh 
+
+
+#### Bug fixes:
+
+- Volto 19a25 VLT 8a16.
+  See https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a16 @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Volto 19a25 VLT 8a16.
+  See https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a16 @sneridagh 
+
+
+
+### Project
+
+
+#### Documentation
+
+- Improve documentation explaining the reason behind kitconcept.core and how to upgrade it. @ericof 
+
+
+
 ## 2.0.0a9 (2026-01-26)
 
 ### Backend
