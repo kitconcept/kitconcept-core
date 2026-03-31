@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.14 (2026-03-31)
+
+### Feature
+
+- Moved the `kitconcept.blocks.config` inherit expander in here from the intranet distribution. @sneridagh 
+- Use timestamp and site title to name export file. @danalvrz 
+
 ## 2.0.0-alpha.13 (2026-03-14)
 
 ### Breaking
