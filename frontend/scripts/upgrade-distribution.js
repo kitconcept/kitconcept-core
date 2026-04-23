@@ -52,14 +52,6 @@ function readDistributionVersion(packageJsonPath, distributionName) {
   return null;
 }
 
-function readAddonName(addonPackageJsonPath) {
-  const pkg = JSON.parse(fs.readFileSync(addonPackageJsonPath, 'utf8'));
-  if (!pkg.name) {
-    throw new Error(`Missing package name in ${addonPackageJsonPath}`);
-  }
-  return pkg.name;
-}
-
 function readInstalledDistributionPackage(distributionName) {
   let packageJsonPath = '';
   try {
@@ -100,23 +92,6 @@ function readExistingVoltoConfig() {
   }
   // eslint-disable-next-line import/no-dynamic-require
   return require(voltoConfigPath);
-}
-
-function maybeUpgradeAddonDistribution(addonName) {
-  const existing = readExistingVoltoConfig();
-  const configuredDistribution = existing?.distribution || {};
-  if (!configuredDistribution.name || !configuredDistribution.version) {
-    return;
-  }
-
-  const distributionSpecifier = `${configuredDistribution.name}@${configuredDistribution.version}`;
-  const cmd = `pnpm --filter ${addonName} up ${distributionSpecifier}`;
-  execSync(cmd, { cwd: frontendRoot, stdio: 'inherit' });
-
-  // eslint-disable-next-line no-console
-  console.log(
-    `Upgraded ${addonName} distribution dependency to ${distributionSpecifier}.`,
-  );
 }
 
 function writeVoltoConfig({ addons = [], theme = '', distribution = null }) {
@@ -176,9 +151,6 @@ async function main() {
   const settings = readRepositorySettings();
   const distributionName = settings.base_package;
   const addonPath = path.join(repoRoot, settings.path, 'package.json');
-  const addonName = readAddonName(addonPath);
-
-  maybeUpgradeAddonDistribution(addonName);
 
   const distributionVersion = readDistributionVersion(
     addonPath,
