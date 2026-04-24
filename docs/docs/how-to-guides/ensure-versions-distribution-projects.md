@@ -66,8 +66,8 @@ For now, you can follow these instructions:
 
 ```makefile
 upgrade:
-    node scripts/upgrade-distribution.js
-	pnpm exec prettier --log-level silent --write volto.config.js
+  node scripts/upgrade-distribution.js
+  pnpm exec prettier --log-level silent --write volto.config.js
 ```
 
 1. Copy `frontend/scripts/internalChecks.test.ts` to your add-on `src` folder. This will add a test that checks that the distribution versions are consistent with the distribution package dependencies. You might have to install `vitest` as a dev dependency to run the test.
