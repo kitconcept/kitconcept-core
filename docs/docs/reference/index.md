@@ -18,5 +18,4 @@ This part of the documentation contains reference material, including APIs, conf
 :maxdepth: 2
 
 frontend-styleguide
-release
 ```

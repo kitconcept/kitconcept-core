@@ -3,11 +3,11 @@ myst:
   html_meta:
     "description": "kitconcept package release reference"
     "property=og:description": "kitconcept package release reference"
-    "property=og:title": "Release"
+    "property=og:title": "How to make package releases"
     "keywords": "kitconcept, release, repoplone, release-it"
 ---
 
-# Release
+# How to make package releases
 
 kitconcept packages use two release workflows, depending on the repository type:
 
