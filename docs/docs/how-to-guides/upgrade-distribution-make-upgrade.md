@@ -26,11 +26,25 @@ upgrade:
   pnpm exec prettier --log-level silent --write volto.config.js
 ```
 
-For setup details, see [](/how-to-guides/ensure-versions-distribution-projects).
+For setup details, see {doc}`/how-to-guides/ensure-versions-distribution-projects`.
 
 ## Upgrade steps
 
-1. From the project root, run:
+1. First, update and pin the frontend distribution version in your project dependencies, as described in {doc}`/how-to-guides/upgrade-distribution`.
+
+   To upgrade the frontend distribution to the latest version, run:
+
+   ```bash
+   uvx repoplone deps upgrade frontend
+   ```
+
+   Or pin a specific version:
+
+   ```bash
+   uvx repoplone deps upgrade frontend <version>
+   ```
+
+2. From the project root, run:
 
    ```bash
    make -C frontend upgrade
@@ -43,17 +57,17 @@ For setup details, see [](/how-to-guides/ensure-versions-distribution-projects).
    make upgrade
    ```
 
-2. Install and sync dependencies:
+3. Install and sync dependencies:
 
    ```bash
    make frontend-install
    ```
 
-3. Review generated changes in:
+4. Review generated changes in:
    - `frontend/volto.config.js`
    - `frontend/mrs.developer.json`
 
-4. Run tests:
+5. Run tests:
 
    ```bash
    make test
@@ -68,3 +82,5 @@ For setup details, see [](/how-to-guides/ensure-versions-distribution-projects).
   - distribution `dependencies`
 - Preserves existing `addons` and `theme` in `volto.config.js`.
 - Updates `frontend/mrs.developer.json` with the resolved `core.tag` (`volto_version`).
+- The effective dependency sync happens when you run `make frontend-install` after running `make upgrade`.
+- During install, `frontend/scripts/.pnpmfile.cjs` enforces the versions listed in `distribution.dependencies` from `volto.config.js`.
