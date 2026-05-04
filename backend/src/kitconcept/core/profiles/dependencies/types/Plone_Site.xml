@@ -15,6 +15,7 @@
     <element value="kitconcept.sticky_menu" />
     <element value="plonegovbr.socialmedia.settings" />
     <element value="plone.basic" />
+    <element value="plone.dublincore" />
     <element value="plone.relateditems" />
     <element value="plone.locking" />
     <element value="volto.blocks" />
