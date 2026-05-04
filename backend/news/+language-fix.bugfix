@@ -1,0 +1,1 @@
+Fix "Plone Site" objects not having `language` field by adding `plone.dublincore`. @jnptk
