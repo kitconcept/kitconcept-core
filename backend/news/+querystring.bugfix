@@ -1,3 +1,0 @@
-Update to plone.app.querystring 2.1.7 (includes fix for TypeError in event calendar
-block, and a fix for sort_on that was previously only in plone.app.querystring
-3.x). @davisagli

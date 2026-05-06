@@ -7,6 +7,31 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a17 (2026-05-06)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to plone.app.querystring 2.1.7 (includes fix for TypeError in event calendar
+  block, and a fix for sort_on that was previously only in plone.app.querystring
+  3.x). @davisagli 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a16 (2026-05-06)
 
 ### Backend
