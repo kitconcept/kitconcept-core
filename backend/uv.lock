@@ -1187,7 +1187,7 @@ requires-dist = [
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0a9" },
     { name = "plone-api" },
-    { name = "plone-app-querystring", specifier = ">=2.1.7" },
+    { name = "plone-app-querystring", specifier = "==2.1.7" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-distribution" },
     { name = "plone-exportimport", specifier = ">=2.0.0a2" },

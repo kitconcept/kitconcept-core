@@ -26,7 +26,7 @@ dependencies = [
     "Products.CMFPlone==6.1.4",
     "plone.distribution",
     "plone.api",
-    "plone.app.querystring>=2.1.7",
+    "plone.app.querystring==2.1.7",
     "kitconcept.voltolighttheme>=8.0.0a9",
     "collective.volto.formsupport==3.2.3",
     "collective.honeypot",
