@@ -8,6 +8,17 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-alpha.15 (2026-05-06)
+
+### Bugfix
+
+- Upgrade to VLT 8a25.
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a25 @sneridagh 
+
+### Internal
+
+- Improved and fixed script for upgrading project based dists. @sneridagh [#115](https://github.com/kitconcept/kitconcept-core/issue/115)
+
 ## 2.0.0-alpha.14 (2026-03-31)
 
 ### Feature

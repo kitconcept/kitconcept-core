@@ -7,6 +7,43 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a15 (2026-05-06)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to plone.app.querystring 2.1.6 (fix for TypeError in event calendar block). @davisagli [#14](https://github.com/kitconcept/kitconcept-core/issues/14)
+- Fix "Plone Site" objects not having `language` field by adding `plone.dublincore`. @jnptk 
+- Upgrade to VLT 8a25.
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a25 @sneridagh 
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Upgrade to VLT 8a25.
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a25 @sneridagh 
+
+#### Internal
+
+- Improved and fixed script for upgrading project based dists. @sneridagh [#115](https://github.com/kitconcept/kitconcept-core/issue/115)
+
+
+
+### Project
+
+
+#### Documentation
+
+- Improved and fixed script for upgrading project based dists. @sneridagh [#115](https://github.com/kitconcept/kitconcept-core/pull/115)
+- Added release process documentation. @sneridagh 
+
+
+
 ## 2.0.0a14 (2026-03-31)
 
 ### Backend
