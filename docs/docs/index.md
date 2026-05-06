@@ -122,6 +122,16 @@ It's structured following the [Diátaxis](https://diataxis.fr/) documentation fr
 :hidden: true
 
 how-to-guides/index
+how-to-guides/blocks-config-ttw
+how-to-guides/reindex-content-script
+how-to-guides/move-rename-content-objects
+how-to-guides/upgrade-dependencies
+how-to-guides/upgrade-plone
+how-to-guides/upgrade-distribution
+how-to-guides/ensure-versions-distribution-projects
+how-to-guides/upgrade-distribution-make-upgrade
+how-to-guides/import-export
+how-to-guides/release
 ```
 
 ```{toctree}

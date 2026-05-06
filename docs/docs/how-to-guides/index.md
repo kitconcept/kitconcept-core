@@ -17,18 +17,3 @@ This part of the documentation contains how-to guides, including installation an
 ```{seealso}
 https://diataxis.fr/how-to-guides/
 ```
-
-```{toctree}
-:maxdepth: 2
-
-blocks-config-ttw
-reindex-content-script
-move-rename-content-objects
-upgrade-dependencies
-upgrade-plone
-upgrade-distribution
-ensure-versions-distribution-projects
-upgrade-distribution-make-upgrade
-import-export
-release
-```
