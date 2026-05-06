@@ -11,6 +11,5 @@
   <include package=".v20251209001" />
   <include package=".v20260122001" />
   <include package=".v20260504001" />
-  <include package=".v20260505001" />
 
 </configure>
