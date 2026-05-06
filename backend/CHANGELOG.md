@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a16 (2026-05-06)
+
+
+### Internal:
+
+- Revert "Update to plone.app.querystring 2.1.6 @sneridagh [#120](https://github.com/kitconcept/kitconcept-core/issues/120)
+
 ## 2.0.0a15 (2026-05-06)
 
 
