@@ -151,7 +151,7 @@ constraints = [
     { name = "plone-app-mosaic", specifier = "==3.3.2" },
     { name = "plone-app-multilingual", specifier = "==8.4.0" },
     { name = "plone-app-portlets", specifier = "==6.0.3" },
-    { name = "plone-app-querystring", specifier = "==2.1.4" },
+    { name = "plone-app-querystring", specifier = "==2.1.7" },
     { name = "plone-app-redirector", specifier = "==3.0.5" },
     { name = "plone-app-registry", specifier = "==2.0.7" },
     { name = "plone-app-relationfield", specifier = "==4.0.3" },
@@ -1149,6 +1149,7 @@ dependencies = [
     { name = "collective-volto-formsupport" },
     { name = "kitconcept-voltolighttheme" },
     { name = "plone-api" },
+    { name = "plone-app-querystring" },
     { name = "plone-distribution" },
     { name = "plone-exportimport" },
     { name = "products-cmfplone" },
@@ -1186,6 +1187,7 @@ requires-dist = [
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0a9" },
     { name = "plone-api" },
+    { name = "plone-app-querystring", specifier = "==2.1.7" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-distribution" },
     { name = "plone-exportimport", specifier = ">=2.0.0a2" },
@@ -1213,7 +1215,7 @@ test = [
 
 [[package]]
 name = "kitconcept-voltolighttheme"
-version = "8.0.0a16"
+version = "8.0.0a25"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -1222,9 +1224,9 @@ dependencies = [
     { name = "plonegovbr-socialmedia" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/ab/754b385af2f31c61f345b03b93762ef7c80692466b856958ed0c513cdd7e/kitconcept_voltolighttheme-8.0.0a16.tar.gz", hash = "sha256:e33369137a01dafc6f4aff457ba649b7471a560ce0d1614c26557d6b312ad13e", size = 1365445, upload-time = "2026-02-16T14:55:51.946Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/b8/86e4368e05726f90fa36475482bf6631d3a70d6a5a4ffa695019f8213d30/kitconcept_voltolighttheme-8.0.0a25.tar.gz", hash = "sha256:15248038ccf7e1d54cd7f4951732110d226e072a56cfc81af06a5298809f23ca", size = 1366203, upload-time = "2026-05-06T07:36:28.225Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fe/65/bcf636bf6d0a50fab8390aeda4166b57af9d10dd89bee28c2d03c35c7644/kitconcept_voltolighttheme-8.0.0a16-py3-none-any.whl", hash = "sha256:fa5feda1ddb70163ba53b1a9b3ed63f0ea8b0413589facca6b4dd9342c3ea766", size = 1432447, upload-time = "2026-02-16T14:55:53.545Z" },
+    { url = "https://files.pythonhosted.org/packages/31/a8/80cc13575ec8fc1c8d791c335829df075335b01bf2a460085e2bd56a076e/kitconcept_voltolighttheme-8.0.0a25-py3-none-any.whl", hash = "sha256:1d46e455d7217bf885944cc44223719484e1a3c9fa426d89791a8dd28501f39d", size = 1433845, upload-time = "2026-05-06T07:36:30.027Z" },
 ]
 
 [[package]]
@@ -2165,7 +2167,7 @@ wheels = [
 
 [[package]]
 name = "plone-app-querystring"
-version = "2.1.4"
+version = "2.1.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-app-contentlisting" },
@@ -2177,16 +2179,15 @@ dependencies = [
     { name = "plone-registry" },
     { name = "plone-uuid" },
     { name = "products-genericsetup" },
-    { name = "products-zcatalog" },
     { name = "python-dateutil" },
     { name = "setuptools" },
     { name = "zope" },
     { name = "zope-dottedname" },
     { name = "zope-globalrequest" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1e/02/73078b0538eea614b9b387684d97fb40bcd8b91ede090938c6d69467e3ff/plone_app_querystring-2.1.4.tar.gz", hash = "sha256:c7e8a142514e15560791988a83f2352445cec6b71b47bbb0a01f495d20a69d4c", size = 49740, upload-time = "2025-09-11T21:09:18.364Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/96/3c3237f737115b4ce62653502e09a6c93265db96aaa07628200bfae02fb7/plone_app_querystring-2.1.7.tar.gz", hash = "sha256:b001112b94dc88a7bf5ac1f2805487ad72c77ed85dbe82f8f7028e1451d4d13b", size = 50405, upload-time = "2026-05-06T18:30:40.72Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/df/ab86eb3bb7764f08ed0e570105fea8de2e044f3b9060416c65dcde158119/plone_app_querystring-2.1.4-py3-none-any.whl", hash = "sha256:e56ff39a1e8a415b9827a8892543e7232651ea8aa5859f1e089cae7ecb157e51", size = 51165, upload-time = "2025-09-11T21:09:16.955Z" },
+    { url = "https://files.pythonhosted.org/packages/e5/92/3ed9759ba4ef3bcce98b752b94c67cf1048d2d8cacfd8e3a7fd23de0f18d/plone_app_querystring-2.1.7-py3-none-any.whl", hash = "sha256:70dac40a66badc3fa221041d739fc139bab1d3ac07644400d384e07cbf4cf5fd", size = 52034, upload-time = "2026-05-06T18:30:39.085Z" },
 ]
 
 [[package]]

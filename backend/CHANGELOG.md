@@ -9,6 +9,37 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0a18 (2026-05-06)
+
+No significant changes.
+
+
+## 2.0.0a17 (2026-05-06)
+
+
+### Bug fixes:
+
+- Update to plone.app.querystring 2.1.7 (includes fix for TypeError in event calendar
+  block, and a fix for sort_on that was previously only in plone.app.querystring
+  3.x). @davisagli 
+
+## 2.0.0a16 (2026-05-06)
+
+
+### Internal:
+
+- Revert "Update to plone.app.querystring 2.1.6 @sneridagh [#120](https://github.com/kitconcept/kitconcept-core/issues/120)
+
+## 2.0.0a15 (2026-05-06)
+
+
+### Bug fixes:
+
+- Update to plone.app.querystring 2.1.6 (fix for TypeError in event calendar block). @davisagli [#14](https://github.com/kitconcept/kitconcept-core/issues/14)
+- Fix "Plone Site" objects not having `language` field by adding `plone.dublincore`. @jnptk 
+- Upgrade to VLT 8a25.
+  https://github.com/kitconcept/volto-light-theme/releases/tag/8.0.0a25 @sneridagh 
+
 ## 2.0.0a14 (2026-03-31)
 
 No significant changes.
