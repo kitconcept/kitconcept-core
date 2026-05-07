@@ -210,7 +210,7 @@ constraints = [
     { name = "plone-resource", specifier = "==3.0.3" },
     { name = "plone-resourceeditor", specifier = "==4.0.2" },
     { name = "plone-rest", specifier = "==5.1.0" },
-    { name = "plone-restapi", specifier = "==9.15.4" },
+    { name = "plone-restapi", specifier = ">=10.0.0rc3" },
     { name = "plone-rfc822", specifier = "==3.0.2" },
     { name = "plone-scale", specifier = "==4.3.0" },
     { name = "plone-schema", specifier = "==2.0.3" },
@@ -1152,6 +1152,7 @@ dependencies = [
     { name = "plone-app-querystring" },
     { name = "plone-distribution" },
     { name = "plone-exportimport" },
+    { name = "plone-restapi" },
     { name = "products-cmfplone" },
 ]
 
@@ -1191,6 +1192,7 @@ requires-dist = [
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-distribution" },
     { name = "plone-exportimport", specifier = ">=2.0.0a2" },
+    { name = "plone-restapi", specifier = "==10.0.0rc3" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "products-cmfplone", specifier = "==6.1.4" },
     { name = "pytest", marker = "extra == 'test'" },
@@ -3208,27 +3210,29 @@ wheels = [
 
 [[package]]
 name = "plone-restapi"
-version = "9.15.4"
+version = "10.0.0rc3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "packaging" },
+    { name = "plone-api" },
+    { name = "plone-app-layout" },
     { name = "plone-rest" },
     { name = "plone-schema" },
+    { name = "products-cmfcore" },
     { name = "products-cmfplone" },
     { name = "pyjwt" },
     { name = "python-dateutil" },
     { name = "pytz" },
-    { name = "setuptools" },
+    { name = "zope" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/44/49/d949c0603a8740a6b0e9f8bb181427bceb66d85cb6d5964b43cf054cd71a/plone_restapi-9.15.4.tar.gz", hash = "sha256:f7246a3d928e8be3470d995ec974cac1c776b1f6949b7ade21c1b5c78a669f87", size = 2973417, upload-time = "2026-01-14T03:10:19.758Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/cf/286c66f06579b0b6454e64cbac20c2278bc6bfa07468ff6efc7b0af37535/plone_restapi-10.0.0rc3.tar.gz", hash = "sha256:cccae1f544c2c3cbc100d0150a1755d7d2e481cf3d2291790b3c878042d66434", size = 2994772, upload-time = "2026-04-13T18:44:08.432Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/6a/05a166e6459503bc9746829ae09b2f6f848a5908e3bf662eeca016980525/plone_restapi-9.15.4-py3-none-any.whl", hash = "sha256:608ecb6cf30a01afc56f0cad568498b59cb7162897a5f4aea1e302f90ab66dbc", size = 3094036, upload-time = "2026-01-14T03:10:04.816Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/7f/2fb6598553126a7f0d1adce756cf8c79b6114c5caf9dd811636c8bca6541/plone_restapi-10.0.0rc3-py3-none-any.whl", hash = "sha256:9a110852278d9cc22a7a3e4c86df40ff6c76b6d5eb2da732ebdbf8893c9dceb1", size = 3109987, upload-time = "2026-04-13T18:44:06.368Z" },
 ]
 
 [package.optional-dependencies]
 test = [
     { name = "collective-mockmailhost" },
-    { name = "plone-api" },
     { name = "plone-app-caching" },
     { name = "plone-app-contenttypes", extra = ["test"] },
     { name = "plone-app-discussion", extra = ["test"] },
@@ -3237,6 +3241,7 @@ test = [
     { name = "plone-app-testing" },
     { name = "plone-app-upgrade" },
     { name = "plone-rest" },
+    { name = "plone-testing" },
     { name = "requests" },
 ]
 
