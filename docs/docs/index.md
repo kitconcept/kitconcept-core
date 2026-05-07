@@ -140,6 +140,7 @@ how-to-guides/release
 :hidden: true
 
 reference/index
+reference/frontend-styleguide
 ```
 
 ```{toctree}
@@ -156,6 +157,7 @@ tutorials/index
 :hidden: true
 
 concepts/index
+concepts/what-is-core
 ```
 
 ```{toctree}
