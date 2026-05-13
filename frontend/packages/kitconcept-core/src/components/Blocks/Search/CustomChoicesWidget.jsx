@@ -1,15 +1,8 @@
 import FormFieldWrapper from '@plone/volto/components/manage/Widgets/FormFieldWrapper';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
-import {
-  Modal,
-  Button,
-  ModalHeader,
-  ModalDescription,
-  ModalContent,
-  ModalActions,
-  Input,
-} from 'semantic-ui-react';
+import { useEffect, useState } from 'react';
+import { Button, Modal, Dialog } from '@plone/components';
+import { DialogTrigger, Heading } from 'react-aria-components';
 import DragDropList from '@plone/volto/components/manage/DragDropList/DragDropList';
 import { reorderArray } from '@plone/volto/helpers/Utils/Utils';
 import { usePrevious } from '@plone/volto/helpers/Utils/usePrevious';
@@ -162,28 +155,21 @@ const CustomChoicesWidget = (props) => {
 
   return (
     <FormFieldWrapper {...props} className="custom-choices-widget">
-      <Modal
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        open={open}
-        trigger={
-          <Button
-            onClick={(e) => {
-              e.target.blur();
-            }}
-            basic
-            primary
-            className="edit-custom-choices-button"
-          >
-            {intl.formatMessage(messages.customizeList)}…
-          </Button>
-        }
-        className="custom-choices-widget-modal"
-      >
-        <ModalHeader>{intl.formatMessage(messages.customizeList)}</ModalHeader>
-        <div className="lists-wrapper">
-          <ModalContent>
-            <ModalDescription>
+      <DialogTrigger>
+        <Button
+          className="edit-custom-choices-button"
+          onClick={() => setOpen(true)}
+        >
+          {intl.formatMessage(messages.customizeList)}…
+        </Button>
+        <Modal
+          className="custom-choices-widget-modal"
+          isOpen={open}
+          onOpenChange={setOpen}
+        >
+          <Dialog>
+            <Heading>{intl.formatMessage(messages.customizeList)}</Heading>
+            <div className="lists-wrapper">
               <h2>
                 <FormattedMessage
                   id="listTitle"
@@ -195,13 +181,12 @@ const CustomChoicesWidget = (props) => {
               </h2>
               <p>{intl.formatMessage(messages.listDescription)}</p>
               <div className="search-keyword-input">
-                <Input
+                <input
                   id={'keyword-searchtext'}
                   value={searchText}
                   placeholder={intl.formatMessage(messages.searchKeyword)}
-                  fluid
-                  onChange={(event, { value }) => {
-                    setSearchText(value);
+                  onChange={(event) => {
+                    setSearchText(event.target.value);
                   }}
                   aria-label="Search"
                 />
@@ -244,16 +229,11 @@ const CustomChoicesWidget = (props) => {
                   </tbody>
                 </table>
               </div>
-            </ModalDescription>
-          </ModalContent>
-          <ModalContent>
-            <ModalDescription>
               <h2>{intl.formatMessage(messages.customList)}</h2>
               <p>{intl.formatMessage(messages.customListDescription)}</p>
               <div className="buttons-wrapper">
                 <Button
                   className="sort-button blue"
-                  basic
                   onClick={(e) => {
                     setCustomKeywordList(sortAlphabetically(customKeywordList));
                     e.target.blur();
@@ -263,8 +243,6 @@ const CustomChoicesWidget = (props) => {
                 </Button>
                 <Button
                   className="clear-button"
-                  negative
-                  basic
                   onClick={(e) => {
                     setCustomKeywordList([]);
                     e.target.blur();
@@ -382,29 +360,28 @@ const CustomChoicesWidget = (props) => {
                   );
                 }}
               </DragDropList>
-            </ModalDescription>
-          </ModalContent>
-        </div>
-        <ModalActions>
-          <Button
-            onClick={() => {
-              setCustomKeywordList(value || []);
-              setOpen(false);
-            }}
-          >
-            {intl.formatMessage(messages.cancel)}
-          </Button>
-          <Button
-            onClick={() => {
-              setOpen(false);
-              onChange(id, customKeywordList);
-            }}
-            positive
-          >
-            {intl.formatMessage(messages.apply)}
-          </Button>
-        </ModalActions>
-      </Modal>
+            </div>
+            <div className="buttons-wrapper">
+              <Button
+                onClick={() => {
+                  setCustomKeywordList(value || []);
+                  setOpen(false);
+                }}
+              >
+                {intl.formatMessage(messages.cancel)}
+              </Button>
+              <Button
+                onClick={() => {
+                  setOpen(false);
+                  onChange(id, customKeywordList);
+                }}
+              >
+                {intl.formatMessage(messages.apply)}
+              </Button>
+            </div>
+          </Dialog>
+        </Modal>
+      </DialogTrigger>
     </FormFieldWrapper>
   );
 };

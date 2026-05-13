@@ -9,6 +9,7 @@ import {
   customSelectStyles,
 } from '@plone/volto/components/manage/Blocks/Search/SelectStyling';
 import isEmpty from 'lodash/isEmpty';
+import './custom_choices.css';
 
 const CustomSelectFacet = (props) => {
   const { facet, choices, reactSelect, onChange, value, isEditMode } = props;
@@ -54,7 +55,6 @@ const CustomSelectFacet = (props) => {
 
 const customSelectFacetSchemaEnhancer = ({ schema, formData }) => {
   const fields = schema.fieldsets[0].fields;
-  debugger;
   fields.splice(fields.indexOf('type') + 1, 0, 'choices');
   schema.properties.choices = {
     widget: 'custom_choices',
