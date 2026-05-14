@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2026-03-09T12:12:02.110Z\n"
+"POT-Creation-Date: 2026-05-14T16:43:34.147Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,9 +13,19 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Add item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Add item"
+msgstr ""
+
 #. Default: "Add-ons"
 #: components/Controlpanels/VersionOverview
 msgid "Add-ons"
+msgstr ""
+
+#. Default: "Apply"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Apply"
 msgstr ""
 
 #. Default: "Back"
@@ -24,9 +34,19 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+#. Default: "Cancel"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Cancel"
+msgstr ""
+
 #. Default: "Choose file"
 #: components/Controlpanels/ExportImport
 msgid "Choose file"
+msgstr ""
+
+#. Default: "Clear list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Clear list"
 msgstr ""
 
 #. Default: "Configuration Versions"
@@ -42,6 +62,16 @@ msgstr ""
 #. Default: "Current active configuration"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Current active configuration"
+msgstr ""
+
+#. Default: "Custom list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Custom list"
+msgstr ""
+
+#. Default: "Customize list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Customize list"
 msgstr ""
 
 #. Default: "Dry run selected, transaction aborted."
@@ -114,6 +144,11 @@ msgstr ""
 msgid "No file selected"
 msgstr ""
 
+#. Default: "Order list alphabetically"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Order list alphabetically"
+msgstr ""
+
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview
 msgid "Package Version"
@@ -132,6 +167,21 @@ msgstr ""
 #. Default: "Profile Version (Installed)"
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (Installed)"
+msgstr ""
+
+#. Default: "Remove item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Remove item"
+msgstr ""
+
+#. Default: "Reset"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Reset"
+msgstr ""
+
+#. Default: "Search Keyword"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Search Keyword"
 msgstr ""
 
 #. Default: "Select a file first"
@@ -202,4 +252,29 @@ msgstr ""
 #. Default: "Your site is up to date."
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Your site is up to date."
+msgstr ""
+
+#. Default: "Available choices"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "availableChoices"
+msgstr ""
+
+#. Default: "Customize your keyword list by reordering the entries and, if needed, renaming the keywords for display purposes."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "customListDescription"
+msgstr ""
+
+#. Default: "Customized Select"
+#: config/blocks
+msgid "customSelectFacet"
+msgstr ""
+
+#. Default: "Select keywords from the full list by filtering and using the arrow button. These keywords will be added to your custom list on the right."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listDescription"
+msgstr ""
+
+#. Default: "Customize "{vocabulary}" list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listTitle"
 msgstr ""

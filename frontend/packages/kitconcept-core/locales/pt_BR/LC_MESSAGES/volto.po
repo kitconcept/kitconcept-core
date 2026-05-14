@@ -16,10 +16,20 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#. Default: "Add item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Add item"
+msgstr ""
+
 #. Default: "Add-ons"
 #: components/Controlpanels/VersionOverview
 msgid "Add-ons"
 msgstr "Complementos"
+
+#. Default: "Apply"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Apply"
+msgstr ""
 
 #. Default: "Back"
 #: components/Controlpanels/ExportImport
@@ -27,9 +37,19 @@ msgstr "Complementos"
 msgid "Back"
 msgstr "Voltar"
 
+#. Default: "Cancel"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Cancel"
+msgstr ""
+
 #. Default: "Choose file"
 #: components/Controlpanels/ExportImport
 msgid "Choose file"
+msgstr ""
+
+#. Default: "Clear list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Clear list"
 msgstr ""
 
 #. Default: "Configuration Versions"
@@ -46,6 +66,16 @@ msgstr ""
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Current active configuration"
 msgstr "Configuração ativa atual"
+
+#. Default: "Custom list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Custom list"
+msgstr ""
+
+#. Default: "Customize list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Customize list"
+msgstr ""
 
 #. Default: "Dry run selected, transaction aborted."
 #: components/Controlpanels/UpgradeControlPanel
@@ -117,6 +147,11 @@ msgstr "Nenhum complemento encontrado"
 msgid "No file selected"
 msgstr ""
 
+#. Default: "Order list alphabetically"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Order list alphabetically"
+msgstr ""
+
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview
 msgid "Package Version"
@@ -136,6 +171,21 @@ msgstr "Versão do perfil (sistema de arquivos)"
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (Installed)"
 msgstr "Versão do perfil (instalada)"
+
+#. Default: "Remove item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Remove item"
+msgstr ""
+
+#. Default: "Reset"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Reset"
+msgstr ""
+
+#. Default: "Search Keyword"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Search Keyword"
+msgstr ""
 
 #. Default: "Select a file first"
 #: components/Controlpanels/ExportImport
@@ -206,3 +256,28 @@ msgstr "Aviso sobre o modo de depuração"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Your site is up to date."
 msgstr "Seu site está atualizado."
+
+#. Default: "Available choices"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "availableChoices"
+msgstr ""
+
+#. Default: "Customize your keyword list by reordering the entries and, if needed, renaming the keywords for display purposes."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "customListDescription"
+msgstr ""
+
+#. Default: "Customized Select"
+#: config/blocks
+msgid "customSelectFacet"
+msgstr ""
+
+#. Default: "Select keywords from the full list by filtering and using the arrow button. These keywords will be added to your custom list on the right."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listDescription"
+msgstr ""
+
+#. Default: "Customize "{vocabulary}" list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listTitle"
+msgstr ""
