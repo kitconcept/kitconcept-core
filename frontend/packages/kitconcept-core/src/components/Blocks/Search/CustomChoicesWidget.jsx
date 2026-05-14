@@ -1,8 +1,15 @@
 import FormFieldWrapper from '@plone/volto/components/manage/Widgets/FormFieldWrapper';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import { Button, Modal, Dialog } from '@plone/components';
-import { DialogTrigger, Heading } from 'react-aria-components';
+import React, { useEffect, useState } from 'react';
+import {
+  Modal,
+  Button,
+  ModalHeader,
+  ModalDescription,
+  ModalContent,
+  ModalActions,
+  Input,
+} from 'semantic-ui-react';
 import DragDropList from '@plone/volto/components/manage/DragDropList/DragDropList';
 import { reorderArray } from '@plone/volto/helpers/Utils/Utils';
 import { usePrevious } from '@plone/volto/helpers/Utils/usePrevious';
@@ -16,6 +23,7 @@ import aheadSVG from '@plone/volto/icons/ahead.svg';
 import undoSVG from '@plone/volto/icons/undo.svg';
 import { useSelector } from 'react-redux';
 import dragSVG from '@plone/volto/icons/drag.svg';
+import clearSVG from '@plone/volto/icons/clear.svg';
 
 const messages = defineMessages({
   labelRemoveItem: {
@@ -34,6 +42,10 @@ const messages = defineMessages({
     id: 'listDescription',
     defaultMessage:
       'Select keywords from the full list by filtering and using the arrow button. These keywords will be added to your custom list on the right.',
+  },
+  availableChoices: {
+    id: 'availableChoices',
+    defaultMessage: 'Available choices',
   },
   customListDescription: {
     id: 'customListDescription',
@@ -155,38 +167,47 @@ const CustomChoicesWidget = (props) => {
 
   return (
     <FormFieldWrapper {...props} className="custom-choices-widget">
-      <DialogTrigger>
-        <Button
-          className="edit-custom-choices-button"
-          onClick={() => setOpen(true)}
-        >
-          {intl.formatMessage(messages.customizeList)}…
-        </Button>
-        <Modal
-          className="custom-choices-widget-modal"
-          isOpen={open}
-          onOpenChange={setOpen}
-        >
-          <Dialog>
-            <Heading>{intl.formatMessage(messages.customizeList)}</Heading>
-            <div className="lists-wrapper">
-              <h2>
-                <FormattedMessage
-                  id="listTitle"
-                  defaultMessage="List of {vocabulary}"
-                  values={{
-                    vocabulary: `${fieldLabel}`,
-                  }}
-                />
-              </h2>
+      <Modal
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
+        trigger={
+          <Button
+            onClick={(e) => {
+              e.target.blur();
+            }}
+            basic
+            primary
+            className="edit-custom-choices-button"
+          >
+            {intl.formatMessage(messages.customizeList)}…
+          </Button>
+        }
+        className="custom-choices-widget-modal"
+      >
+        <ModalHeader>
+          {' '}
+          <FormattedMessage
+            id="listTitle"
+            defaultMessage='Customize "{vocabulary}" list'
+            values={{
+              vocabulary: `${fieldLabel}`,
+            }}
+          />
+        </ModalHeader>
+        <div className="lists-wrapper">
+          <ModalContent>
+            <ModalDescription>
+              <strong>{intl.formatMessage(messages.availableChoices)}</strong>
               <p>{intl.formatMessage(messages.listDescription)}</p>
               <div className="search-keyword-input">
-                <input
+                <Input
                   id={'keyword-searchtext'}
                   value={searchText}
                   placeholder={intl.formatMessage(messages.searchKeyword)}
-                  onChange={(event) => {
-                    setSearchText(event.target.value);
+                  fluid
+                  onChange={(event, { value }) => {
+                    setSearchText(value);
                   }}
                   aria-label="Search"
                 />
@@ -229,10 +250,15 @@ const CustomChoicesWidget = (props) => {
                   </tbody>
                 </table>
               </div>
-              <h2>{intl.formatMessage(messages.customList)}</h2>
+            </ModalDescription>
+          </ModalContent>
+          <ModalContent>
+            <ModalDescription>
+              <strong>{intl.formatMessage(messages.customList)}</strong>
               <p>{intl.formatMessage(messages.customListDescription)}</p>
               <div className="buttons-wrapper">
                 <Button
+                  size="tiny"
                   className="sort-button blue"
                   onClick={(e) => {
                     setCustomKeywordList(sortAlphabetically(customKeywordList));
@@ -243,6 +269,8 @@ const CustomChoicesWidget = (props) => {
                 </Button>
                 <Button
                   className="clear-button"
+                  size="tiny"
+                  negative
                   onClick={(e) => {
                     setCustomKeywordList([]);
                     e.target.blur();
@@ -360,28 +388,37 @@ const CustomChoicesWidget = (props) => {
                   );
                 }}
               </DragDropList>
-            </div>
-            <div className="buttons-wrapper">
-              <Button
-                onClick={() => {
-                  setCustomKeywordList(value || []);
-                  setOpen(false);
-                }}
-              >
-                {intl.formatMessage(messages.cancel)}
-              </Button>
-              <Button
-                onClick={() => {
-                  setOpen(false);
-                  onChange(id, customKeywordList);
-                }}
-              >
-                {intl.formatMessage(messages.apply)}
-              </Button>
-            </div>
-          </Dialog>
-        </Modal>
-      </DialogTrigger>
+            </ModalDescription>
+          </ModalContent>
+        </div>
+        <ModalActions>
+          <Button
+            type="button"
+            basic
+            secondary
+            aria-label={intl.formatMessage(messages.cancel)}
+            title={intl.formatMessage(messages.cancel)}
+            onClick={() => {
+              setCustomKeywordList(value || []);
+              setOpen(false);
+            }}
+          >
+            <Icon name={clearSVG} className="circled" size="30px" />
+          </Button>
+          <Button
+            basic
+            primary
+            aria-label={intl.formatMessage(messages.apply)}
+            title={intl.formatMessage(messages.apply)}
+            onClick={() => {
+              setOpen(false);
+              onChange(id, customKeywordList);
+            }}
+          >
+            <Icon name={aheadSVG} className="contents circled" size="30px" />
+          </Button>
+        </ModalActions>
+      </Modal>
     </FormFieldWrapper>
   );
 };
