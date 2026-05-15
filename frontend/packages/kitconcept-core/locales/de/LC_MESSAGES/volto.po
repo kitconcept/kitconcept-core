@@ -11,10 +11,20 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#. Default: "Add item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Add item"
+msgstr "Element hinzufügen"
+
 #. Default: "Add-ons"
 #: components/Controlpanels/VersionOverview
 msgid "Add-ons"
 msgstr ""
+
+#. Default: "Apply"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Apply"
+msgstr "Anwenden"
 
 #. Default: "Back"
 #: components/Controlpanels/ExportImport
@@ -22,10 +32,20 @@ msgstr ""
 msgid "Back"
 msgstr "Zurück"
 
+#. Default: "Cancel"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Cancel"
+msgstr "Abbrechen"
+
 #. Default: "Choose file"
 #: components/Controlpanels/ExportImport
 msgid "Choose file"
 msgstr "Datai auswählen"
+
+#. Default: "Clear list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Clear list"
+msgstr "Liste löschen"
 
 #. Default: "Configuration Versions"
 #: components/Controlpanels/UpgradeControlPanel
@@ -41,6 +61,16 @@ msgstr "Inhaltsübertragung"
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Current active configuration"
 msgstr ""
+
+#. Default: "Custom list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Custom list"
+msgstr "Individualisierte Liste"
+
+#. Default: "Customize list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Customize list"
+msgstr "Liste individualisieren"
 
 #. Default: "Dry run selected, transaction aborted."
 #: components/Controlpanels/UpgradeControlPanel
@@ -112,6 +142,11 @@ msgstr ""
 msgid "No file selected"
 msgstr "Keine Datei ausgewählt"
 
+#. Default: "Order list alphabetically"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Order list alphabetically"
+msgstr "Liste alphabetisch sortieren"
+
 #. Default: "Package Version"
 #: components/Controlpanels/VersionOverview
 msgid "Package Version"
@@ -131,6 +166,21 @@ msgstr ""
 #: components/Controlpanels/VersionOverview
 msgid "Profile Version (Installed)"
 msgstr ""
+
+#. Default: "Remove item"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Remove item"
+msgstr "Entfernen"
+
+#. Default: "Reset"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#. Default: "Search Keyword"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "Search Keyword"
+msgstr "Suchbegriff"
 
 #. Default: "Select a file first"
 #: components/Controlpanels/ExportImport
@@ -201,3 +251,28 @@ msgstr ""
 #: components/Controlpanels/UpgradeControlPanel
 msgid "Your site is up to date."
 msgstr ""
+
+#. Default: "Available choices"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "availableChoices"
+msgstr "Verfügbare Optionen"
+
+#. Default: "Customize your keyword list by reordering the entries and, if needed, renaming the keywords for display purposes."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "customListDescription"
+msgstr "Passen Sie Ihre Stichwortliste an, indem Sie die Einträge neu anordnen und die Stichworte bei Bedarf für eine bessere Darstellung umbenennen."
+
+#. Default: "Customized Select"
+#: config/blocks
+msgid "customSelectFacet"
+msgstr "Individualisierte Auswahl"
+
+#. Default: "Select keywords from the full list by filtering and using the arrow button. These keywords will be added to your custom list on the right."
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listDescription"
+msgstr "Wählen Sie Schlüsselwörter aus der vollständigen Liste aus, indem Sie filtern und die Pfeilschaltfläche verwenden. Diese Schlüsselwörter werden Ihrer benutzerdefinierten Liste rechts hinzugefügt."
+
+#. Default: "Customize "{vocabulary}" list"
+#: components/Blocks/Search/CustomChoicesWidget
+msgid "listTitle"
+msgstr "Liste von {vocabulary}"
