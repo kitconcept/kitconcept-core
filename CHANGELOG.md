@@ -7,6 +7,30 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0a19 (2026-05-15)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+#### Feature
+
+- Add "Customized Select" facet for search and event calendar blocks. @davisagli 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0a18 (2026-05-06)
 
 ### Backend
