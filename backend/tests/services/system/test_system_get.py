@@ -45,10 +45,10 @@ class TestSystemGet:
     @pytest.mark.parametrize(
         "key,expected",
         (
-            ("cmf_version", "3.7"),
+            ("cmf_version", "3.8"),
             ("debug_mode", "No"),
-            ("plone_restapi_version", "9.15.4"),
-            ("plone_version", "6.1.4"),
+            ("plone_restapi_version", "10.0.0"),
+            ("plone_version", "6.2.0"),
             ("upgrade", False),
         ),
     )
