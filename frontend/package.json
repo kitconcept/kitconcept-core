@@ -36,7 +36,7 @@
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
     "@kitconcept/core": "workspace:*",
-    "@kitconcept/volto-light-theme": "8.0.0-alpha.16"
+    "@kitconcept/volto-light-theme": "8.0.0-alpha.28"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
