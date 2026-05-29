@@ -9,8 +9,12 @@
       destination="20260528001"
       >
     <genericsetup:upgradeStep
-        title="Upgrade dependencies for Plone 6.2.0"
-        handler="..utils.null_upgrade_step"
+        title="Fix history action permission to CMFEditions: Access previous versions."
+        handler="plone.app.upgrade.v62.alpha.fix_history_action_permission"
+        />
+    <genericsetup:upgradeDepends
+        title="Register IClassicUISchema control panel."
+        import_profile="plone.app.upgrade.v62:to_iclassicuischema"
         />
   </genericsetup:upgradeSteps>
 
