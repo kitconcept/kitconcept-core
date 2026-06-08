@@ -1,11 +1,18 @@
 import type { ConfigType } from '@plone/registry';
 import type { apiExpandersType } from '@plone/types';
+import ReturnToOriginToast from '../components/ReturnToOriginalToast/ReturnToOriginalToast';
 
 export default function install(config: ConfigType) {
   // Language is Deutsch
   config.settings.defaultLanguage = 'de';
   config.settings.supportedLanguages = ['en', 'de'];
-
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
+    {
+      match: '',
+      component: ReturnToOriginToast,
+    },
+  ];
   const EXPANDERS_INHERIT_BEHAVIORS = 'kitconcept.blocks.config';
 
   // Add API expander for inheriting blocks config
