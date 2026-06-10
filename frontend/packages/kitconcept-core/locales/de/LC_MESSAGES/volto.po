@@ -276,3 +276,13 @@ msgstr "Wählen Sie Schlüsselwörter aus der vollständigen Liste aus, indem Si
 #: components/Blocks/Search/CustomChoicesWidget
 msgid "listTitle"
 msgstr "Liste von {vocabulary}"
+
+#. Default: "You opened this item from another page. Use the link to return"
+#: components/ReturnToOriginalToast/ReturnToOriginalToast
+msgid "returnToDescription"
+msgstr "Sie haben diesen Eintrag von einer anderen Seite aus aufgerufen. Klicken Sie auf den Link, um zurückzukehren."
+
+#. Default: "Back to the original page"
+#: components/ReturnToOriginalToast/ReturnToOriginalToast
+msgid "returnToPage"
+msgstr "Zurück zur ursprünglichen Seite"

@@ -283,3 +283,13 @@ msgstr ""
 #: components/Blocks/Search/CustomChoicesWidget
 msgid "listTitle"
 msgstr ""
+
+#. Default: "You opened this item from another page. Use the link to return"
+#: components/ReturnToOriginalToast/ReturnToOriginalToast
+msgid "returnToDescription"
+msgstr ""
+
+#. Default: "Back to the original page"
+#: components/ReturnToOriginalToast/ReturnToOriginalToast
+msgid "returnToPage"
+msgstr ""
