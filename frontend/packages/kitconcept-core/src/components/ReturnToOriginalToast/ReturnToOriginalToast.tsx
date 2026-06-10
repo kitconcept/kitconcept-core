@@ -10,11 +10,11 @@ import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   returnTitle: {
-    id: 'Back to the original page',
+    id: 'returnToPage',
     defaultMessage: 'Back to the original page',
   },
   returnDescription: {
-    id: 'You opened this item from another page. Use the link to return',
+    id: 'returnToDescription',
     defaultMessage:
       'You opened this item from another page. Use the link to return',
   },
