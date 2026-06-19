@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20260505001"
+      destination="20260619001"
+      >
+    <genericsetup:upgradeDepends
+        title="Remove collective.volto.formsupport dependency"
+        import_profile="collective.volto.formsupport:uninstall"
+        />
+    <genericsetup:upgradeDepends
+        title="Install plone.formblock dependency"
+        import_profile="plone.formblock:default"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

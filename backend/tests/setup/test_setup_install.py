@@ -7,7 +7,7 @@ import pytest
 
 class TestSetupInstall:
     @pytest.fixture(autouse=True)
-    def _setup(self, current_versions):
+    def _setup(self, current_versions) -> None:
         self.profile_version: str = current_versions.base
         self.dependencies_profile_version: str = current_versions.dependencies
 
@@ -59,13 +59,23 @@ class TestSetupDependencies:
             "plone.volto:default",
             "plonetheme.barceloneta:default",
             "kitconcept.voltolighttheme:default",
-            "collective.volto.formsupport:default",
+            "plone.formblock:default",
             "plonegovbr.socialmedia:default",
         ],
     )
     def test_installed(self, profile: str):
         """Test if a profile is installed."""
         assert self.setup_tool.getLastVersionForProfile(profile) is not None
+
+    @pytest.mark.parametrize(
+        "profile",
+        [
+            "collective.volto.formsupport:default",
+        ],
+    )
+    def test_uninstalled(self, profile: str):
+        """Test if a profile is not installed."""
+        assert self.setup_tool.getLastVersionForProfile(profile) == "unknown"
 
     @pytest.mark.parametrize(
         "portal_type,title,klass",
