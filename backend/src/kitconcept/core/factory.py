@@ -61,6 +61,8 @@ _PLONE_PACKAGES = [
     "plone.restapi",
     "plone.volto",
     "kitconcept.voltolighttheme",
+    "collective.volto.formsupport",
+    "plone.formblock",
     "plonegovbr.socialmedia",
 ]
 _PLONE_PROFILES = [
@@ -97,8 +99,10 @@ _PLONE_PROFILES = [
     "plone.volto:default",
     "kitconcept.voltolighttheme:default",
     "kitconcept.voltolighttheme:demo",
-    "collective.volto.formsupport:default",
+    "plone.formblock:default",
     "plonegovbr.socialmedia:demo",
+    # Leave it here until we remove the package
+    "collective.volto.formsupport:default",
 ]
 
 
@@ -149,9 +153,9 @@ class LocalAddonList:
         Addon(profile_id="plonetheme.barceloneta:default"),
         Addon(profile_id="kitconcept.voltolighttheme:default"),
         Addon(profile_id="collective.person:default"),
-        Addon(profile_id="collective.volto.formsupport:default"),
         Addon(profile_id="plonegovbr.socialmedia:default"),
         Addon(profile_id="kitconcept.core:dependencies"),
+        Addon(profile_id="plone.formblock:default"),
     ])
 
 

@@ -29,6 +29,7 @@ dependencies = [
     "plone.app.querystring==2.1.7",
     "kitconcept.voltolighttheme>=8.0.0a9",
     "collective.volto.formsupport==3.2.3",
+    "plone.formblock>=1.0.0a2",
     "collective.honeypot",
     "collective.person==1.0.0b4",
     "plone.exportimport>=2.0.0a2",
