@@ -1,7 +1,6 @@
 from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
 from plone.restapi.testing import RelativeSession
-from zope.component.hooks import site
 
 import pytest
 
@@ -12,14 +11,8 @@ def portal(functional):
 
 
 @pytest.fixture(scope="class")
-def portal_class(functional_class):
-    if hasattr(functional_class, "testSetUp"):
-        functional_class.testSetUp()
-    portal = functional_class["portal"]
-    with site(portal):
-        yield portal
-    if hasattr(functional_class, "testTearDown"):
-        functional_class.testTearDown()
+def portal_class(functional_portal_class):
+    yield functional_portal_class
 
 
 @pytest.fixture()

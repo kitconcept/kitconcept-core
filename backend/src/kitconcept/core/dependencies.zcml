@@ -1,11 +1,34 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
+  <include
+      package="z3c.unconfigure"
+      file="meta.zcml"
+      />
+
   <!-- List all packages you depend here -->
   <include package="plone.restapi" />
   <include package="plone.volto" />
   <include package="collective.person" />
   <include package="kitconcept.voltolighttheme" />
-  <include package="collective.volto.formsupport" />
   <include package="plonegovbr.socialmedia" />
+
+  <include package="collective.volto.formsupport" />
+
+  <!-- Unconfigure components from collective.volto.formsupport -->
+  <unconfigure>
+    <utility
+        factory="collective.volto.formsupport.datamanager.catalog.FormDataSoupCatalogFactory"
+        provides="souper.interfaces.ICatalogFactory"
+        name="form_data"
+        />
+    <adapter
+        factory="collective.volto.formsupport.restapi.services.form_data.form_data.FormData"
+        name="form-data"
+        />
+  </unconfigure>
+
+  <!-- Include the plone.formblock package -->
+  <include package="plone.formblock" />
+
 
 </configure>
