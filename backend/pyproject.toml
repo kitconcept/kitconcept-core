@@ -41,7 +41,7 @@ test = [
     "plone.restapi[test]",
     "pytest",
     "pytest-cov",
-    "pytest-plone>=1.0.0a1",
+    "pytest-plone>=1.0.0",
 ]
 
 [dependency-groups]
