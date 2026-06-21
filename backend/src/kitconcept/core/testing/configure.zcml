@@ -10,6 +10,9 @@
       title="kitconcept.core"
       description="Distribution used for testing."
       directory="distributions/testing"
+      handler="kitconcept.core.utils.distributions.handler"
+      post_handler="kitconcept.core.utils.distributions.post_handler"
+      pre_handler="kitconcept.core.utils.distributions.pre_handler"
       profile_id="kitconcept.core:base"
       />
 
