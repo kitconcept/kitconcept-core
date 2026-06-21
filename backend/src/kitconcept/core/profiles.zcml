@@ -30,6 +30,15 @@
       directory="profiles/dependencies"
       />
 
+  <genericsetup:registerProfile
+      name="multilingual"
+      title="kitconcept: Multilingual support"
+      description="Generic setup profile with multilingual support for kitconcept projects."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="plone.base.interfaces.IPloneSiteRoot"
+      directory="profiles/multilingual"
+      />
+
   <!-- Hide Uninstall Profile-->
   <utility
       factory=".factory.HiddenProfiles"
