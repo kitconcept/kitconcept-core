@@ -5,8 +5,8 @@
 
   <genericsetup:upgradeSteps
       profile="kitconcept.core:base"
-      source="20260505001"
-      destination="20260528001"
+      source="20260619001"
+      destination="20260620001"
       >
     <genericsetup:upgradeStep
         title="Fix history action permission to CMFEditions: Access previous versions."

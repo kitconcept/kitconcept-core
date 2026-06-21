@@ -2,7 +2,7 @@ from kitconcept.core import CMF_DEPENDENCIES_PROFILE
 from kitconcept.core import DEFAULT_PROFILE
 from kitconcept.core import DEPENDENCIES_PROFILE
 from kitconcept.core import PACKAGE_NAME
-from kitconcept.core.interfaces import IAddonList
+from plone.base.interfaces import IAddonList
 from plone.base.interfaces.installable import INonInstallable
 from plone.distribution.api import site as site_api
 from Products.CMFPlone.MigrationTool import Addon
