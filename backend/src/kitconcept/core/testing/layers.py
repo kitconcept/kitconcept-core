@@ -1,5 +1,3 @@
-from plone.app.testing.interfaces import DEFAULT_LANGUAGE
-from plone.app.testing.interfaces import PLONE_SITE_ID
 from plone.app.testing.interfaces import SITE_OWNER_NAME
 from plone.app.testing.interfaces import SITE_OWNER_PASSWORD
 from plone.app.testing.interfaces import TEST_USER_ID
@@ -13,13 +11,22 @@ from zope.globalrequest import setRequest
 
 PLONE_SITE_TITLE = "kitconcept Site"
 
+DEFAULT_ANSWERS = {
+    "site_id": "plone",
+    "title": PLONE_SITE_TITLE,
+    "description": "Testing site.",
+    "available_languages": ["en"],
+    "default_language": "en",
+    "portal_timezone": "UTC",
+    "setup_content": False,
+}
+
 
 class kitconceptFixture(PloneFixture):
     package_name: str = "kitconcept.core"
-    internal_packages: tuple[str] = (
+    internal_packages: tuple[str, ...] = (
         "plone.restapi",
         "plone.volto",
-        "kitconcept.core.testing",
     )
 
     @property
@@ -30,33 +37,6 @@ class kitconceptFixture(PloneFixture):
         # Add current package
         products.append((self.package_name, {"loadZCML": True}))
         return tuple(products)
-
-    def setUpDefaultContent(self, app):
-        app["acl_users"].userFolderAddUser(
-            SITE_OWNER_NAME, SITE_OWNER_PASSWORD, ["Manager"], []
-        )
-
-        zope.login(app["acl_users"], SITE_OWNER_NAME)
-
-        # Create the site with the default set of extension profiles
-        from kitconcept.core.factory import add_site
-
-        add_site(
-            app,
-            PLONE_SITE_ID,
-            title=PLONE_SITE_TITLE,
-            setup_content=False,
-            default_language=DEFAULT_LANGUAGE,
-            distribution="testing",
-            extension_ids=self.extensionProfiles,
-        )
-        pas = app[PLONE_SITE_ID]["acl_users"]
-        pas.source_users.addUser(TEST_USER_ID, TEST_USER_NAME, TEST_USER_PASSWORD)
-        for role in TEST_USER_ROLES:
-            pas.portal_role_manager.doAssignRoleToPrincipal(TEST_USER_ID, role)
-
-        # Log out again
-        zope.logout()
 
 
 class kitconceptDistributionFixture(kitconceptFixture):
@@ -98,3 +78,12 @@ class kitconceptDistributionFixture(kitconceptFixture):
         # Log out again
         zope.logout()
         setRequest(None)
+
+
+class CoreFixture(kitconceptDistributionFixture):
+    sites = (("testing", DEFAULT_ANSWERS),)
+    internal_packages: tuple[str, ...] = (
+        "plone.restapi",
+        "plone.volto",
+        "kitconcept.core.testing",
+    )
