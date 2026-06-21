@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-24 17:52+0000\n"
+"POT-Creation-Date: 2026-06-21 17:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,10 @@ msgstr "Perfil de configuração genérico com dependências principais necessá
 #: kitconcept/core/profiles.zcml:31
 msgid "Generic setup profile with dependencies used by kitconcept projects."
 msgstr "Perfil de configuração genérico com dependências usadas por projetos kitconcept."
+
+#: kitconcept/core/profiles.zcml:40
+msgid "Generic setup profile with multilingual support for kitconcept projects."
+msgstr "Configuração multilíngue para projetos kitconcept."
 
 #: kitconcept/core/controlpanel/kitconcept.py:25
 msgid "Non-clickable Profiles"
@@ -112,6 +116,10 @@ msgstr "kitconcept: Configurações base"
 #: kitconcept/core/profiles.zcml:22
 msgid "kitconcept: CMF dependencies"
 msgstr "kitconcept: Dependências CMF"
+
+#: kitconcept/core/profiles.zcml:40
+msgid "kitconcept: Multilingual support"
+msgstr "kitconcept: Suporte multilíngue"
 
 #: kitconcept/core/profiles.zcml:31
 msgid "kitconcept: Required dependencies"

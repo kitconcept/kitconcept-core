@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2026-02-24 17:52+0000\n"
+"POT-Creation-Date: 2026-06-21 17:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,10 @@ msgstr ""
 
 #: kitconcept/core/profiles.zcml:31
 msgid "Generic setup profile with dependencies used by kitconcept projects."
+msgstr ""
+
+#: kitconcept/core/profiles.zcml:40
+msgid "Generic setup profile with multilingual support for kitconcept projects."
 msgstr ""
 
 #: kitconcept/core/controlpanel/kitconcept.py:25
@@ -114,6 +118,10 @@ msgstr ""
 
 #: kitconcept/core/profiles.zcml:22
 msgid "kitconcept: CMF dependencies"
+msgstr ""
+
+#: kitconcept/core/profiles.zcml:40
+msgid "kitconcept: Multilingual support"
 msgstr ""
 
 #: kitconcept/core/profiles.zcml:31
