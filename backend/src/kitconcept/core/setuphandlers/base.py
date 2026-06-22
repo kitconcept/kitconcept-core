@@ -22,12 +22,6 @@ def set_profile_version(profile: str):
     st.setLastVersionForProfile(profile, version)
 
 
-def initialize_migration_tool(profile: str, package_name: str):
-    """Set list of addons managed by this package."""
-    mt = api.portal.get_tool("portal_migration")
-    mt.initializeTool(profile, package_name)
-
-
 def import_final_steps(context: SetupTool):
     """Final Plone import steps.
 
@@ -37,8 +31,6 @@ def import_final_steps(context: SetupTool):
     site = getSite()
     profile = DEFAULT_PROFILE
     package_name = PACKAGE_NAME
-    # Initialize Migration Tool
-    initialize_migration_tool(profile, package_name)
 
     # Unset all profile upgrade versions in portal_setup.  Our default
     # profile should only be applied when creating a new site, so this

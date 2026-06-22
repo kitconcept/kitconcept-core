@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20260619001"
+      destination="20260620001"
+      >
+    <genericsetup:upgradeStep
+        title="Fix history action permission to CMFEditions: Access previous versions."
+        handler="plone.app.upgrade.v62.alpha.fix_history_action_permission"
+        />
+    <genericsetup:upgradeDepends
+        title="Register IClassicUISchema control panel."
+        import_profile="plone.app.upgrade.v62:to_iclassicuischema"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

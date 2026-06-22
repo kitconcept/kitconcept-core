@@ -2,7 +2,7 @@ from kitconcept.core import CMF_DEPENDENCIES_PROFILE
 from kitconcept.core import DEFAULT_PROFILE
 from kitconcept.core import DEPENDENCIES_PROFILE
 from kitconcept.core import PACKAGE_NAME
-from kitconcept.core.interfaces import IAddonList
+from plone.base.interfaces import IAddonList
 from plone.base.interfaces.installable import INonInstallable
 from plone.distribution.api import site as site_api
 from Products.CMFPlone.MigrationTool import Addon
@@ -167,15 +167,22 @@ def add_site(
     profile_id: str = DEFAULT_PROFILE,
     snapshot: bool = False,
     content_profile_id: str | None = None,
-    extension_ids: tuple[str] = (),
+    extension_ids: tuple[str, ...] = (),
     setup_content: bool = False,
+    available_languages: list[str] | None = None,
     default_language: str = "de",
     portal_timezone: str = "UTC",
     distribution: str = "volto",
     **kwargs,
 ):
-    """Add a PloneSite to the context."""
+    """Add a PloneSite to the context.
 
+    We maintain the same signature used in `Products.CMFPlone.factory.addPloneSite`
+    to ensure compatibility with existing scripts
+    """
+    # Set available languages to default language if not provided
+    if not available_languages:
+        available_languages = [default_language]
     # Pass all arguments and keyword arguments in the answers,
     # But the 'distribution_name' is not needed there.
     answers = {
@@ -187,6 +194,7 @@ def add_site(
         "content_profile_id": content_profile_id,
         "extension_ids": extension_ids,
         "setup_content": setup_content,
+        "available_languages": available_languages,
         "default_language": default_language,
         "portal_timezone": portal_timezone,
     }

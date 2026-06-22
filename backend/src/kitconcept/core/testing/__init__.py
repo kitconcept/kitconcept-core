@@ -6,7 +6,7 @@ from plone.app.testing import PloneSandboxLayer
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 
-kitconcept_FIXTURE = layers.kitconceptFixture()
+kitconcept_FIXTURE = layers.CoreFixture()
 
 
 class Layer(PloneSandboxLayer):

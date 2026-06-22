@@ -31,7 +31,25 @@ def current_versions() -> CurrentVersions:
     from kitconcept.core import __version__
 
     return CurrentVersions(
-        base="20260619001",
+        base="20260620001",
         dependencies="1000",
         package=__version__,
     )
+
+
+@pytest.fixture(scope="session")
+def distribution() -> str:
+    return "testing"
+
+
+@pytest.fixture(scope="session")
+def answers() -> dict:
+    return {
+        "site_id": "plone2",
+        "title": "Test Site",
+        "description": "Testing site.",
+        "available_languages": ["en"],
+        "default_language": "en",
+        "portal_timezone": "UTC",
+        "setup_content": False,
+    }
