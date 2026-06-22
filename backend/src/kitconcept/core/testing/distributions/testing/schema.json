@@ -5,8 +5,27 @@
     "type": "object",
     "required": [
       "site_id",
-      "title"
+      "title",
+      "authentication"
     ],
+    "definitions": {
+      "languages": {
+        "type": "string",
+        "title": "Language",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": ["de"],
+            "title": "Deutsch"
+          },
+          {
+            "type": "string",
+            "enum": ["en"],
+            "title": "English"
+          }
+        ]
+      }
+    },
     "properties": {
       "site_id": {
         "type": "string",
@@ -30,13 +49,111 @@
         "format": "data-url",
         "title": "Site logo"
       },
-      "default_language": {"$ref": "#/definitions/languages"},
+      "available_languages": {
+        "type": "array",
+        "title": "Available Languages",
+        "description": "Languages that will be available. If more than one language is selected, the first one in the list will be the default language.",
+        "items": {"$ref": "#/definitions/languages"},
+        "default": ["de"]
+      },
+      "default_language": {
+        "type": "string",
+        "title": "Default Language",
+        "default": ""
+      },
       "portal_timezone": {"$ref": "#/definitions/timezones"},
       "setup_content": {
         "type": "boolean",
         "title": "Create Example Content",
         "description": "Should example content be added during site creation?",
         "default": true
+      },
+      "authentication": {
+        "title": "Authentication",
+        "type": "object",
+        "properties": {
+          "provider" : {
+            "type": "string",
+            "title": "User authentication",
+            "description": "Which authentication would be used?",
+            "default": "internal",
+            "oneOf": [
+              { "const": "internal", "title": "Plone" },
+              { "const": "keycloak", "title": "Keycloak" },
+              { "const": "oidc", "title": "OIDC / OAuth2" },
+              { "const": "authomatic-google", "title": "Social Login Google" },
+              { "const": "authomatic-github", "title": "Social Login GitHub" }
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "keycloak"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/keycloak"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "oidc"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/oidc"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "authomatic-github"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/authomatic-github"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "authomatic-google"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/authomatic-google"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "provider": {
+                  "const": "internal"
+                }
+              }
+            },
+            "then": {
+              "properties": {},
+              "required": []
+            }
+          },
+          {
+            "required": [
+              "provider"
+            ]
+          }
+        ]
       }
     }
   },

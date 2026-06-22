@@ -1,5 +1,6 @@
 """Init and utils."""
 
+from kitconcept.core.patches.schema import apply_patch
 from zope.i18nmessageid import MessageFactory
 
 import logging
@@ -28,3 +29,6 @@ def initialize(context):
         tools=tools,
         icon="tool.gif",
     ).initialize(context)
+
+
+apply_patch(logger=logger)

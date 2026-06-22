@@ -34,6 +34,9 @@ dependencies = [
     "collective.honeypot",
     "collective.person==1.0.0b4",
     "plone.exportimport>=2.0.0a2",
+    "pas.plugins.authomatic==2.0.0",
+    "pas.plugins.keycloakgroups==1.0.0b1",
+    "pas.plugins.oidc==2.0.0",
 ]
 
 [project.optional-dependencies]

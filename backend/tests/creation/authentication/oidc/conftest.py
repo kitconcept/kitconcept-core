@@ -1,0 +1,22 @@
+import pytest
+
+
+@pytest.fixture(scope="session")
+def answers():
+    return {
+        "site_id": "site",
+        "title": "Site",
+        "description": "Site created with A CMS solution for public websites. Created by kitconcept.",
+        "available_languages": ["en"],
+        "default_language": "en",
+        "portal_timezone": "Europe/Berlin",
+        "setup_content": True,
+        "authentication": {
+            "provider": "oidc",
+            "oidc-issuer": "http://localhost:8180/realms/site",
+            "oidc-client_id": "plone",
+            "oidc-client_secret": "12345678",
+            "oidc-site-url": "http://localhost:3000",
+            "oidc-scope": ["openid", "profile", "email"],
+        },
+    }
