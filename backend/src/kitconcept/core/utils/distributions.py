@@ -1,5 +1,6 @@
 from kitconcept.core import _types as t
 from kitconcept.core import logger
+from kitconcept.core.utils import authentication as auth_utils
 from kitconcept.core.utils import creation as utils
 from kitconcept.core.utils.packages import package_version
 from plone import api
@@ -102,6 +103,11 @@ def post_handler(
     utils.update_content(site, title, description, raw_logo)
     # Update registry
     utils.update_registry(registry_data)
+
+    # Update authentication
+    auth_answers = answers.get("authentication", {"provider": "internal"})
+    auth_utils.setup_authentication(auth_answers)
+
     # Update permissions
     utils.update_permissions()
     return site

@@ -1,8 +1,13 @@
 from dataclasses import dataclass
+from kitconcept.core.factory import add_site
 from kitconcept.core.testing import ACCEPTANCE_TESTING
 from kitconcept.core.testing import FUNCTIONAL_TESTING
 from kitconcept.core.testing import INTEGRATION_TESTING
+from plone import api
+from plone.app.testing.interfaces import SITE_OWNER_NAME
+from Products.CMFPlone.Portal import PloneSite
 from pytest_plone import fixtures_factory
+from typing import Any
 
 import pytest
 
@@ -17,6 +22,37 @@ globals().update(
         (INTEGRATION_TESTING, "integration"),
     ))
 )
+
+
+@pytest.fixture
+def traverse():
+    def func(data: dict | list, path: str | list[str]) -> Any:
+        func = None
+        path = path.split(":") if isinstance(path, str) else path
+        if len(path) == 2:
+            func, path = path
+        else:
+            path = path[0]
+        parts: list[str | int] = [part for part in path.split("/") if part.strip()]
+        value = data
+        for part in parts:
+            if isinstance(value, list) and isinstance(part, str):
+                part = int(part)
+            value = value[part]
+        match func:
+            # Add other functions here
+            case "len":
+                value = len(value)
+            case "type":
+                # This makes it easier to compare
+                value = type(value).__name__
+            case "is_uuid4":
+                value = len(value) == 32 and value[15] == "4"
+            case "keys":
+                value = list(value.keys())
+        return value
+
+    return func
 
 
 @dataclass
@@ -43,13 +79,32 @@ def distribution() -> str:
 
 
 @pytest.fixture(scope="session")
-def answers() -> dict:
-    return {
-        "site_id": "plone2",
-        "title": "Test Site",
-        "description": "Testing site.",
-        "available_languages": ["en"],
-        "default_language": "en",
-        "portal_timezone": "UTC",
-        "setup_content": False,
-    }
+def prepare_answers():
+    def func() -> dict:
+        return {
+            "site_id": "plone2",
+            "title": "Test Site",
+            "description": "Testing site.",
+            "available_languages": ["en"],
+            "default_language": "en",
+            "portal_timezone": "UTC",
+            "authentication": {"provider": "internal"},
+            "setup_content": False,
+        }
+
+    return func
+
+
+@pytest.fixture(scope="session")
+def answers(prepare_answers) -> dict:
+    return prepare_answers()
+
+
+@pytest.fixture(scope="session")
+def create_site(distribution):
+    def func(app, answers: dict) -> PloneSite:
+        with api.env.adopt_user(SITE_OWNER_NAME):
+            site = add_site(app, distribution=distribution, **answers)
+        return site
+
+    return func

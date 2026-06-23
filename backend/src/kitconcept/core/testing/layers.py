@@ -17,6 +17,7 @@ DEFAULT_ANSWERS = {
     "description": "Testing site.",
     "available_languages": ["en"],
     "default_language": "en",
+    "authentication": {"provider": "internal"},
     "portal_timezone": "UTC",
     "setup_content": False,
 }

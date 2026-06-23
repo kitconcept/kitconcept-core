@@ -12,8 +12,11 @@
   <include package="kitconcept.voltolighttheme" />
   <include package="plonegovbr.socialmedia" />
 
-  <include package="collective.volto.formsupport" />
+  <include package="pas.plugins.authomatic" />
+  <include package="pas.plugins.keycloakgroups" />
+  <include package="pas.plugins.oidc" />
 
+  <include package="collective.volto.formsupport" />
   <!-- Unconfigure components from collective.volto.formsupport -->
   <unconfigure>
     <utility
