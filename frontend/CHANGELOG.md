@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-beta.1 (2026-06-23)
+
+### Internal
+
+- Upgrade to Volto 19.1.0. @sneridagh 
+
 ## 2.0.0-alpha.20 (2026-06-15)
 
 ### Internal

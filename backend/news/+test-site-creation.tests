@@ -1,1 +1,0 @@
-Reworked the test fixtures to create the site through the distribution handlers (answers-driven), enabling multilingual content-type tests. @ericof

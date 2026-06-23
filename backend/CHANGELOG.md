@@ -9,6 +9,29 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0b1 (2026-06-23)
+
+
+### New features:
+
+- Add plone.formblock dependency and uninstall collective.volto.formsupport. @ericof [#246](https://github.com/kitconcept/kitconcept-core/issues/246)
+- Upgrade to Plone 6.2.0. @sneridagh [#387](https://github.com/kitconcept/kitconcept-core/issues/387)
+- Added authentication support during site creation, with providers for Keycloak, OIDC, and Authomatic (GitHub and Google). @ericof [#414](https://github.com/kitconcept/kitconcept-core/issues/414)
+- Added a `multilingual` Generic Setup profile and moved the LRF (Language Root Folder) type into it, so downstream projects no longer need to ship this configuration themselves. @ericof 
+- Added reusable distribution `pre_handler`/`handler`/`post_handler` and site-creation utilities, removing the need for downstream projects to duplicate them. @ericof 
+
+
+### Internal:
+
+- Fixed a typo in the `move_rename_object` script docstring and refreshed the i18n locale files. @ericof 
+- The package now uses native namespaces. @ericof 
+- Update pytest-plone to version 1.0.0. @ericof 
+
+
+### Tests
+
+- Reworked the test fixtures to create the site through the distribution handlers (answers-driven), enabling multilingual content-type tests. @ericof 
+
 ## 2.0.0a20 (2026-06-15)
 
 No significant changes.
