@@ -163,6 +163,8 @@ elif  [[ "$1" == "run" ]]; then
   exec $sudo $VENVBIN/zconsole run etc/${CONF} "${@:2}"
 elif  [[ "$1" == "addzopeuser" ]]; then
   exec $sudo $VENVBIN/addzopeuser -c etc/${CONF} "${@:2}"
+elif  [[ "$1" == "import" ]]; then
+  exec $sudo $VENVBIN/plone-importer etc/${CONF} "${@:2}" "${@:3}"
 elif  [[ "$1" == "export" ]]; then
   exec $sudo $VENVBIN/plone-exporter etc/${CONF} "${@:2}" "${@:3}"
 elif  [[ "$1" == "pack" ]]; then

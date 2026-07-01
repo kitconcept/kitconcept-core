@@ -19,6 +19,7 @@ node_modules/
 .eggs/
 .installed.cfg
 .mr.developer.cfg
+.python-version
 .venv/
 bin/
 develop-eggs/
@@ -36,10 +37,12 @@ var/
 .lock
 /.make-sentinels/
 /*-mxdev.txt
-/instance/
 /reports/
 /sources/
 /venv/
 constraints*.txt
 requirements*.txt
 .mxdev_cache/
+
+# Instance
+/instance/

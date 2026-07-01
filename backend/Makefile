@@ -80,7 +80,7 @@ upgrade: ## Upgrade dependencies
 .PHONY: clean
 clean: ## Clean environment
 	@echo "$(RED)==> Cleaning environment and build$(RESET)"
-	@rm -rf $(VENV_FOLDER) pyvenv.cfg .installed.cfg instance .venv .pytest_cache .ruff_cache constraints* requirements*
+	@rm -rf $(VENV_FOLDER) pyvenv.cfg .python-version .installed.cfg instance .venv .pytest_cache .ruff_cache constraints* requirements* dist
 
 .PHONY: remove-data
 remove-data: ## Remove all content
