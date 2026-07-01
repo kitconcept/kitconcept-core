@@ -7,6 +7,41 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0b2 (2026-07-01)
+
+### Backend
+
+
+#### New features:
+
+- Support Python 3.14. @ericof [#434](https://github.com/kitconcept/kitconcept-core/issues/434)
+- Upgrade Products.CMFPlone to 6.2.1. @ericof [#435](https://github.com/kitconcept/kitconcept-core/issues/435)
+- Add site-creation script helpers that read answers from environment variables, shared from the website and intranet distributions. @ericof [#436](https://github.com/kitconcept/kitconcept-core/issues/436)
+- Upgrade collective.person to 1.0.0b6. @ericof 
+- Upgrade kitconcept.voltolighttheme to 8.0.0a30. @ericof 
+- Use `plone/server-builder:uv` base images and clean up the container skeleton. @ericof 
+
+
+#### Internal:
+
+- Remove `.python-version` and update `.gitignore`. @ericof 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+
+#### Internal
+
+- Bump Python version to 3.14 on GitHub Actions. @ericof [#434](https://github.com/kitconcept/kitconcept-core/pull/434)
+
+
+
 ## 2.0.0b1 (2026-06-23)
 
 ### Backend
