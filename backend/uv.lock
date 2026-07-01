@@ -1391,7 +1391,7 @@ requires-dist = [
     { name = "collective-person", specifier = "==1.0.0b6" },
     { name = "collective-volto-formsupport", specifier = "==3.2.3" },
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
-    { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0a9" },
+    { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0a30" },
     { name = "pas-plugins-authomatic", specifier = "==2.0.0" },
     { name = "pas-plugins-keycloakgroups", specifier = "==1.0.0b1" },
     { name = "pas-plugins-oidc", specifier = "==2.0.0" },
@@ -1424,7 +1424,7 @@ test = [
 
 [[package]]
 name = "kitconcept-voltolighttheme"
-version = "8.0.0a28"
+version = "8.0.0a30"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "plone-api" },
@@ -1433,9 +1433,9 @@ dependencies = [
     { name = "plonegovbr-socialmedia" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3f/50/d9ed32d19561c6f6931e400b83852150fd96921fc6aa234e7e82af94ffba/kitconcept_voltolighttheme-8.0.0a28.tar.gz", hash = "sha256:ffce22fe477f0be11d108458ade4828fc59b8d6c09830653fdb2b0375f4796fe", size = 1366959, upload-time = "2026-05-15T10:35:57.644Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/68/4d/e4d4997e8d1777eccfe41f714e9736dbf71fd53daa7641e10154e3114571/kitconcept_voltolighttheme-8.0.0a30.tar.gz", hash = "sha256:ad3d6edb35df60b4b1b8a71c9d17852f9a3fef2e71c7db7c4f6b19421be96f3c", size = 1366950, upload-time = "2026-06-11T16:15:30.752Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/78/03/bc3901f2ab833f058c68ab58f53d548654134b444cda034bd21e7b6365e1/kitconcept_voltolighttheme-8.0.0a28-py3-none-any.whl", hash = "sha256:6880d08a8a704f6d08381f078f68a5dc0910c605750a70f320526faa93eca620", size = 1435278, upload-time = "2026-05-15T10:35:59.418Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/66/271e892d80efeaaecdbcd4fce171967733443a8a3d869919f54a12108560/kitconcept_voltolighttheme-8.0.0a30-py3-none-any.whl", hash = "sha256:f52bae6596343bfa831781500ac6d2fb6d28a89e06d2210de9b0b9b3fd1b5b3c", size = 1435283, upload-time = "2026-06-11T16:15:32.901Z" },
 ]
 
 [[package]]
