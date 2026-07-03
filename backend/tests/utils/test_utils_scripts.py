@@ -15,19 +15,23 @@ def answers_file():
     (
         ("site_id", "", "Plone"),
         ("site_id", "Site", "Site"),
+        ("title", "", "Core!"),
         ("title", "Foo Bar", "Foo Bar"),
         ("description", "A new site", "A new site"),
         (
             "description",
             "",
-            "Site da câmara modelo",
+            "kitconcept core distribution",
         ),
-        ("default_language", "", "pt-br"),
+        ("available_languages", "", ["en"]),
+        ("available_languages", ["de", "en"], ["de", "en"]),
+        ("default_language", "", "en"),
         ("default_language", "de", "de"),
-        ("portal_timezone", "", "America/Sao_Paulo"),
-        ("portal_timezone", "UTC", "UTC"),
-        ("setup_content", "", True),
+        ("portal_timezone", "", "UTC"),
+        ("portal_timezone", "America/Sao_Paulo", "America/Sao_Paulo"),
+        ("setup_content", "", False),
         ("setup_content", "f", False),
+        ("setup_content", "t", True),
     ),
 )
 def test_parse_answers(answers_file, key: str, value: str, expected: str | bool):
@@ -146,3 +150,24 @@ class TestGetEnvironmentalVariables:
         result = scripts.get_environmental_variables(self.options)
         assert result["site_id"] == "Plone"
         assert result["authentication"] == {"provider": "oidc"}
+
+
+class TestCreateSite:
+    distribution = "testing"
+
+    @pytest.fixture(autouse=True)
+    def _setup(self, app, answers_file):
+        self.app = app
+        self.answers_file = answers_file
+
+    def test_create_site(self):
+        site = scripts.create_site(
+            app=self.app,
+            answers_file=self.answers_file,
+            env_answers={},
+            package_iface=None,
+            env_options=scripts.OPTIONS,
+            distribution=self.distribution,
+        )
+        assert site is not None
+        assert site.id == "Plone"
