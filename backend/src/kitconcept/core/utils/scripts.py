@@ -1,10 +1,12 @@
 from AccessControl.SecurityManagement import newSecurityManager
+from collections.abc import Sequence
 from kitconcept.core import logger
 from kitconcept.core.factory import add_site
 from kitconcept.core.interfaces import IBrowserLayer
 from OFS.Application import Application
 from pathlib import Path
 from Products.CMFPlone.Portal import PloneSite
+from Products.GenericSetup.tool import SetupTool
 from Testing.makerequest import makerequest
 from typing import Any
 from zope.interface import directlyProvidedBy
@@ -22,10 +24,14 @@ marker = object()  # Unique marker object to indicate no value
 truthy = frozenset(("t", "true", "y", "yes", "on", "1"))
 
 
-def as_bool(s):
-    """Return the boolean value ``True`` if the case-lowered value of string
-    input ``s`` is a :term:`truthy string`. If ``s`` is already one of the
-    boolean values ``True`` or ``False``, return it."""
+def as_bool(s) -> bool:
+    """Coerce a value into a boolean.
+
+    :param s: Value to coerce. ``None`` yields ``False``; an existing ``bool``
+        is returned unchanged; any other value is stringified, stripped, and
+        compared case-insensitively against :data:`truthy`.
+    :returns: ``True`` if ``s`` represents a truthy string, ``False`` otherwise.
+    """
     if s is None:
         return False
     if isinstance(s, bool):
@@ -102,6 +108,19 @@ OPTIONS: tuple[tuple[str, str, Any], ...] = (
 
 
 def parse_answers(answers_file: Path, answers_env: dict) -> dict:
+    """Load site-creation answers from a JSON file and override them from the
+    environment.
+
+    Answers are read from ``answers_file``; for each key present in that file,
+    a matching value in ``answers_env`` takes precedence. The ``setup_content``
+    key is coerced with :func:`as_bool` when a value is supplied. Empty or
+    missing environment values leave the file value untouched.
+
+    :param answers_file: Path to a JSON file holding the base answers.
+    :param answers_env: Mapping of answer keys to environment-provided
+        overrides, typically produced by :func:`get_environmental_variables`.
+    :returns: The merged answers mapping.
+    """
     answers = json.loads(answers_file.read_text())
     for key in answers:
         env_value = answers_env.get(key, "")
@@ -115,6 +134,7 @@ def parse_answers(answers_file: Path, answers_env: dict) -> dict:
 
 
 def _prepare_loggers():
+    """Configure logging output and silence noisy third-party loggers."""
     logging.basicConfig(format="%(message)s")
     logger.setLevel(logging.INFO)
     # Silence some loggers
@@ -125,21 +145,52 @@ def _prepare_loggers():
         logging.getLogger(logger_name).setLevel(logging.ERROR)
 
 
-def _prepare_request(app: Application, package_iface: InterfaceClass | None = None):
+def _prepare_request(
+    app: Application, package_ifaces: tuple[type[InterfaceClass], ...] = ()
+) -> None:
+    """Mark the application request with the required browser layers.
+
+    :param app: The Zope application object whose ``REQUEST`` is decorated.
+    :param package_ifaces: Additional browser-layer interfaces to provide on
+        the request, on top of :class:`IBrowserLayer` and any interfaces the
+        request already provides.
+    """
     request: HTTPRequest = app.REQUEST
-    ifaces = [IBrowserLayer]
-    if package_iface:
-        ifaces.append(package_iface)
+    ifaces: list[type[InterfaceClass]] = [IBrowserLayer]
+    if package_ifaces:
+        ifaces.extend(list(package_ifaces))
     for iface in directlyProvidedBy(request):
         ifaces.append(iface)
 
     directlyProvides(request, *ifaces)
 
 
-def _prepare_user(app: Application):
+def _prepare_user(app: Application) -> None:
+    """Authenticate the security context as the ``admin`` user.
+
+    :param app: The Zope application object providing ``acl_users``.
+    """
     admin = app.acl_users.getUserById("admin")
     admin = admin.__of__(app.acl_users)
     newSecurityManager(None, admin)
+
+
+def _install_additional_profiles(
+    site: PloneSite, additional_profiles: Sequence[str]
+) -> None:
+    """Run all import steps for each of the given GenericSetup profiles.
+
+    :param site: The Plone site whose ``portal_setup`` tool applies the
+        profiles.
+    :param additional_profiles: Profile ids to install. An empty sequence is a
+        no-op.
+    """
+    if not additional_profiles:
+        return
+    setup_tool: SetupTool = site.portal_setup
+    for profile in additional_profiles:
+        logger.info(f" - Installing additional profile {profile}")
+        setup_tool.runAllImportStepsFromProfile(profile)
 
 
 def get_environmental_variables(
@@ -180,11 +231,33 @@ def _create_site(
     distribution: str,
     delete_existing: bool,
     answers: dict[str, Any],
-    package_iface: InterfaceClass | None = None,
+    package_ifaces: tuple[type[InterfaceClass], ...] = (),
+    additional_profiles: Sequence[str] = (),
 ) -> PloneSite:
+    """Create (or reuse) a Plone site inside the Zope application.
+
+    Prepares the request, security context and loggers, then adds a site with
+    id ``answers["site_id"]``. If a site with that id already exists it is
+    reused, unless ``delete_existing`` is set, in which case it is removed and
+    recreated. Additional GenericSetup profiles are installed on newly created
+    sites.
+
+    :param app: The Zope application object.
+    :param distribution: Distribution name used when ``answers`` does not carry
+        its own ``distribution`` key.
+    :param delete_existing: When ``True``, delete a pre-existing site with the
+        same id before creating a new one.
+    :param answers: Site-creation parameters passed through to
+        :func:`~kitconcept.core.factory.add_site`; must contain ``site_id``.
+    :param package_ifaces: Additional browser-layer interfaces to provide on
+        the request.
+    :param additional_profiles: GenericSetup profile ids to install on a newly
+        created site.
+    :returns: The created or reused Plone site.
+    """
     _prepare_loggers()
     app = makerequest(app)
-    _prepare_request(app, package_iface)
+    _prepare_request(app, package_ifaces)
     _prepare_user(app)
     if "distribution" not in answers:
         answers["distribution"] = distribution
@@ -211,6 +284,7 @@ def _create_site(
     if site_id not in app.objectIds():
         with transaction.manager:
             site = add_site(app, **answers)
+            _install_additional_profiles(site, additional_profiles)
         logger.info(f" - Site {site.id} created!")
     else:
         site = app[site_id]
@@ -221,14 +295,55 @@ def create_site(
     app: Application,
     answers_file: Path,
     env_answers: dict[str, Any],
-    package_iface: InterfaceClass | None = None,
-    env_options: tuple[tuple[str, str, Any], ...] = (),
+    package_iface: type[InterfaceClass] | Sequence[type[InterfaceClass]] | None = None,
+    env_options: tuple[tuple[str, str, Any], ...] = OPTIONS,
+    additional_profiles: Sequence[str] = (),
+    distribution: str = "",
 ) -> PloneSite:
-    distribution = str(os.getenv("DISTRIBUTION", ""))
+    """Create a new Plone site from a JSON answers file and the environment.
+
+    High-level entry point that resolves configuration from arguments,
+    environment variables and ``answers_file``, then delegates the actual
+    creation to :func:`_create_site`. The ``DELETE_EXISTING`` and
+    ``DISTRIBUTION`` environment variables provide defaults for their
+    respective options. When ``env_answers`` is empty, overrides are collected
+    via :func:`get_environmental_variables`.
+
+    :param app: The Zope application object.
+    :param answers_file: Path to the JSON file holding the base answers.
+    :param env_answers: Pre-computed environment overrides; when falsy they are
+        gathered from the environment using ``env_options``.
+    :param package_iface: A single browser-layer interface or a sequence of
+        them to provide on the request, or ``None``.
+    :param env_options: Option definitions used to read overrides from the
+        environment via :func:`get_environmental_variables`; defaults to
+        :data:`OPTIONS`.
+    :param additional_profiles: GenericSetup profile ids to install on a newly
+        created site.
+    :param distribution: Distribution name; falls back to the ``DISTRIBUTION``
+        environment variable when empty.
+    :returns: The created or reused Plone site.
+    :raises FileNotFoundError: If ``answers_file`` does not exist.
+    :raises json.JSONDecodeError: If ``answers_file`` is not valid JSON.
+    :raises KeyError: If the resolved answers do not contain ``site_id``.
+    """
+    package_ifaces: tuple[type[InterfaceClass], ...] = ()
     delete_existing = as_bool(os.getenv("DELETE_EXISTING"))
+    distribution = distribution if distribution else str(os.getenv("DISTRIBUTION", ""))
     if not env_answers:
         # Extract answers from environment variables
         env_answers = get_environmental_variables(env_options)
+    if package_iface and not isinstance(package_iface, Sequence):
+        package_ifaces = (package_iface,)
+    elif package_iface:
+        package_ifaces = tuple(package_iface)
     # Load site creation parameters
     answers = parse_answers(answers_file, env_answers)
-    return _create_site(app, distribution, delete_existing, answers, package_iface)
+    return _create_site(
+        app=app,
+        distribution=distribution,
+        delete_existing=delete_existing,
+        answers=answers,
+        package_ifaces=package_ifaces,
+        additional_profiles=additional_profiles,
+    )
