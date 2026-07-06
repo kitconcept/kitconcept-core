@@ -27,7 +27,7 @@ class IKitconceptSettings(Interface):
             "Person profiles are clickable in teasers, grids, listings, and search"
         ),
         required=False,
-        default=False,
+        default=True,
     )
 
 
