@@ -9,6 +9,23 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0b3 (2026-07-06)
+
+
+### New features:
+
+- `create_site` now accepts a list of browser-layer interfaces and can install additional Generic Setup profiles during site creation. @ericof [#441](https://github.com/kitconcept/kitconcept-core/issues/441)
+
+
+### Documentation:
+
+- Rewrote the docstrings of the `utils.scripts` site-creation helpers in reStructuredText. @ericof [#441](https://github.com/kitconcept/kitconcept-core/issues/441)
+
+
+### Tests
+
+- Expanded test coverage for the site-creation script helpers, including an end-to-end `create_site` test. @ericof [#441](https://github.com/kitconcept/kitconcept-core/issues/441)
+
 ## 2.0.0b2 (2026-07-01)
 
 
