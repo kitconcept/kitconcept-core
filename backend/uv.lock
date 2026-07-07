@@ -1398,7 +1398,7 @@ requires-dist = [
     { name = "plone-api" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-distribution" },
-    { name = "plone-formblock", specifier = ">=1.0.0a2" },
+    { name = "plone-formblock", specifier = ">=1.0.0a3" },
     { name = "plone-restapi", extras = ["test"], marker = "extra == 'test'" },
     { name = "plone-volto" },
     { name = "products-cmfplone", specifier = "==6.2.1" },
@@ -3207,7 +3207,7 @@ wheels = [
 
 [[package]]
 name = "plone-formblock"
-version = "1.0.0a2"
+version = "1.0.0a3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -3219,9 +3219,9 @@ dependencies = [
     { name = "pyotp" },
     { name = "souper-plone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0c/2c/f184add43539b0b53ceb7857a70cd532af520b9eef28b8fa60b9da3d4e47/plone_formblock-1.0.0a2.tar.gz", hash = "sha256:059ff2452349d79a0e007c80527758d02d771baf9d22f8ab75c7bbff534a2612", size = 133651, upload-time = "2026-06-18T15:23:09.514Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/fc/890be2b7e96232a507345cf9caaefaf6495abb24411383ab469aa923bc94/plone_formblock-1.0.0a3.tar.gz", hash = "sha256:00efa055eb83bb424570e5c19c393941df548bb3f5894f2a5ead6783419f454f", size = 138494, upload-time = "2026-07-07T17:48:30.263Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/86/c310b2d0202affd415eceee62308fa3b4b3774df5a34b4b641d27d946d47/plone_formblock-1.0.0a2-py3-none-any.whl", hash = "sha256:c91288c9e1821bb556638bfb29630c2cdeb93aba309d0c3c2f59f6e2c6670c66", size = 89528, upload-time = "2026-06-18T15:23:07.894Z" },
+    { url = "https://files.pythonhosted.org/packages/73/32/c8b1d61849c77402b8ad427f292dd4a93e701c387d1f9c64ea3ef7b2704c/plone_formblock-1.0.0a3-py3-none-any.whl", hash = "sha256:74dbba615b221b80ea51dbfd3ba69706fea062a3b49e019fac4a6c68918f6ce9", size = 92976, upload-time = "2026-07-07T17:48:28.585Z" },
 ]
 
 [[package]]
