@@ -30,7 +30,7 @@ dependencies = [
     "plone.volto",
     "kitconcept.voltolighttheme>=8.0.0a30",
     "collective.volto.formsupport==3.2.3",
-    "plone.formblock>=1.0.0a2",
+    "plone.formblock>=1.0.0a3",
     "collective.honeypot",
     "collective.person==1.0.0b6",
     "pas.plugins.authomatic==2.0.0",

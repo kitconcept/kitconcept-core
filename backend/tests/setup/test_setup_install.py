@@ -35,7 +35,7 @@ class TestSetupInstall:
 
 class TestSetupDependencies:
     @pytest.fixture(autouse=True)
-    def _setup(self, portal_class):
+    def _setup(self, portal_class) -> None:
         self.portal = portal_class
         self.setup_tool: SetupTool = portal_class.portal_setup
         self.types_tool: TypesTool = portal_class.portal_types
