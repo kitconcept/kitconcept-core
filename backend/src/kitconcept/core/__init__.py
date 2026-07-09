@@ -6,7 +6,7 @@ from zope.i18nmessageid import MessageFactory
 import logging
 
 
-__version__ = "2.0.0b3"
+__version__ = "2.0.0b4"
 
 PACKAGE_NAME = "kitconcept.core"
 DEFAULT_PROFILE = f"{PACKAGE_NAME}:base"

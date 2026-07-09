@@ -7,6 +7,39 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0b4 (2026-07-07)
+
+### Backend
+
+
+#### New features:
+
+- Hid all add-ons managed by our package. @ericof 
+
+
+#### Bug fixes:
+
+- Added missing upgrade step from 20260620001 to 20260701001 and added upgrade tests. @ericof 
+
+
+#### Internal:
+
+- Bumped `plone.formblock` to `>=1.0.0a3`. @ericof [#452](https://github.com/kitconcept/kitconcept-core/issues/452)
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0b3 (2026-07-06)
 
 ### Backend

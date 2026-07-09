@@ -5,14 +5,13 @@
 
   <genericsetup:upgradeSteps
       profile="kitconcept.core:base"
-      source="20260620001"
+      source="20260701001"
       destination="20260706001"
       >
     <genericsetup:upgradeDepends
         title="Add clickable_profile_links to registry"
         import_profile="kitconcept.core:dependencies"
         import_steps="plone.app.registry"
-    
         />
     <genericsetup:upgradeStep
         title="Rename disable_profile_links to clickable_profile_links"
