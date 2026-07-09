@@ -9,14 +9,13 @@
       destination="20260706001"
       >
     <genericsetup:upgradeDepends
-        title="Reimport registry records for IKitconceptSettings"
-        import_profile="kitconcept.core:dependencies"
+        title="Add clickable_profile_links to registry"
         import_steps="plone.app.registry"
-        run_deps="false"
+    
         />
     <genericsetup:upgradeStep
         title="Rename disable_profile_links to clickable_profile_links"
-        handler="..utils.rename_disable_to_clickable_profile_links"
+        handler=".rename_disable_to_clickable_profile_links"
         />
   </genericsetup:upgradeSteps>
 
