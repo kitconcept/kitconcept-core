@@ -9,7 +9,7 @@
       destination="20260706001"
       >
     <genericsetup:upgradeDepends
-        title="Add clickable_profile_links to registry"
+        title="Add clickable_profile_links to kitconcept registry"
         import_profile="kitconcept.core:dependencies"
         import_steps="plone.app.registry"
         />
