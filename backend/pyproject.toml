@@ -45,7 +45,7 @@ test = [
     "plone.restapi[test]",
     "pytest",
     "pytest-cov",
-    "pytest-plone>=1.0.0",
+    "pytest-plone>=1.1.0",
 ]
 
 [dependency-groups]
@@ -59,7 +59,7 @@ test = [
     "plone.restapi[test]",
     "pytest",
     "pytest-cov",
-    "pytest-plone>=1.0.0",
+    "pytest-plone>=1.1.0",
 ]
 
 [project.urls]
