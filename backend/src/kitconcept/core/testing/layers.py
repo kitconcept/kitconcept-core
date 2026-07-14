@@ -58,6 +58,7 @@ class kitconceptDistributionFixture(kitconceptFixture):
         sites = self.sites
         if not sites:
             raise RuntimeError("No sites defined in this fixture")
+
         for distribution_name, answers in sites:
             site_id = answers["site_id"]
             # Create Plone site
@@ -67,7 +68,6 @@ class kitconceptDistributionFixture(kitconceptFixture):
                 distribution=distribution_name,
                 **answers,
             )
-
             # Create the test user. (Plone)PAS does not have an API to create a
             # user with different userid and login name, so we call the plugin
             # directly.

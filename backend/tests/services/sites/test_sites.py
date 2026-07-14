@@ -1,11 +1,14 @@
+from copy import deepcopy
+from random import randint
+
 import pytest
 
 
 class TestSitesEndpoint:
     @pytest.fixture(autouse=True)
-    def _setup(self, api_manager_request, distribution):
+    def _setup(self, api_manager_request, distribution_name):
         self.api_session = api_manager_request
-        self.url = f"@sites/{distribution}"
+        self.url = f"@sites/{distribution_name}"
 
     def test_get(self):
         response = self.api_session.get(self.url)
@@ -34,9 +37,11 @@ class TestSitesEndpoint:
         assert key in definitions
 
     def test_post(self, answers):
-        response = self.api_session.post(self.url, json=answers)
+        _answers = deepcopy(answers)
+        _answers["site_id"] = f"plone{randint(5, 10):02d}"  # noqa: S311
+        response = self.api_session.post(self.url, json=_answers)
         data = response.json()
         assert response.status_code == 200
         assert isinstance(data, dict)
-        assert data["id"] == answers["site_id"]
+        assert data["id"] == _answers["site_id"]
         assert data["_profile_id"] == "kitconcept.core:base"
