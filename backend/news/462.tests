@@ -1,0 +1,1 @@
+Upgrade `pytest-plone` to version 1.1.0 and re-parent the acceptance remote-library bundle onto the kitconcept fixture, avoiding a duplicate Plone site under the new `keep_session` default. @ericof

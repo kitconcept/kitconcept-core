@@ -16,11 +16,14 @@ pytest_plugins = ["pytest_plone"]
 
 
 globals().update(
-    fixtures_factory((
-        (ACCEPTANCE_TESTING, "acceptance"),
-        (FUNCTIONAL_TESTING, "functional"),
-        (INTEGRATION_TESTING, "integration"),
-    ))
+    fixtures_factory(
+        (
+            (ACCEPTANCE_TESTING, "acceptance"),
+            (FUNCTIONAL_TESTING, "functional"),
+            (INTEGRATION_TESTING, "integration"),
+        ),
+        keep_session=True,
+    )
 )
 
 
@@ -74,7 +77,7 @@ def current_versions() -> CurrentVersions:
 
 
 @pytest.fixture(scope="session")
-def distribution() -> str:
+def distribution_name() -> str:
     return "testing"
 
 
@@ -101,10 +104,13 @@ def answers(prepare_answers) -> dict:
 
 
 @pytest.fixture(scope="session")
-def create_site(distribution):
+def create_site(distribution_name):
     def func(app, answers: dict) -> PloneSite:
         with api.env.adopt_user(SITE_OWNER_NAME):
-            site = add_site(app, distribution=distribution, **answers)
+            site_id = answers.get("site_id")
+            if site_id and (site_id in app.objectIds()):
+                app.manage_delObjects(site_id)
+            site = add_site(app, distribution=distribution_name, **answers)
         return site
 
     return func

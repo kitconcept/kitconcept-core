@@ -1,5 +1,6 @@
 from kitconcept.core.testing import layers
-from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
+from kitconcept.core.testing import robot
+from plone.app.robotframework.remote import RemoteLibraryLayer
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
@@ -26,6 +27,11 @@ FUNCTIONAL_TESTING = FunctionalTesting(
     name="kitconcept.coreLayer:FunctionalTesting",
 )
 
+REMOTE_LIBRARY_BUNDLE_FIXTURE = RemoteLibraryLayer(
+    bases=(kitconcept_FIXTURE,),
+    libraries=robot.RF_LIBRARIES,
+    name="RemoteLibraryBundle:RobotRemote",
+)
 
 ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
