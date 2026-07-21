@@ -1,6 +1,11 @@
-.Toastify__toast.Toastify__toast--info.return-to-origin-toast
+.Toastify__toast.Toastify__toast--info.return-to-origin-toast {
   .toast-box-center {
-  padding-top: 20px;
+    padding-top: 20px;
+  }
+
+  .Toastify__toast-body svg.icon {
+    height: 28px !important;
+  }
 }
 
 .return.toast-box {

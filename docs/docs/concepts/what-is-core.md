@@ -110,7 +110,7 @@ After bumping the version of `kitconcept.core:base`, we need to create a new upg
         handler="..utils.null_upgrade_step"
         />
     <genericsetup:upgradeDepends
-        title="Adds disable_profile_links setting to kitconcept settings"
+        title="Adds clickable_profile_links setting to kitconcept settings"
         import_profile="kitconcept.core:dependencies"
         import_steps="plone.app.registry"
         />
