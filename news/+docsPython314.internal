@@ -1,0 +1,1 @@
+Updated documentation build to Python 3.14 and dropped the unused `sphinxcontrib-httpdomain`/`sphinxcontrib-httpexample` extensions (and the `setuptools` workaround they required). @ericof
