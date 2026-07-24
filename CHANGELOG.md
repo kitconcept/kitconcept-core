@@ -7,6 +7,44 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0b5 (2026-07-24)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Use "clickable_profile_link' instead of 'disable_profile_link' @Tishasoumya-02 
+
+
+#### Tests
+
+- Upgrade `pytest-plone` to version 1.1.0 and re-parent the acceptance remote-library bundle onto the kitconcept fixture, avoiding a duplicate Plone site under the new `keep_session` default. @ericof [#462](https://github.com/kitconcept/kitconcept-core/issues/462)
+
+
+
+### Frontend
+
+#### Bugfix
+
+- Fix the size of i icon in toast @Tishasoumya-02 
+
+
+
+### Project
+
+
+#### Internal
+
+- Updated documentation build to Python 3.14 and dropped the unused `sphinxcontrib-httpdomain`/`sphinxcontrib-httpexample` extensions (and the `setuptools` workaround they required). @ericof 
+
+
+#### Documentation
+
+- Update docs for clickable profile link control panel setting @Tishasoumya-02 
+
+
+
 ## 2.0.0b4 (2026-07-07)
 
 ### Backend
