@@ -9,6 +9,18 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0b5 (2026-07-24)
+
+
+### Bug fixes:
+
+- Use "clickable_profile_link' instead of 'disable_profile_link' @Tishasoumya-02 
+
+
+### Tests
+
+- Upgrade `pytest-plone` to version 1.1.0 and re-parent the acceptance remote-library bundle onto the kitconcept fixture, avoiding a duplicate Plone site under the new `keep_session` default. @ericof [#462](https://github.com/kitconcept/kitconcept-core/issues/462)
+
 ## 2.0.0b4 (2026-07-07)
 
 

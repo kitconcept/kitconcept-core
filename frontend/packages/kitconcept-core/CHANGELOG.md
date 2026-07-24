@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.0.0-beta.5 (2026-07-24)
+
+### Bugfix
+
+- Fix the size of i icon in toast @Tishasoumya-02 
+
 ## 2.0.0-beta.4 (2026-07-07)
 
 ## 2.0.0-beta.3 (2026-07-06)
