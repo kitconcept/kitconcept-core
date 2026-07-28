@@ -44,6 +44,7 @@ class TestUpgrades:
             "20260505001",
             "20260619001",
             "20260620001",
+            "20260706001",
         ],
     )
     def test_upgrade_to_latest(self, list_upgrades, src_version: str) -> None:

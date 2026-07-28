@@ -4,5 +4,6 @@
   "distribution": "testing",
   "setup_content": false,
   "default_language": "de",
+  "available_languages": ["de", "en"],
   "portal_timezone": "UTC"
 }
