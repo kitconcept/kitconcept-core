@@ -1,0 +1,1 @@
+Removed the dependency on `pkg_resources`, using `importlib.metadata` to report package versions instead, and consolidated the two `package_version` helpers into a single implementation. @ericof
