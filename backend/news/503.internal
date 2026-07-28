@@ -1,0 +1,1 @@
+Restricted the display layouts available on the Language Root Folder (LRF) content type to `summary_view`, removing the `full_view`, `tabular_view`, `album_view` and `folder_listing` layouts inherited from `plone.app.multilingual`, and set `summary_view` as its default view. Existing multilingual sites are updated by an upgrade step. @ericof

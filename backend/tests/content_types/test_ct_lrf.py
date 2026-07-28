@@ -1,4 +1,3 @@
-from Acquisition import aq_parent
 from collections.abc import Generator
 from plone.dexterity.fti import DexterityFTI
 from Products.CMFPlone.Portal import PloneSite
@@ -20,13 +19,11 @@ def answers() -> dict:
 
 
 @pytest.fixture(scope="class")
-def portal(portal_class, create_site, answers) -> Generator[PloneSite, None, None]:
-    app = aq_parent(portal_class)
-    site = create_site(app=app, answers=answers)
+def portal(app_class, create_site, answers) -> Generator[PloneSite, None, None]:
+    site = create_site(app=app_class, answers=answers)
     yield site
 
 
-# @pytest.mark.skip(reason="Only available if plone.app.multilingual is installed")
 class TestContentTypeFTI:
     portal_type: str = "LRF"
 
@@ -40,6 +37,8 @@ class TestContentTypeFTI:
         [
             ("title", "Language Root Folder"),
             ("global_allow", False),
+            ("default_view", "summary_view"),
+            ("view_methods", ("summary_view",)),
         ],
     )
     def test_fti(self, attr: str, expected):
@@ -49,9 +48,9 @@ class TestContentTypeFTI:
         assert isinstance(fti, DexterityFTI)
         assert getattr(fti, attr) == expected
 
-    def test_behaviors(self):
-        """Test behaviors are present and in correct order."""
-        assert self.fti.behaviors == (
+    @pytest.mark.parametrize(
+        "idx,behavior",
+        enumerate((
             "plone.basic",
             "volto.preview_image_link",
             "plone.categorization",
@@ -64,4 +63,8 @@ class TestContentTypeFTI:
             "plone.locking",
             "plone.versioning",
             "plone.translatable",
-        )
+        )),
+    )
+    def test_behaviors(self, idx: int, behavior: str):
+        """Test behaviors are present and in correct order."""
+        assert self.fti.behaviors[idx] == behavior
