@@ -7,6 +7,35 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0b7 (2026-07-28)
+
+### Backend
+
+
+#### Internal:
+
+- Removed the dependency on `pkg_resources`, using `importlib.metadata` to report package versions instead, and consolidated the two `package_version` helpers into a single implementation. @ericof [#502](https://github.com/kitconcept/kitconcept-core/issues/502)
+- Restricted the display layouts available on the Language Root Folder (LRF) content type to `summary_view`, removing the `full_view`, `tabular_view`, `album_view` and `folder_listing` layouts inherited from `plone.app.multilingual`, and set `summary_view` as its default view. Existing multilingual sites are updated by an upgrade step. @ericof [#503](https://github.com/kitconcept/kitconcept-core/issues/503)
+
+
+#### Tests
+
+- Refactored the content type FTI behavior tests. @ericof 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0b6 (2026-07-24)
 
 ### Backend
