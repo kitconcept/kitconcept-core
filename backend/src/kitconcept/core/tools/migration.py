@@ -4,6 +4,7 @@ from App.config import getConfiguration
 from collections.abc import Generator
 from contextlib import contextmanager
 from io import StringIO
+from kitconcept.core.utils.packages import package_version
 from plone.base.interfaces import IMigrationTool
 from Products.CMFCore.utils import registerToolInterface
 from Products.CMFPlone.MigrationTool import MigrationTool as BaseTool
@@ -11,19 +12,12 @@ from typing import Any
 from zope.interface import implementer
 
 import logging
-import pkg_resources
 import sys
 
 
 def get_configuration() -> DefaultConfiguration:
     """Return the global Zope configuration object."""
     return getConfiguration()
-
-
-def package_version(package_name: str) -> str:
-    """Return the version of an installed package."""
-    package_dist = pkg_resources.get_distribution(package_name)
-    return package_dist.version
 
 
 @contextmanager
