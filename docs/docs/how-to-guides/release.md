@@ -89,3 +89,28 @@ make release
 
 Follow the prompts to select the release type.
 The tool handles version bumping, changelog generation, tagging, GitHub release creation, and npm publishing according to the repository configuration.
+
+### Stamping the Volto version for distributions
+
+When the package being released is a Volto **distribution**, its published `package.json` must advertise the Volto core version it targets in a `volto_version` field. That field is what lets downstream projects detect the distribution and enforce its dependencies (see {doc}`/how-to-guides/ensure-versions-distribution-projects`).
+
+RepoPlone stamps this field from the `@plone/volto` tag in `mrs.developer.json`:
+
+```shell
+uvx repoplone deps stamp-volto-version
+```
+
+This is typically wired into the distribution package's `.release-it.json` so it runs automatically during a release. For example:
+
+```json
+{
+  "hooks": {
+    "after:bump": [
+      "uvx repoplone deps stamp-volto-version",
+      "git add package.json"
+    ]
+  }
+}
+```
+
+The command locates `repository.toml` by walking up the directory tree, so it works from the package directory where `release-it` runs.
