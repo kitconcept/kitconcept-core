@@ -4,35 +4,34 @@ myst:
     "description": "Upgrade a distribution-based frontend project using make upgrade"
     "property=og:description": "Upgrade a distribution-based frontend project using make upgrade"
     "property=og:title": "Upgrade a distribution-based frontend project using make upgrade"
-    "keywords": "kitconcept distribution, make upgrade, volto distribution upgrade"
+    "keywords": "kitconcept distribution, make upgrade, volto distribution upgrade, repoplone"
 ---
 
 # How to upgrade a distribution-based project
 
-Use this guide in projects based on a frontend distribution where `frontend/Makefile` provides an `upgrade` target.
+Use this guide in projects based on a frontend distribution where `frontend/Makefile` provides an `upgrade` target that wraps RepoPlone.
 
 ## Prerequisites
 
 - `repository.toml` contains `[frontend.package]` with:
-  - `base_package`
-  - `path`
+  - `base_package` (the distribution package name)
+  - `path` (the path to your frontend add-on package)
 - The add-on package at `path` declares the distribution package in `package.json`.
-- `frontend/scripts/upgrade-distribution.js` exists in the project.
-- `frontend/Makefile` has an `upgrade` target that runs:
+- `frontend/.pnpmfile.cjs` reads `frontend/distribution.json` to enforce the distribution versions.
+- `frontend/Makefile` has an `upgrade` target that runs RepoPlone:
 
-```makefile
-upgrade:
-  node scripts/upgrade-distribution.js
-  pnpm exec prettier --log-level silent --write volto.config.js
-```
+  ```makefile
+  upgrade:
+  	cd .. && uvx repoplone deps upgrade frontend
+  ```
 
 For setup details, see {doc}`/how-to-guides/ensure-versions-distribution-projects`.
 
 ## Upgrade steps
 
-1. First, update and pin the frontend distribution version in your project dependencies, as described in {doc}`/how-to-guides/upgrade-distribution`.
+1. From the project root, upgrade the frontend distribution.
 
-   To upgrade the frontend distribution to the latest version, run:
+   To upgrade to the latest version, run:
 
    ```bash
    uvx repoplone deps upgrade frontend
@@ -44,43 +43,30 @@ For setup details, see {doc}`/how-to-guides/ensure-versions-distribution-project
    uvx repoplone deps upgrade frontend <version>
    ```
 
-2. From the project root, run:
+   If your `frontend/Makefile` provides the `upgrade` target, you can run it instead:
 
    ```bash
    make -C frontend upgrade
    ```
 
-   or
-
-   ```bash
-   cd frontend
-   make upgrade
-   ```
-
-3. Install and sync dependencies:
-
-   ```bash
-   make frontend-install
-   ```
-
-4. Review generated changes in:
-   - `frontend/volto.config.js`
+2. Review the generated changes in:
+   - `frontend/distribution.json`
    - `frontend/mrs.developer.json`
 
-5. Run tests:
+3. Run tests:
 
    ```bash
    make test
    ```
 
-## What `make upgrade` updates
+## What the upgrade does
 
-- Rewrites `frontend/volto.config.js` distribution block with:
-  - distribution `name`
-  - distribution `version`
-  - resolved `volto_version`
-  - distribution `dependencies`
-- Preserves existing `addons` and `theme` in `volto.config.js`.
-- Updates `frontend/mrs.developer.json` with the resolved `core.tag` (`volto_version`).
-- The effective dependency sync happens when you run `make frontend-install` after running `make upgrade`.
-- During install, `frontend/scripts/.pnpmfile.cjs` enforces the versions listed in `distribution.dependencies` from `volto.config.js`.
+- Bumps the distribution version pinned in your add-on's `package.json`.
+- Because the distribution publishes a `volto_version`, RepoPlone recognizes it as a distribution and, for the target version:
+  - writes `frontend/distribution.json` with the distribution `name`, `version`, resolved `volto_version`, and the enforced `dependencies`;
+  - updates `frontend/mrs.developer.json` `core.tag` with the resolved `volto_version`.
+- Syncs the lockfile by running `make frontend-install`. During install, `frontend/.pnpmfile.cjs` enforces the versions listed in `distribution.json` across the workspace.
+
+```{note}
+Review the changelog and release notes for the new version to understand the changes introduced in the distribution.
+```

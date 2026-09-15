@@ -41,6 +41,9 @@ To upgrade the frontend component to the latest version, execute:
 uvx repoplone deps upgrade frontend
 ```
 
+```{note}
+When the frontend base package is a Volto distribution (recognized by the `volto_version` field it publishes), this command also regenerates `frontend/distribution.json` with the distribution's enforced dependencies and aligns `frontend/mrs.developer.json` `core.tag`. See {doc}`/how-to-guides/ensure-versions-distribution-projects` and {doc}`/how-to-guides/upgrade-distribution-make-upgrade`.
+```
 
 ```{note}
 Review the changelog and release notes for the new version to understand the changes introduced in the distribution.

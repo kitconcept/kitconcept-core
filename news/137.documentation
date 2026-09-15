@@ -1,0 +1,1 @@
+Update the distribution how-to guides to describe the repoplone-native workflow: enforcement via a generated `frontend/distribution.json` plus `.pnpmfile.cjs`, `make upgrade` wrapping `uvx repoplone deps upgrade frontend`, and the `uvx repoplone deps stamp-volto-version` release command. @sneridagh

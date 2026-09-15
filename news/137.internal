@@ -1,0 +1,1 @@
+Remove the obsolete `frontend/scripts/upgrade-distribution.js` sample, now superseded by the frontend distribution management built into `repoplone`. @sneridagh
