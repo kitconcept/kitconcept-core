@@ -7,6 +7,39 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0b8 (2026-09-17)
+
+### Backend
+
+
+#### Internal:
+
+- Upgrade to Plone 6.2.2 @sneridagh 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update Volto and VLT. @sneridagh 
+
+
+
+### Project
+
+
+#### Internal
+
+- Remove the obsolete `frontend/scripts/upgrade-distribution.js` sample, now superseded by the frontend distribution management built into `repoplone`. @sneridagh [#137](https://github.com/kitconcept/kitconcept-core/pull/137)
+
+
+#### Documentation
+
+- Update the distribution how-to guides to describe the repoplone-native workflow: enforcement via a generated `frontend/distribution.json` plus `.pnpmfile.cjs`, `make upgrade` wrapping `uvx repoplone deps upgrade frontend`, and the `uvx repoplone deps stamp-volto-version` release command. @sneridagh [#137](https://github.com/kitconcept/kitconcept-core/pull/137)
+
+
+
 ## 2.0.0b7 (2026-07-28)
 
 ### Backend
