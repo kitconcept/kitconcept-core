@@ -26,10 +26,9 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "dependencies": {
-    "@plone/components": "workspace:^"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "@plone/components": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^3.12.1",

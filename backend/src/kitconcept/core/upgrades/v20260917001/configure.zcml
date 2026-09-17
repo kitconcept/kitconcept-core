@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20260728001"
+      destination="20260917001"
+      >
+    <genericsetup:upgradeStep
+        title="Update the IImagingSchema field registrations."
+        handler="plone.app.upgrade.v62.final.update_iimagingschema_fields"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
