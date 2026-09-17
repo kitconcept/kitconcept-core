@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.0.0 (2026-09-17)
+
+### Backend
+
+No significant changes.
+
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+
+#### Internal
+
+- Final release. @sneridagh 
+
+
+
 ## 2.0.0b8 (2026-09-17)
 
 ### Backend
