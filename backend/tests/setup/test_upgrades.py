@@ -45,6 +45,7 @@ class TestUpgrades:
             "20260619001",
             "20260620001",
             "20260706001",
+            "20260917001",
         ],
     )
     def test_upgrade_to_latest(self, list_upgrades, src_version: str) -> None:
@@ -54,3 +55,22 @@ class TestUpgrades:
         assert len(upgrades) > 0, (
             f"No upgrade path found from {src_version} to {self.version}"
         )
+
+    def test_update_blocks_config_permission(self) -> None:
+        """The upgrade grants the blocks config permission to site admins."""
+        from kitconcept.core.upgrades.v20260918001 import (
+            update_blocks_config_permission,
+        )
+
+        permission = "Can edit TTW blocks configuration"
+        # Simulate an existing site without the role mapping.
+        self.portal.manage_permission(permission, roles=[], acquire=0)
+
+        update_blocks_config_permission(self.setup_tool)
+
+        selected = {
+            role["name"]
+            for role in self.portal.rolesOfPermission(permission)
+            if role["selected"]
+        }
+        assert selected == {"Manager", "Site Administrator"}

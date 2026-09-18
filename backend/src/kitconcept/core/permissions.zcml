@@ -4,6 +4,9 @@
     i18n_domain="kitconcept.core"
     >
 
-  <!-- -*- extra stuff goes here -*- -->
+  <permission
+      id="kitconcept.can_edit_blocks_config"
+      title="Can edit TTW blocks configuration"
+      />
 
 </configure>

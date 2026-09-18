@@ -28,7 +28,7 @@ class ITTWBlocksSettings(model.Schema):
     )
 
     directives.write_permission(
-        blocks_config_mutator="kitconcept.intranet.siteadminsonly"
+        blocks_config_mutator="kitconcept.can_edit_blocks_config"
     )
     directives.widget(
         "blocks_config_mutator",

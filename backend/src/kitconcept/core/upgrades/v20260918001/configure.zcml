@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20260917001"
+      destination="20260918001"
+      >
+    <genericsetup:upgradeStep
+        title="Grant 'Can edit TTW blocks configuration' permission to Manager and Site Administrator"
+        handler=".update_blocks_config_permission"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
