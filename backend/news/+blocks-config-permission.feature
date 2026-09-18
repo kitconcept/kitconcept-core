@@ -1,1 +1,0 @@
-Changed the `blocks_config_mutator` write permission to the dedicated `kitconcept.can_edit_blocks_config` permission and granted it to `Manager` and `Site Administrator` via an upgrade step. @sneridagh

@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.1.0 (2026-09-18)
+
+### Backend
+
+
+#### New features:
+
+- Changed the `blocks_config_mutator` write permission to the dedicated `kitconcept.can_edit_blocks_config` permission and granted it to `Manager` and `Site Administrator` via an upgrade step. @sneridagh 
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.0.0 (2026-09-17)
 
 ### Backend
