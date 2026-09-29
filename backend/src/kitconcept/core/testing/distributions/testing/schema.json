@@ -82,7 +82,11 @@
               { "const": "keycloak", "title": "Keycloak" },
               { "const": "oidc", "title": "OIDC / OAuth2" },
               { "const": "authomatic-google", "title": "Social Login Google" },
-              { "const": "authomatic-github", "title": "Social Login GitHub" }
+              { "const": "authomatic-github", "title": "Social Login GitHub" },
+              { "const": "identity-keycloak", "title": "Identity: Keycloak" },
+              { "const": "identity-oidc", "title": "Identity: OIDC" },
+              { "const": "identity-github", "title": "Identity: GitHub" },
+              { "const": "identity-google", "title": "Identity: Google" }
             ]
           }
         },

@@ -20,6 +20,7 @@ def _setup_plone_auth(answers: t.AuthAnswers):
 
 def get_authentication_provider(provider: str) -> t.AuthenticationProvider:
     from .authomatic import setup_authomatic
+    from .identity import setup_identity
     from .keycloak import setup_keycloak_auth
     from .oidc import setup_oidc_auth
 
@@ -41,6 +42,10 @@ def get_authentication_provider(provider: str) -> t.AuthenticationProvider:
         "authomatic-google": t.AuthenticationProvider(
             setup_authomatic, ("pas.plugins.authomatic:default",)
         ),
+        "identity-keycloak": t.AuthenticationProvider(setup_identity, ()),
+        "identity-oidc": t.AuthenticationProvider(setup_identity, ()),
+        "identity-github": t.AuthenticationProvider(setup_identity, ()),
+        "identity-google": t.AuthenticationProvider(setup_identity, ()),
     }
     return providers.get(provider, providers["internal"])
 

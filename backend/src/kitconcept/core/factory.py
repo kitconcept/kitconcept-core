@@ -79,6 +79,9 @@ _CORE_DEPENDENCIES = [
     "souper.plone",
     "collective.volto.otp",
     "pas.plugins.authomatic",
+    "pas.plugins.identity",
+    # Identity provider (server) layer of pas.plugins.identity, not offered yet
+    "pas.plugins.identity.server",
     "pas.plugins.oidc",
     "pas.plugins.keycloakgroups",
 ]

@@ -1,0 +1,10 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Persons created for a user account become pas.plugins.identity profiles -->
+  <subscriber
+      for="collective.person.content.person.IPerson
+           zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".person_added"
+      />
+
+</configure>

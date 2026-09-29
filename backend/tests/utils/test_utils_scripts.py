@@ -144,6 +144,23 @@ class TestGetEnvironmentalVariables:
             "oidc-scope": ["openid", "email"],
         }
 
+    def test_nested_identity_keys(self, monkeypatch):
+        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "identity-keycloak")
+        monkeypatch.setenv(
+            "SITE_AUTHENTICATION_IDENTITY-SERVER_URL", "https://auth.example.com"
+        )
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-REALM_NAME", "site")
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-CLIENT_SECRET", "secret")
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-SCOPE", "openid, email")
+        result = scripts.get_environmental_variables(self.options)
+        assert result["authentication"] == {
+            "provider": "identity-keycloak",
+            "identity-server_url": "https://auth.example.com",
+            "identity-realm_name": "site",
+            "identity-client_secret": "secret",
+            "identity-scope": ["openid", "email"],
+        }
+
     def test_mixed_plain_and_nested(self, monkeypatch):
         monkeypatch.setenv("SITE_ID", "Plone")
         monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "oidc")

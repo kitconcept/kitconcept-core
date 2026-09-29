@@ -104,6 +104,37 @@ OPTIONS: tuple[tuple[str, str, Any], ...] = (
         "SITE_AUTHENTICATION_AUTHOMATIC-GOOGLE-SCOPE",
         as_list,
     ),
+    (
+        "authentication.identity-server_url",
+        "SITE_AUTHENTICATION_IDENTITY-SERVER_URL",
+        None,
+    ),
+    (
+        "authentication.identity-realm_name",
+        "SITE_AUTHENTICATION_IDENTITY-REALM_NAME",
+        None,
+    ),
+    ("authentication.identity-issuer", "SITE_AUTHENTICATION_IDENTITY-ISSUER", None),
+    (
+        "authentication.identity-client_id",
+        "SITE_AUTHENTICATION_IDENTITY-CLIENT_ID",
+        None,
+    ),
+    (
+        "authentication.identity-client_secret",
+        "SITE_AUTHENTICATION_IDENTITY-CLIENT_SECRET",
+        None,
+    ),
+    (
+        "authentication.identity-site-url",
+        "SITE_AUTHENTICATION_IDENTITY-SITE-URL",
+        None,
+    ),
+    (
+        "authentication.identity-scope",
+        "SITE_AUTHENTICATION_IDENTITY-SCOPE",
+        as_list,
+    ),
 )
 
 
