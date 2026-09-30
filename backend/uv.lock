@@ -1423,7 +1423,7 @@ requires-dist = [
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0" },
     { name = "pas-plugins-authomatic", specifier = "==2.0.0" },
-    { name = "pas-plugins-identity", specifier = "==1.0.0a11" },
+    { name = "pas-plugins-identity", specifier = "==1.0.0a12" },
     { name = "pas-plugins-keycloakgroups", specifier = "==1.0.0b1" },
     { name = "pas-plugins-oidc", specifier = "==2.0.0" },
     { name = "plone-api" },
@@ -1776,7 +1776,7 @@ wheels = [
 
 [[package]]
 name = "pas-plugins-identity"
-version = "1.0.0a11"
+version = "1.0.0a12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "authlib" },
@@ -1789,9 +1789,9 @@ dependencies = [
     { name = "products-cmfplone" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/18/73/14b81d051e2b222f841de2d59a8e0d07370012b9422bb7f956bd74f29cb3/pas_plugins_identity-1.0.0a11.tar.gz", hash = "sha256:e7fcdfd017293a6142f59aa25fb5c1d80bd9374c646d8015810eb2679676b18a", size = 1072756, upload-time = "2026-09-28T18:56:59.829Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/70/a0/5e7090746432e635a91ae617b18715b595e3abeeb8607958604683985902/pas_plugins_identity-1.0.0a12.tar.gz", hash = "sha256:d46050c5b9fba9816320487c6bcdcd3f2f434a8b13efbd95cb0649c004be2586", size = 1084868, upload-time = "2026-09-30T14:45:31.166Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c4/ca/98859e860977fa896ee7cda0a112199e7ac26080a27a8cc9b0e2dbe17e52/pas_plugins_identity-1.0.0a11-py3-none-any.whl", hash = "sha256:2c3c51f64a4777a9c8af43a32c34f0f18525156a135f4fd4245dc4ef6957a005", size = 723316, upload-time = "2026-09-28T18:56:58.083Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/47/bb8e43d2e8c76e0acdb8c460cd8086309b4148d7899b72c34e942d47df3d/pas_plugins_identity-1.0.0a12-py3-none-any.whl", hash = "sha256:411dcfdea80e4a652b2ddd681ffb80a6866fa966ad8928972909413d34f01698", size = 728649, upload-time = "2026-09-30T14:45:29.167Z" },
 ]
 
 [[package]]

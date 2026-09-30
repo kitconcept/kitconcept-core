@@ -77,6 +77,22 @@ class TestUserAsPerson:
         assert "Site Administrators" in [group.getId() for group in groups]
 
 
+class TestGroupsInSourceGroups:
+    @pytest.fixture(autouse=True)
+    def _setup(self, portal):
+        self.portal = portal
+        with api.env.adopt_roles(["Manager"]):
+            api.group.create(groupname="editors-team", title="Editors team")
+
+    def test_group_in_source_groups(self):
+        source_groups = self.portal.acl_users.source_groups
+        assert "editors-team" in source_groups.getGroupIds()
+
+    def test_no_group_content(self):
+        brains = api.content.find(portal_type="UserGroup")
+        assert len(brains) == 0
+
+
 class TestPersonContent:
     @pytest.fixture(autouse=True)
     def _setup(self, portal):

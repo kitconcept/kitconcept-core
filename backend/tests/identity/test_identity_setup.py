@@ -25,7 +25,7 @@ class TestIdentitySetup:
         [
             ["user_content_type", "Person"],
             ["user_container_path", "users"],
-            ["group_content_type", ""],
+            ["group_content_type", None],
             ["profile_container_id", "users"],
             ["profile_container_title", "Users"],
             ["profile_container_type", "PrincipalsContainer"],
@@ -52,22 +52,17 @@ class TestIdentitySetup:
         assert fti.allowed_content_types == ("Person",)
 
 
-class TestIdentityPatch:
-    @pytest.mark.parametrize(
-        "module",
-        [
-            "pas.plugins.identity.core.catalog",
-            "pas.plugins.identity.core.profiles",
-            "pas.plugins.identity.core.pas.profile",
-            "pas.plugins.identity.core.subscribers.principals",
-        ],
-    )
-    def test_profile_portal_type(self, module: str):
-        from importlib import import_module
+class TestIdentityPrincipalTypes:
+    @pytest.fixture(autouse=True)
+    def _setup(self, portal):
+        self.portal = portal
 
-        assert import_module(module).PROFILE_PORTAL_TYPE == "Person"
+    def test_user_portal_type(self):
+        from pas.plugins.identity.core.principal_types import user_portal_type
+
+        assert user_portal_type() == "Person"
 
     def test_catalogued_types(self):
-        from pas.plugins.identity.core import catalog
+        from pas.plugins.identity.core.principal_types import catalogued_types
 
-        assert catalog.CATALOGUED_TYPES == ("Person", "UserGroup")
+        assert catalogued_types() == ("Person", "UserGroup")
