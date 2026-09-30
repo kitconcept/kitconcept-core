@@ -11,10 +11,9 @@ class TestIdentitySetup:
     def _setup(self, portal):
         self.portal = portal
 
-    def test_profile_installed(self, profile_last_version):
-        result = profile_last_version(f"profile-{PREFIX}:default")
-        assert isinstance(result, str)
-        assert result != ""
+    def test_profile_installed(self):
+        setup_tool = self.portal.portal_setup
+        assert setup_tool.getLastVersionForProfile(f"{PREFIX}:default") != "unknown"
 
     @pytest.mark.parametrize("plugin_id", ["identity", "identity_profile"])
     def test_plugin_created(self, plugin_id):

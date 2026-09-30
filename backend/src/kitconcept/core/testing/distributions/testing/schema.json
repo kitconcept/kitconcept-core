@@ -79,14 +79,10 @@
             "default": "internal",
             "oneOf": [
               { "const": "internal", "title": "Plone" },
-              { "const": "keycloak", "title": "Keycloak" },
-              { "const": "oidc", "title": "OIDC / OAuth2" },
-              { "const": "authomatic-google", "title": "Social Login Google" },
-              { "const": "authomatic-github", "title": "Social Login GitHub" },
-              { "const": "identity-keycloak", "title": "Identity: Keycloak" },
-              { "const": "identity-oidc", "title": "Identity: OIDC" },
-              { "const": "identity-github", "title": "Identity: GitHub" },
-              { "const": "identity-google", "title": "Identity: Google" }
+              { "const": "identity-keycloak", "title": "Keycloak" },
+              { "const": "identity-oidc", "title": "OIDC" },
+              { "const": "identity-github", "title": "GitHub" },
+              { "const": "identity-google", "title": "Google" }
             ]
           }
         },
@@ -95,48 +91,48 @@
             "if": {
               "properties": {
                 "provider": {
-                  "const": "keycloak"
+                  "const": "identity-keycloak"
                 }
               }
             },
             "then": {
-              "$ref": "#/definitions/keycloak"
+              "$ref": "#/definitions/identity-keycloak"
             }
           },
           {
             "if": {
               "properties": {
                 "provider": {
-                  "const": "oidc"
+                  "const": "identity-oidc"
                 }
               }
             },
             "then": {
-              "$ref": "#/definitions/oidc"
+              "$ref": "#/definitions/identity-oidc"
             }
           },
           {
             "if": {
               "properties": {
                 "provider": {
-                  "const": "authomatic-github"
+                  "const": "identity-github"
                 }
               }
             },
             "then": {
-              "$ref": "#/definitions/authomatic-github"
+              "$ref": "#/definitions/identity-github"
             }
           },
           {
             "if": {
               "properties": {
                 "provider": {
-                  "const": "authomatic-google"
+                  "const": "identity-google"
                 }
               }
             },
             "then": {
-              "$ref": "#/definitions/authomatic-google"
+              "$ref": "#/definitions/identity-google"
             }
           },
           {
@@ -162,5 +158,8 @@
     }
   },
   "uischema": {
+    "default_language": {
+      "ui:widget": "hidden"
+    }
   }
 }

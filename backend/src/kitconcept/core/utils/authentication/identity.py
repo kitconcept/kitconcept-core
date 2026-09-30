@@ -20,6 +20,15 @@ PROVIDERS: dict[str, tuple[str, str, str]] = {
 # Answers that are not driver settings
 NON_CONFIG_KEYS = ("site-url", "server_url", "realm_name")
 
+# pas.plugins.keycloakgroups looks groups up by Keycloak user id, which is the
+# ``sub`` claim, so Keycloak users get it as their Plone userid
+KEYCLOAK_USERID_SOURCE = "subject"
+
+KEYCLOAK_GROUPS_PREFIX = "keycloak_groups"
+
+# Answers copied to the pas.plugins.keycloakgroups settings
+KEYCLOAK_GROUPS_KEYS = ("server_url", "realm_name", "client_id", "client_secret")
+
 
 def _prepare_answers(raw_answers: t.AnswersIdentity) -> dict:
     """Strip the answer prefix, and drop empty values.
@@ -46,11 +55,27 @@ def _prepare_config(provider: str, answers: dict) -> dict:
     config = {
         key: value for key, value in answers.items() if key not in NON_CONFIG_KEYS
     }
-    if provider == "identity-keycloak" and "issuer" not in config:
-        server_url = answers["server_url"].rstrip("/")
-        realm = answers["realm_name"]
-        config["issuer"] = f"{server_url}/realms/{realm}"
+    if provider == "identity-keycloak":
+        if "issuer" not in config:
+            server_url = answers["server_url"].rstrip("/")
+            realm = answers["realm_name"]
+            config["issuer"] = f"{server_url}/realms/{realm}"
+        config.setdefault("userid_source", KEYCLOAK_USERID_SOURCE)
     return config
+
+
+def _setup_keycloak_groups(answers: dict):
+    """Use the groups of the Keycloak realm, with pas.plugins.keycloakgroups.
+
+    :param answers: Answers, as returned by :func:`_prepare_answers`.
+    """
+    settings = {key: answers[key] for key in KEYCLOAK_GROUPS_KEYS if key in answers}
+    # Last, so the plugin is activated with the connection settings in place
+    settings["enabled"] = True
+    for key, value in settings.items():
+        name = f"{KEYCLOAK_GROUPS_PREFIX}.{key}"
+        api.portal.set_registry_record(name, value)
+        logger.info(f"Authentication: Set registry {name}")
 
 
 def _callback_url(answers: dict) -> str | None:
@@ -86,4 +111,6 @@ def setup_identity(raw_answers: t.AnswersIdentity):
     if callback_url:
         api.portal.set_registry_record(CALLBACK_URL_RECORD, callback_url)
         logger.info(f"Authentication: Set registry value on {CALLBACK_URL_RECORD}")
+    if provider == "identity-keycloak":
+        _setup_keycloak_groups(answers)
     logger.info("Authentication: Identity authentication setup")

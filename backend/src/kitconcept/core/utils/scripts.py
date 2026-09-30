@@ -18,6 +18,7 @@ import json
 import logging
 import os
 import transaction
+import warnings
 
 
 marker = object()  # Unique marker object to indicate no value
@@ -63,47 +64,6 @@ OPTIONS: tuple[tuple[str, str, Any], ...] = (
     ("setup_content", "SITE_SETUP_CONTENT", as_bool),
     ("demo_content", "SITE_DEMO_CONTENT", as_bool),
     ("authentication.provider", "SITE_AUTHENTICATION_PROVIDER", None),
-    ("authentication.oidc-server_url", "SITE_AUTHENTICATION_OIDC-SERVER_URL", None),
-    ("authentication.oidc-realm_name", "SITE_AUTHENTICATION_OIDC-REALM_NAME", None),
-    ("authentication.oidc-client_id", "SITE_AUTHENTICATION_OIDC-CLIENT_ID", None),
-    (
-        "authentication.oidc-client_secret",
-        "SITE_AUTHENTICATION_OIDC-CLIENT_SECRET",
-        None,
-    ),
-    ("authentication.oidc-site-url", "SITE_AUTHENTICATION_OIDC-SITE-URL", None),
-    ("authentication.oidc-scope", "SITE_AUTHENTICATION_OIDC-SCOPE", as_list),
-    ("authentication.oidc-issuer", "SITE_AUTHENTICATION_OIDC-ISSUER", None),
-    (
-        "authentication.authomatic-github-consumer_key",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GITHUB-CONSUMER_KEY",
-        None,
-    ),
-    (
-        "authentication.authomatic-github-consumer_secret",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GITHUB-CONSUMER_SECRET",
-        None,
-    ),
-    (
-        "authentication.authomatic-github-scope",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GITHUB-SCOPE",
-        as_list,
-    ),
-    (
-        "authentication.authomatic-google-consumer_key",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GOOGLE-CONSUMER_KEY",
-        None,
-    ),
-    (
-        "authentication.authomatic-google-consumer_secret",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GOOGLE-CONSUMER_SECRET",
-        None,
-    ),
-    (
-        "authentication.authomatic-google-scope",
-        "SITE_AUTHENTICATION_AUTHOMATIC-GOOGLE-SCOPE",
-        as_list,
-    ),
     (
         "authentication.identity-server_url",
         "SITE_AUTHENTICATION_IDENTITY-SERVER_URL",
@@ -136,6 +96,26 @@ OPTIONS: tuple[tuple[str, str, Any], ...] = (
         as_list,
     ),
 )
+
+# Prefixes of the environment variables of the pas.plugins.oidc and
+# pas.plugins.authomatic providers, which are no longer read
+DEPRECATED_ENV_PREFIXES: tuple[str, ...] = (
+    "SITE_AUTHENTICATION_OIDC-",
+    "SITE_AUTHENTICATION_AUTHOMATIC-",
+)
+
+
+def _warn_deprecated_env_vars() -> None:
+    """Warn about environment variables of providers no longer supported."""
+    for env_var in sorted(os.environ):
+        if not env_var.startswith(DEPRECATED_ENV_PREFIXES):
+            continue
+        message = (
+            f"{env_var} is ignored: use the SITE_AUTHENTICATION_IDENTITY-* "
+            "variables of the identity-* authentication providers instead."
+        )
+        warnings.warn(message, DeprecationWarning, stacklevel=3)
+        logger.warning(message)
 
 
 def parse_answers(answers_file: Path, answers_env: dict) -> dict:
@@ -236,9 +216,14 @@ def get_environmental_variables(
     containing a ``.`` (e.g. ``authentication.provider``) are expanded into a
     nested dictionary.
 
+    Variables of the ``pas.plugins.oidc`` and ``pas.plugins.authomatic``
+    providers (see :data:`DEPRECATED_ENV_PREFIXES`) are ignored, with a
+    warning.
+
     :returns: Mapping of answer keys to their (optionally transformed) values,
         ready to be merged into the site-creation answers.
     """
+    _warn_deprecated_env_vars()
     env_vars: dict[str, Any] = {}
     for key, env_var, transform in options:
         value = os.getenv(env_var, marker)
