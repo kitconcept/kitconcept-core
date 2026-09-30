@@ -82,11 +82,25 @@ class PersonUserMixin:
 
     @property
     def fullname(self) -> str:
-        """Return the full name, which is the Person title.
+        """Return the full name.
 
-        :returns: The full name.
+        pas.plugins.identity writes a name claim only over the value it wrote
+        itself, so this returns exactly the full name last written, while the
+        first and last name still split from it. After they are edited, it
+        returns them joined, and the provider no longer overwrites them.
+
+        Not the Person title: the title utility of collective.person may
+        order the names differently (``last_first``), and formats a missing
+        first name as ``"None"``.
+
+        :returns: The full name, empty when there are no names.
         """
-        return self.title or ""
+        first_name = getattr(self, "first_name", None) or ""
+        last_name = getattr(self, "last_name", None) or ""
+        written = getattr(self, "_fullname", "")
+        if written and split_fullname(written) == (first_name, last_name):
+            return written
+        return " ".join(name for name in (first_name, last_name) if name)
 
     @fullname.setter
     def fullname(self, value: str) -> None:
@@ -99,6 +113,7 @@ class PersonUserMixin:
             return
         self.first_name = first_name
         self.last_name = last_name
+        self._fullname = value
 
     @property
     def emails(self) -> tuple[str, ...]:

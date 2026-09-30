@@ -119,6 +119,80 @@ class TestPersonContent:
         assert self.person.emails == ()
 
 
+class TestPersonFullname:
+    @pytest.fixture(autouse=True)
+    def _setup(self, portal):
+        self.portal = portal
+
+    def _create(self, **names):
+        from pas.plugins.identity.core.container import get_container
+
+        with api.env.adopt_roles(["Manager"]):
+            return api.content.create(
+                container=get_container(create=True),
+                type="Person",
+                id="sso-user",
+                login="sso-user",
+                **names,
+            )
+
+    @pytest.mark.parametrize(
+        "names,expected",
+        [
+            [{}, ""],
+            [{"last_name": "Hopper"}, "Hopper"],
+            [{"first_name": "Grace"}, "Grace"],
+            [{"first_name": "Grace", "last_name": "Hopper"}, "Grace Hopper"],
+        ],
+    )
+    def test_fullname(self, names: dict, expected: str):
+        assert self._create(**names).fullname == expected
+
+    def test_name_claim_synced(self):
+        """A login writes the name claim onto a Person created without names."""
+        from pas.plugins.identity.core.profiles import sync_claims
+
+        person = self._create()
+        with api.env.adopt_roles(["Manager"]):
+            changed = sync_claims(person, {"fullname": "Grace Hopper"}, "")
+        assert changed == ["fullname"]
+        assert (person.first_name, person.last_name) == ("Grace", "Hopper")
+
+    @pytest.mark.parametrize(
+        "utility,first,second",
+        [
+            ("first_last", "Grace Hopper", "Grace M. Hopper"),
+            ("last_first", "Grace Hopper", "Grace M. Hopper"),
+            ("first_last", "Grace  Hopper", "Grace M. Hopper"),
+            ("first_last", "Grace", "Grace Hopper"),
+        ],
+    )
+    def test_later_login_updates_name(self, utility: str, first: str, second: str):
+        """The name last written round-trips, so the provider still owns it."""
+        from pas.plugins.identity.core.profiles import sync_claims
+
+        api.portal.set_registry_record("person.title_utility", utility)
+        person = self._create()
+        with api.env.adopt_roles(["Manager"]):
+            sync_claims(person, {"fullname": first}, "")
+            assert person.fullname == first
+            changed = sync_claims(person, {"fullname": second}, "")
+        assert changed == ["fullname"]
+        assert person.fullname == second
+
+    def test_edited_name_is_kept(self):
+        """A name edited on the Person is not overwritten by the next login."""
+        from pas.plugins.identity.core.profiles import sync_claims
+
+        person = self._create()
+        with api.env.adopt_roles(["Manager"]):
+            sync_claims(person, {"fullname": "Grace Hopper"}, "")
+            person.last_name = "Murray Hopper"
+            changed = sync_claims(person, {"fullname": "Grace B. Hopper"}, "")
+        assert changed == []
+        assert person.fullname == "Grace Murray Hopper"
+
+
 class TestCreatePersonsForUsers:
     @pytest.fixture(autouse=True)
     def _setup(self, portal, create_source_user):
