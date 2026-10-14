@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="kitconcept.core"
+>
+
+  <records interface="pas.plugins.identity.core.controlpanel.interfaces.IIdentitySettings"
+           prefix="pas.plugins.identity"
+  >
+
+    <!-- Users are Person objects -->
+    <value key="user_content_type">Person</value>
+
+    <!-- No group content type: groups stay in source_groups.
+         pas.plugins.identity seeds UserGroup at install; an empty value
+         imports as None, which it reads as no group type. -->
+    <value key="group_content_type" />
+
+  </records>
+
+</registry>

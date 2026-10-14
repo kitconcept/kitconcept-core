@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="kitconcept.core"
+>
+
+  <records interface="pas.plugins.identity.core.controlpanel.interfaces.IProfileSettings"
+           prefix="pas.plugins.identity"
+  >
+
+    <!-- Users are Person objects, created in /users -->
+    <value key="profile_container_id">users</value>
+    <value key="profile_container_title">Users</value>
+    <value key="profile_container_type">PrincipalsContainer</value>
+
+    <!-- Person uses simple_publication_workflow, every state is active -->
+    <value key="profile_enumeration_states">
+      <element>private</element>
+      <element>pending</element>
+      <element>published</element>
+    </value>
+
+    <!-- Do not redirect users with an incomplete Person to its edit form -->
+    <value key="enforce_required_profile_fields">False</value>
+
+  </records>
+
+</registry>

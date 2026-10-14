@@ -37,8 +37,16 @@ def _setup_keycloak_groups(payload_groups: dict):
 
 
 def setup_keycloak_auth(raw_answers: t.AnswersKeycloak):
+    """Configure pas.plugins.oidc and pas.plugins.keycloakgroups.
+
+    Deprecated: use the ``identity-keycloak`` authentication provider.
+
+    :param raw_answers: Authentication answers.
+    """
+    from kitconcept.core.utils.authentication import warn_deprecated
     from kitconcept.core.utils.authentication.oidc import _setup_oidc
 
+    warn_deprecated("setup_keycloak_auth", "keycloak")
     # Setup keycloak_groups
     payload_groups = _answers_to_keycloak_groups(raw_answers)
     _setup_keycloak_groups(payload_groups)

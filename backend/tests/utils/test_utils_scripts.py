@@ -131,25 +131,44 @@ class TestGetEnvironmentalVariables:
             is expected
         )
 
-    def test_nested_authentication_keys(self, monkeypatch):
-        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "oidc")
+    @pytest.mark.parametrize(
+        "env_var",
+        (
+            "SITE_AUTHENTICATION_OIDC-SERVER_URL",
+            "SITE_AUTHENTICATION_AUTHOMATIC-GITHUB-CONSUMER_KEY",
+        ),
+    )
+    def test_deprecated_authentication_keys(self, monkeypatch, env_var: str):
+        """Variables of the old providers are ignored, with a warning."""
+        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "identity-oidc")
+        monkeypatch.setenv(env_var, "value")
+        with pytest.deprecated_call(match=env_var):
+            result = scripts.get_environmental_variables(self.options)
+        assert result["authentication"] == {"provider": "identity-oidc"}
+
+    def test_nested_identity_keys(self, monkeypatch):
+        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "identity-keycloak")
         monkeypatch.setenv(
-            "SITE_AUTHENTICATION_OIDC-SERVER_URL", "https://auth.example.com"
+            "SITE_AUTHENTICATION_IDENTITY-SERVER_URL", "https://auth.example.com"
         )
-        monkeypatch.setenv("SITE_AUTHENTICATION_OIDC-SCOPE", "openid, email")
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-REALM_NAME", "site")
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-CLIENT_SECRET", "secret")
+        monkeypatch.setenv("SITE_AUTHENTICATION_IDENTITY-SCOPE", "openid, email")
         result = scripts.get_environmental_variables(self.options)
         assert result["authentication"] == {
-            "provider": "oidc",
-            "oidc-server_url": "https://auth.example.com",
-            "oidc-scope": ["openid", "email"],
+            "provider": "identity-keycloak",
+            "identity-server_url": "https://auth.example.com",
+            "identity-realm_name": "site",
+            "identity-client_secret": "secret",
+            "identity-scope": ["openid", "email"],
         }
 
     def test_mixed_plain_and_nested(self, monkeypatch):
         monkeypatch.setenv("SITE_ID", "Plone")
-        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "oidc")
+        monkeypatch.setenv("SITE_AUTHENTICATION_PROVIDER", "identity-oidc")
         result = scripts.get_environmental_variables(self.options)
         assert result["site_id"] == "Plone"
-        assert result["authentication"] == {"provider": "oidc"}
+        assert result["authentication"] == {"provider": "identity-oidc"}
 
 
 class TestCreateSite:

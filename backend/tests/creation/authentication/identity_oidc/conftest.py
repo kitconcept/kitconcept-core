@@ -12,9 +12,10 @@ def answers():
         "portal_timezone": "Europe/Berlin",
         "setup_content": True,
         "authentication": {
-            "provider": "authomatic-google",
-            "authomatic-google-consumer_key": "google-12345",
-            "authomatic-google-consumer_secret": "12345678",
-            "authomatic-google-scope": ["profile", "email"],
+            "provider": "identity-oidc",
+            "identity-issuer": "https://auth.example.com",
+            "identity-client_id": "plone",
+            "identity-client_secret": "12345678",
+            "identity-site-url": "https://www.example.com",
         },
     }

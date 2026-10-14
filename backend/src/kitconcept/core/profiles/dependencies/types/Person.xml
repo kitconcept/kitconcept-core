@@ -6,7 +6,8 @@
 >
   <!-- This is needed to reset the XML defined blocks layout for Person -->
   <property name="model_source" />
-  <property name="schema">collective.person.content.person.IPerson</property>
+  <!-- Extends collective.person IPerson, so a Person can represent a user -->
+  <property name="schema">kitconcept.core.content.person.IPerson</property>
 
   <property name="behaviors">
     <element value="kitconcept.core.person_image" />
@@ -18,6 +19,7 @@
     <element value="kitconcept.core.biography" />
     <element value="collective.contact_behaviors.contact_info" />
     <element value="kitconcept.core.additional_contact_info" />
+    <element value="kitconcept.core.person_emails" />
     <element remove="true"
              value="volto.blocks.editable.layout"
     />

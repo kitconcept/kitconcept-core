@@ -19,5 +19,6 @@
   <include package=".v20260728001" />
   <include package=".v20260917001" />
   <include package=".v20260918001" />
+  <include package=".v20260929001" />
 
 </configure>

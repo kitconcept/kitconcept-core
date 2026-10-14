@@ -22,10 +22,10 @@ class TestSitesEndpoint:
             "languages",
             "timezones",
             "field-scope",
-            "keycloak",
-            "oidc",
-            "authomatic-github",
-            "authomatic-google",
+            "identity-keycloak",
+            "identity-oidc",
+            "identity-github",
+            "identity-google",
         ),
     )
     def test_get_add_definitions(self, key: str):

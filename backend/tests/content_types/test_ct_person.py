@@ -16,6 +16,7 @@ class TestContentTypeFTI:
         [
             ("title", "Person"),
             ("klass", "collective.person.content.person.Person"),
+            ("schema", "kitconcept.core.content.person.IPerson"),
             ("global_allow", True),
         ],
     )
@@ -35,6 +36,7 @@ class TestContentTypeFTI:
             "kitconcept.core.biography",
             "collective.contact_behaviors.contact_info",
             "kitconcept.core.additional_contact_info",
+            "kitconcept.core.person_emails",
             "plone.namefromtitle",
             "plone.shortname",
             "volto.navtitle",

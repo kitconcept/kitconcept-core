@@ -40,4 +40,11 @@
       provides=".person_image.IPersonImage"
       />
 
+  <plone:behavior
+      name="kitconcept.core.person_emails"
+      title="Person: Email addresses"
+      description="Email addresses of a person that represents a user."
+      provides=".person_emails.IPersonEmails"
+      />
+
 </configure>

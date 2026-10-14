@@ -46,6 +46,7 @@ class TestUpgrades:
             "20260620001",
             "20260706001",
             "20260917001",
+            "20260918001",
         ],
     )
     def test_upgrade_to_latest(self, list_upgrades, src_version: str) -> None:
@@ -74,3 +75,36 @@ class TestUpgrades:
             if role["selected"]
         }
         assert selected == {"Manager", "Site Administrator"}
+
+
+class TestUpgradeIdentity:
+    @pytest.fixture(autouse=True)
+    def _setup(self, portal) -> None:
+        self.portal = portal
+        self.setup_tool: SetupTool = portal.portal_setup
+
+    def test_install_identity(self) -> None:
+        """Reimporting the settings keeps Person as the user content type."""
+        from kitconcept.core.upgrades.v20260929001 import install_identity
+        from plone import api
+
+        api.portal.set_registry_record("pas.plugins.identity.user_content_type", "")
+
+        install_identity(self.setup_tool)
+
+        assert (
+            api.portal.get_registry_record("pas.plugins.identity.user_content_type")
+            == "Person"
+        )
+        fti = self.portal.portal_types.Person
+        assert fti.schema == "kitconcept.core.content.person.IPerson"
+
+    def test_create_persons(self) -> None:
+        """Every user in source_users gets a Person."""
+        from kitconcept.core.upgrades.v20260929001 import create_persons
+
+        self.portal.acl_users.source_users.addUser("legacy", "legacy", "secret-1234")
+
+        create_persons(self.setup_tool)
+
+        assert self.portal["users"]["legacy"].portal_type == "Person"

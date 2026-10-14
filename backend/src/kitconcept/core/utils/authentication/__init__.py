@@ -3,8 +3,42 @@ from kitconcept.core import logger
 from plone import api
 from Products.GenericSetup.tool import SetupTool
 
+import warnings
 
-__all__ = ["setup_authentication"]
+
+__all__ = [
+    "DEPRECATED_PROVIDERS",
+    "UnsupportedAuthenticationProvider",
+    "setup_authentication",
+]
+
+
+# Providers based on pas.plugins.oidc and pas.plugins.authomatic -> replacement
+DEPRECATED_PROVIDERS: dict[str, str] = {
+    "keycloak": "identity-keycloak",
+    "oidc": "identity-oidc",
+    "authomatic-github": "identity-github",
+    "authomatic-google": "identity-google",
+}
+
+
+class UnsupportedAuthenticationProvider(ValueError):
+    """An authentication provider new sites can no longer use."""
+
+
+def warn_deprecated(name: str, provider: str):
+    """Warn that a setup helper of a deprecated provider was called.
+
+    :param name: Name of the helper.
+    :param provider: Deprecated provider the helper sets up.
+    """
+    replacement = DEPRECATED_PROVIDERS[provider]
+    message = (
+        f"{name} is deprecated and will be removed in a future version: "
+        f"use the {replacement!r} authentication provider instead."
+    )
+    warnings.warn(message, DeprecationWarning, stacklevel=3)
+    logger.warning(f"Authentication: {message}")
 
 
 def _install_profiles(profiles: tuple[str, ...]):
@@ -19,34 +53,40 @@ def _setup_plone_auth(answers: t.AuthAnswers):
 
 
 def get_authentication_provider(provider: str) -> t.AuthenticationProvider:
-    from .authomatic import setup_authomatic
-    from .keycloak import setup_keycloak_auth
-    from .oidc import setup_oidc_auth
+    """Return the setup handler and profiles of an authentication provider.
 
+    :param provider: Provider answer, e.g. ``identity-keycloak``.
+    :returns: The provider; ``internal`` for an unknown provider.
+    :raises UnsupportedAuthenticationProvider: For a provider based on
+        ``pas.plugins.oidc`` or ``pas.plugins.authomatic``.
+    """
+    from .identity import setup_identity
+
+    if provider in DEPRECATED_PROVIDERS:
+        replacement = DEPRECATED_PROVIDERS[provider]
+        raise UnsupportedAuthenticationProvider(
+            f"Authentication provider {provider!r} is no longer supported, "
+            f"use {replacement!r} instead."
+        )
     providers = {
         "internal": t.AuthenticationProvider(_setup_plone_auth, ()),
-        "keycloak": t.AuthenticationProvider(
-            setup_keycloak_auth,
-            (
-                "pas.plugins.oidc:default",
-                "pas.plugins.keycloakgroups:default",
-            ),
+        "identity-keycloak": t.AuthenticationProvider(
+            setup_identity, ("pas.plugins.keycloakgroups:default",)
         ),
-        "oidc": t.AuthenticationProvider(
-            setup_oidc_auth, ("pas.plugins.oidc:default",)
-        ),
-        "authomatic-github": t.AuthenticationProvider(
-            setup_authomatic, ("pas.plugins.authomatic:default",)
-        ),
-        "authomatic-google": t.AuthenticationProvider(
-            setup_authomatic, ("pas.plugins.authomatic:default",)
-        ),
+        "identity-oidc": t.AuthenticationProvider(setup_identity, ()),
+        "identity-github": t.AuthenticationProvider(setup_identity, ()),
+        "identity-google": t.AuthenticationProvider(setup_identity, ()),
     }
     return providers.get(provider, providers["internal"])
 
 
 def setup_authentication(answers: t.AuthAnswers):
-    """Setup authentication based on answers provided by the user."""
+    """Setup authentication based on answers provided by the user.
+
+    :param answers: Authentication answers.
+    :raises UnsupportedAuthenticationProvider: For a provider based on
+        ``pas.plugins.oidc`` or ``pas.plugins.authomatic``.
+    """
     provider = answers.get("provider", "internal")
     auth_provider = get_authentication_provider(provider)
     # First install dependencies
