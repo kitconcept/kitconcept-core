@@ -7,6 +7,35 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.1.1 (2026-10-23)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to Plone 6.2.2.1. This includes security fixes for certifi, pip, plone.app.content,
+  and Pillow. @davisagli 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to volto 19.5.1 for development. @davisagli 
+
+
+
+### Project
+
+
+#### Internal
+
+- Update dependencies for building the docs. @davisagli 
+
+
+
 ## 2.1.0 (2026-09-18)
 
 ### Backend

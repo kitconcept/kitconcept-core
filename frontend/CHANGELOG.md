@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.1 (2026-10-23)
+
+### Internal
+
+- Update to volto 19.5.1 for development. @davisagli 
+
 ## 2.1.0 (2026-09-18)
 
 ## 2.0.0 (2026-09-17)
