@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Literal
+from typing import NotRequired
 from typing import overload
 from typing import Protocol
 from typing import TypedDict
@@ -60,7 +61,23 @@ AnswersAuthomaticGitHub = TypedDict(
 
 AnswersAuthomatic = AnswersAuthomaticGoogle | AnswersAuthomaticGitHub
 
-AuthAnswers = AnswersKeycloak | AnswersAuthomatic | AnswersOIDC
+AnswersIdentity = TypedDict(
+    "AnswersIdentity",
+    {
+        "provider": Literal[
+            "identity-keycloak", "identity-oidc", "identity-github", "identity-google"
+        ],
+        "identity-server_url": NotRequired[str],
+        "identity-realm_name": NotRequired[str],
+        "identity-issuer": NotRequired[str],
+        "identity-client_id": str,
+        "identity-client_secret": str,
+        "identity-site-url": NotRequired[str],
+        "identity-scope": NotRequired[list[str]],
+    },
+)
+
+AuthAnswers = AnswersKeycloak | AnswersAuthomatic | AnswersOIDC | AnswersIdentity
 
 
 class AuthSetupHandler(Protocol):
@@ -70,6 +87,8 @@ class AuthSetupHandler(Protocol):
     def __call__(self, answers: AnswersOIDC) -> None: ...
     @overload
     def __call__(self, answers: AnswersAuthomatic) -> None: ...
+    @overload
+    def __call__(self, answers: AnswersIdentity) -> None: ...
 
     def __call__(self, answers: AuthAnswers) -> None: ...
 

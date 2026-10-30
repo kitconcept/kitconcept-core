@@ -19,7 +19,10 @@ logger = logging.getLogger(PACKAGE_NAME)
 
 
 def initialize(context):
+    from kitconcept.core.patches import identity
     from kitconcept.core.tools import migration
+
+    identity.apply_patch(logger=logger)
     from Products.CMFPlone.utils import ToolInit
 
     tools = (migration.MigrationTool,)

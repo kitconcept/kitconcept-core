@@ -13,6 +13,7 @@
   <include package="plonegovbr.socialmedia" />
 
   <include package="pas.plugins.authomatic" />
+  <include package="pas.plugins.identity" />
   <include package="pas.plugins.keycloakgroups" />
   <include package="pas.plugins.oidc" />
 

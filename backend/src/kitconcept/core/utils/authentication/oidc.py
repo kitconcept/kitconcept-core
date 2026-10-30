@@ -31,5 +31,14 @@ def _setup_oidc(raw_answers: t.AnswersOIDC):
 
 
 def setup_oidc_auth(raw_answers: t.AnswersOIDC):
+    """Configure pas.plugins.oidc.
+
+    Deprecated: use the ``identity-oidc`` authentication provider.
+
+    :param raw_answers: Authentication answers.
+    """
+    from kitconcept.core.utils.authentication import warn_deprecated
+
+    warn_deprecated("setup_oidc_auth", "oidc")
     _setup_oidc(raw_answers)
     logger.info("Authentication: OIDC authentication setup")

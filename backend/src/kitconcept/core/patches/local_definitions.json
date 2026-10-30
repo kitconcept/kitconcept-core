@@ -5,31 +5,31 @@
     "minItems": 1,
     "uniqueItems": true
   },
-  "keycloak": {
+  "identity-keycloak": {
     "type": "object",
     "properties": {
-      "oidc-server_url": {
+      "identity-server_url": {
         "type": "string",
         "title": "Server URL"
       },
-      "oidc-realm_name": {
+      "identity-realm_name": {
         "type": "string",
         "title": "Realm"
       },
-      "oidc-client_id": {
+      "identity-client_id": {
         "type": "string",
         "title": "Client ID"
       },
-      "oidc-client_secret": {
+      "identity-client_secret": {
         "type": "string",
         "title": "Client Secret"
       },
-      "oidc-site-url": {
+      "identity-site-url": {
         "type": "string",
         "title": "Public URL of your site",
-        "description": "Please inform the address this site will be available."
+        "description": "Please inform the address this site will be available. Leave it empty to use the address of the request."
       },
-      "oidc-scope": {
+      "identity-scope": {
         "$ref": "#/definitions/field-scope",
         "items": {
           "type": "string",
@@ -42,35 +42,33 @@
       }
     },
     "required": [
-      "oidc-server_url",
-      "oidc-realm_name",
-      "oidc-client_id",
-      "oidc-client_secret",
-      "oidc-site-url",
-      "oidc-scope"
+      "identity-server_url",
+      "identity-realm_name",
+      "identity-client_id",
+      "identity-client_secret"
     ]
   },
-  "oidc": {
+  "identity-oidc": {
     "type": "object",
     "properties": {
-      "oidc-issuer": {
+      "identity-issuer": {
         "type": "string",
         "title": "Issuer (URL)"
       },
-      "oidc-client_id": {
+      "identity-client_id": {
         "type": "string",
         "title": "Client ID"
       },
-      "oidc-client_secret": {
+      "identity-client_secret": {
         "type": "string",
         "title": "Client Secret"
       },
-      "oidc-site-url": {
+      "identity-site-url": {
         "type": "string",
         "title": "Public URL of your site",
-        "description": "Please inform the address this site will be available."
+        "description": "Please inform the address this site will be available. Leave it empty to use the address of the request."
       },
-      "oidc-scope": {
+      "identity-scope": {
         "$ref": "#/definitions/field-scope",
         "items": {
           "type": "string",
@@ -83,25 +81,28 @@
       }
     },
     "required": [
-      "oidc-issuer",
-      "oidc-client_id",
-      "oidc-client_secret",
-      "oidc-site-url",
-      "oidc-scope"
+      "identity-issuer",
+      "identity-client_id",
+      "identity-client_secret"
     ]
   },
-  "authomatic-github": {
+  "identity-github": {
     "type": "object",
     "properties": {
-      "authomatic-github-consumer_key": {
+      "identity-client_id": {
         "type": "string",
-        "title": "Consumer Key"
+        "title": "Client ID"
       },
-      "authomatic-github-consumer_secret": {
+      "identity-client_secret": {
         "type": "string",
-        "title": "Consumer Secret"
+        "title": "Client Secret"
       },
-      "authomatic-github-scope": {
+      "identity-site-url": {
+        "type": "string",
+        "title": "Public URL of your site",
+        "description": "Please inform the address this site will be available. Leave it empty to use the address of the request."
+      },
+      "identity-scope": {
         "$ref": "#/definitions/field-scope",
         "items": {
           "type": "string",
@@ -113,27 +114,32 @@
       }
     },
     "required": [
-      "authomatic-github-consumer_key",
-      "authomatic-github-consumer_secret",
-      "authomatic-github-scope"
+      "identity-client_id",
+      "identity-client_secret"
     ]
   },
-  "authomatic-google": {
+  "identity-google": {
     "type": "object",
     "properties": {
-      "authomatic-google-consumer_key": {
+      "identity-client_id": {
         "type": "string",
-        "title": "Consumer Key"
+        "title": "Client ID"
       },
-      "authomatic-google-consumer_secret": {
+      "identity-client_secret": {
         "type": "string",
-        "title": "Consumer Secret"
+        "title": "Client Secret"
       },
-      "authomatic-google-scope": {
+      "identity-site-url": {
+        "type": "string",
+        "title": "Public URL of your site",
+        "description": "Please inform the address this site will be available. Leave it empty to use the address of the request."
+      },
+      "identity-scope": {
         "$ref": "#/definitions/field-scope",
         "items": {
           "type": "string",
           "enum": [
+            "openid",
             "profile",
             "email"
           ]
@@ -141,9 +147,8 @@
       }
     },
     "required": [
-      "authomatic-google-consumer_key",
-      "authomatic-google-consumer_secret",
-      "authomatic-google-scope"
+      "identity-client_id",
+      "identity-client_secret"
     ]
   }
 }

@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20260918001"
+      destination="20260929001"
+      >
+    <genericsetup:upgradeStep
+        title="Install pas.plugins.identity and use Person as the user content type"
+        handler=".install_identity"
+        />
+    <genericsetup:upgradeStep
+        title="Create a Person for every user in source_users"
+        handler=".create_persons"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>

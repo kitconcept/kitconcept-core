@@ -37,6 +37,8 @@ BIN_FOLDER=$(VENV_FOLDER)/bin
 # Environment variables to be exported
 export PYTHONWARNINGS := ignore
 export DOCKER_BUILDKIT := 1
+export ALLOWED_DISTRIBUTIONS := testing
+
 
 all: build
 

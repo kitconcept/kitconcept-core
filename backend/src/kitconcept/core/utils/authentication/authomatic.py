@@ -76,6 +76,16 @@ def _prepare_json_config(raw_answers: t.AnswersAuthomatic) -> dict:
 
 
 def setup_authomatic(raw_answers: t.AnswersAuthomatic):
+    """Configure pas.plugins.authomatic.
+
+    Deprecated: use the ``identity-github`` or ``identity-google``
+    authentication provider.
+
+    :param raw_answers: Authentication answers.
+    """
+    from kitconcept.core.utils.authentication import warn_deprecated
+
+    warn_deprecated("setup_authomatic", raw_answers["provider"])
     config = _prepare_json_config(raw_answers)
     data = json.dumps(config, indent=2)
     api.portal.set_registry_record(KEY, data)
