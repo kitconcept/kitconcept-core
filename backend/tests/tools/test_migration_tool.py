@@ -58,7 +58,7 @@ class TestMigrationToolVersions:
                 },
             ],
             ["Zope", "6.2"],
-            ["CMFPlone", "6.2.2"],
+            ["CMFPlone", "6.2.3"],
         ],
     )
     def test_coreVersions(self, key: str, expected: str):
