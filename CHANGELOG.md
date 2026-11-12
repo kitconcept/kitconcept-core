@@ -7,6 +7,32 @@
 -->
 
 <!-- towncrier release notes start -->
+## 2.1.2 (2026-11-11)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to Plone 6.2.3. Fixes security vulnerabilities. @davisagli 
+
+
+
+### Frontend
+
+#### Internal
+
+- Update to volto 19.7.0 for development. @davisagli 
+
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 2.1.1 (2026-10-23)
 
 ### Backend

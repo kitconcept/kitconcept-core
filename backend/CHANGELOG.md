@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.1.2 (2026-11-11)
+
+
+### Bug fixes:
+
+- Update to Plone 6.2.3. Fixes security vulnerabilities. @davisagli 
+
 ## 2.1.1 (2026-10-23)
 
 
