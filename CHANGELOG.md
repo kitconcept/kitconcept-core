@@ -7,6 +7,29 @@
 -->
 
 <!-- towncrier release notes start -->
+## 1.0.7 (2026-11-11)
+
+### Backend
+
+
+#### Bug fixes:
+
+- Update to Plone 6.1.6. Includes security fixes. @davisagli [#144](https://github.com/kitconcept/kitconcept-core/issues/144)
+
+
+
+### Frontend
+
+No significant changes.
+
+
+### Project
+
+No significant changes.
+
+
+
+
 ## 1.0.6 (2026-01-15)
 
 ### Backend
