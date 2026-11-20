@@ -33,9 +33,9 @@ dependencies = [
     "plone.formblock>=1.0.0a3",
     "collective.honeypot",
     "collective.person==1.0.0b6",
-    "pas.plugins.authomatic==2.0.0",
+    "pas.plugins.authomatic==3.1.0",
     "pas.plugins.keycloakgroups==1.0.0b1",
-    "pas.plugins.oidc==2.0.0",
+    "pas.plugins.oidc==2.1.0",
 ]
 
 [project.optional-dependencies]

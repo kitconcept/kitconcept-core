@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20261110001"
+      destination="20261120001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade the authentication add-ons: pas.plugins.authomatic 3.1.0 and pas.plugins.oidc 2.1.0"
+        handler=".upgrade_addons"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
