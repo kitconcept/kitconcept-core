@@ -11,6 +11,7 @@ from typing import Any
 
 import pytest
 
+
 pytest_plugins = ["pytest_plone"]
 
 
@@ -69,7 +70,7 @@ def current_versions() -> CurrentVersions:
     from kitconcept.core import __version__
 
     return CurrentVersions(
-        base="20261110001",
+        base="20261120001",
         dependencies="1000",
         package=__version__,
     )
