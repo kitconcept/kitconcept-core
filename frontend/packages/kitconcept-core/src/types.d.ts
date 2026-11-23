@@ -12,9 +12,14 @@ declare module '@plone/types' {
     /**
      * Extra keys of this block config that the blocks configuration DSL may
      * replace, and the type their value must have. For example:
-     * `{ flagColors: 'styleDefinitions' }`.
+     * `{ flagColors: 'styleDefinitions' }`. The type must be a
+     * `TTWConfigurableType`; unknown types are refused when the configuration
+     * is applied.
+     *
+     * Typed loosely on purpose: add-ons declare the same property without
+     * depending on this package, and the declarations must be identical.
      */
-    ttwConfigurable?: Record<string, TTWConfigurableType>;
+    ttwConfigurable?: Record<string, string>;
   }
 }
 

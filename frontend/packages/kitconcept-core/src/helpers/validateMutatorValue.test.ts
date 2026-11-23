@@ -49,7 +49,10 @@ describe('validateStyleDefinitions', () => {
 });
 
 describe('validateMutatorValue', () => {
-  it('refuses an unknown value type', () => {
-    expect(validateMutatorValue('nope' as any, []).valid).toBe(false);
-  });
+  it.each(['nope', 'toString', '__proto__', 'constructor'])(
+    'refuses the unknown value type "%s"',
+    (type) => {
+      expect(validateMutatorValue(type, []).valid).toBe(false);
+    },
+  );
 });

@@ -97,10 +97,14 @@ const VALIDATORS: Record<
  * through the web.
  */
 export function validateMutatorValue(
-  type: TTWConfigurableType,
+  type: string,
   value: unknown,
 ): ValidationResult<unknown> {
-  const validator = VALIDATORS[type];
+  // Only own keys, so a type such as "toString" can't pick up a function
+  // from the object prototype.
+  const validator = Object.prototype.hasOwnProperty.call(VALIDATORS, type)
+    ? VALIDATORS[type as TTWConfigurableType]
+    : undefined;
   if (!validator) {
     return { valid: false, reason: `has an unknown value type "${type}"` };
   }
