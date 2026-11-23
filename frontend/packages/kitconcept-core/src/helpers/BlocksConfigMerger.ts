@@ -22,6 +22,13 @@ export const GLOBAL_MUTATOR_KEY = '*';
  */
 const DEFAULT_THEME_NAME = 'default';
 
+/**
+ * Block-specific color lists that the DSL can replace, for blocks that keep
+ * their colors outside `themes`. Each one is only applied to blocks that
+ * already have it in code.
+ */
+const PALETTE_KEYS = ['descriptionColors', 'flagColors'] as const;
+
 export type BlocksSettings = {
   blocksConfig: BlocksConfig['blocksConfig'];
   themes: BlocksConfig['themes'];
@@ -126,6 +133,21 @@ export function mergeBlocksSettings(
     if (Array.isArray(dsl.themes)) {
       blockConfig.themes = dsl.themes;
     }
+
+    // Assign block-specific palettes
+    PALETTE_KEYS.forEach((key) => {
+      const palette = dsl[key];
+      if (palette === undefined) return;
+      if (!Array.isArray(palette) || !palette.length) {
+        warn(`"${blockId}.${key}" must be a non-empty list. Ignoring it.`);
+        return;
+      }
+      if (!(key in blockConfig)) {
+        warn(`The "${blockId}" block has no "${key}". Ignoring it.`);
+        return;
+      }
+      (blockConfig as Record<string, unknown>)[key] = palette;
+    });
   });
 
   return {

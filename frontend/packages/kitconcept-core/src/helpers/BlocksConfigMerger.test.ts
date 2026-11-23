@@ -221,3 +221,57 @@ describe('BlocksConfigMerger with a "*" entry', () => {
     expect(result).toEqual(baseBlocksConfig);
   });
 });
+
+describe('mergeBlocksSettings with block-specific palettes', () => {
+  const highlightColors = [theme('highlight-custom-color-1', '#ECEBEB')];
+  const dlrColors = [theme('dlr-blue', '#00678B')];
+  const settings: any = {
+    themes: codeThemes,
+    blocksConfig: {
+      highlight: { descriptionColors: highlightColors },
+      slider: { flagColors: sliderPalette },
+      teaser: {},
+    },
+  };
+
+  it('replaces descriptionColors and flagColors', () => {
+    const result: any = mergeBlocksSettings(settings, {
+      highlight: { descriptionColors: dlrColors },
+      slider: { flagColors: dlrColors },
+    });
+    expect(result.blocksConfig.highlight.descriptionColors).toEqual(dlrColors);
+    expect(result.blocksConfig.slider.flagColors).toEqual(dlrColors);
+  });
+
+  it('does not change the palettes with the "*" themes', () => {
+    const result: any = mergeBlocksSettings(settings, {
+      '*': { themes: globalThemes },
+    });
+    expect(result.blocksConfig.highlight.descriptionColors).toEqual(
+      highlightColors,
+    );
+    expect(result.blocksConfig.slider.flagColors).toEqual(sliderPalette);
+  });
+
+  it('ignores a palette the block does not have', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const result: any = mergeBlocksSettings(settings, {
+      teaser: { flagColors: dlrColors },
+    });
+    expect(result.blocksConfig.teaser.flagColors).toBeUndefined();
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('teaser'));
+    warn.mockRestore();
+  });
+
+  it('ignores an empty palette', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const result: any = mergeBlocksSettings(settings, {
+      highlight: { descriptionColors: [] },
+    });
+    expect(result.blocksConfig.highlight.descriptionColors).toEqual(
+      highlightColors,
+    );
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
+  });
+});

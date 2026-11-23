@@ -13,6 +13,10 @@ export type BlockMutator = {
   disable?: boolean;
   variations?: string[];
   themes?: StyleDefinition[];
+  /** Colors of the description box of the Highlight block. */
+  descriptionColors?: StyleDefinition[];
+  /** Colors of the flag of the Slider block. */
+  flagColors?: StyleDefinition[];
 };
 
 /**

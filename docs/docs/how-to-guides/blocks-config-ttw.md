@@ -58,6 +58,8 @@ export type BlockMutator = {
   disable?: boolean;
   variations?: string[];
   themes?: StyleDefinition[];
+  descriptionColors?: StyleDefinition[];
+  flagColors?: StyleDefinition[];
 };
 
 export type GlobalMutator = {
@@ -169,6 +171,54 @@ Keep these points in mind:
 - Include a theme named `default`. Blocks without a selected theme fall back to it. Without it, they are shown without theme colors, and a warning is shown in the browser console.
 - Content stores the name of the selected theme. If you remove or rename a theme, blocks that use it lose their colors without any error.
 - Blocks inside a Grid block inherit the theme of the Grid by its name. If a block's own `themes` entry leaves out names of the site-wide themes, that block cannot inherit them.
+
+## Block-specific color lists
+
+Some blocks keep their colors outside `themes`, with their own CSS custom properties:
+
+| Block | Key | CSS custom properties |
+|---|---|---|
+| Highlight (`highlight`) | `descriptionColors` | `--descriptionColor`, `--descriptionColor-foreground` |
+| Slider (`slider`) | `flagColors` | `--flagColor`, `--flagColor-foreground` |
+
+You can replace these lists in the block's entry.
+The `"*"` themes don't change them.
+
+```json
+{
+  "highlight": {
+    "descriptionColors": [
+      {
+        "style": {
+          "--descriptionColor": "#00678B",
+          "--descriptionColor-foreground": "#fff"
+        },
+        "name": "highlight-custom-color-1",
+        "label": "DLR blue"
+      }
+    ]
+  },
+  "slider": {
+    "flagColors": [
+      {
+        "style": {
+          "--flagColor": "#00678B",
+          "--flagColor-foreground": "#fff"
+        },
+        "name": "slider-custom-color-1",
+        "label": "DLR blue"
+      }
+    ]
+  }
+}
+```
+
+Keep these points in mind:
+
+- The list must not be empty. A list for a block that doesn't have it is ignored, with a warning in the browser console.
+- New blocks get the first color of the Highlight list, and the color named `slider-custom-color-1` of the Slider list. Keep a color with that name in the Slider list.
+- Content stores the name of the selected color. If you remove or rename a color, blocks that use it lose their colors without any error. To change the colors of existing blocks, keep their names and change the values.
+- These lists need versions of `@kitconcept/volto-highlight-block` and `@kitconcept/volto-slider-block` that read the colors from the blocks configuration when rendering the page.
 
 ## How the configuration is applied
 
