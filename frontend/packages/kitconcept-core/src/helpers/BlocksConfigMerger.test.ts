@@ -1,5 +1,5 @@
 import { BlocksConfigMerger, mergeBlocksSettings } from './BlocksConfigMerger';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 const baseBlocksConfig = {
   teaser: {
@@ -222,28 +222,55 @@ describe('BlocksConfigMerger with a "*" entry', () => {
   });
 });
 
-describe('mergeBlocksSettings with block-specific palettes', () => {
+describe('mergeBlocksSettings with keys allowed by the block', () => {
   const highlightColors = [theme('highlight-custom-color-1', '#ECEBEB')];
-  const dlrColors = [theme('dlr-blue', '#00678B')];
+  const dlrColors = [
+    {
+      name: 'dlr-blue',
+      label: 'DLR blue',
+      style: { '--flagColor': '#00678B', '--flagColor-foreground': '#fff' },
+    },
+  ];
+  const view = () => null;
   const settings: any = {
     themes: codeThemes,
     blocksConfig: {
-      highlight: { descriptionColors: highlightColors },
-      slider: { flagColors: sliderPalette },
-      teaser: {},
+      highlight: {
+        descriptionColors: highlightColors,
+        ttwConfigurable: { descriptionColors: 'styleDefinitions' },
+      },
+      slider: {
+        flagColors: sliderPalette,
+        view,
+        ttwConfigurable: {
+          flagColors: 'styleDefinitions',
+          view: 'styleDefinitions',
+          __proto__: 'styleDefinitions',
+          ttwConfigurable: 'styleDefinitions',
+        },
+      },
+      teaser: { icon: { content: '<svg />' } },
     },
   };
+  let warn: ReturnType<typeof vi.spyOn>;
+  beforeEach(() => {
+    warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+  afterEach(() => {
+    warn.mockRestore();
+  });
 
-  it('replaces descriptionColors and flagColors', () => {
+  it('replaces a key the block allows', () => {
     const result: any = mergeBlocksSettings(settings, {
       highlight: { descriptionColors: dlrColors },
       slider: { flagColors: dlrColors },
     });
     expect(result.blocksConfig.highlight.descriptionColors).toEqual(dlrColors);
     expect(result.blocksConfig.slider.flagColors).toEqual(dlrColors);
+    expect(warn).not.toHaveBeenCalled();
   });
 
-  it('does not change the palettes with the "*" themes', () => {
+  it('does not change these keys with the "*" themes', () => {
     const result: any = mergeBlocksSettings(settings, {
       '*': { themes: globalThemes },
     });
@@ -253,18 +280,38 @@ describe('mergeBlocksSettings with block-specific palettes', () => {
     expect(result.blocksConfig.slider.flagColors).toEqual(sliderPalette);
   });
 
-  it('ignores a palette the block does not have', () => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  it('ignores a key the block does not allow', () => {
     const result: any = mergeBlocksSettings(settings, {
-      teaser: { flagColors: dlrColors },
+      teaser: { icon: { content: '<img src=x onerror=alert(1)>' } },
+      highlight: { flagColors: dlrColors },
     });
-    expect(result.blocksConfig.teaser.flagColors).toBeUndefined();
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('teaser'));
-    warn.mockRestore();
+    expect(result.blocksConfig.teaser.icon).toEqual({ content: '<svg />' });
+    expect(result.blocksConfig.highlight.flagColors).toBeUndefined();
+    expect(warn).toHaveBeenCalledTimes(2);
   });
 
-  it('ignores an empty palette', () => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  it('never replaces a function, even if the block allows it', () => {
+    const result: any = mergeBlocksSettings(settings, {
+      slider: { view: dlrColors },
+    });
+    expect(result.blocksConfig.slider.view).toBe(view);
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('function'));
+  });
+
+  it('never applies forbidden keys, even if the block allows them', () => {
+    const mutator = JSON.parse(
+      '{"slider": {"__proto__": {"polluted": true}, "ttwConfigurable": {"icon": "styleDefinitions"}}}',
+    );
+    const result: any = mergeBlocksSettings(settings, mutator);
+    expect(result.blocksConfig.slider.polluted).toBeUndefined();
+    expect(({} as any).polluted).toBeUndefined();
+    expect(result.blocksConfig.slider.ttwConfigurable).toEqual(
+      settings.blocksConfig.slider.ttwConfigurable,
+    );
+    expect(warn).toHaveBeenCalledTimes(2);
+  });
+
+  it('ignores an invalid value', () => {
     const result: any = mergeBlocksSettings(settings, {
       highlight: { descriptionColors: [] },
     });
@@ -272,6 +319,32 @@ describe('mergeBlocksSettings with block-specific palettes', () => {
       highlightColors,
     );
     expect(warn).toHaveBeenCalled();
-    warn.mockRestore();
+  });
+
+  it('ignores invalid block themes', () => {
+    const result: any = mergeBlocksSettings(baseSettings, {
+      __button: {
+        themes: [{ name: 'x', label: 'X', style: { color: 'red' } as any }],
+      },
+    });
+    expect(result.blocksConfig.__button.themes).toBeUndefined();
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('not a CSS custom property'),
+    );
+  });
+
+  it('ignores invalid "*" themes', () => {
+    const result = mergeBlocksSettings(baseSettings, {
+      '*': {
+        themes: [
+          {
+            name: 'default',
+            label: 'Default',
+            style: { '--theme-color': 'url(https://example.com/x.png)' },
+          },
+        ],
+      },
+    });
+    expect(result.themes).toBe(codeThemes);
   });
 });

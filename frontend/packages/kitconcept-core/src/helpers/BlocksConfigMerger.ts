@@ -2,6 +2,10 @@ import type { BlocksConfig, StyleDefinition } from '@plone/types';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
 import type { BlockMutator, MutatorDSL } from '../types';
+import {
+  validateMutatorValue,
+  validateStyleDefinitions,
+} from './validateMutatorValue';
 
 // Utility type for deep recursive Partial
 type DeepPartial<T> = {
@@ -23,11 +27,21 @@ export const GLOBAL_MUTATOR_KEY = '*';
 const DEFAULT_THEME_NAME = 'default';
 
 /**
- * Block-specific color lists that the DSL can replace, for blocks that keep
- * their colors outside `themes`. Each one is only applied to blocks that
- * already have it in code.
+ * The keys of a block entry that every block supports.
  */
-const PALETTE_KEYS = ['descriptionColors', 'flagColors'] as const;
+const BUILT_IN_KEYS = ['disable', 'variations', 'themes'];
+
+/**
+ * Keys that are never applied, even if a block lists them in
+ * `ttwConfigurable`: they would change the prototype of the config, or the
+ * allowlist itself.
+ */
+const FORBIDDEN_KEYS = [
+  '__proto__',
+  'constructor',
+  'prototype',
+  'ttwConfigurable',
+];
 
 export type BlocksSettings = {
   blocksConfig: BlocksConfig['blocksConfig'];
@@ -62,18 +76,17 @@ const getGlobalThemes = (merger: MutatorDSL): StyleDefinition[] | undefined => {
   }
 
   if (globalMutator.themes === undefined) return undefined;
-  if (!Array.isArray(globalMutator.themes)) {
-    warn(`"${GLOBAL_MUTATOR_KEY}.themes" must be a list. Ignoring it.`);
+  const result = validateStyleDefinitions(globalMutator.themes);
+  if (!result.valid) {
+    warn(`"${GLOBAL_MUTATOR_KEY}.themes" ${result.reason}. Ignoring it.`);
     return undefined;
   }
-  if (
-    !globalMutator.themes.some((theme) => theme?.name === DEFAULT_THEME_NAME)
-  ) {
+  if (!result.value.some((theme) => theme.name === DEFAULT_THEME_NAME)) {
     warn(
       `"${GLOBAL_MUTATOR_KEY}.themes" has no theme named "${DEFAULT_THEME_NAME}". Blocks without a selected theme fall back to it, so they are shown without theme colors.`,
     );
   }
-  return globalMutator.themes;
+  return result.value;
 };
 
 /**
@@ -86,7 +99,13 @@ const getGlobalThemes = (merger: MutatorDSL): StyleDefinition[] | undefined => {
  *    which blocks without their own `themes` already fall back to. Blocks
  *    whose `themes` in code are a copy of the site-wide themes get them too.
  *    Blocks with their own palette in code keep it.
- * 3. The block's own entry (`disable`, `variations`, `themes`).
+ * 3. The block's own entry: `disable`, `variations`, `themes`, and the keys
+ *    the block lists in its `ttwConfigurable` config.
+ *
+ * Every theme list and every `ttwConfigurable` value is checked before it is
+ * applied (see `validateMutatorValue`). Invalid values, keys the block does
+ * not allow, and keys that would replace a function are ignored with a
+ * warning.
  */
 export function mergeBlocksSettings(
   settings: PartialBlocksSettings,
@@ -130,24 +149,43 @@ export function mergeBlocksSettings(
     }
 
     // Assign themes
-    if (Array.isArray(dsl.themes)) {
-      blockConfig.themes = dsl.themes;
+    if (dsl.themes !== undefined) {
+      const result = validateStyleDefinitions(dsl.themes);
+      if (result.valid) {
+        blockConfig.themes = result.value;
+      } else {
+        warn(`"${blockId}.themes" ${result.reason}. Ignoring it.`);
+      }
     }
 
-    // Assign block-specific palettes
-    PALETTE_KEYS.forEach((key) => {
-      const palette = dsl[key];
-      if (palette === undefined) return;
-      if (!Array.isArray(palette) || !palette.length) {
-        warn(`"${blockId}.${key}" must be a non-empty list. Ignoring it.`);
-        return;
-      }
-      if (!(key in blockConfig)) {
-        warn(`The "${blockId}" block has no "${key}". Ignoring it.`);
-        return;
-      }
-      (blockConfig as Record<string, unknown>)[key] = palette;
-    });
+    // Assign the keys the block allows to be changed through the web
+    const allowed = blockConfig.ttwConfigurable || {};
+    const target = blockConfig as Record<string, unknown>;
+    Object.keys(dsl)
+      .filter((key) => !BUILT_IN_KEYS.includes(key))
+      .forEach((key) => {
+        const type = Object.prototype.hasOwnProperty.call(allowed, key)
+          ? allowed[key]
+          : undefined;
+        if (!type || FORBIDDEN_KEYS.includes(key)) {
+          warn(
+            `The "${blockId}" block does not allow "${key}" to be changed. Ignoring it.`,
+          );
+          return;
+        }
+        if (typeof target[key] === 'function') {
+          warn(
+            `"${blockId}.${key}" is a function in code and cannot be replaced. Ignoring it.`,
+          );
+          return;
+        }
+        const result = validateMutatorValue(type, dsl[key]);
+        if (!result.valid) {
+          warn(`"${blockId}.${key}" ${result.reason}. Ignoring it.`);
+          return;
+        }
+        target[key] = result.value;
+      });
   });
 
   return {

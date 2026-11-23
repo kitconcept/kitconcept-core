@@ -1,22 +1,34 @@
 import type { StyleDefinition } from '@plone/types';
 
+/**
+ * The value types that a block can allow to be changed through the web. Each
+ * one has a check in `helpers/validateMutatorValue.ts`.
+ */
+export type TTWConfigurableType = 'styleDefinitions';
+
 declare module '@plone/types' {
   export interface BlockConfigBase {
     themes?: StyleDefinition[];
+    /**
+     * Extra keys of this block config that the blocks configuration DSL may
+     * replace, and the type their value must have. For example:
+     * `{ flagColors: 'styleDefinitions' }`.
+     */
+    ttwConfigurable?: Record<string, TTWConfigurableType>;
   }
 }
 
 /**
  * Changes for a single block, keyed by its block id.
+ *
+ * Besides `disable`, `variations` and `themes`, it accepts the keys that the
+ * block lists in its `ttwConfigurable` config.
  */
 export type BlockMutator = {
   disable?: boolean;
   variations?: string[];
   themes?: StyleDefinition[];
-  /** Colors of the description box of the Highlight block. */
-  descriptionColors?: StyleDefinition[];
-  /** Colors of the flag of the Slider block. */
-  flagColors?: StyleDefinition[];
+  [key: string]: unknown;
 };
 
 /**
