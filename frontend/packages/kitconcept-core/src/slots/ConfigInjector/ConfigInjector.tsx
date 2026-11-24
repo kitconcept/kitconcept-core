@@ -1,7 +1,7 @@
 import config from '@plone/volto/registry';
 import { useSelector } from 'react-redux';
-import { BlocksConfigMerger } from '../../helpers/BlocksConfigMerger';
-import type { Content } from '@plone/types';
+import { applyBlocksConfigMutator } from '../../helpers/applyBlocksConfigMutator';
+import type { BlocksConfig, Content } from '@plone/types';
 import type { MutatorDSL } from '../../types';
 
 type FormState = {
@@ -11,18 +11,15 @@ type FormState = {
 };
 
 const ConfigInjector = () => {
-  const blockConfigData = useSelector<FormState, MutatorDSL>(
+  const blockConfigData = useSelector<FormState, MutatorDSL | undefined>(
     (state) =>
       state.content.data?.['@components']?.inherit?.['kitconcept.blocks.config']
         ?.data?.blocks_config_mutator,
   );
 
-  if (blockConfigData) {
-    config.blocks.blocksConfig = BlocksConfigMerger(
-      config.blocks.blocksConfig,
-      blockConfigData,
-    );
-  }
+  // Merges onto the settings from code, and puts them back when the current
+  // content has no blocks configuration.
+  applyBlocksConfigMutator(config.blocks as BlocksConfig, blockConfigData);
 
   // This component does not render anything, it just injects config from the Redux
   // store in the global config
