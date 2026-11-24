@@ -9,6 +9,15 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.0 (2026-11-24)
+
+
+### Internal:
+
+- Updated pas.plugins.authomatic to 3.1.0. New sites get the `username_userid` user id factory instead of `uuid`; existing sites keep the factory they have configured. Existing sites are upgraded by the distribution upgrade step. @ericof 
+- Updated pas.plugins.oidc to 2.1.0. The client secret is hidden in the OIDC control panel, and the userinfo endpoint method can be set there (new sites default to POST). Existing sites are upgraded by the distribution upgrade step. @ericof 
+- Upgrade collective.person to 1.0.0b7. @iFlameing 
+
 ## 2.1.2 (2026-11-11)
 
 

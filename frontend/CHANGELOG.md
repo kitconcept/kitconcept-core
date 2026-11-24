@@ -8,6 +8,21 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.0 (2026-11-24)
+
+### Feature
+
+- Add the reserved `"*"` key to the blocks configuration DSL to set the themes of all blocks at once. A block's own `themes` entry still takes precedence. @sneridagh 
+- Let blocks list more keys of their config that the blocks configuration DSL may replace, in `ttwConfigurable`, with the type their value must have. The Highlight and Slider blocks use it for `descriptionColors` and `flagColors`. All theme lists and allowed values are checked before they are applied. @sneridagh 
+
+### Bugfix
+
+- Fix the blocks configuration of a site or subsite staying active after navigating away from it: the configuration is now always merged onto the settings from code, and they are restored when the content has no blocks configuration. @sneridagh 
+
+### Internal
+
+- Update to volto 19.8.1 @iFlameing 
+
 ## 2.1.2 (2026-11-11)
 
 ### Internal

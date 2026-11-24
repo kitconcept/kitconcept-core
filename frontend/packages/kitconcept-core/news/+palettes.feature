@@ -1,1 +1,0 @@
-Let blocks list more keys of their config that the blocks configuration DSL may replace, in `ttwConfigurable`, with the type their value must have. The Highlight and Slider blocks use it for `descriptionColors` and `flagColors`. All theme lists and allowed values are checked before they are applied. @sneridagh
