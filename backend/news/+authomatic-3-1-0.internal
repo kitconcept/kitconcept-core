@@ -1,0 +1,1 @@
+Updated pas.plugins.authomatic to 3.1.0. New sites get the `username_userid` user id factory instead of `uuid`; existing sites keep the factory they have configured. Existing sites are upgraded by the distribution upgrade step. @ericof

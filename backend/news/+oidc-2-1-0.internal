@@ -1,0 +1,1 @@
+Updated pas.plugins.oidc to 2.1.0. The client secret is hidden in the OIDC control panel, and the userinfo endpoint method can be set there (new sites default to POST). Existing sites are upgraded by the distribution upgrade step. @ericof

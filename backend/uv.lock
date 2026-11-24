@@ -1416,9 +1416,9 @@ requires-dist = [
     { name = "collective-volto-formsupport", specifier = "==3.2.3" },
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0" },
-    { name = "pas-plugins-authomatic", specifier = "==2.0.0" },
+    { name = "pas-plugins-authomatic", specifier = "==3.1.0" },
     { name = "pas-plugins-keycloakgroups", specifier = "==1.0.0b1" },
-    { name = "pas-plugins-oidc", specifier = "==2.0.0" },
+    { name = "pas-plugins-oidc", specifier = "==2.1.0" },
     { name = "plone-api" },
     { name = "plone-app-testing", marker = "extra == 'test'" },
     { name = "plone-distribution" },
@@ -1754,7 +1754,7 @@ wheels = [
 
 [[package]]
 name = "pas-plugins-authomatic"
-version = "2.0.0"
+version = "3.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "authomatic" },
@@ -1762,9 +1762,9 @@ dependencies = [
     { name = "plone-restapi" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2c/7b/84920c8cb580432134c542a7137c2c3569a182f0a1fb25b1328fa7239995/pas_plugins_authomatic-2.0.0.tar.gz", hash = "sha256:7c6b9eb2558c8ff6aa6703578d6498cf291bd3d5684753ee753e1bf61ccaf709", size = 184905, upload-time = "2025-05-15T17:43:35.697Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/71/46/8276a43de3019af6b6bca8fd76da42ea0604a700d7289769a479880ddc0a/pas_plugins_authomatic-3.1.0.tar.gz", hash = "sha256:9a53685d92c1e2bd18b80ded5607c0617c8131dad60835f9dd4cfd91dba83f5e", size = 198255, upload-time = "2026-11-20T17:50:44.641Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e8/52/4ff1fe71cffc3a9318c314115899172b18b46cf3c684767d0f3e1f204f7e/pas_plugins_authomatic-2.0.0-py3-none-any.whl", hash = "sha256:41ce9149c93dc1ddec5098a1a7a4b8c737662d3454d3499ad237430619a2b853", size = 62564, upload-time = "2025-05-15T17:43:33.759Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/31/86230428fa949b6cedd0ddb6450c4538ff89761270ede0774035e7633af7/pas_plugins_authomatic-3.1.0-py3-none-any.whl", hash = "sha256:fe180b91d864ad1477fd12e3a07feddb08d0fbc17cc92a3de2b597db22689772", size = 73438, upload-time = "2026-11-20T17:50:43.311Z" },
 ]
 
 [[package]]
@@ -1785,7 +1785,7 @@ wheels = [
 
 [[package]]
 name = "pas-plugins-oidc"
-version = "2.0.0"
+version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "oic" },
@@ -1800,9 +1800,9 @@ dependencies = [
     { name = "z3c-form" },
     { name = "zope" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/a2/7259fbbf336f769562b650ad52bffac7ba3f156a993a577d9e9e834106ad/pas_plugins_oidc-2.0.0.tar.gz", hash = "sha256:6cf9df32a6d3ca3d3a06a3d148b9581e2cd11769360197044fba05b72214e94b", size = 518842, upload-time = "2025-05-07T02:28:31.81Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/cd/5c432c9d27444c747b5b7efcf3cfa72cde1bbd8658c2a4203bcaf5589196/pas_plugins_oidc-2.1.0.tar.gz", hash = "sha256:220455e11f58fa0917d470de7c7427ae76bd3033c5eba496b33094de8839c3d5", size = 520877, upload-time = "2026-11-10T07:33:43.786Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/b8/d2aeb95f28a732d65dfb88967b8429e9168e96224ff21be0250ce581a514/pas_plugins_oidc-2.0.0-py3-none-any.whl", hash = "sha256:9366dab74f73fb61d8e73a7957d14cb1cae9ab2a70464ba40e4f2fb6eab00179", size = 51721, upload-time = "2025-05-07T02:28:30.022Z" },
+    { url = "https://files.pythonhosted.org/packages/41/33/2865ef2255699b7107213df3f6ef91b96f0a87bc92a1518e187b3123266b/pas_plugins_oidc-2.1.0-py3-none-any.whl", hash = "sha256:aa10bd5500b0b971f8b8f45e7e22d3aecc7345b5cc5ebefd2e8263c96256fc84", size = 54096, upload-time = "2026-11-10T07:33:41.011Z" },
 ]
 
 [[package]]
