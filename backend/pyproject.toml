@@ -32,7 +32,7 @@ dependencies = [
     "collective.volto.formsupport==3.2.3",
     "plone.formblock>=1.0.0a3",
     "collective.honeypot",
-    "collective.person==1.0.0b6",
+    "collective.person==1.0.0b7",
     "pas.plugins.authomatic==3.1.0",
     "pas.plugins.keycloakgroups==1.0.0b1",
     "pas.plugins.oidc==2.1.0",

@@ -789,7 +789,7 @@ wheels = [
 
 [[package]]
 name = "collective-person"
-version = "1.0.0b6"
+version = "1.0.0b7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "collective-contact-behaviors" },
@@ -799,9 +799,9 @@ dependencies = [
     { name = "plone-volto" },
     { name = "products-cmfplone" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/42/ce/f44091738aa4121a0110633ce08b746cc40b079a64a21377fe576f87d9e0/collective_person-1.0.0b6.tar.gz", hash = "sha256:39fa99170e72c20f81dd1b22a3b94eaa0a8182e5883aeda829f5eb85db925253", size = 1423785, upload-time = "2026-05-20T09:35:44.623Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/ec/ead14772435cb1c0bbc0ae628be99fcf86fefe32fe7a471532206b1dabb2/collective_person-1.0.0b7.tar.gz", hash = "sha256:9fde95e65bea06734fd38a9a4bce59f7f08298b7d19a5fcf8035e53b42a7cb2f", size = 1424726, upload-time = "2026-11-20T18:48:50.961Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fa/84/7b2f3fcb5f1a8c4ffec24678eddd178a7a8a9911568e38acf30a700d64d2/collective_person-1.0.0b6-py3-none-any.whl", hash = "sha256:b438c037133e33c846d3b2ddaed40b4a78f7493a298048c56ac092119f1e4111", size = 1440699, upload-time = "2026-05-20T09:35:42.125Z" },
+    { url = "https://files.pythonhosted.org/packages/72/05/6aa77d60453e859465554a238273b4f34ce009617a95402d22f9e1268fa6/collective_person-1.0.0b7-py3-none-any.whl", hash = "sha256:e9afd1d419d799de296409ce80a0431252cdfdd1bfaf16e94938348985618fef", size = 1441803, upload-time = "2026-11-20T18:48:48.302Z" },
 ]
 
 [[package]]
@@ -1412,7 +1412,7 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "collective-honeypot" },
-    { name = "collective-person", specifier = "==1.0.0b6" },
+    { name = "collective-person", specifier = "==1.0.0b7" },
     { name = "collective-volto-formsupport", specifier = "==3.2.3" },
     { name = "horse-with-no-namespace", marker = "extra == 'test'" },
     { name = "kitconcept-voltolighttheme", specifier = ">=8.0.0" },

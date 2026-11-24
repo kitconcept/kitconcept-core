@@ -6,11 +6,11 @@
   <genericsetup:upgradeSteps
       profile="kitconcept.core:base"
       source="20261110001"
-      destination="20261120001"
+      destination="20261123001"
       >
     <genericsetup:upgradeStep
-        title="Upgrade the authentication add-ons: pas.plugins.authomatic 3.1.0 and pas.plugins.oidc 2.1.0"
-        handler=".upgrade_addons"
+        title="Upgrade collective.person to 1.0.0b7 (remove Editor and Owner from Add Person)"
+        handler=".upgrade_collective_person"
         />
   </genericsetup:upgradeSteps>
 

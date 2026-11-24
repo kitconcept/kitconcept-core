@@ -1,14 +1,14 @@
-"""Upgrade to 20261120001: the authentication add-ons are upgraded on existing sites."""
+"""Upgrade to 20261124001: the authentication add-ons are upgraded on existing sites."""
 
 from kitconcept.core import PACKAGE_NAME
-from kitconcept.core.upgrades.v20261120001 import upgrade_addons
+from kitconcept.core.upgrades.v20261124001 import upgrade_addons
 from Products.GenericSetup.tool import SetupTool
 
 import pytest
 
 
-SOURCE = "20261110001"
-DESTINATION = "20261120001"
+SOURCE = "20261123001"
+DESTINATION = "20261124001"
 BASE = f"{PACKAGE_NAME}:base"
 AUTHOMATIC = "pas.plugins.authomatic:default"
 OIDC = "pas.plugins.oidc:default"
