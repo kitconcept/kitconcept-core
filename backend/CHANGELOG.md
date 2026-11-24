@@ -9,6 +9,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.2.1 (2026-11-24)
+
+
+### Bug fixes:
+
+- Use `document_view` as the default and only view of the Language Root Folder (LRF) content type, so Volto renders its blocks instead of a summary listing of its children. Existing multilingual sites are updated by an upgrade step. @sneridagh 
+
 ## 2.2.0 (2026-11-24)
 
 

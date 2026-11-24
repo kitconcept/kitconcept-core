@@ -1,1 +1,0 @@
-Use `document_view` as the default and only view of the Language Root Folder (LRF) content type, so Volto renders its blocks instead of a summary listing of its children. Existing multilingual sites are updated by an upgrade step. @sneridagh
