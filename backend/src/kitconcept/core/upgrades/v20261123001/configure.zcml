@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="kitconcept.core:base"
+      source="20261110001"
+      destination="20261123001"
+      >
+    <genericsetup:upgradeStep
+        title="Upgrade collective.person to 1.0.0b7 (remove Editor and Owner from Add Person)"
+        handler=".upgrade_collective_person"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
