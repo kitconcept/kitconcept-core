@@ -55,14 +55,10 @@ class TestUpgrade:
             setup_tool.setLastVersionForProfile(profile_id, version)
 
     def test_offered_from_source(self):
-        """A site at the source version is offered exactly this step."""
+        """A site at the source version is offered this step first."""
         steps = flatten_upgrades(self.setup_tool.listUpgrades(BASE))
 
-        assert [(s["ssource"], s["sdest"]) for s in steps] == [(SOURCE, DESTINATION)]
-
-    def test_base_version_is_current(self):
-        """The base profile's filesystem version is the destination."""
-        assert self.setup_tool.getVersionForProfile(BASE) == DESTINATION
+        assert (steps[0]["ssource"], steps[0]["sdest"]) == (SOURCE, DESTINATION)
 
     def test_runs_addon_upgrades(self):
         """Running the step brings both add-ons to their new versions."""
@@ -78,7 +74,8 @@ class TestUpgrade:
 
         self.portal.portal_migration.upgrade()
 
-        assert recorded_version(self.setup_tool, BASE) == DESTINATION
+        current = self.setup_tool.getVersionForProfile(BASE)
+        assert recorded_version(self.setup_tool, BASE) == current
         for profile_id, expected in NEW_ADDON_VERSIONS.items():
             assert recorded_version(self.setup_tool, profile_id) == expected
 

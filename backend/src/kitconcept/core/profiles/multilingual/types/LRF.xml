@@ -22,12 +22,12 @@
     <element value="plone.translatable" />
   </property>
 
-  <property name="default_view">summary_view</property>
+  <property name="default_view">document_view</property>
 
   <property name="view_methods"
             purge="true"
   >
-    <element value="summary_view" />
+    <element value="document_view" />
   </property>
 
 </object>
